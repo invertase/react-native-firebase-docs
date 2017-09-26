@@ -1,14 +1,5 @@
--  martin:
-    name: Martin D'vloper
-    job: Developer
-    skills:
-      - python
-      - perl
-      - pascal
--  tabitha:
-    name: Tabitha Bitumen
-    job: Developer
-    skills:
-      - lisp
-      - fortran
-      - erlang
+Prologue:
+- text: Release Notes
+  to: "/docs/test1"
+- text: Something Else
+  to: "/docs/test2"
