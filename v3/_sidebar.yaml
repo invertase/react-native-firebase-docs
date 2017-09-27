@@ -1,5 +1,5 @@
 json:
-- to: "/v3/something"
+- to: "/v3/somethingd"
   text: '123'
 - to: "/v3/something"
   text: '123'
