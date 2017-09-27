@@ -1,5 +1,5 @@
-json:
-- to: "/v3/somethingd"
-  text: '123'
-- to: "/v3/something"
-  text: '123'
+Prologue:
+- to: "/v3/getting-started"
+  text: 'Getting Started'
+- to: "/v3/release-notes"
+  text: 'Release Notes'
