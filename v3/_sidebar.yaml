@@ -1,5 +1,17 @@
-Prologue:
-- to: "/v3/getting-started"
-  text: 'Getting Started'
-- to: "/v3/release-notes"
-  text: 'Release Notes'
+- title: Learn
+  sections:
+  - title: Prolog
+    links:
+    - to: "/v3/getting-started"
+      text: Getting Started
+    - to: "/v3/release-notes"
+      text: Release Notes
+      
+- title: Modules
+  sections:
+  - title: Admob
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
