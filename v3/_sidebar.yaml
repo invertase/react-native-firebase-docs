@@ -8,6 +8,8 @@
       text: Release Notes
     - to: "/v3/migration-guide"
       text: Migration Guide
+    - to: "/v3/faqs"
+      text: FAQs
   - title: Installation
     links:
     - to: "/v3/installation/initial-setup"
@@ -24,6 +26,12 @@
       text: Getting Started
     - to: "/v3/testing"
       text: Testing
+  - title: Guides
+    links:
+    - to: "/v3/guides/abc"
+      text: Guide 1
+    - to: "/v3/guides/abc2"
+      text: Guide 2
       
 - title: Modules
   categories:
