@@ -83,12 +83,6 @@
       text: Reference
     - to: "/v3/admob/banner"
       text: Banner
-  - title: Transactions
-    links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
   - title: Performance Monitoring
     links:
     - to: "/v3/admob/reference"
