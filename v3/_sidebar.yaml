@@ -100,7 +100,7 @@
     - to: "https://github.com/invertase/react-native-firebase/issues"
       text: Issues
       type: external
-    - to: "https://github.com/invertase/react-native-firebase/issues"
+    - to: "https://react-native-firebase.canny.io/feature-requests"
       text: Feature Requests
       type: external
   - title: Community
