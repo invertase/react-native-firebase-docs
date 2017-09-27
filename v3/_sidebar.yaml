@@ -6,6 +6,25 @@
       text: Getting Started
     - to: "/v3/release-notes"
       text: Release Notes
+    - to: "/v3/migration-guide"
+      text: Migration Guide
+  - title: Installation
+    links:
+    - to: "/v3/installation/initial-setup"
+      text: Initial Setup
+    - to: "/v3/installation/ios"
+      text: iOS
+    - to: "/v3/installation/android"
+      text: Android
+    - to: "/v3/installation/javascript"
+      text: JavaScript
+  - title: Contributing
+    links:
+    - to: "/v3/contributing"
+      text: Getting Started
+    - to: "/v3/testing"
+      text: Testing
+      
 - title: Modules
   categories:
   - title: Admob
@@ -14,3 +33,71 @@
       text: Reference
     - to: "/v3/admob/banner"
       text: Banner
+  - title: Analytics
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Authentication
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Cloud Messaging
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Crash Reporting
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Database
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Remote Config
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Storage
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Transactions
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Performance Monitoring
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+      
+- title: ""
+  categories:
+  - title: Community
+    links:
+    - to: "https://github.com/invertase/react-native-firebase"
+      text: Repository
+      type: external
+    - to: "https://github.com/invertase/react-native-firebase/issues"
+      text: Issues
+      type: external
+    - to: "https://github.com/invertase/react-native-firebase/issues"
+      text: Feature Requests
+      type: external
