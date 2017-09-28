@@ -1,0 +1,123 @@
+- title: Learn
+  categories:
+  - title: Introduction
+    links:
+    - to: "/v3/getting-started"
+      text: Getting Started
+    - to: "/v3/release-notes"
+      text: Release Notes
+    - to: "/v3/migration-guide"
+      text: Migration Guide
+    - to: "/v3/faqs"
+      text: FAQs
+  - title: Installation
+    links:
+    - to: "/v3/installation/initial-setup"
+      text: Initial Setup
+    - to: "/v3/installation/ios"
+      text: iOS
+    - to: "/v3/installation/android"
+      text: Android
+    - to: "/v3/installation/javascript"
+      text: JavaScript
+  - title: Contributing
+    links:
+    - to: "/v3/contributing"
+      text: Getting Started
+    - to: "/v3/testing"
+      text: Testing
+  - title: Guides
+    links:
+    - to: "/v3/guides/abc"
+      text: Guide 1
+    - to: "/v3/guides/abc2"
+      text: Guide 2
+      
+- title: Modules
+  categories:
+  - title: Admob
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/v3/admob/android"
+      text: Install on Android
+      icon: android
+  - title: Analytics
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Authentication
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Cloud Messaging
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Core
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Crash Reporting
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Database
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Remote Config
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Storage
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+  - title: Performance Monitoring
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
+      
+- title: "Explore"
+  categories:
+  - title: Library
+    links:
+    - to: "https://github.com/invertase/react-native-firebase"
+      text: Repository
+      type: external
+    - to: "https://github.com/invertase/react-native-firebase/issues"
+      text: Issues
+      type: external
+    - to: "https://react-native-firebase.canny.io/feature-requests"
+      text: Feature Requests
+      type: external
+  - title: Community
+    links:
+    - to: "https://twitter.com/@rnfirebase"
+      text: Twitter @RNFirebase
+      type: external
+    - to: "https://discordapp.com/invite/t6bdqMs"
+      text: Chat on Discord
+      type: external
