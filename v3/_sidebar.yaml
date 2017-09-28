@@ -39,8 +39,12 @@
     links:
     - to: "/v3/admob/reference"
       text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/v3/admob/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/v3/admob/android"
+      text: Install on Android
+      icon: android
   - title: Analytics
     links:
     - to: "/v3/admob/reference"
