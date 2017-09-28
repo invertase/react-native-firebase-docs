@@ -59,6 +59,12 @@
       text: Reference
     - to: "/v3/admob/banner"
       text: Banner
+  - title: Core
+    links:
+    - to: "/v3/admob/reference"
+      text: Reference
+    - to: "/v3/admob/banner"
+      text: Banner
   - title: Crash Reporting
     links:
     - to: "/v3/admob/reference"
