@@ -16,8 +16,7 @@ All in all, RNFirebase provides much faster performance over the web SDK and pro
 
 ## Supported Firebase Modules
 
-> The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native.
-> '**?**' indicates partial support
+> The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native. A `?` indicates partial support.
 
 | Firebase Features      | v1.x.x  | v2.x.x  | v3.x.x | Web SDK |
 | ---------------------- | :---: | :---: | :---: | :---: |
