@@ -7,7 +7,7 @@ Add the Firebase Admob dependancy to `android/app/build.gradle`:
 ```
 dependencies {
   ...
-  compile "com.google.firebase:firebase-ads:11.2.0"
+  compile "com.google.firebase:firebase-ads:{{ android.firebase.version }}"
 }
 ```
 
