@@ -11,6 +11,22 @@ dependencies {
 }
 ```
 
+Performance Monitoring also requires the Firebase Plugins dependency. In your projects `android/build.gradle` file, add the plugin to your dependencies:
+
+```groovy
+dependencies {
+  // ...
+  classpath 'com.google.firebase:firebase-plugins:{{ android.firebase.plugins }}'
+}
+```
+
+At the top of your `android/app/build.gradle` file, below other plugins, apply the `firebase-perf` plugin:
+
+```groovy
+apply plugin: "com.android.application"
+apply plugin: "com.google.firebase.firebase-perf"
+```
+
 ## Install the RNFirebase Performance package
 
 Add the `RNFirebasePerformancePackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
