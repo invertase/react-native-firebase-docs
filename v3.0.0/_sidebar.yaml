@@ -47,58 +47,88 @@
       icon: android
   - title: Analytics
     links:
-    - to: "/admob/reference"
+    - to: "/analytics/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/analytics/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/analytics/android"
+      text: Install on Android
+      icon: android
   - title: Authentication
     links:
-    - to: "/admob/reference"
+    - to: "/auth/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/auth/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/auth/android"
+      text: Install on Android
+      icon: android
   - title: Cloud Messaging
     links:
-    - to: "/admob/reference"
+    - to: "/messaging/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/messaging/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/messaging/android"
+      text: Install on Android
+      icon: android
   - title: Core
     links:
-    - to: "/admob/reference"
+    - to: "/core/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
   - title: Crash Reporting
     links:
-    - to: "/admob/reference"
+    - to: "/crash/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/crash/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/crash/android"
+      text: Install on Android
+      icon: android
   - title: Database
     links:
-    - to: "/admob/reference"
+    - to: "/database/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/database/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/database/android"
+      text: Install on Android
+      icon: android
   - title: Remote Config
     links:
-    - to: "/admob/reference"
+    - to: "/config/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/config/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/config/android"
+      text: Install on Android
+      icon: android
   - title: Storage
     links:
-    - to: "/admob/reference"
+    - to: "/storage/reference"
       text: Reference
-    - to: "/admob/banner"
-      text: Banner
+    - to: "/storage/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/storage/android"
+      text: Install on Android
+      icon: android
   - title: Performance Monitoring
     links:
-    - to: "/admob/reference"
+    - to: "/perf/reference"
       text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/perf/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/perf/android"
+      text: Install on Android
+      icon: android
       
 - title: "Explore"
   categories:
