@@ -2,7 +2,7 @@
 
 ## 1. Setup google-services.json
 
-A google-services.json file contains all of the information required by the Firebase Android SDK to connect to your Firebase project. To automatically generate the plist file, follow the instructions on the Firebase console to "Add Firebase to your app".
+A google-services.json file contains all of the information required by the Firebase Android SDK to connect to your Firebase project. To automatically generate the plist file, follow the instructions on the [Firebase console](https://console.firebase.google.com) to "Add Firebase to your app".
 
 Once downloaded, place this file in the root of your project at `android/app/google-services.json`.
 
