@@ -1,3 +1,4 @@
 android:
   firebase:
     version: 11.2.0
+    plugins: 1.1.0
