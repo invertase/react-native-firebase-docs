@@ -3,10 +3,10 @@
 ## Methods firebase.perf
 
 ### setPerformanceCollectionEnabled
-*setPerformanceCollectionEnabled(enabled) returns void
+*setPerformanceCollectionEnabled(enabled) returns void*
 
 Enables or disables performance monitoring. 
 
 | Parameter |         |
 | --------- | ------- |
-| enabled   | boolean |
+| enabled   | boolean \n Whether monitoring is enabled or disabled |
