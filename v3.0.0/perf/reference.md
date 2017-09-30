@@ -16,7 +16,7 @@ Enables or disables performance monitoring.
 | enabled   | **boolean** <br />W hether monitoring is enabled or disabled |
 
 ### newTrace
-[color #FF9800]*newTrace(id) returns [Trace](#trace);*[/color]
+[method]newTrace(id) returns [Trace](#trace);[/method]
 
 Returns a new instance of Trace. The id is the unique name of something you'd like to run performance monitoring against.
 
