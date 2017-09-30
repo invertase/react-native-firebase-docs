@@ -37,99 +37,98 @@
   categories:
   - title: Admob
     links:
-    - to: "/admob/reference"
-      text: Reference
     - to: "/admob/ios"
       text: Install on iOS
       icon: apple
     - to: "/admob/android"
       text: Install on Android
       icon: android
+    - to: "/admob/reference"
+      text: Reference
   - title: Analytics
     links:
-    - to: "/analytics/reference"
-      text: Reference
     - to: "/analytics/ios"
       text: Install on iOS
       icon: apple
     - to: "/analytics/android"
       text: Install on Android
       icon: android
+    - to: "/analytics/reference"
+      text: Reference
   - title: Authentication
     links:
-    - to: "/auth/reference"
-      text: Reference
     - to: "/auth/ios"
       text: Install on iOS
       icon: apple
     - to: "/auth/android"
       text: Install on Android
       icon: android
+    - to: "/auth/reference"
+      text: Reference
   - title: Cloud Messaging
     links:
-    - to: "/messaging/reference"
-      text: Reference
     - to: "/messaging/ios"
       text: Install on iOS
       icon: apple
     - to: "/messaging/android"
       text: Install on Android
       icon: android
+    - to: "/messaging/reference"
+      text: Reference
   - title: Core
     links:
     - to: "/core/reference"
       text: Reference
   - title: Crash Reporting
     links:
-    - to: "/crash/reference"
-      text: Reference
     - to: "/crash/ios"
       text: Install on iOS
       icon: apple
     - to: "/crash/android"
       text: Install on Android
       icon: android
+    - to: "/crash/reference"
+      text: Reference
   - title: Database
     links:
-    - to: "/database/reference"
-      text: Reference
     - to: "/database/ios"
       text: Install on iOS
       icon: apple
     - to: "/database/android"
       text: Install on Android
       icon: android
+    - to: "/database/reference"
+      text: Reference
   - title: Remote Config
     links:
-    - to: "/config/reference"
-      text: Reference
     - to: "/config/ios"
       text: Install on iOS
       icon: apple
     - to: "/config/android"
       text: Install on Android
       icon: android
+    - to: "/config/reference"
+      text: Reference
   - title: Storage
     links:
-    - to: "/storage/reference"
-      text: Reference
     - to: "/storage/ios"
       text: Install on iOS
       icon: apple
     - to: "/storage/android"
       text: Install on Android
       icon: android
+    - to: "/storage/reference"
+      text: Reference
   - title: Performance Monitoring
     links:
-    - to: "/perf/reference"
-      text: Reference
     - to: "/perf/ios"
       text: Install on iOS
       icon: apple
     - to: "/perf/android"
       text: Install on Android
       icon: android
-      
+    - to: "/perf/reference"
+      text: Reference
 - title: "Explore"
   categories:
   - title: Library
