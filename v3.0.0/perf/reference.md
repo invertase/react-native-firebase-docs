@@ -5,7 +5,7 @@
 ## Methods 
 
 ### setPerformanceCollectionEnabled
-*setPerformanceCollectionEnabled(enabled) returns void*
+*`setPerformanceCollectionEnabled(enabled) returns void`*
 
 Enables or disables performance monitoring. 
 
