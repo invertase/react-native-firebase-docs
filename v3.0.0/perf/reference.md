@@ -49,4 +49,4 @@ Notifies Firebase an event has occured. These events will be visible on Firebase
 
 Stops performance tracing. The completed trace stats are now sent to Firebase.
 
-?> Results are not realtime. They can take a number of hours to appear in the Firebase console.
+> Results are not realtime. They can take a number of hours to appear in the Firebase console.
