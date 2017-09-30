@@ -89,6 +89,8 @@
       icon: android
     - to: "/crash/reference"
       text: Reference
+    - to: "/crash/manual-reporting"
+      text: Manual Reporting
   - title: Database
     links:
     - to: "/database/ios"
