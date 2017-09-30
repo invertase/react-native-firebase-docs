@@ -9,4 +9,4 @@ Enables or disables performance monitoring.
 
 | Parameter |         |
 | --------- | ------- |
-| enabled   | boolean \n Whether monitoring is enabled or disabled |
+| enabled   | boolean <br /> Whether monitoring is enabled or disabled |
