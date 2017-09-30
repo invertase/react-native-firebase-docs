@@ -7,13 +7,13 @@ firebase.perf
 ## Methods 
 
 ### setPerformanceCollectionEnabled
-*setPerformanceCollectionEnabled(enabled) returns void;*
+[method]setPerformanceCollectionEnabled(enabled) returns void;[/method]
 
 Enables or disables performance monitoring. 
 
 | Parameter |         |
 | --------- | ------- |
-| enabled   | **boolean** <br />W hether monitoring is enabled or disabled |
+| enabled   | **boolean** <br />Whether monitoring is enabled or disabled |
 
 ### newTrace
 [method]newTrace(id) returns [Trace](#trace);[/method]
@@ -31,12 +31,12 @@ Returns a new instance of Trace. The id is the unique name of something you'd li
 > Once a trace has been started and stopped, you cannot re-start it in the same app lifecycle.
 
 #### start
-*trace.start() returns void;*
+[method]trace.start() returns void;[/method]
 
 Initializes the trace to start tracing performance to relay back to Firebase.
 
 #### incrementCounter
-*trace.incrementCounter(event) returns void;*
+[method]trace.incrementCounter(event) returns void;[/method]
 
 Notifies Firebase an event has occured. These events will be visible on Firebase once your trace has stopped.
 
@@ -45,7 +45,7 @@ Notifies Firebase an event has occured. These events will be visible on Firebase
 | event     | **string** <br /> An event name to increment a counter against |
 
 #### stop
-*trace.stop() returns void;*
+[method]trace.stop() returns void;[/method]
 
 Stops performance tracing. The completed trace stats are now sent to Firebase.
 
