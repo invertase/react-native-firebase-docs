@@ -1,0 +1,14 @@
+crash:
+- setCrashCollectionEnabled
+- isCrashCollectionEnabled
+- log
+- logcat
+- report
+
+perf:
+- setPerformanceCollectionEnabled
+- newTrace
+- Trace:
+  - start
+  - incrementCounter
+  - stop
