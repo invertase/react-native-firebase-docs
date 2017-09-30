@@ -1,6 +1,8 @@
 # Performance Monitoring
 
-`firebase.perf`
+```
+firebase.perf
+```
 
 ## Methods 
 
