@@ -1,14 +1,17 @@
-crash:
-- setCrashCollectionEnabled
-- isCrashCollectionEnabled
-- log
-- logcat
-- report
-
-perf:
-- setPerformanceCollectionEnabled
-- newTrace
-- Trace:
-  - start
-  - incrementCounter
-  - stop
+- module: crash
+  methods:
+  - setCrashCollectionEnabled
+  - isCrashCollectionEnabled
+  - log
+  - logcat
+  - report
+  
+- module: perf
+  methods:
+  - setPerformanceCollectionEnabled
+  - newTrace
+  classes:
+    Trace:
+    - start
+    - incrementCounter
+    - stop
