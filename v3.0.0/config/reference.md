@@ -1,4 +1,4 @@
-# Analytics
+# Remote Config
 
 ```
 firebase.config
@@ -69,7 +69,7 @@ Returns all keys as an array by a prefix. If no prefix is defined all keys are r
 
 | Parameter |         |
 | --------- | ------- |
-| prefix (optional)   | **string** |
+| prefix    | **string** (optional) |
 
 ### setDefaultsFromResource
 [method]setDefaultsFromResource(filename) returns void;[/method]
