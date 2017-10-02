@@ -1,5 +1,7 @@
 # Android Installation
 
+First ensure you have followed the [initial setup guide](version /installation/initial-setup).
+
 ## Add the dependency
 
 Add the Firebase Analytics dependancy to `android/app/build.gradle`:
