@@ -55,6 +55,10 @@
       text: Interstitial
     - to: "/admob/rewarded-video"
       text: Rewarded Video
+    - to: "/admob/rewarded-video"
+      text: Rewarded Video
+    - to: "/admob/error-handling"
+      text: Error Handling
   - title: Analytics
     links:
     - to: "/analytics/ios"
