@@ -30,7 +30,7 @@ Listens for advert events. See [EventTypes](version /admob/reference#eventtypes)
 
 | Parameter |         |
 | --------- | ------- |
-| event   | [**EventTypes**](version /admob/reference#eventtypes) | **RewardedVideoEventTypes**](version /admob/reference#rewardedvideoeventtypes) <br /> A single event type |
+| event   | [**EventTypes**](version /admob/reference#eventtypes) [**RewardedVideoEventTypes**](version /admob/reference#rewardedvideoeventtypes) <br /> A single event type |
 | callback   | **function** |
 
 ### isLoaded
