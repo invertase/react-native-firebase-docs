@@ -54,6 +54,11 @@
       text: Interstitial
     - to: "/admob/rewarded-video"
       text: Rewarded Video
+    - to: "/admob/ad-request"
+    - type: divider
+      text: AdRequest      
+    - to: "/admob/video-options"
+      text: VideoOptions
     - type: divider
     - to: "/admob/error-handling"
       text: Error Handling
