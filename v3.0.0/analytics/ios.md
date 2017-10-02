@@ -7,7 +7,7 @@ First ensure you have followed the [initial setup guide](version /installation/i
 Add the following to your `Podfile`:
 
 ```
-pod 'Firebase/RemoteConfig'
+pod 'Firebase/Analytics'
 ```
 
 Run `pod update`.
