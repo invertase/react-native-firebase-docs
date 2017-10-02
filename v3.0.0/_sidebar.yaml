@@ -45,8 +45,7 @@
       icon: android
     - to: "/admob/reference"
       text: Reference
-    - to: "/admob/getting-started"
-      text: Getting Started
+    - type: divider
     - to: "/admob/banner"
       text: Banner
     - to: "/admob/native-express"
@@ -55,6 +54,7 @@
       text: Interstitial
     - to: "/admob/rewarded-video"
       text: Rewarded Video
+    - type: divider
     - to: "/admob/error-handling"
       text: Error Handling
   - title: Analytics
