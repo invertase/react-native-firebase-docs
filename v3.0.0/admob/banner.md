@@ -22,7 +22,7 @@ Requests and shows the banner at a certain size.
 
 | Type | Default |
 | --------- | ------- |
-| **[Size](version /admob/sizes)** | SMART_BANNER  |
+| [Size](version /admob/sizes) | SMART_BANNER  |
 
 ### request
 
@@ -38,7 +38,7 @@ Called when an ad is received/loaded.
 
 | Type | Default |
 | --------- | ------- |
-| **function**  |  |
+| function  |  |
 
 ### onAdOpened
 
@@ -70,7 +70,7 @@ Called when an ad request failed. See [Error Handling](version /admob/error-hand
 
 | Type | Default |
 | --------- | ------- |
-| **function**  |  |
+| function  |  |
 
 ## Additional Props
 
