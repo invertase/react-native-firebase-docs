@@ -40,12 +40,12 @@ Thrown errors can be one of the following:
 | config/throttled   | Config fetch was throttled |
 
 ### activateFetched
-[method]activateFetched() returns Promise<success>;[/method]
+[method]activateFetched() returns Promise containing boolean;[/method]
 
 Moves fetched data in the apps active config. Always successfully resolves with a boolean value of whether the fetched config was moved successfully.
 
 ### getValue
-[method]getValue(key) returns Promise<snapshot>;[/method]
+[method]getValue(key) returns Promise containing snapshot;[/method]
 
 Gets a config item by key. Returns a snapshot containing source (`default`, `remote` or `static`) and `val` function.
 
@@ -54,7 +54,7 @@ Gets a config item by key. Returns a snapshot containing source (`default`, `rem
 | key   | **string** |
 
 ### getValues
-[method]getValue(keys) returns Promise<snapshots>;[/method]
+[method]getValue(keys) returns Promise containing object of snapshots;[/method]
 
 Gets multiple values by key. Returns an snapshot object of keys with the same object returned from [getValue](#getValue), e.g. `snapshots.foo.val()`.
 
@@ -63,7 +63,7 @@ Gets multiple values by key. Returns an snapshot object of keys with the same ob
 | keys   | **Array<string>** |
 
 ### getKeysByPrefix
-[method]getKeysByPrefix(prefix) returns Promise<Array<string>>;[/method]
+[method]getKeysByPrefix(prefix) returns Promise containing array of strings;[/method]
 
 Returns all keys as an array by a prefix. If no prefix is defined all keys are returned.
 
