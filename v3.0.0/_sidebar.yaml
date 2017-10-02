@@ -147,13 +147,13 @@
       text: Reference
   - title: Performance Monitoring
     links:
-    - to: "/perf/ios"
+    - to: "/perf-mon/ios"
       text: Install on iOS
       icon: apple
-    - to: "/perf/android"
+    - to: "/perf-mon/android"
       text: Install on Android
       icon: android
-    - to: "/perf/reference"
+    - to: "/perf-mon/reference"
       text: Reference
 - title: "Explore"
   categories:
