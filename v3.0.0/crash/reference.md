@@ -50,5 +50,5 @@ Sends the crash report, along with any previous [logs](#log) or [logcats](#logca
 
 | Parameter |     |
 | --------- | --- |
-| error     | [**Error**]() <br /> A JavaScript Error. |
+| error     | [**Error**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) <br /> A JavaScript Error. |
 | maxStackSize | **number** |
