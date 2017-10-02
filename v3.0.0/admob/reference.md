@@ -72,7 +72,7 @@ Returns an `Object` containing Admob event types.
 ### RewardedVideoEventTypes
 [method]RewardedVideoEventTypes returns [RewardedVideoEventTypes](https://github.com/invertase/react-native-firebase/blob/master/lib/modules/admob/EventTypes.js#L10);[/method]
 
-Returns an `Object` containing [RewardedVideo](#rewardedvideo) event types.
+Returns an `Object` containing [RewardedVideo](#rewarded) event types.
 
 ### NativeExpressEventTypes
 [method]NativeExpressEventTypes returns [NativeExpressEventTypes](https://github.com/invertase/react-native-firebase/blob/master/lib/modules/admob/EventTypes.js#L18);[/method]
