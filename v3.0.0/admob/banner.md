@@ -8,16 +8,69 @@ AdMob Banners in RNFirebase are exported as a usable React component, allowing y
 
 ## Props
 
-| Prop                | Type               | Default                                 | Description                                                                         |
-| ------------------- | ------------------ | --------------------------------------- | ----------------------------------------------------------------------------------- |
-| size (required)     | string (See [Sizes](version /admob/sizes)) | SMART_BANNER                            | Returns a sized banner (automatically sets View style)                              |
-| unitId (required)   | string             |                                         | Your AdMob banner unit ID.                                                          |
-| request             | [AdRequest](/admob/adrequest)          | new AdRequest().addTestDevice().build() | An instance of AdRequest to load with the Banner                                    |
-| onAdLoaded          | function           |                                         | Called when an ad is received.                                                      |
-| onAdOpened          | function           |                                         | Called when an ad opens an overlay that covers the screen.                          |
-| onAdLeftApplication | function           |                                         | Called when an ad leaves the application (e.g., to go to the browser).              |
-| onAdClosed          | function           |                                         | Called when the user is about to return to the application after clicking on an ad. |
-| onAdFailedToLoad    | function           |                                         | Called when an ad request failed. See Error Handling                                |
+### unitId (required)
+
+Your AdMob banner unit ID
+
+| Type | Default |
+| --------- | ------- |
+| **string** |   |
+
+### size
+
+Requests and shows the banner at a certain size.
+
+| Type | Default |
+| --------- | ------- |
+| [Size](version /admob/sizes)   | SMART_BANNER  |
+
+### request
+
+An instance of [AdRequest.build](version /admob/adrequest) to load with the Banner.
+
+| Type | Default |
+| --------- | ------- |
+| [AdRequest.build](version /admob/adrequest)   | `new AdRequest().addTestDevice().build()`  |
+
+### onAdLoaded
+
+Called when an ad is received/loaded. 
+
+| Type | Default |
+| --------- | ------- |
+| function  |  |
+
+### onAdOpened
+
+Called when an ad opens an overlay that covers the screen.
+
+| Type | Default |
+| --------- | ------- |
+| function  |  |
+
+### onAdLeftApplication
+
+Called when an ad leaves the application (e.g. to go to the browser).
+
+| Type | Default |
+| --------- | ------- |
+| function  |  |
+
+### onAdClosed
+
+Called when the user is about to return to the application after clicking on an ad.
+
+| Type | Default |
+| --------- | ------- |
+| function  |  |
+
+### onAdFailedToLoad
+
+Called when an ad request failed. See [Error Codes](version /admob/error-codes).
+
+| Type | Default |
+| --------- | ------- |
+| function  |  |
 
 ## Additional Props
 
