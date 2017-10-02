@@ -1,6 +1,6 @@
 # iOS Installation
 
-First ensure you have followed the [iOS getting started](version /getting-started) guide.
+First ensure you have followed the [initial setup guide](version /installation/initial-setup).
 
 ## Add the pod
 
