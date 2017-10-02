@@ -1,5 +1,9 @@
 # Native Express
 
+```
+firebase.admob.NativeExpress
+```
+
 An AdMob Native Express advert is much like a standard Banner, except it can be integrated seamlessly into your app using user predefined styling (background color, positions, font size etc). Native Express adverts are exported as a usable React component.
 
 ## Props
