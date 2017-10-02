@@ -45,6 +45,16 @@
       icon: android
     - to: "/admob/reference"
       text: Reference
+    - to: "/admob/getting-started"
+      text: Getting Started
+    - to: "/admob/banner"
+      text: Banner
+    - to: "/admob/native-express"
+      text: Native Express
+    - to: "/admob/interstitial"
+      text: Interstitial
+    - to: "/admob/rewarded-video"
+      text: Rewarded Video
   - title: Analytics
     links:
     - to: "/analytics/ios"
