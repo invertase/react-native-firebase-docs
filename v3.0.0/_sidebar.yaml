@@ -133,6 +133,8 @@
       icon: android
     - to: "/config/reference"
       text: Reference
+    - to: "/config/example"
+      text: Example
   - title: Storage
     links:
     - to: "/storage/ios"
