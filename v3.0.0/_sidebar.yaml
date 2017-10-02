@@ -87,6 +87,9 @@
       icon: android
     - to: "/auth/reference"
       text: Reference
+    - type: divider
+    - to: "/auth/user"
+      text: User    
   - title: Cloud Messaging
     links:
     - to: "/messaging/ios"
