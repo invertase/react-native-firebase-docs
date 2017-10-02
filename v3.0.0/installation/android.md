@@ -34,7 +34,7 @@ RNFirebase now needs to be linked into your Android project.
 
 Within your `android/settings.gradle`, add the following:
 
-```
+```groovy
 include ':react-native-firebase'
 project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
 ```
@@ -43,7 +43,7 @@ project(':react-native-firebase').projectDir = new File(rootProject.projectDir, 
 
 Both the RNFirebase module and the Firebase modules need to be installed as project dependencies. In the `android/app/build.gradle` file, add the following:
 
-```
+```groovy
 dependencies {
   // RNFirebase dependency
   compile(project(':react-native-firebase')) {
