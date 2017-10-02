@@ -57,6 +57,8 @@
     - type: divider
     - to: "/admob/error-handling"
       text: Error Handling
+    - to: "/admob/sizes"
+      text: Sizes
   - title: Analytics
     links:
     - to: "/analytics/ios"
