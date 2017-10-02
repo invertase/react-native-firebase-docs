@@ -66,7 +66,7 @@ Called when the user is about to return to the application after clicking on an 
 
 ### onAdFailedToLoad
 
-Called when an ad request failed. See [Error Codes](version /admob/error-codes).
+Called when an ad request failed. See [Error Handling](version /admob/error-handling).
 
 | Type | Default |
 | --------- | ------- |
