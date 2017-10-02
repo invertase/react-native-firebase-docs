@@ -21,7 +21,7 @@ Starting loading an interstial from the Firebase servers with a given [AdRequest
 
 | Parameter |         |
 | --------- | ------- |
-| request   | [**AdRequest.build**](version /admob/adrequest#build) <br /> An AdRequest.build object |
+| request   | [AdRequest.build](version /admob/adrequest#build) <br /> An AdRequest.build object |
 
 ### on
 [method]loadAd(event, callback) returns void;[/method]
@@ -30,7 +30,7 @@ Listens for advert events. See [EventTypes](version /admob/reference#eventtypes)
 
 | Parameter |         |
 | --------- | ------- |
-| event   | [**EventTypes**](version /admob/reference#eventtypes) [**RewardedVideoEventTypes**](version /admob/reference#rewardedvideoeventtypes) <br /> A single event type |
+| event   | [EventTypes](version /admob/reference#eventtypes) or [RewardedVideoEventTypes](version /admob/reference#rewardedvideoeventtypes) <br /> A single event type |
 | callback   | **function** |
 
 ### isLoaded
