@@ -78,7 +78,7 @@ Any additional props passed through to the component must be [ViewPropTypes](htt
 
 A common request is how to handle custom touch events of the Banner. We recommend wrapping the Banner component another component, such as a [`TouchableWithoutFeedback`](https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html).
 
-```
+```js
 ...
 render() {
   return (
@@ -93,7 +93,7 @@ render() {
 
 ## Example
 
-```
+```js
 const Banner = firebase.admob.Banner;
 const AdRequest = firebase.admob.AdRequest;
 const request = new AdRequest();
