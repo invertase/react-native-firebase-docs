@@ -23,7 +23,7 @@ For testing purposes, you can use the Admob test app ID "ca-app-pub-394025609994
 Opens a debug menu, allowing you to test your ads. This menu cannot be closed unless you reload your app.
 
 ### interstitial
-[method]interstitial(unitId) returns ...;[/method]
+[method]interstitial(unitId) returns $[Intersistaial](/admob/interstitial);[/method]
 
 Returns a new Intersistaial to be loaded with a given unitId.
 
