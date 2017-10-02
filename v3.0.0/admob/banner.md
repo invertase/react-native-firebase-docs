@@ -22,7 +22,7 @@ Requests and shows the banner at a certain size.
 
 | Type | Default |
 | --------- | ------- |
-| **[Size]**(version /admob/sizes)   | SMART_BANNER  |
+| **[Size](version /admob/sizes)** | SMART_BANNER  |
 
 ### request
 
