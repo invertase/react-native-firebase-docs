@@ -53,14 +53,14 @@ Returns a [Banner](version /admob/banner) component.
 Returns a [NativeExpress](version /admob/native-express) component.
 
 ### AdRequest
-[method]AdRequest returns [AdRequest](version /admob/adrequest);[/method]
+[method]AdRequest returns [AdRequest](version /admob/ad-request);[/method]
 
-Returns a [AdRequest](#) class.
+Returns a [AdRequest](version /admob/ad-request) class.
 
 ### VideoOptions
-[method]VideoOptions returns [VideoOptions](version /admob/videooptions);[/method]
+[method]VideoOptions returns [VideoOptions](version /admob/video-options);[/method]
 
-Returns a [VideoOptions](version /admob/videooptions) class.
+Returns a [VideoOptions](version /admob/video-options) class.
 
 ## Types
 
