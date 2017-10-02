@@ -32,9 +32,9 @@ Returns a new [Interstitial](version /admob/interstitial) to be loaded with a gi
 | unitId   | **string** <br /> Ad unitId |
 
 ### rewarded
-[method]rewarded(unitId) returns ...;[/method]
+[method]rewarded(unitId) returns [RewardedVideo](version /admob/rewarded-video);[/method]
 
-Returns a new Rewarded Video to be loaded with a given unitId.
+Returns a new [RewardedVideo](version /admob/rewarded-video) to be loaded with a given unitId.
 
 | Parameter |         |
 | --------- | ------- |
@@ -43,24 +43,24 @@ Returns a new Rewarded Video to be loaded with a given unitId.
 ## Statics
 
 ### Banner
-[method]Banner returns ...;[/method]
+[method]Banner returns [Banner](version /admob/banner);[/method]
 
-Returns a [Banner](#) component.
+Returns a [Banner](version /admob/banner) component.
 
 ### NativeExpress
-[method]NativeExpress returns ...;[/method]
+[method]NativeExpress returns [NativeExpress](version /admob/native-express);[/method]
 
-Returns a [NativeExpress](#) component.
+Returns a [NativeExpress](version /admob/native-express) component.
 
 ### AdRequest
-[method]AdRequest returns ...;[/method]
+[method]AdRequest returns [AdRequest](version /admob/adrequest);[/method]
 
 Returns a [AdRequest](#) class.
 
 ### VideoOptions
-[method]VideoOptions returns ...;[/method]
+[method]VideoOptions returns [VideoOptions](version /admob/videooptions);[/method]
 
-Returns a [VideoOptions](#) class.
+Returns a [VideoOptions](version /admob/videooptions) class.
 
 ## Types
 
