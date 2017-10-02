@@ -56,9 +56,10 @@
       text: Rewarded Video
     - to: "/admob/ad-request"
     - type: divider
-      text: AdRequest      
+    - to: "/admob/ad-request"
+      text: Ad Request
     - to: "/admob/video-options"
-      text: VideoOptions
+      text: Video Options
     - type: divider
     - to: "/admob/error-handling"
       text: Error Handling
