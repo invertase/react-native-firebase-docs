@@ -16,8 +16,10 @@
       text: Initial Setup
     - to: "/installation/ios"
       text: iOS
+      icon: apple
     - to: "/installation/android"
       text: Android
+      icon: android
     - to: "/installation/javascript"
       text: JavaScript
   - title: Contributing
