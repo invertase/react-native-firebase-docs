@@ -78,7 +78,7 @@ Links the user account with the given credentials, and returns any available add
 ### reauthenticateAndRetrieveDataWithCredential
 ### reauthenticateWithCredential
 ### reauthenticateWithPhoneNumber
-### 
+
 TODO
 
 ### reload
@@ -165,7 +165,7 @@ Updates a user's profile data.
 
 | Parameter |         |
 | --------- | ------- |
-| profile   | **Object** `{displayName: nullable string, photoUrl: nullable string }` <br /> The profile's displayName and photoURL to update. <br /> Value must not be null. |
+| profile   | **Object** <br /> `{displayName: nullable string, photoUrl: nullable string }` <br /> The profile's displayName and photoURL to update. <br /> Value must not be null. |
 
 ## Properties
 
