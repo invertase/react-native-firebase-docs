@@ -25,7 +25,7 @@ Reconnects to the server and synchronizes the offline Database state with the se
 This method should be used after disabling the active connection with goOffline(). Once reconnected, the client will transmit the proper data and fire the appropriate events so that your client "catches up" automatically.
 
 ### ref
-[method]ref(path) returns [Reference](version /database/ref);[/method]
+[method]ref(path) returns [Ref](version /database/ref);[/method]
 
 Returns a Reference representing the location in the Database corresponding to the provided path. If no path is provided, the Reference will point to the root of the Database.
 
