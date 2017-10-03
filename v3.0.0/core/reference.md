@@ -30,6 +30,15 @@ Returns a [FirebaseApp](version /core/firebase-app) instance by name.
 | --------- | ------- |
 | name   | **string** (optional) <br /> Returns the default app instance if no value. |
 
+### setLogLevel
+[method]setLogLevel(level) returns void;[/method]
+
+Set the global logging level for all logs.
+
+| Parameter |         |
+| --------- | ------- |
+| level   | **string** or **boolean** |
+
 ## Properties
 
 ### apps
