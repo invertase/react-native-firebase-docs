@@ -26,7 +26,7 @@ Returns the current token if it has not expired, otherwise this will refresh the
 
 | Parameter |         |
 | --------- | ------- |
-| forceRefresh   | **boolean** (option) <br /> Force refresh regardless of token expiration. |
+| forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
 
 ### linkAndRetrieveDataWithCredential
 [method]linkAndRetrieveDataWithCredential(credential) returns Promise containing [UserCredential](#);[/method]
@@ -96,6 +96,76 @@ Returns a JSON-serializable representation of this object.
 
 ### unlink
 [method]unlink(providerId) returns [User](#methods);[/method]
+
+Unlinks a provider from a user account.
+
+| Parameter |         |
+| --------- | ------- |
+| providerId   | **string** |
+
+### updateEmail
+[method]updateEmail(newEmail) returns Promise containing void;[/method]
+
+Updates the user's email address.
+
+An email will be sent to the original email address (if it was set) that allows to revoke the email address change, in order to protect them from account hijacking.
+
+Important: this is a security sensitive operation that requires the user to have recently signed in. If this requirement isn't met, ask the user to authenticate again and then call [firebase.User#reauthenticateWithCredential](#reauthenticateWithCredential).
+
+| Parameter |         |
+| --------- | ------- |
+| newEmail   | **string** |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/invalid-email  | Thrown if the email used is invalid. |
+| auth/email-already-in-use  | Thrown if the email is already used by another user. |
+| auth/requires-recent-login  | Thrown if the user's last sign-in time does not meet the security threshold. Use [firebase.User#reauthenticateWithCredential](#reauthenticateWithCredential) to resolve. This does not apply if the user is anonymous. |
+
+### updatePassword
+[method]updatePassword(newPassword) returns Promise containing void;[/method]
+
+Updates the user's password.
+
+Important: this is a security sensitive operation that requires the user to have recently signed in. If this requirement isn't met, ask the user to authenticate again and then call [firebase.User#reauthenticateWithCredential](#reauthenticateWithCredential).
+
+| Parameter |         |
+| --------- | ------- |
+| newPassword   | **string** |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/weak-password  | Thrown if the password is not strong enough. |
+| auth/requires-recent-login  | Thrown if the user's last sign-in time does not meet the security threshold. Use [firebase.User#reauthenticateWithCredential](#reauthenticateWithCredential) to resolve. This does not apply if the user is anonymous. |
+
+### updatePhoneNumber
+[method]updatePhoneNumber(phoneCredential) returns Promise containing void;[/method]
+
+Updates the user's phone number.
+
+| Parameter |         |
+| --------- | ------- |
+| phoneCredential   | **[AuthCredential](version /auth/auth-credential)** <br /> Value must not be null. |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/invalid-verification-code  | Thrown if the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the verification ID of the credential is not valid. |
+
+### updateProfile
+[method]updateProfile(profile) returns Promise containing void;[/method]
+
+Updates a user's profile data.
+
+| Parameter |         |
+| --------- | ------- |
+| profile   | **Object** `{displayName: nullable string, photoUrl: nullable string }` <br /> The profile's displayName and photoURL to update. <br /> Value must not be null. |
 
 ## Properties
 
