@@ -12,7 +12,7 @@ firebase.auth.TwitterAuthProvider
 ## Methods
 
 ### credential
-[method]credential(token, secret) returns [AuthCredentia](version /auth/auth-credential)[/method]
+[method]credential(token, secret) returns [AuthCredential](version /auth/auth-credential)[/method]
 
 | Parameter |         |
 | --------- | ------- |
