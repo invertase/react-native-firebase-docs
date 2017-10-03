@@ -1,7 +1,7 @@
 # ServerValue
 
 ```
-firebase.database.ServerValue.TIMESTAMP
+firebase.database.ServerValue
 ```
 
 ## Properties
