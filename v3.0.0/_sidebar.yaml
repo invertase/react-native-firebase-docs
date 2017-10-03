@@ -94,6 +94,8 @@
     - to: "/auth/user"
       text: User
     - type: divider
+    - to: "/auth/action-code-info"
+      text: ActionCodeInfo
     - to: "/auth/additional-user-info"
       text: AdditionalUserInfo
     - to: "/auth/user-info"
