@@ -56,7 +56,6 @@
       text: Interstitial
     - to: "/admob/rewarded-video"
       text: Rewarded Video
-    - to: "/admob/ad-request"
     - type: divider
     - to: "/admob/ad-request"
       text: AdRequest
