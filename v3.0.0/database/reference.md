@@ -15,9 +15,10 @@ firebase.database is also a namespace that can be used to access global constant
 
 | Parameter |         |
 | --------- | ------- |
-| app  | **[FirebaseApp](version /core/firebase-app)** Optional <br /> Optional app whose Database service to return. If not provided, the default Database service will be returned. <br /> Value must not be null. |
+| app  | **[FirebaseApp](version /core/firebase-app)** (optional) <br /> Optional app whose Database service to return. If not provided, the default Database service will be returned. <br /> Value must not be null. |
 
 ## Interfaces
+
 
 ### Database
 
