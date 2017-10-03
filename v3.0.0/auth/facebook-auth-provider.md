@@ -12,7 +12,7 @@ firebase.auth.FacebookAuthProvider
 ## Methods
 
 ### credential
-[method]credential(token) returns [AuthCredentia](version /auth/auth-credential)[/method]
+[method]credential(token) returns [AuthCredential](version /auth/auth-credential)[/method]
 
 | Parameter |         |
 | --------- | ------- |
