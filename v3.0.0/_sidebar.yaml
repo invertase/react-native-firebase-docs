@@ -167,7 +167,7 @@
     - to: "/database/query"
       text: Query
     - to: "/database/ref"
-      text: Reference
+      text: Ref
     - type: divider
     - to: "/database/server-value"
       text: ServerValue
