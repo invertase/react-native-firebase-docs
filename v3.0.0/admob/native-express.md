@@ -88,6 +88,38 @@ Called if the advert video has ended (only called if the advert has a video).
 | --------- | ------- |
 | **function**  |  |
 
+### onVideoMute
+
+Called when the video changes mute state. Returns an Object containing `{ isMuted: boolean }`.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoPause
+
+Called when video playback is paused.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoPlay
+
+Called when video playback is playing.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoStart
+
+Called when video playback first begins.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
 ## Example
 
 ```js
