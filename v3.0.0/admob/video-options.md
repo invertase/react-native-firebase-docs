@@ -8,7 +8,7 @@ The VideoOptions class is used to create an object to be passed through to each 
 
 ?> Currently `NativeExpress` only accepts VideoOptions. If no VideoOptions are sent, the default options call `setStartMuted(true)`.
 
-## Methods
+## Methods
 
 ### build
 [method]build() returns object;[/method]
