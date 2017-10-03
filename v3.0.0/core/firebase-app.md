@@ -13,11 +13,6 @@ Allows adding additional properties onto a firebase app instance.
 | --------- | ------- |
 | props   | **Object**  |
 
-### delete
-[method]delete() returns Promise containing void;[/method]
-
-Deletes the current FirebaseApp instance.
-
 ### onReady
 [method]onReady() returns Promise containing [FirebaseApp](#methods);[/method]
 
@@ -30,3 +25,9 @@ Resolves a promise once the FirebaseApp instance has been initilized.
 
 ### options
 [method]options returns Object;[/method]
+
+## Unsupported Methods
+
+### delete
+
+FirebaseApp.delete is only supported on iOS, therefore we cannot support it. Please see [this issue comment](https://github.com/firebase/firebase-ios-sdk/issues/140#issuecomment-315953708) for more information.
