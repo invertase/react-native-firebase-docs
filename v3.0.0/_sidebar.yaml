@@ -59,9 +59,9 @@
     - to: "/admob/ad-request"
     - type: divider
     - to: "/admob/ad-request"
-      text: Ad Request
+      text: AdRequest
     - to: "/admob/video-options"
-      text: Video Options
+      text: VideoOptions
     - type: divider
     - to: "/admob/error-handling"
       text: Error Handling
