@@ -6,6 +6,8 @@ firebase.admob
 
 ## Methods 
 
+The following methods are accessed via the Admob instance `firebase.admob()`.
+
 ### initialize
 [method]initialize(id) returns void;[/method]
 
