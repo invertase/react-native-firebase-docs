@@ -19,16 +19,28 @@ firebase.database is also a namespace that can be used to access global constant
 
 ## Interfaces
 
-### [Database](version /database/database)
+### Database
 
-### [DataSnapshot](version /database/data-snapshot)
+[Database](version /database/database)
 
-### [OnDisconnect](version /database/on-disconnect)
+### DataSnapshot
 
-### [Query](version /database/query)
+[DataSnapshot](version /database/data-snapshot)
 
-### [Reference](version /database/reference)
+### OnDisconnect
+
+[OnDisconnect](version /database/on-disconnect)
+
+### Query
+
+[Query](version /database/query)
+
+### Reference
+
+[Reference](version /database/reference)
 
 ## Statics
 
-### [ServerValue](version /database/server-value)
+### ServerValue
+
+[ServerValue](version /database/server-value)
