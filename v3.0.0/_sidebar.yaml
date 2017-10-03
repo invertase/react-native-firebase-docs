@@ -130,6 +130,9 @@
     links:
     - to: "/core/reference"
       text: Reference
+    - type: divider
+    - to: "/core/firebase-app"
+      text: FirebaseApp
   - title: Crash Reporting
     links:
     - to: "/crash/ios"
