@@ -29,13 +29,13 @@ Returns the current token if it has not expired, otherwise this will refresh the
 | forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
 
 ### linkAndRetrieveDataWithCredential
-[method]linkAndRetrieveDataWithCredential(credential) returns Promise containing [UserCredential](#);[/method]
+[method]linkAndRetrieveDataWithCredential(credential) returns Promise containing [UserCredential](version /auth/user-credential);[/method]
 
 Links the user account with the given credentials, and returns any available additional user information, such as user name.
 
 | Parameter |         |
 | --------- | ------- |
-| credential   | **[AuthCredential](#)** (option) <br /> The auth credential. <br /> Value must not be null. |
+| credential   | **[AuthCredential](version /auth/auth-credential)** (option) <br /> The auth credential. <br /> Value must not be null. |
 
 #### Error Codes
 
@@ -43,22 +43,22 @@ Links the user account with the given credentials, and returns any available add
 | --------- | ------- |
 | auth/provider-already-linked  | Thrown if the provider has already been linked to the user. This error is thrown even if this is not the same provider's account that is currently linked to the user. |
 | auth/invalid-credential  | Thrown if the provider's credential is not valid. This can happen if it has already expired when calling link, or if it used invalid token(s). See the Firebase documentation for your provider, and make sure you pass in the correct parameters to the credential method. |
-| auth/credential-already-in-use  | Thrown if the account corresponding to the credential already exists among your users, or is already linked to a Firebase User. For example, this error could be thrown if you are upgrading an anonymous user to a Google user by linking a Google credential to it and the Google credential used is already associated with an existing Firebase Google user. The fields error.email, error.phoneNumber, and error.credential ([firebase.auth.AuthCredential](#)) may be provided, depending on the type of credential. You can recover from this error by signing in with error.credential directly via [firebase.auth.Auth#signInWithCredential](version /auth/reference#signinwithcredential). |
-| auth/email-already-in-use  | Thrown if the email corresponding to the credential already exists among your users. When thrown while linking a credential to an existing user, an error.email and error.credential ([firebase.auth.AuthCredential](#)) fields are also provided. You have to link the credential to the existing user with that email if you wish to continue signing in with that credential. To do so, call [firebase.auth.Auth#fetchProvidersForEmail](version /auth/reference#fetchprovidersforemail), sign in to error.email via one of the providers returned and then [firebase.User#linkWithCredential](#linkwithcredential) the original credential to that newly signed in user |
+| auth/credential-already-in-use  | Thrown if the account corresponding to the credential already exists among your users, or is already linked to a Firebase User. For example, this error could be thrown if you are upgrading an anonymous user to a Google user by linking a Google credential to it and the Google credential used is already associated with an existing Firebase Google user. The fields error.email, error.phoneNumber, and error.credential ([firebase.auth.AuthCredential](version /auth/auth-credential)) may be provided, depending on the type of credential. You can recover from this error by signing in with error.credential directly via [firebase.auth.Auth#signInWithCredential](version /auth/reference#signinwithcredential). |
+| auth/email-already-in-use  | Thrown if the email corresponding to the credential already exists among your users. When thrown while linking a credential to an existing user, an error.email and error.credential ([firebase.auth.AuthCredential](version /auth/auth-credential)) fields are also provided. You have to link the credential to the existing user with that email if you wish to continue signing in with that credential. To do so, call [firebase.auth.Auth#fetchProvidersForEmail](version /auth/reference#fetchprovidersforemail), sign in to error.email via one of the providers returned and then [firebase.User#linkWithCredential](#linkwithcredential) the original credential to that newly signed in user |
 | auth/operation-not-allowed  | Thrown if you have not enabled the provider in the Firebase Console. Go to the Firebase Console for your project, in the Auth section and the **Sign in Method** tab and configure the provider. |
-| auth/invalid-email  | Thrown if the email used in a [firebase.auth.EmailAuthProvider#credential](#) is invalid. |
-| auth/wrong-password  | Thrown if the password used in a [firebase.auth.EmailAuthProvider#credential](#) is not correct or when the user associated with the email does not have a password. |
-| auth/invalid-verification-code  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](#) and the verification code of the credential is not valid. |
-| auth/invalid-verification-id  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](#) and the verification ID of the credential is not valid. |
+| auth/invalid-email  | Thrown if the email used in a [firebase.auth.EmailAuthProvider#credential](version /auth/email-auth-provider) is invalid. |
+| auth/wrong-password  | Thrown if the password used in a [firebase.auth.EmailAuthProvider#credential](version /auth/email-auth-provider) is not correct or when the user associated with the email does not have a password. |
+| auth/invalid-verification-code  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](version phone-auth-provider) and the verification ID of the credential is not valid. |
 
 ### linkWithCredential
-[method]linkWithCredential(credential) returns Promise containing [UserCredential](#);[/method]
+[method]linkWithCredential(credential) returns Promise containing [UserCredential](version /auth/user-credential);[/method]
 
 Links the user account with the given credentials, and returns any available additional user information, such as user name.
 
 | Parameter |         |
 | --------- | ------- |
-| credential   | **[AuthCredential](#)** (option) <br /> The auth credential. <br /> Value must not be null. |
+| credential   | **[AuthCredential](version /auth/auth-credential)** (optional) <br /> The auth credential. <br /> Value must not be null. |
 
 #### Error Codes
 
@@ -66,13 +66,13 @@ Links the user account with the given credentials, and returns any available add
 | --------- | ------- |
 | auth/provider-already-linked  | Thrown if the provider has already been linked to the user. This error is thrown even if this is not the same provider's account that is currently linked to the user. |
 | auth/invalid-credential  | Thrown if the provider's credential is not valid. This can happen if it has already expired when calling link, or if it used invalid token(s). See the Firebase documentation for your provider, and make sure you pass in the correct parameters to the credential method. |
-| auth/credential-already-in-use  | Thrown if the account corresponding to the credential already exists among your users, or is already linked to a Firebase User. For example, this error could be thrown if you are upgrading an anonymous user to a Google user by linking a Google credential to it and the Google credential used is already associated with an existing Firebase Google user. The fields error.email, error.phoneNumber, and error.credential ([firebase.auth.AuthCredential](#)) may be provided, depending on the type of credential. You can recover from this error by signing in with error.credential directly via [firebase.auth.Auth#signInWithCredential](version /auth/reference#signinwithcredential). |
+| auth/credential-already-in-use  | Thrown if the account corresponding to the credential already exists among your users, or is already linked to a Firebase User. For example, this error could be thrown if you are upgrading an anonymous user to a Google user by linking a Google credential to it and the Google credential used is already associated with an existing Firebase Google user. The fields error.email, error.phoneNumber, and error.credential ([firebase.auth.AuthCredential](version /auth/auth-credential)) may be provided, depending on the type of credential. You can recover from this error by signing in with error.credential directly via [firebase.auth.Auth#signInWithCredential](version /auth/reference#signinwithcredential). |
 | auth/email-already-in-use  | Thrown if the email corresponding to the credential already exists among your users. When thrown while linking a credential to an existing user, an error.email and error.credential ([firebase.auth.AuthCredential](#)) fields are also provided. You have to link the credential to the existing user with that email if you wish to continue signing in with that credential. To do so, call [firebase.auth.Auth#fetchProvidersForEmail](version /auth/reference#fetchprovidersforemail), sign in to error.email via one of the providers returned and then [firebase.User#linkWithCredential](#linkwithcredential) the original credential to that newly signed in user |
 | auth/operation-not-allowed  | Thrown if you have not enabled the provider in the Firebase Console. Go to the Firebase Console for your project, in the Auth section and the **Sign in Method** tab and configure the provider. |
-| auth/invalid-email  | Thrown if the email used in a [firebase.auth.EmailAuthProvider#credential](#) is invalid. |
-| auth/wrong-password  | Thrown if the password used in a [firebase.auth.EmailAuthProvider#credential](#) is not correct or when the user associated with the email does not have a password. |
-| auth/invalid-verification-code  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](#) and the verification code of the credential is not valid. |
-| auth/invalid-verification-id  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](#) and the verification ID of the credential is not valid. |
+| auth/invalid-email  | Thrown if the email used in a [firebase.auth.EmailAuthProvider#credential](version /auth/email-auth-provider) is invalid. |
+| auth/wrong-password  | Thrown if the password used in a [firebase.auth.EmailAuthProvider#credential](version /auth/email-auth-provider) is not correct or when the user associated with the email does not have a password. |
+| auth/invalid-verification-code  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [firebase.auth.PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification ID of the credential is not valid. |
 
 ### linkWithPhoneNumber
 ### reauthenticateAndRetrieveDataWithCredential
@@ -195,7 +195,7 @@ Returns `true` if the user is anonymous.
 The URL of the user's profile picture (if available).
 
 ### providerData
-[method]providerData returns Array of [UserInfo](#);[/method]
+[method]providerData returns Array of [UserInfo](version /auth/user-info);[/method]
 
 Additional provider-specific information about the user.
 
