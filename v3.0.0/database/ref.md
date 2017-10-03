@@ -167,7 +167,7 @@ This event will be triggered when a child's sort order changes such that its pos
 | context   | **Object** (optional) <br /> If provided, this object will be used as this when calling your callback(s). |
 
 ### once
-[method]once(eventType, successCallback, failureCallbackOrContext, context) returns Promise containing any type[/method]
+[method]once(eventType, successCallback, failureCallbackOrContext, context) returns Promise containing any type;[/method]
 
 Listens for exactly one event of the specified event type, and then stops listening.
 
@@ -181,10 +181,10 @@ This is equivalent to calling [on()](#on), and then calling [off()](#off) inside
 | context   | **Object** (optional) <br /> If provided, this object will be used as this when calling your callback(s). |
 
 ### onDisconnect
-[method]onDisconnect() returns [OnDisconnect](version /database/on-disconnect)[/method]
+[method]onDisconnect() returns [OnDisconnect](version /database/on-disconnect);[/method]
 
 ### orderByChild
-[method]orderByChild(path) returns [Query](version /database/query)[/method]
+[method]orderByChild(path) returns [Query](version /database/query);[/method]
 
 Generates a new Query object ordered by the specified child key.
 
@@ -197,7 +197,7 @@ Firebase queries allow you to order your data by any child key on the fly. Howev
 | path   | **string** (optional) |
 
 ### orderByKey
-[method]orderByKey() returns [Query](version /database/query)[/method]
+[method]orderByKey() returns [Query](version /database/query);[/method]
 
 Generates a new Query object ordered by key.
 
@@ -206,14 +206,14 @@ Sorts the results of a query by their (ascending) key values.
 You can read more about orderByKey() in [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data).
 
 ### orderByPriority
-[method]orderByPriority() returns [Query](version /database/query)[/method]
+[method]orderByPriority() returns [Query](version /database/query);[/method]
 
 Generates a new Query object ordered by priority.
 
 Applications need not use priority but can order collections by ordinary properties (see [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data) for alternatives to priority).
 
 ### orderByValue
-[method]orderByValue() returns [Query](version /database/query)[/method]
+[method]orderByValue() returns [Query](version /database/query);[/method]
 
 Generates a new Query object ordered by value.
 
@@ -222,7 +222,7 @@ If the children of a query are all scalar values (string, number, or boolean), y
 You can read more about orderByValue() in [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data).
 
 ### push
-[method]push(value, onComplete) returns [Ref](version /database/ref)[/method]
+[method]push(value, onComplete) returns [Ref](version /database/ref);[/method]
 
 Generates a new child location using a unique key and returns its Reference.
 
@@ -328,7 +328,7 @@ The toString() method returns a URL that is ready to be put into a browser, curl
 Append '.json' to the returned URL when typed into a browser to download JSON-formatted data. If the location is secured (that is, not publicly readable), you will get a permission-denied error.
 
 ### transaction
-[method]transaction(transactionUpdate, onComplete, applyLocally) returns Promise containing `{committed: boolean, snapshot: nullable DataSnapshot}`[/method]
+[method]transaction(transactionUpdate, onComplete, applyLocally) returns Promise containing `{committed: boolean, snapshot: nullable DataSnapshot}`;[/method]
 
 Atomically modifies the data at this location.
 
