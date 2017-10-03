@@ -12,7 +12,7 @@ firebase.auth.EmailAuthProvider
 ## Methods
 
 ### credential
-[method]credential(email, password) returns [AuthCredentia](version /auth/auth-credential)[/method]
+[method]credential(email, password) returns [AuthCredential](version /auth/auth-credential)[/method]
 
 | Parameter |         |
 | --------- | ------- |
