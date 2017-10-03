@@ -96,6 +96,8 @@
     - type: divider
     - to: "/auth/additional-user-info"
       text: AdditionalUserInfo
+    - to: "/auth/auth-credential"
+      text: AuthCredential
     - to: "/auth/user-credential"
       text: UserCredential
   - title: Cloud Messaging
