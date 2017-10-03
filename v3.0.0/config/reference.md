@@ -6,6 +6,8 @@ firebase.config
 
 ## Methods
 
+The following methods are accessed via the Config instance firebase.config().
+
 ### logEvent
 [method]enableDeveloperMode() returns void;[/method]
 
