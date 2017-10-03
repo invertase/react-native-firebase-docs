@@ -1,17 +1,20 @@
-## Migration Guide - v2 to v3
+# Migration Guide - v2 to v3
 
 The below is a quick summary of steps to take when migrating from v2 to v3 of RNFirebase. Please see the [v3 change log](https://github.com/invertase/react-native-firebase/releases/tag/v3.0.0) for detailed changes.
 
 > Please note, we're now using `Apache License 2.0` to license this library.
 
-##### 1) Install the latest version of RNFirebase:
-> `npm i react-native-firebase@latest --save`
+## 1) Install the latest version of RNFirebase:
 
-##### 2) Upgrade react-native version (only if you're currently lower than v0.48):
+```
+npm install react-native-firebase@latest --save`
+```
+
+## 2) Upgrade react-native version (only if you're currently lower than v0.48):
 
 - Follow the instructions [here](https://facebook.github.io/react-native/docs/upgrading.html)
 
-##### 3) Update your code to reflect deprecations/breaking changes if needed:
+## 3) Update your code to reflect deprecations/breaking changes if needed:
 
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] enabling database persistence (setPersistence) via JS is no longer supported - this is to prevent several race conditions. See sub points on how to enable these natively.
   - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainActivity` `onCreate` method.
@@ -26,7 +29,7 @@ The below is a quick summary of steps to take when migrating from v2 to v3 of RN
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] on/off behaviour changes. Previous `off` behaviour was incorrect. A `SyncTree/Repo` implementation was added to provide the correct behaviour you'd expect in the web sdk. Whilst this is a breaking change it shouldn't be much of an issue if you've previously setup your on/off handling correctly. See #160 for specifics of this change.
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [storage] UploadTaskSnapshot -> `downloadUrl` renamed to `downloadURL` to match web sdk
 
-##### 4) Android - Update `android/build.gradle`:
+## 4) Android - Update `android/build.gradle`:
 
 - Check you are using google-services 3.1.0 or greater:
 - You must add `maven { url 'https://maven.google.com' }` to your `android/build.gradle` as follows:
@@ -63,11 +66,11 @@ allprojects {
 }
 ```
 
-##### 5) Android - Update `app/build.gradle`:
+## 5) Android - Update `app/build.gradle`:
 
 - You must update all your Firebase & play services dependencies to 11.4.2.
 
-##### 6) iOS - Update podfile:
+## 6) iOS - Update podfile:
 
 - You need to check that you're running at least version 4.3.0 of the Firebase Pods
   - Run `pod outdated`
