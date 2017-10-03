@@ -29,7 +29,7 @@ Returns the current token if it has not expired, otherwise this will refresh the
 | forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
 
 ### linkWithCredential
-[method]linkWithCredential(credential) returns Promise containing [UserCredential](version /auth/user-credential);[/method]
+[method]linkWithCredential(credential) returns Promise containing [User](version /auth/user);[/method]
 
 Links the user account with the given credentials, and returns any available additional user information, such as user name.
 
