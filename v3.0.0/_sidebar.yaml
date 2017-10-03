@@ -172,6 +172,16 @@
     - to: "/database/server-value"
       text: ServerValue
     - type: divider
+  - title: Firestore
+    links:
+    - to: "/firestore/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/firestore/android"
+      text: Install on Android
+      icon: android
+    - to: "/firestore/reference"
+      text: Reference
   - title: Remote Config
     links:
     - to: "/config/ios"
