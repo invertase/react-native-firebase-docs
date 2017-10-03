@@ -157,6 +157,21 @@
       icon: android
     - to: "/database/reference"
       text: Reference
+    - type: divider
+    - to: "/database/database"
+      text: Database
+    - to: "/database/data-snapshot"
+      text: DataSnapshot
+    - to: "/database/on-disconnect"
+      text: OnDisconnect
+    - to: "/database/query"
+      text: Query
+    - to: "/database/ref"
+      text: Reference
+    - type: divider
+    - to: "/database/server-value"
+      text: ServerValue
+    - type: divider
   - title: Remote Config
     links:
     - to: "/config/ios"
