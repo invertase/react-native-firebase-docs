@@ -130,14 +130,14 @@ Asynchronously signs in with the given credentials.
 
 | Code | Message |
 | --------- | ------- |
-| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [firebase.auth.Auth#fetchProvidersForEmail](#fetchprovidersforemail) and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [firebase.User#linkWithCredential](#linkwithcredential). |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [Auth#fetchProvidersForEmail](#fetchProvidersForEmail) and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [User#linkWithCredential](version /auth/user#linkWithCredential). |
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
-| auth/user-not-found  | Thrown if signing in with a credential from firebase.auth.EmailAuthProvider#credential and there is no user corresponding to the given email. |
-| auth/wrong-password  | Thrown if signing in with a credential from firebase.auth.EmailAuthProvider#credential and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
-| auth/invalid-verification-code  | Thrown if the credential is a firebase.auth.PhoneAuthProvider#credential and the verification code of the credential is not valid. |
-| auth/invalid-verification-id  | Thrown if the credential is a firebase.auth.PhoneAuthProvider#credential and the verification ID of the credential is not valid. |
+| auth/user-not-found  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider) and there is no user corresponding to the given email. |
+| auth/wrong-password  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider) and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
+| auth/invalid-verification-code  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification ID of the credential is not valid. |
 
 ### signInWithPhoneNumber
 [method]signInWithPhoneNumber(phoneNumber) returns TODO;[/method]
@@ -170,7 +170,7 @@ TODO
 
 Sends a password reset email to the given email address.
 
-To complete the password reset, call [firebase.auth.Auth#confirmPasswordReset](#confirmpasswordreset) with the code supplied in the email sent to the user, along with the new password specified by the user.
+To complete the password reset, call [Auth#confirmPasswordReset](#confirmPasswordReset) with the code supplied in the email sent to the user, along with the new password specified by the user.
 
 | Parameter |         |
 | --------- | ------- |
@@ -222,7 +222,7 @@ Applies a verification code sent to the user by email or other out-of-band mecha
 | auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
 
 ### checkActionCode
-[method]checkActionCode(code) returns Promise containing [ActionCodeInfo](#);[/method]
+[method]checkActionCode(code) returns Promise containing [ActionCodeInfo](version /auth/action-code-info);[/method]
 
 Checks a verification code sent to the user by email or other out-of-band mechanism.
 
