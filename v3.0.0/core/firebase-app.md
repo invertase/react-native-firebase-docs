@@ -3,7 +3,7 @@
 ## Methods
 
 ### extendApp
-[method]extendApp(props) returns string;[/method]
+[method]extendApp(props) returns void;[/method]
 
 Allows adding additional properties onto a firebase app instance.
 
