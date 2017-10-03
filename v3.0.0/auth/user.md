@@ -7,9 +7,9 @@ A user account.
 ### delete
 [method]delete() returns Promise containing void;[/method]
 
-Adds an observer for changes to the user's sign-in state.
+Deletes and signs out the user.
 
-Returns an unsubscriber function.
+Important: this is a security sensitive operation that requires the user to have recently signed in. If this requirement isn't met, ask the user to authenticate again and then call [User#reauthenticateWithCredential](#reauthenticateWithCredential).
 
 #### Error Codes
 
