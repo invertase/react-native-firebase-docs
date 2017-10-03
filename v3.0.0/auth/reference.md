@@ -6,6 +6,8 @@ firebase.auth
 
 ## Methods 
 
+The following methods are accessed via the Auth instance firebase.auth().
+
 ### onAuthStateChanged
 [method]onAuthStateChanged(listener) returns function containing [User](version /auth/user) or null;[/method]
 
@@ -255,6 +257,8 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 | auth/invalid-email  | Thrown if the email address is not valid. |
 
 ## Properties
+
+The following properties are accessed via the Auth instance firebase.auth().
 
 ### currentUser
 [method]currentUser returns [User](version /auth/user) or null;[/method]
