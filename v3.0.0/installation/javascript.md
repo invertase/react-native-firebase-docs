@@ -21,4 +21,4 @@ firebase.auth().signInAnonymously()
 
 ## Multiple app instances
 
-RNFirebase v3 supports multiple app instances out of the box. For information on usage, follow the [core documentation](/docs/v3/core).
+RNFirebase v3 supports multiple app instances out of the box. For information on usage, follow the [core documentation](version /core/reference).
