@@ -328,7 +328,7 @@ The toString() method returns a URL that is ready to be put into a browser, curl
 Append '.json' to the returned URL when typed into a browser to download JSON-formatted data. If the location is secured (that is, not publicly readable), you will get a permission-denied error.
 
 ### transaction
-[method]transaction(transactionUpdate, onComplete, applyLocally) returns Promise containing `{committed: boolean, snapshot: nullable [DataSnapshot](version /database/data-snapshot))}`[/method]
+[method]transaction(transactionUpdate, onComplete, applyLocally) returns Promise containing `{committed: boolean, snapshot: nullable DataSnapshot}`[/method]
 
 Atomically modifies the data at this location.
 
