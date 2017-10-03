@@ -6,6 +6,8 @@ firebase.perf
 
 ## Methods 
 
+The following methods are accessed via the Performance Monitoring instance `firebase.perf()`.
+
 ### setPerformanceCollectionEnabled
 [method]setPerformanceCollectionEnabled(enabled) returns void;[/method]
 
