@@ -194,8 +194,6 @@
       text: Firestore
     - to: "/firestore/geopoint"
       text: GeoPoint
-    - to: "/firestore/path"
-      text: Path
     - to: "/firestore/query"
       text: Query
     - to: "/firestore/query-snapshot"
