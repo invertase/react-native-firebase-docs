@@ -9,7 +9,7 @@ firebase.auth
 The following methods are accessed via the Auth instance `firebase.auth()`.
 
 ### onAuthStateChanged
-[method]onAuthStateChanged(listener) returns function containing [User](version /auth/user) or null;[/method]
+[method]onAuthStateChanged(listener) returns function;[/method]
 
 Adds an observer for changes to the user's sign-in state.
 
@@ -17,7 +17,7 @@ Returns an unsubscriber function.
 
 | Parameter |         |
 | --------- | ------- |
-| listener  | **function** |
+| listener  | **function([User](version /auth/user) or null)** |
 
 
 ### onIdTokenChanged
