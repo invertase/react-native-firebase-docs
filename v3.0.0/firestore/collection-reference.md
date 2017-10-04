@@ -46,7 +46,7 @@ Creates a new query where the results end at the provided document (inclusive). 
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | The snapshot of the document the query results should end at or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | **[DocumentSnapshot](version /firestore/document-snapshot)** <br /> The snapshot of the document the query results should end at or the field values to start this query at, in order of the query's order by. |
 
 ### endBefore
 [method]endBefore(snapshotOrVarArgs) returns [Query](version /firestore/query);[/method]
@@ -55,7 +55,7 @@ Creates a new query where the results end at the provided document (inclusive). 
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | The snapshot of the document the query results should end before or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | **[DocumentSnapshot](version /firestore/document-snapshot)** <br /> The snapshot of the document the query results should end before or the field values to start this query at, in order of the query's order by. |
 
 ### get
 [method]get() returns Promise containing [QuerySnapshot](version /firestore/query-snapshot);[/method]
@@ -102,7 +102,7 @@ Creates a new query where the results start after the provided document (exclusi
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | **[DocumentSnapshot](version /firestore/document-snapshot)** <br />The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
 
 ### startAt
 [method]startAt(snapshotOrVarArgs) returns [Query](version /firestore/query);[/method]
