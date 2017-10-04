@@ -4,6 +4,8 @@ The Firebase Firestore service interface.
 
 Do not call this constructor directly. Instead, use `firebase.firestore()`.
 
+> Please note that Persistence (offline support) is enabled by default with Firestore on iOS and Android.
+
 ## Methods
 
 ### batch
@@ -31,7 +33,7 @@ Gets a DocumentReference instance that refers to the document at the specified p
 
 ## Unsupported Methods
 
-### enablePersistence
+### enablePersistence
 
 ### runTransaction
 
