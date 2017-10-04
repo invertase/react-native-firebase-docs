@@ -59,7 +59,7 @@ dependencies {
 
 ### Update Google Play service maven reposiory
 
-Google Play services from 11.3.0 onwards require their dependencies to be downloaded from Google's Maven respository so add the required reference to the repositories section of the project level `build.gradle` (`android/build.gradle`):
+Google Play services from 11.2.0 onwards require their dependencies to be downloaded from Google's Maven respository so add the required reference to the repositories section of the project level `build.gradle` (`android/build.gradle`):
 
 ```
 allprojects {
