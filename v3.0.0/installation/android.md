@@ -15,7 +15,7 @@ buildscript {
   // ...
   dependencies {
     // ...
-    classpath 'com.google.gms:google-services:3.0.0'
+    classpath 'com.google.gms:google-services:{{ android.google.services }}'
   }
 }
 ```
@@ -51,8 +51,8 @@ dependencies {
   }
   
   // Firebase dependancies
-  compile "com.google.android.gms:play-services-base:11.0.4"
-  compile "com.google.firebase:firebase-core:11.0.4"
+  compile "com.google.android.gms:play-services-base:{{ android.firebase.version }}"
+  compile "com.google.firebase:firebase-core:{{ android.firebase.version }}"
   
   ...
 ```
