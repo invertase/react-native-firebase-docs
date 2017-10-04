@@ -2,105 +2,65 @@
   categories:
   - title: Introduction
     links:
-    - to: "/v3/getting-started"
+    - to: "/getting-started"
       text: Getting Started
-    - to: "/v3/release-notes"
-      text: Release Notes
-    - to: "/v3/migration-guide"
+    - to: "/installation-ios"
+      text: Installation iOS
+    - to: "/installation-android"
+      text: Installation Android
+    - to: "/usage"
+      text: Usage
+    - to: "/migration-guide"
       text: Migration Guide
-    - to: "/v3/faqs"
+    - to: "/faqs"
       text: FAQs
-  - title: Installation
-    links:
-    - to: "/v3/installation/initial-setup"
-      text: Initial Setup
-    - to: "/v3/installation/ios"
-      text: iOS
-    - to: "/v3/installation/android"
-      text: Android
-    - to: "/v3/installation/javascript"
-      text: JavaScript
   - title: Contributing
     links:
-    - to: "/v3/contributing"
-      text: Getting Started
-    - to: "/v3/testing"
+    - to: "/contributing/guidelines"
+      text: Guidelines
+    - to: "/contributing/testing"
       text: Testing
-  - title: Guides
-    links:
-    - to: "/v3/guides/abc"
-      text: Guide 1
-    - to: "/v3/guides/abc2"
-      text: Guide 2
-      
+
 - title: Modules
   categories:
   - title: Admob
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/ios"
-      text: Install on iOS
-      icon: apple
-    - to: "/v3/admob/android"
-      text: Install on Android
-      icon: android
+    - to: "/admob"
+      text: Documentation
   - title: Analytics
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/analytics"
+      text: Documentation
   - title: Authentication
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/authentication"
+      text: Documentation
   - title: Cloud Messaging
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
-  - title: Core
-    links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/messaging"
+      text: Documentation
   - title: Crash Reporting
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/crash"
+      text: Documentation
   - title: Database
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/database"
+      text: Documentation
   - title: Remote Config
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/config"
+      text: Documentation
   - title: Storage
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/Storage"
+      text: Documentation
   - title: Performance Monitoring
     links:
-    - to: "/v3/admob/reference"
-      text: Reference
-    - to: "/v3/admob/banner"
-      text: Banner
+    - to: "/perf"
+      text: Documentation
       
-- title: "Explore"
+- title: "Other"
   categories:
   - title: Library
     links:

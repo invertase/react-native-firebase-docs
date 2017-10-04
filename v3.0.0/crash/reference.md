@@ -6,6 +6,8 @@ firebase.crash
 
 ## Methods 
 
+The following methods are accessed via the Crash instance `firebase.crash()`.
+
 ### setCrashCollectionEnabled
 [method]setCrashCollectionEnabled(enabled) returns void;[/method]
 

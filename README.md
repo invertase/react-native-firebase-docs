@@ -1,2 +1,3 @@
-# foobar
-Nothing important... Playing about
+# React Native Firebase Docs
+
+This repoistory contains the documentation for the [RNFirebase documenatation](#).

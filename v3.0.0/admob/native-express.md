@@ -26,19 +26,19 @@ Requests and shows the banner at a certain size.
 
 ### request
 
-An instance of [AdRequest.build](version /admob/adrequest) to load with the Banner.
+An instance of [AdRequest.build](version /admob/ad-request) to load with the Banner.
 
 | Type | Default |
 | --------- | ------- |
-| [AdRequest.build](version /admob/adrequest)   | `new AdRequest().addTestDevice().build()`  |
+| [AdRequest.build](version /admob/ad-request)   | `new AdRequest().addTestDevice().build()`  |
 
 ### video
 
-An instance of [VideoOptions.build](version /admob/videooptions) to load with the Native Express banner.
+An instance of [VideoOptions.build](version /admob/video-options) to load with the Native Express banner.
 
 | Type | Default |
 | --------- | ------- |
-| [VideoOptions.build](version /admob/videooptions)   | `new VideoOptions().build()`  |
+| [VideoOptions.build](version /admob/video-options)   | `new VideoOptions().build()`  |
 
 ### onAdLoaded
 
@@ -83,6 +83,38 @@ Called when an ad request failed. See [Error Handling](version /admob/error-hand
 ### onVideoEnd
 
 Called if the advert video has ended (only called if the advert has a video).
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoMute
+
+Called when the video changes mute state. Returns an Object containing `{ isMuted: boolean }`.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoPause
+
+Called when video playback is paused.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoPlay
+
+Called when video playback is playing.
+
+| Type | Default |
+| --------- | ------- |
+| **function**  |  |
+
+### onVideoStart
+
+Called when video playback first begins.
 
 | Type | Default |
 | --------- | ------- |

@@ -26,11 +26,11 @@ Requests and shows the banner at a certain size.
 
 ### request
 
-An instance of [AdRequest.build](version /admob/adrequest) to load with the Banner.
+An instance of [AdRequest.build](version /admob/ad-request) to load with the Banner.
 
 | Type | Default |
 | --------- | ------- |
-| [AdRequest.build](version /admob/adrequest)   | `new AdRequest().addTestDevice().build()`  |
+| [AdRequest.build](version /admob/ad-request)   | `new AdRequest().addTestDevice().build()`  |
 
 ### onAdLoaded
 

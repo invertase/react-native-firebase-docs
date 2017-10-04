@@ -2,7 +2,7 @@
 
 React Native Firebase (RNFirebase) is a well tested feature rich library which enables you to use the native Firebase iOS & Android SDKs in your React Native environment through an intuitive JavaScript API, which matches the Firebase web SDK where possible. 
  
-To get started, [follow our installation guide](/docs/v3/installation/initial-setup).
+To get started, [follow our installation guide](version /installation/initial-setup).
 
 ## RNFirebase vs Firebase web SDK
 

@@ -4,7 +4,11 @@
 firebase.perf
 ```
 
+Firebase Performance Monitoring captures a number of traces automatically, such as all outbound HTTP requests, app boot time and more.
+
 ## Methods 
+
+The following methods are accessed via the Performance Monitoring instance `firebase.perf()`.
 
 ### setPerformanceCollectionEnabled
 [method]setPerformanceCollectionEnabled(enabled) returns void;[/method]

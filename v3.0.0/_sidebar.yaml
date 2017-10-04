@@ -56,12 +56,11 @@
       text: Interstitial
     - to: "/admob/rewarded-video"
       text: Rewarded Video
-    - to: "/admob/ad-request"
     - type: divider
     - to: "/admob/ad-request"
-      text: Ad Request
+      text: AdRequest
     - to: "/admob/video-options"
-      text: Video Options
+      text: VideoOptions
     - type: divider
     - to: "/admob/error-handling"
       text: Error Handling
@@ -77,6 +76,9 @@
       icon: android
     - to: "/analytics/reference"
       text: Reference
+    - type: divider
+    - to: "/analytics/reserved-events"
+      text: Reserved Events
   - title: Authentication
     links:
     - to: "/auth/ios"
@@ -87,6 +89,34 @@
       icon: android
     - to: "/auth/reference"
       text: Reference
+    - type: divider
+    - to: "/auth/user"
+      text: User
+    - type: divider
+    - to: "/auth/action-code-info"
+      text: ActionCodeInfo
+    - to: "/auth/additional-user-info"
+      text: AdditionalUserInfo
+    - to: "/auth/user-info"
+      text: UserInfo
+    - type: divider
+    - to: "/auth/auth-credential"
+      text: AuthCredential
+    - to: "/auth/user-credential"
+      text: UserCredential
+    - type: divider
+    - to: "/auth/email-auth-provider"
+      text: EmailAuthProvider
+    - to: "/auth/facebook-auth-provider"
+      text: FacebookAuthProvider
+    - to: "/auth/github-auth-provider"
+      text: GithubAuthProvider
+    - to: "/auth/google-auth-provider"
+      text: GoogleAuthProvider
+    - to: "/auth/phone-auth-provider"
+      text: PhoneAuthProvider
+    - to: "/auth/twitter-auth-provider"
+      text: TwitterAuthProvider
   - title: Cloud Messaging
     links:
     - to: "/messaging/ios"
@@ -101,6 +131,9 @@
     links:
     - to: "/core/reference"
       text: Reference
+    - type: divider
+    - to: "/core/firebase-app"
+      text: FirebaseApp
   - title: Crash Reporting
     links:
     - to: "/crash/ios"
@@ -123,6 +156,53 @@
       icon: android
     - to: "/database/reference"
       text: Reference
+    - type: divider
+    - to: "/database/database"
+      text: Database
+    - to: "/database/data-snapshot"
+      text: DataSnapshot
+    - to: "/database/on-disconnect"
+      text: OnDisconnect
+    - to: "/database/query"
+      text: Query
+    - to: "/database/ref"
+      text: Ref
+    - type: divider
+    - to: "/database/server-value"
+      text: ServerValue
+    - type: divider
+  - title: Firestore
+    links:
+    - to: "/firestore/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/firestore/android"
+      text: Install on Android
+      icon: android
+    - to: "/firestore/reference"
+      text: Reference
+    - type: divider
+    - to: "/firestore/collection-reference"
+      text: CollectionReference
+    - to: "/firestore/document-reference"
+      text: DocumentReference
+    - to: "/firestore/document-snapshot"
+      text: DocumentSnapshot
+    - to: "/firestore/document-change"
+      text: DocumentChange
+    - to: "/firestore/firestore"
+      text: Firestore
+    - to: "/firestore/geopoint"
+      text: GeoPoint
+    - to: "/firestore/query"
+      text: Query
+    - to: "/firestore/query-snapshot"
+      text: QuerySnapshot
+    - to: "/firestore/write-batch"
+      text: WriteBatch
+    - type: divider
+    - to: "/firestore/field-value"
+      text: FieldValue
   - title: Remote Config
     links:
     - to: "/config/ios"
@@ -147,13 +227,13 @@
       text: Reference
   - title: Performance Monitoring
     links:
-    - to: "/perf/ios"
+    - to: "/perf-mon/ios"
       text: Install on iOS
       icon: apple
-    - to: "/perf/android"
+    - to: "/perf-mon/android"
       text: Install on Android
       icon: android
-    - to: "/perf/reference"
+    - to: "/perf-mon/reference"
       text: Reference
 - title: "Explore"
   categories:

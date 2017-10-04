@@ -6,6 +6,8 @@ firebase.analytics
 
 ## Methods
 
+The following methods are accessed via the Analytics instance `firebase.analytics()`.
+
 ### logEvent
 [method]logEvent(event, params) returns void;[/method]
 
