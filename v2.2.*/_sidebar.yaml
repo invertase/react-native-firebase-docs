@@ -14,7 +14,7 @@
       text: Migration Guide
     - to: "/faqs"
       text: FAQs
-   - title: Contributing
+  - title: Contributing
     links:
     - to: "/contributing/guidelines"
       text: Guidelines
