@@ -124,7 +124,7 @@ Asynchronously signs in with the given credentials.
 
 | Parameter |         |
 | --------- | ------- |
-| credential     | **[Credential](version /auth/credentials)**  |
+| credential     | **Credential** <br /> A credential returned from a provider. |
 
 #### Error Codes
 
