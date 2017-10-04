@@ -84,5 +84,4 @@ public class MainApplication extends Application implements ReactApplication {
 
 ### Install modules
 
-TODO
-
+The `RNFirebasePackage` only provides your application with access to [Core](version /core/reference) features. Check out the installation guides on the other modules for how to use other Firebase features.
