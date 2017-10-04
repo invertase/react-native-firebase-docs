@@ -134,10 +134,10 @@ Asynchronously signs in with the given credentials.
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
-| auth/user-not-found  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider) and there is no user corresponding to the given email. |
-| auth/wrong-password  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider) and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
-| auth/invalid-verification-code  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification code of the credential is not valid. |
-| auth/invalid-verification-id  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider) and the verification ID of the credential is not valid. |
+| auth/user-not-found  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider#credential) and there is no user corresponding to the given email. |
+| auth/wrong-password  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider#credential) and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
+| auth/invalid-verification-code  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification ID of the credential is not valid. |
 
 ### signInWithPhoneNumber
 [method]signInWithPhoneNumber(phoneNumber) returns TODO;[/method]
