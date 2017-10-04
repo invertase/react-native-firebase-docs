@@ -47,6 +47,8 @@
     links:
     - to: "/database"
       text: Documentation
+    - to: "/transactions"
+      text: Transactions
   - title: Remote Config
     links:
     - to: "/config"
