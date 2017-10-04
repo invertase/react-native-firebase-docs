@@ -181,6 +181,30 @@
       icon: android
     - to: "/firestore/reference"
       text: Reference
+    - type: divider
+    - to: "/firestore/collection-reference"
+      text: CollectionReference
+    - to: "/firestore/document-reference"
+      text: DocumentReference
+    - to: "/firestore/document-snapshot"
+      text: DocumentSnapshot
+    - to: "/firestore/document-change"
+      text: DocumentChange
+    - to: "/firestore/firestore"
+      text: Firestore
+    - to: "/firestore/geopoint"
+      text: GeoPoint
+    - to: "/firestore/path"
+      text: Path
+    - to: "/firestore/query"
+      text: Query
+    - to: "/firestore/query-snapshot"
+      text: QuerySnapshot
+    - to: "/firestore/write-batch"
+      text: WriteBatch
+    - type: divider
+    - to: "/firestore/field-value"
+      text: FieldValue
   - title: Remote Config
     links:
     - to: "/config/ios"
