@@ -45,10 +45,6 @@ firebase.firestore() can be called with no arguments to access the default app's
 
 [GeoPoint](version /firestore/geopoint)
 
-### Path
-
-[Path](version /firestore/path)
-
 ### Query
 
 [Path](version /firestore/query)
