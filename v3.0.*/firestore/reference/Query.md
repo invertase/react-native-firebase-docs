@@ -11,7 +11,7 @@ The Firestore for the Cloud Firestore database (useful for performing transactio
 
 ## Methods
 
-### endAt
+### endAt
 [method]endAt(snapshotOrVarArgs) returns [ref firestore.Query];[/method]
 
 Creates a new query where the results end at the provided document (inclusive). The end position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
@@ -20,7 +20,7 @@ Creates a new query where the results end at the provided document (inclusive). 
 | --------- | ------- |
 | snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document the query results should end at or the field values to start this query at, in order of the query's order by. |
 
-### endBefore
+### endBefore
 [method]endBefore(snapshotOrVarArgs) returns [ref firestore.Query];[/method]
 
 Creates a new query where the results end at the provided document (inclusive). The end position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
@@ -29,12 +29,12 @@ Creates a new query where the results end at the provided document (inclusive). 
 | --------- | ------- |
 | snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document the query results should end before or the field values to start this query at, in order of the query's order by. |
 
-### get
+### get
 [method]get() returns Promise containing [QuerySnapshot](version /firestore/query-snapshot);[/method]
 
 Executes the query and returns the results as a QuerySnapshot.
 
-### limit
+### limit
 [method]limit(limit) returns [ref firestore.Query];[/method]
 
 Creates a new query where the results are limited to the specified number of documents.
@@ -43,7 +43,7 @@ Creates a new query where the results are limited to the specified number of doc
 | --------- | ------- |
 | limit  | **number** <br /> The maximum number of items to return. |
 
-### onSnapshot
+### onSnapshot
 [method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError, onCompletion) returns void;[/method]
 
 Attaches a listener for QuerySnapshot events. You may either pass individual onNext and onError callbacks or pass a single observer object with next and error callbacks.
@@ -57,7 +57,7 @@ NOTE: Although an onCompletion callback can be provided, it will never be called
 | onError  | (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 | onCompletion  | Value must not be null. |
 
-### orderBy
+### orderBy
 [method]orderBy(fieldPath, directionStr) returns [ref firestore.Query];[/method]
 
 Creates a new query where the results are sorted by the specified field, in descendin or ascending order.
@@ -67,7 +67,7 @@ Creates a new query where the results are sorted by the specified field, in desc
 | fieldPath  | **string** <br /> The field to sort by. |
 | directionStr  | **string** (optional) <br /> Optional direction to sort by (asc or desc). If not specified, the default order is ascending. |
 
-### startAfter
+### startAfter
 [method]startAfter(snapshotOrVarArgs) returns [ref firestore.Query];[/method]
 
 Creates a new query where the results start after the provided document (exclusive). The starting position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
@@ -76,7 +76,7 @@ Creates a new query where the results start after the provided document (exclusi
 | --------- | ------- |
 | snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
 
-### startAt
+### startAt
 [method]startAt(snapshotOrVarArgs) returns [ref firestore.Query];[/method]
 
 Creates a new query where the results start at the provided document (inclusive). The starting position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of the query.
@@ -85,7 +85,7 @@ Creates a new query where the results start at the provided document (inclusive)
 | --------- | ------- |
 | snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
 
-### where
+### where
 [method]where(fieldPath, opStr, value) returns [ref firestore.Query];[/method]
 
 Creates a new query that returns only documents that include the specified fields and where the values satisfy the constraints provided.
