@@ -30,7 +30,7 @@ An instance of [ref admob.AdRequest#build] to load with the Banner.
 
 | Type | Default |
 | --------- | ------- |
-| [AdRequest.build](version /admob/ad-request)   | `new AdRequest().addTestDevice().build()`  |
+| [ref admob.AdRequest#build]  | `new AdRequest().addTestDevice().build()`  |
 
 ### onAdLoaded
 
