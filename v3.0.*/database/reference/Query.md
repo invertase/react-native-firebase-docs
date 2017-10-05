@@ -8,14 +8,14 @@ Read our documentation on [Sorting and filtering data](https://firebase.google.c
 
 ## Properties
 
-### ref
+### ref
 [method]ref returns non-null [ref database.Reference];[/method]
 
 Returns a Reference to the Query's location.
 
 ## Methods
 
-### endAt
+### endAt
 [method]endAt(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified ending point.
@@ -31,12 +31,12 @@ You can read more about endAt() in [Filtering data](https://firebase.google.com/
 | value  | **string** or **number** or **boolean** or **null** <br /> The value to end at. The argument type depends on which orderBy*() function was used in this query. Specify a value that matches the orderBy*() type. When used in combination with orderByKey(), the value must be a string. |
 | key  | **string** (optional) <br /> The child key to end at, among the children with the previously specified priority. This argument is only allowed if ordering by child, value, or priority. |
 
-### equalTo
-[method]equalTo(value, key) returns [ref database.Query]`;[/method]
+### equalTo
+[method]equalTo(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified ending point.
 
-Using startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
 
 The ending point is inclusive, so children with exactly the specified value will be included in the query. The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have a key name less than or equal to the specified key.
 
