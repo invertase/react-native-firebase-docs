@@ -84,36 +84,21 @@
     - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/reference"
-      text: Reference
-    - type: divider
-    - to: "/user"
-      text: User
-    - type: divider
-    - to: "/action-code-info"
-      text: ActionCodeInfo
-    - to: "/additional-user-info"
-      text: AdditionalUserInfo
-    - to: "/auth/user-info"
-      text: UserInfo
-    - type: divider
-    - to: "/auth/auth-credential"
-      text: AuthCredential
-    - to: "/auth/user-credential"
-      text: UserCredential
-    - type: divider
-    - to: "/auth/email-auth-provider"
-      text: EmailAuthProvider
-    - to: "/auth/facebook-auth-provider"
-      text: FacebookAuthProvider
-    - to: "/auth/github-auth-provider"
-      text: GithubAuthProvider
-    - to: "/auth/google-auth-provider"
-      text: GoogleAuthProvider
-    - to: "/auth/phone-auth-provider"
-      text: PhoneAuthProvider
-    - to: "/auth/twitter-auth-provider"
-      text: TwitterAuthProvider
+    - type: reference
+      files:
+      - auth
+      - ActionCodeInfo
+      - AdditionalUserInfo
+      - AuthCredential
+      - EmailAuthProvider
+      - FacebookAuthProvider
+      - GithubAuthProvider
+      - GoogleAuthProvider
+      - PhoneAuthProvider
+      - TwitterAuthProvider
+      - User
+      - UserCredential
+      - UserInfo
   - title: Cloud Messaging
     path: messaging
     links:
