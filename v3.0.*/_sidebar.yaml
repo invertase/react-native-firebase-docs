@@ -69,7 +69,6 @@
     - to: "/android"
       text: Install on Android
       icon: android
-    - type: divider
     - to: "/reserved-events"
       text: Reserved Events
     - type: divider
