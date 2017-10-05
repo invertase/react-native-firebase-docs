@@ -10,7 +10,7 @@ import firebase from 'react-native-firebase';
 
 As the default app is pre-initialized natively there is no need to call initializeApp for the default app instance. Just import and go:
 
-```
+```javascript
 import firebase from 'react-native-firebase';
 
 firebase.auth().signInAnonymously()

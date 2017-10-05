@@ -26,7 +26,7 @@ B) Within the `didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` meth
 [FIRApp configure];
 ```
 
-## 3. Setup RNFirebase
+## 3. Setup RNFirebase
 
 TODO
 

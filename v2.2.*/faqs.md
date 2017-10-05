@@ -1,8 +1,23 @@
-# Frequently Asked Questions
+# FAQs / Troubleshooting
 
 ## Usage with Expo
 
-TODO
+If you use Expo and would like to use this package, you'll need to eject. If you do not want to eject, but wish to make use of features
+such as Realtime Database (without offline support) & Authentication, you can still use the Firebase Web SDK in your project. 
+
+For features such a Crash Reporting, Push Notifications (via Firebase not Expo), Performance Monitoring, AdMob, Analytics, Storage & Remote Config, you will have to eject your Expo project as these require the native SDKs, as the Web SDK does not support these.
+
+You can see an indepth conversation [here](https://expo.canny.io/feature-requests/p/full-native-firebase-integration).
+
+## Comparison to Firestack
+
+Firestack was a great start to integrating Firebase and React Native, however has underlying issues which needed to be fixed.
+A V3 fork of Firestack was created to help address issues such as lack of standardisation with the Firebase Web SDK,
+and missing core features (crash reporting, transactions etc). The volume of pull requests with fixes/features soon became
+too large to manage on the existing repository, whilst trying to maintain backwards compatibility.
+
+RNFirebase was re-written from the ground up, addressing these issues with core focus being around matching the Web SDK as
+closely as possible and fixing the major bugs/issues along the way.
 
 ## [Android] Google Play Services related issues
 

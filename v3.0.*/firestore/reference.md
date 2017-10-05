@@ -19,10 +19,6 @@ firebase.firestore() can be called with no arguments to access the default app's
 
 ### CollectionReference
 
-[WriteBatch](version /firestore/collection-reference)
-
-### CollectionReference
-
 [CollectionReference](version /firestore/collection-reference)
 
 ### DocumentReference

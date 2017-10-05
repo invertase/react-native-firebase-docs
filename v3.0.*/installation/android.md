@@ -10,19 +10,19 @@ Once downloaded, place this file in the root of your project at `android/app/goo
 
 In order for Android to parse this file, add the google-services gradle plugin as a dependency to your project in the *project* level `build.gradle` file:
 
-```java
+```groovy
 buildscript {
   // ...
   dependencies {
     // ...
-    classpath 'com.google.gms:google-services:3.0.0'
+    classpath 'com.google.gms:google-services:{{ android.google.services }}'
   }
 }
 ```
 
 To apply the plugin to your project, add the following to the **VERY BOTTOM** of your app `android/app/build.gradle` file:
 
-```java
+```groovy
 apply plugin: 'com.google.gms.google-services'
 ```
 
@@ -51,10 +51,33 @@ dependencies {
   }
   
   // Firebase dependancies
-  compile "com.google.android.gms:play-services-base:11.0.4"
-  compile "com.google.firebase:firebase-core:11.0.4"
+  compile "com.google.android.gms:play-services-base:{{ android.firebase.version }}"
+  compile "com.google.firebase:firebase-core:{{ android.firebase.version }}"
   
   ...
+```
+
+### Update Google Play service maven reposiory
+
+Google Play services from 11.2.0 onwards require their dependencies to be downloaded from Google's Maven respository so add the required reference to the repositories section of the project level `build.gradle` (`android/build.gradle`):
+
+```groovy
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        // -------------------------------------------------
+        // Add this below the existing maven property above
+        // -------------------------------------------------
+        maven {
+            url 'https://maven.google.com'
+        }
+    }
+}
 ```
 
 ### Add RNFirebase as a React Native module
@@ -82,6 +105,6 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 
-### Install modules
+## 3. Install modules
 
 The `RNFirebasePackage` only provides your application with access to [Core](version /core/reference) features. Check out the installation guides on the other modules for how to use other Firebase features.
