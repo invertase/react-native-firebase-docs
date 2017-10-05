@@ -24,14 +24,14 @@ True if there are no documents in the QuerySnapshot.
 
 The query you called get or onSnapshot on to get the QuerySnapshot.
 
-### size
+### size
 [method]size returns number;[/method]
 
 The number of documents in the QuerySnapshot.
 
 ## Methods
 
-### forEach
+### forEach
 [method]forEach(callback) returns void;[/method]
 
 Enumerates all of the documents in the QuerySnapshot.
