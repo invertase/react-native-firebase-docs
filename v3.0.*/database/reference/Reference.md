@@ -10,7 +10,7 @@ Writing is done with the set() method and reading can be done with the on() meth
 
 ## Properties
 
-### key
+### key
 [method]key returns string or null;[/method]
 
 The last part of the `Reference`'s path.
