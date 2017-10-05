@@ -5,56 +5,56 @@ firebase.firestore
 ```
 
 ### firestore
-[method]firestore(app) returns [Firestore](version /firestore/firestore)[/method]
+[method]firestore(app) returns [ref firestore.Firestore];[/method]
 
-Gets the [Firestore](version /firestore/firestore) service for the default app or a given app.
+Gets the [ref firestore.Firestore] service for the default app or a given app.
 
 firebase.firestore() can be called with no arguments to access the default app's Firestore service or as firebase.firestore(app) to access the Firestore service associated with a specific app.
 
 | Parameter |         |
 | --------- | ------- |
-| app  | **[FirebaseApp](version /core/firebase-app)** (optional) <br /> Optional app whose Firestore service to return. If not provided, the default Firestore service will be returned. <br /> Value must not be null. |
+| app  | **[ref core.FirebaseApp]** (optional) <br /> Optional app whose Firestore service to return. If not provided, the default Firestore service will be returned. <br /> Value must not be null. |
 
 ## Interfaces
 
 ### CollectionReference
 
-[CollectionReference](version /firestore/collection-reference)
+[ref firestore.CollectionReference]
 
 ### DocumentReference
 
-[DocumentReference](version /firestore/document-reference)
+[ref firestore.DocumentReference]
 
 ### DocumentSnapshot
 
-[DocumentSnapshot](version /firestore/document-snapshot)
+[ref firestore.DocumentSnapshot]
 
 ### DocumentChange
 
-[DocumentChange](version /firestore/document-change)
+[ref firestore.DocumentChange]
 
 ### Firestore
 
-[Firestore](version /firestore/firestore)
+[ref firestore.Firestore]
 
 ### GeoPoint
 
-[GeoPoint](version /firestore/geopoint)
+[ref firestore.GeoPoint]
 
 ### Query
 
-[Path](version /firestore/query)
+[ref firestore.Query]
 
 ### QuerySnapshot
 
-[Path](version /firestore/QuerySnapshot)
+[ref firestore.QuerySnapshot]
 
 ### WriteBatch
 
-[WriteBatch](version /firestore/write-batch)
+[ref firestore.WriteBatch]
 
 ## Statics
 
-### FieldValue
+### FieldValue
 
-[FieldValue](version /firestore/field-value)
+[ref firestore.FieldValue]
