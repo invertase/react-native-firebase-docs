@@ -103,10 +103,10 @@
   - title: Cloud Messaging
     path: messaging
     links:
-    - to: "/messaging/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/messaging/android"
+    - to: "/android"
       text: Install on Android
       icon: android
     - type: divider  
@@ -116,9 +116,9 @@
   - title: Core
     path: core
     links:
-    - to: "/core/default-app"
+    - to: "/default-app"
       text: Default App
-    - to: "/core/initialize-apps"
+    - to: "/initialize-apps"
       text: Initializing Apps
     - type: divider  
     - type: reference
@@ -128,42 +128,37 @@
   - title: Crash Reporting
     path: crash
     links:
-    - to: "/crash/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/crash/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/crash/reference"
-      text: Reference
-    - to: "/crash/manual-reporting"
+    - to: "/manual-reporting"
       text: Manual Reporting
+    - type: divider  
+    - type: reference
+      files:
+      - crash 
   - title: Database
     path: database
     links:
-    - to: "/database/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/database/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/database/reference"
-      text: Reference
-    - type: divider
-    - to: "/database/database"
-      text: Database
-    - to: "/database/data-snapshot"
-      text: DataSnapshot
-    - to: "/database/on-disconnect"
-      text: OnDisconnect
-    - to: "/database/query"
-      text: Query
-    - to: "/database/ref"
-      text: Ref
-    - type: divider
-    - to: "/database/server-value"
-      text: ServerValue
-    - type: divider
+    - type: divider  
+    - type: reference
+      files:
+      - database
+      - DataSnapshot
+      - Database
+      - OnDisconnect
+      - Query
+      - Reference
+      - ServerValue
   - title: Firestore
     path: firestore
     links:
