@@ -1,10 +1,10 @@
-## Initializing Apps
+# Initializing Apps
 
 !> The **default** firebase app instance can **not** be initialized via JS, please setup your google services plist/json files in your android studio / xcode projects. See [Default App](/core/default-app) for more information.
 
 App initialization in RNFirebase is for the most part the same as the web sdk, with only a few minor differences.
 
-### Supported Modules
+# Supported Modules
 
 Only 4 modules on the official firebase native SDK's support multiple apps, they are as follows:
 
@@ -13,9 +13,9 @@ Only 4 modules on the official firebase native SDK's support multiple apps, they
  - Firestore
  - Storage
 
-### Initialize via JavaScript
+# Initialize via JavaScript
 
-#### Cross Platform Example
+## Cross Platform Example
 
 ```javascript
 import { Platform } from 'react-native';
@@ -70,7 +70,7 @@ kittensApp.onReady().then((app) => {
 });
 ```
 
-### Initialize via Android/iOS native code
+# Initialize via Android/iOS native code
 
 If you're familiar with native code you can create apps natively also (or if you are already initializing additional apps natively on app boot) - these apps automatically become available for use inside RNFirebase.
 
@@ -87,7 +87,7 @@ dogsApp.auth().signInAnonymously().then((user) => {
 ```
 
 
-### Deleting an app instance
+# Deleting an app instance
 
 Currently it's not possible to provide cross platform 'delete app' functionality as the Firebase Android SDK is missing the app delete method, this has been flagged with firebase ([firebase/firebase-ios-sdk#140 (comment)](https://github.com/firebase/firebase-ios-sdk/issues/140#issuecomment-315953708)).
 

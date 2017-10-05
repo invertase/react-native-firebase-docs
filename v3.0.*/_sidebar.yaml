@@ -109,8 +109,10 @@
     - to: "/messaging/android"
       text: Install on Android
       icon: android
-    - to: "/messaging/reference"
-      text: Reference
+    - type: divider  
+    - type: reference
+      files:
+      - messaging
   - title: Core
     path: core
     links:
@@ -118,12 +120,11 @@
       text: Default App
     - to: "/core/initialize-apps"
       text: Initializing Apps
-    - type: divider
-    - to: "/core/reference"
-      text: Reference
-    - type: divider
-    - to: "/core/firebase-app"
-      text: FirebaseApp
+    - type: divider  
+    - type: reference
+      files:
+      - core 
+      - FirebaseApp
   - title: Crash Reporting
     path: crash
     links:
