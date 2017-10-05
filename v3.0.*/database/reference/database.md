@@ -3,10 +3,10 @@
 ```		
 firebase.database		
 ```		
- 		
+
 ### database		
 [method]database(app) returns [ref databbase.Database];[/method]		
- 		
+
 Gets the [ref databbase.Database] service for the default app or a given app.		
  		
 firebase.database() can be called with no arguments to access the default app's Database service or as firebase.database(app) to access the Database service associated with a specific app.		
