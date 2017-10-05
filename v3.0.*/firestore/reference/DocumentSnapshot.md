@@ -19,7 +19,7 @@ Property of the DocumentSnapshot that provides the document's ID.
 
 The DocumentReference for the document included in the DocumentSnapshot.
 
-## Methods
+## Methods
 
 ### data
 [method]data() returns Object;[/method]
