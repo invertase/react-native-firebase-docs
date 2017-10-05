@@ -16,7 +16,7 @@ If no AdRequest is sent, the default request calls addTestDevice. Therefore, ens
 Builds the current ad request for AdMob to handle.
 
 ### addTestDevice
-[method]addTestDevice(device) returns this;[/method]
+[method]addTestDevice(device) returns [ref admob.AdRequest];[/method]
 
 Sets a device ID as a test device. If no device string is passed, a default emulator id is passed.
 
@@ -25,7 +25,7 @@ Sets a device ID as a test device. If no device string is passed, a default emul
 | device   | **string** (optional) <br /> Device ID. <br /> If null, a default emulator id is passed.  |
 
 ### addKeyword
-[method]addKeyword(keyword) returns this;[/method]
+[method]addKeyword(keyword) returns [ref admob.AdRequest];[/method]
 
 Add a new keyword to relate the advert to.
 
@@ -34,7 +34,7 @@ Add a new keyword to relate the advert to.
 | keyword   | **string**  |
 
 ### setGender
-[method]setGender(gender) returns this;[/method]
+[method]setGender(gender) returns [ref admob.AdRequest];[/method]
 
 Sets the user's gender for targeting purposes.
 
@@ -43,7 +43,7 @@ Sets the user's gender for targeting purposes.
 | gender   | **string** <br /> One of `male`, `female`, `unknown` |
 
 ### setRequestAgent
-[method]setRequestAgent(requestAgent) returns this;[/method]
+[method]setRequestAgent(requestAgent) returns [ref admob.AdRequest];[/method]
 
 Sets the request agent string to identify the ad request's origin. Third party libraries that reference the Mobile Ads SDK should call this method to denote the platform from which the ad request originated. For example, if a third party ad network called "CoolAds network" mediates requests to the Mobile Ads SDK, it should call this method with "CoolAds"
 
@@ -52,7 +52,7 @@ Sets the request agent string to identify the ad request's origin. Third party l
 | requestAgent   | **string** |
 
 ### setContentUrl
-[method]setContentUrl(url) returns this;[/method]
+[method]setContentUrl(url) returns [ref admob.AdRequest];[/method]
 
 Sets the content URL for targeting purposes.
 
@@ -61,7 +61,7 @@ Sets the content URL for targeting purposes.
 | url   | **string** |
 
 ### tagForChildDirectedTreatment
-[method]tagForChildDirectedTreatment(forChildren) returns this;[/method]
+[method]tagForChildDirectedTreatment(forChildren) returns [ref admob.AdRequest];[/method]
 
 Sets whether the request will be shown to children.
 
