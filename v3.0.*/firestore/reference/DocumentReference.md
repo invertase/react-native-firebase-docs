@@ -9,19 +9,19 @@ A DocumentReference refers to a document location in a Firestore database and ca
 
 The Firestore the document is in. This is useful for performing transactions, for example.
 
-### id
+### id
 [method]id returns string;[/method]
 
 The document's identifier within its collection.
 
-### parent
+### parent
 [method]parent returns nullable [ref firestore.DocumentReference];[/method]
 
 The Collection this DocumentReference belongs to.
 
 ## Methods
 
-### collection
+### collection
 [method]collection(collectionPath) returns [ref firestore.CollectionReference];[/method]
 
 Gets a CollectionReference instance that refers to the collection at the specified path.
@@ -37,14 +37,14 @@ Deletes the document referred to by this DocumentReference.
 
 Returns a promise that resolves once the document has been successfully deleted from the backend (Note that it won't resolve while you're offline).
 
-### get
+### get
 [method]get() returns Promise containing [ref firestore.DocumentSnapshot];[/method]
 
 Reads the document referred to by this DocumentReference.
 
 Note: get() attempts to provide up-to-date data when possible by waiting for data from the server, but it may return cached data or fail if you are offline and the server cannot be reached.
 
-### onSnapshot
+### onSnapshot
 [method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError) returns void;[/method]
 
 Attaches a listener for DocumentSnapshot events. You may either pass individual onNext and onError callbacks or pass a single observer object with next and error callbacks.
@@ -55,7 +55,7 @@ Attaches a listener for DocumentSnapshot events. You may either pass individual 
 | observerOrOnNextOrOnError  | **Object** or **function([ref firestore.DocumentSnapshot]) ** or  **function(Error)** <br /> If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
 | onError  | **function(Error)** (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 
-### set
+### set
 [method]set(data, options) returns Promise containing void;[/method]
 
 Writes to the document referred to by this DocumentReference. If the document does not exist yet, it will be created. If you pass options, the provided data can be merged into the existing document.
