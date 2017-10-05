@@ -128,6 +128,10 @@
   - title: Core
     path: core
     links:
+    - to: "/core/default-app"
+      text: Default App
+    - to: "/core/initialize-app"
+      text: Initializing Apps
     - to: "/core/reference"
       text: Reference
     - type: divider
