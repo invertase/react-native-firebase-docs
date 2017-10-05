@@ -12,7 +12,7 @@ firebase.auth.GoogleAuthProvider
 ## Methods
 
 ### credential
-[method]credential(idToken, accessToken) returns [AuthCredential](version /auth/auth-credential)[/method]
+[method]credential(idToken, accessToken) returns [ref auth.AuthCredential];[/method]
 
 Creates a credential for Google. At least one of ID token and access token is required.
 
