@@ -38,68 +38,55 @@
 - title: Modules
   categories:
   - title: Admob
+    path: admob
     links:
+    - to: "/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/android"
+      text: Install on Android
+      icon: android
+    - type: divider
+    - to: "/error-handling"
+      text: Error Handling
+    - to: "/sizes"
+      text: Sizes
     - type: reference
       files:
       - admob
       - NativeExpress
-    - to: "/admob/ios"
-      text: Install on iOS
-      icon: apple
-    - to: "/admob/android"
-      text: Install on Android
-      icon: android
-    - to: "/admob/reference"
-      text: Reference
-    - type: divider
-    - to: "/admob/banner"
-      text: Banner
-    - to: "/admob/native-express"
-      text: Native Express
-    - to: "/admob/interstitial"
-      text: Interstitial
-    - to: "/admob/rewarded-video"
-      text: Rewarded Video
-    - type: divider
-    - to: "/admob/ad-request"
-      text: AdRequest
-    - to: "/admob/video-options"
-      text: VideoOptions
-    - type: divider
-    - to: "/admob/error-handling"
-      text: Error Handling
-    - to: "/admob/sizes"
-      text: Sizes
   - title: Analytics
+    path: analytics
     links:
-    - to: "/analytics/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/analytics/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/analytics/reference"
+    - to: "/reference"
       text: Reference
     - type: divider
-    - to: "/analytics/reserved-events"
+    - to: "/reserved-events"
       text: Reserved Events
   - title: Authentication
+    path: auth
     links:
-    - to: "/auth/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/auth/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/auth/reference"
+    - to: "/reference"
       text: Reference
     - type: divider
-    - to: "/auth/user"
+    - to: "/user"
       text: User
     - type: divider
-    - to: "/auth/action-code-info"
+    - to: "/action-code-info"
       text: ActionCodeInfo
-    - to: "/auth/additional-user-info"
+    - to: "/additional-user-info"
       text: AdditionalUserInfo
     - to: "/auth/user-info"
       text: UserInfo
@@ -122,6 +109,7 @@
     - to: "/auth/twitter-auth-provider"
       text: TwitterAuthProvider
   - title: Cloud Messaging
+    path: messaging
     links:
     - to: "/messaging/ios"
       text: Install on iOS
@@ -132,6 +120,7 @@
     - to: "/messaging/reference"
       text: Reference
   - title: Core
+    path: core
     links:
     - to: "/core/reference"
       text: Reference
@@ -139,6 +128,7 @@
     - to: "/core/firebase-app"
       text: FirebaseApp
   - title: Crash Reporting
+    path: crash
     links:
     - to: "/crash/ios"
       text: Install on iOS
@@ -151,6 +141,7 @@
     - to: "/crash/manual-reporting"
       text: Manual Reporting
   - title: Database
+    path: database
     links:
     - to: "/database/ios"
       text: Install on iOS
@@ -176,6 +167,7 @@
       text: ServerValue
     - type: divider
   - title: Firestore
+    path: firestore
     links:
     - to: "/firestore/ios"
       text: Install on iOS
@@ -208,6 +200,7 @@
     - to: "/firestore/field-value"
       text: FieldValue
   - title: Remote Config
+    path: config
     links:
     - to: "/config/ios"
       text: Install on iOS
@@ -220,6 +213,7 @@
     - to: "/config/example"
       text: Example
   - title: Storage
+    path: storage
     links:
     - to: "/storage/ios"
       text: Install on iOS
@@ -230,6 +224,7 @@
     - to: "/storage/reference"
       text: Reference
   - title: Performance Monitoring
+    path: perf-mon
     links:
     - to: "/perf-mon/ios"
       text: Install on iOS
