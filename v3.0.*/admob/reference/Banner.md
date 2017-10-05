@@ -26,7 +26,7 @@ Requests and shows the banner at a certain size.
 
 ### request
 
-An instance of [AdRequest.build](version /admob/ad-request) to load with the Banner.
+An instance of [ref admob.AdRequest#build] to load with the Banner.
 
 | Type | Default |
 | --------- | ------- |
