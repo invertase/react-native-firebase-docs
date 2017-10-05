@@ -10,7 +10,7 @@ Once downloaded, place this file in the root of your project at `android/app/goo
 
 In order for Android to parse this file, add the google-services gradle plugin as a dependency to your project in the *project* level `build.gradle` file:
 
-```java
+```groovy
 buildscript {
   // ...
   dependencies {
@@ -22,7 +22,7 @@ buildscript {
 
 To apply the plugin to your project, add the following to the **VERY BOTTOM** of your app `android/app/build.gradle` file:
 
-```java
+```groovy
 apply plugin: 'com.google.gms.google-services'
 ```
 
