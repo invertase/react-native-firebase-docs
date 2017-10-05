@@ -25,7 +25,7 @@ Returns whether crash reporting is currently enabled or disabled.
 ### log
 [method]log(message) returns void;[/method]
 
-Logs a message that will be sent with a [report](#report).
+Logs a message that will be sent with a [ref crash#report].
 
 | Parameter |         |
 | --------- | ------- |
@@ -46,7 +46,7 @@ Logs a message that will be sent with a [report](#report).
 ### report
 [method]report(error, maxStackSize) returns void;[/method]
 
-Sends the crash report, along with any previous [logs](#log) or [logcats](#logcats) to Firebase.
+Sends the crash report, along with any previous [ref crash#log] or [ref crash#logcat] to Firebase.
 
 > Reports are not realtime. They can take a number of hours to appear in the Firebase console.
 
