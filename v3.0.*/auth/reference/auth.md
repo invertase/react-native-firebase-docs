@@ -17,7 +17,7 @@ Returns an unsubscriber function.
 
 | Parameter |         |
 | --------- | ------- |
-| listener  | **function([User](version /auth/user) or null)** |
+| listener  | **function([ref auth.User] or null)** |
 
 
 ### onIdTokenChanged
@@ -37,7 +37,7 @@ Returns an unsubscriber function.
 Signs out the current user.
 
 ### signInAnonymously
-[method]signInAnonymously() returns Promise containing [User](version /auth/user);[/method]
+[method]signInAnonymously() returns Promise containing [ref auth.User];[/method]
 
 Asynchronously signs in as an anonymous user.
 
@@ -50,7 +50,7 @@ If there is already an anonymous user signed in, that user will be returned; oth
 | auth/operation-not-allowed   | Thrown if anonymous accounts are not enabled. Enable anonymous accounts in the Firebase Console, under the Auth tab.  |
 
 ### createUserWithEmailAndPassword
-[method]createUserWithEmailAndPassword(email, password) returns Promise containing [User](version /auth/user);[/method]
+[method]createUserWithEmailAndPassword(email, password) returns Promise containing [ref auth.User];[/method]
 
 Creates a new user account associated with the specified email address and password.
 
@@ -75,7 +75,7 @@ Note: The email address acts as a unique identifier for the user and enables an 
 | auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
 
 ### signInWithEmailAndPassword
-[method]signInWithEmailAndPassword(email, password) returns Promise containing [User](version /auth/user);[/method]
+[method]signInWithEmailAndPassword(email, password) returns Promise containing [ref auth.User];[/method]
 
 Asynchronously signs in using an email and password.
 
@@ -98,7 +98,7 @@ Fails with an error if the email address and password do not match.
 | auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
 
 ### signInWithCustomToken
-[method]signInWithCustomToken(customToken) returns Promise containing [User](version /auth/user);[/method]
+[method]signInWithCustomToken(customToken) returns Promise containing [ref auth.User];[/method]
 
 Asynchronously signs in using a custom token.
 
@@ -118,7 +118,7 @@ Fails with an error if the token is invalid, expired, or not accepted by the Fir
 | auth/invalid-custom-token  | Thrown if the custom token format is incorrect. |
 
 ### signInWithCredential
-[method]signInWithCredential(credential) returns Promise containing [User](version /auth/user);[/method]
+[method]signInWithCredential(credential) returns Promise containing [ref auth.User];[/method]
 
 Asynchronously signs in with the given credentials.
 
@@ -130,14 +130,14 @@ Asynchronously signs in with the given credentials.
 
 | Code | Message |
 | --------- | ------- |
-| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [Auth#fetchProvidersForEmail](#fetchProvidersForEmail) and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [User#linkWithCredential](version /auth/user#linkWithCredential). |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchProvidersForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
-| auth/user-not-found  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider#credential) and there is no user corresponding to the given email. |
-| auth/wrong-password  | Thrown if signing in with a credential from [EmailAuthProvider#credential](version /auth/email-auth-provider#credential) and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
-| auth/invalid-verification-code  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification code of the credential is not valid. |
-| auth/invalid-verification-id  | Thrown if the credential is a [PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification ID of the credential is not valid. |
+| auth/user-not-found  | Thrown if signing in with a credential from [ref auth.EmailAuthProvider#credential] and there is no user corresponding to the given email. |
+| auth/wrong-password  | Thrown if signing in with a credential from [ref auth.EmailAuthProvider#credential] and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
+| auth/invalid-verification-code  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification ID of the credential is not valid. |
 
 ### signInWithPhoneNumber
 [method]signInWithPhoneNumber(phoneNumber) returns TODO;[/method]
@@ -170,7 +170,7 @@ TODO
 
 Sends a password reset email to the given email address.
 
-To complete the password reset, call [Auth#confirmPasswordReset](#confirmPasswordReset) with the code supplied in the email sent to the user, along with the new password specified by the user.
+To complete the password reset, call [ref auth#confirmPasswordReset] with the code supplied in the email sent to the user, along with the new password specified by the user.
 
 | Parameter |         |
 | --------- | ------- |
@@ -222,7 +222,7 @@ Applies a verification code sent to the user by email or other out-of-band mecha
 | auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
 
 ### checkActionCode
-[method]checkActionCode(code) returns Promise containing [ActionCodeInfo](version /auth/action-code-info);[/method]
+[method]checkActionCode(code) returns Promise containing [ref auth.ActionCodeInfo];[/method]
 
 Checks a verification code sent to the user by email or other out-of-band mechanism.
 
@@ -261,7 +261,7 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 The following properties are accessed via the Auth instance `firebase.auth()`.
 
 ### currentUser
-[method]currentUser returns [User](version /auth/user) or null;[/method]
+[method]currentUser returns [ref auth.User] or null;[/method]
 
 The currently signed-in user (or null if no user signed in).
 
