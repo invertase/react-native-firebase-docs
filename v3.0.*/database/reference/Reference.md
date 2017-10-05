@@ -6,7 +6,7 @@ You can reference the root or child location in your Database by calling firebas
 
 Writing is done with the set() method and reading can be done with the on() method. 
 
-> The web SDK includes a `Reference` & `ThenableReference` interface. In RNFirebase, `Ref` combines these into one.
+> The web SDK includes a `Reference` & `ThenableReference` interface. In RNFirebase, `Reference` combines these into one.
 
 ## Properties
 
