@@ -24,7 +24,7 @@ Listens for advert events. See [EventTypes](version /admob/reference#eventtypes)
 
 | Parameter |         |
 | --------- | ------- |
-| event   | [ref admob#EventTypes] <br /> A single event type |
+| event   | **[ref admob#EventTypes]** <br /> A single event type |
 | callback   | **function** |
 
 ### isLoaded
