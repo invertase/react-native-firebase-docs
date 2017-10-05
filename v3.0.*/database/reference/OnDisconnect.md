@@ -73,7 +73,7 @@ The values argument contains multiple property-value pairs that will be written 
 
 As opposed to the set() method, update() can be use to selectively update only the referenced properties at the current location (instead of replacing all the child properties at the current location).
 
-See more examples using the connected version of [update()](version /database/ref#update).
+See more examples using the connected version of [ref database.Reference#update].
 
 | Parameter |         |
 | --------- | ------- |
