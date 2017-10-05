@@ -61,10 +61,18 @@ dependencies {
 
 Google Play services from 11.2.0 onwards require their dependencies to be downloaded from Google's Maven respository so add the required reference to the repositories section of the project level `build.gradle` (`android/build.gradle`):
 
-```
+```groovy
 allprojects {
     repositories {
-         // ...
+        mavenLocal()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        // -------------------------------------------------
+        // Add this below the existing maven property above
+        // -------------------------------------------------
         maven {
             url 'https://maven.google.com'
         }
