@@ -17,11 +17,11 @@ A single rewarded video instance can only be shown once. If you want to display 
 ### loadAd
 [method]loadAd(request) returns void;[/method]
 
-Starting loading an interstial from the Firebase servers with a given [AdRequest.build](version /admob/ad-request#build) payload.
+Starting loading an interstial from the Firebase servers with a given [ref admob.AdRequest#build] payload.
 
 | Parameter |         |
 | --------- | ------- |
-| request   | [AdRequest.build](version /admob/ad-request#build) <br /> An AdRequest.build object |
+| request   | **[ref admob.AdRequest#build]** <br /> An AdRequest.build object |
 
 ### on
 [method]loadAd(event, callback) returns void;[/method]
@@ -30,7 +30,7 @@ Listens for advert events. See [EventTypes](version /admob/reference#eventtypes)
 
 | Parameter |         |
 | --------- | ------- |
-| event   | [EventTypes](version /admob/reference#eventtypes) or [RewardedVideoEventTypes](version /admob/reference#rewardedvideoeventtypes) <br /> A single event type |
+| event   | **[ref admob#EventTypes]** or **[ref admob#RewardedVideoEventTypes]** <br /> A single event type |
 | callback   | **function** |
 
 ### isLoaded
