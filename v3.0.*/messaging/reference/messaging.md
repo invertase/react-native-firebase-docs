@@ -6,7 +6,7 @@ As the Firebase Web SDK has limited messaging functionality, the following metho
 
 Badge notification is well known on the iOS platform, but also supported by different Android devices / launchers. This library uses the [ShortcutBadger](https://github.com/leolin310148/ShortcutBadger) library to set the badge number also on Android. A list of supported launcher can be found there.
 
-!> On iOS, your app first needs to [request permission](#requestPermissions) in order to receive Cloud Messages.
+!> On iOS, your app first needs to [ref messaging#requestPermission] in order to receive Cloud Messages.
 
 ## Methods
 
@@ -33,7 +33,7 @@ Unsubscribes the device to a topic.
 ### getInitialNotification
 [method]getInitialNotification() returns Promise containing Object;[/method]
 
-When the application has been opened from a notification, `getInitialNotification` is called and the notification payload is returned. Use [onMessage](#onMessage) for notifications when the app is running.
+When the application has been opened from a notification, `getInitialNotification` is called and the notification payload is returned. Use [ref messaging#onMessage] for notifications when the app is running.
 
 ### getToken
 [method]getToken() returns Promise containing string;[/method]
@@ -59,7 +59,7 @@ Returns an unsubsciber function.
 ### onMessage
 [method]onMessage() returns function();[/method]
 
-On a new message, the payload object is passed to the listener callback. This method is only triggered when the app is running. Use [getInitialNotification](#getInitialNotification) for notifications which cause the app to open.
+On a new message, the payload object is passed to the listener callback. This method is only triggered when the app is running. Use [ref messaging#getInitialNotification] for notifications which cause the app to open.
 
 Returns an unsubsciber function.
 
