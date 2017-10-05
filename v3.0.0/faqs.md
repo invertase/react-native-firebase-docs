@@ -4,16 +4,6 @@
 
 TODO
 
-## Comparison to Firestack
-
-Firestack was a great start to integrating Firebase and React Native, however has underlying issues which needed to be fixed.
-A V3 fork of Firestack was created to help address issues such as lack of standardisation with the Firebase Web SDK,
-and missing core features (crash reporting, transactions etc). The volume of pull requests with fixes/features soon became
-too large to manage on the existing repository, whilst trying to maintain backwards compatibility.
-
-RNFirebase was re-written from the ground up, addressing these issues with core focus being around matching the Web SDK as
-closely as possible and fixing the major bugs/issues along the way.
-
 ## [Android] Google Play Services related issues
 
 The firebase SDK requires a certain version of Google Play Services installed on Android in order to function properly.
