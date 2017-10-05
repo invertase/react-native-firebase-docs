@@ -3,9 +3,9 @@
 ## Methods
 
 ### initializeApp
-[method]initializeApp(options, name) returns [FirebaseApp](version /core/firebase-app);[/method]
+[method]initializeApp(options, name) returns [ref core.FirebaseApp];[/method]
 
-Initializes a new [FirebaseApp](version /core/firebase-app) instance.
+Initializes a new [ref core.FirebaseApp] instance.
 
 | Parameter |         |
 | --------- | ------- |
@@ -22,9 +22,9 @@ Initializes a new [FirebaseApp](version /core/firebase-app) instance.
 | storageBucket   | **string** |
 
 ### app
-[method]app(name) returns [FirebaseApp](version /core/firebase-app);[/method]
+[method]app(name) returns [ref core.FirebaseApp];[/method]
 
-Returns a [FirebaseApp](version /core/firebase-app) instance by name.
+Returns a [ref core.FirebaseApp] instance by name.
 
 | Parameter |         |
 | --------- | ------- |
@@ -42,7 +42,7 @@ Set the global logging level for all logs.
 ## Properties
 
 ### apps
-[method]apps returns Array of [FirebaseApp](version /core/firebase-app);[/method]
+[method]apps returns Array of [ref core.FirebaseApp];[/method]
 
 Returns all initilized apps.
 
