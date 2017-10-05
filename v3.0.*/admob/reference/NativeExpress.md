@@ -26,19 +26,19 @@ Requests and shows the banner at a certain size.
 
 ### request
 
-An instance of [AdRequest.build](version /admob/ad-request) to load with the Banner.
+An instance of [ref admob.AdRequest#build]  to load with the Banner.
 
 | Type | Default |
 | --------- | ------- |
-| [AdRequest.build](version /admob/ad-request)   | `new AdRequest().addTestDevice().build()`  |
+| [ref admob.AdRequest#build]   | `new AdRequest().addTestDevice().build()`  |
 
 ### video
 
-An instance of [VideoOptions.build](version /admob/video-options) to load with the Native Express banner.
+An instance of [ref admob.VideoOptions#build] to load with the Native Express banner.
 
 | Type | Default |
 | --------- | ------- |
-| [VideoOptions.build](version /admob/video-options)   | `new VideoOptions().build()`  |
+| [ref admob.VideoOptions#build]  | `new VideoOptions().build()`  |
 
 ### onAdLoaded
 
