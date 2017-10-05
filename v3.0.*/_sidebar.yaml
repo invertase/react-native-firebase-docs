@@ -46,11 +46,11 @@
     - to: "/android"
       text: Install on Android
       icon: android
-    - type: divider
     - to: "/error-handling"
       text: Error Handling
     - to: "/sizes"
       text: Sizes
+    - type: divider
     - type: reference
       files:
       - admob
