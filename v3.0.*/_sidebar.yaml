@@ -84,6 +84,7 @@
     - to: "/android"
       text: Install on Android
       icon: android
+    - type: divider
     - type: reference
       files:
       - auth
