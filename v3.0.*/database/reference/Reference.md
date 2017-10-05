@@ -49,7 +49,7 @@ The relative path can either be a simple child name (for example, "ada") or a de
 | --------- | ------- |
 | path   | **string** <br /> A relative path from this location to the desired child location. |
 
-### endAt
+### endAt
 [method]endAt(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified ending point.
@@ -63,7 +63,7 @@ The ending point is inclusive, so children with exactly the specified value will
 | value   | **string** <br /> The value to end at. The argument type depends on which orderBy*() function was used in this query. Specify a value that matches the orderBy*() type. When used in combination with orderByKey(). |
 | key   | **string** (optional) <br /> The child key to end at, among the children with the previously specified priority. This argument is only allowed if ordering by child, value, or priority. |
 
-### equalTo
+### equalTo
 [method]equalTo(value, key) returns [ref database.Query];[/method]
 
 Creates a Query that includes children that match the specified value.
