@@ -12,7 +12,7 @@ Badge notification is well known on the iOS platform, but also supported by diff
 
 The following methods are accessed via the Cloud Messaging instance firebase.messaging().
 
-### subscribeToTopic
+### subscribeToTopic
 [method]subscribeToTopic(topic) returns void;[/method]
 
 Subscribes the device to a topic.
@@ -21,7 +21,7 @@ Subscribes the device to a topic.
 | --------- | ------- |
 | topic   | **string**  |
 
-### unsubscribeFromTopic
+### unsubscribeFromTopic
 [method]unsubscribeFromTopic(topic) returns void;[/method]
 
 Unsubscribes the device to a topic.
@@ -30,12 +30,12 @@ Unsubscribes the device to a topic.
 | --------- | ------- |
 | topic   | **string**  |
 
-### getInitialNotification
+### getInitialNotification
 [method]getInitialNotification() returns Promise containing Object;[/method]
 
 When the application has been opened from a notification, `getInitialNotification` is called and the notification payload is returned. Use [ref messaging#onMessage] for notifications when the app is running.
 
-### getToken
+### getToken
 [method]getToken() returns Promise containing string;[/method]
 
 Returns the devices FCM token. This token can be used in the Firebase console to send messages to directly.
@@ -63,7 +63,7 @@ On a new message, the payload object is passed to the listener callback. This me
 
 Returns an unsubsciber function.
 
-### [ios] requestPermissions
+### [ios] requestPermissions
 [method]requestPermissions() returns void;[/method]
 
 Requests app notification permissions in an Alert dialog.
