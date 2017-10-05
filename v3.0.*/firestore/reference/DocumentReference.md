@@ -4,10 +4,10 @@ A DocumentReference refers to a document location in a Firestore database and ca
 
 ## Properties
 
-### firestore
-[method]firestore returns [Firestore](version /firestore/firestore);[/method]
+### firestore
+[method]firestore returns [ref firestore.Firestore];[/method]
 
-The fFirestore the document is in. This is useful for performing transactions, for example.
+The Firestore the document is in. This is useful for performing transactions, for example.
 
 ### id
 [method]id returns string;[/method]
@@ -15,14 +15,14 @@ The fFirestore the document is in. This is useful for performing transactions, f
 The document's identifier within its collection.
 
 ### parent
-[method]parent returns nullable [DocumentReference](version /firestore/document-reference);[/method]
+[method]parent returns nullable [ref firestore.DocumentReference];[/method]
 
 The Collection this DocumentReference belongs to.
 
 ## Methods
 
 ### collection
-[method]collection(collectionPath) returns [CollectionReference](version /firestore/collection-reference);[/method]
+[method]collection(collectionPath) returns [ref firestore.CollectionReference];[/method]
 
 Gets a CollectionReference instance that refers to the collection at the specified path.
 
@@ -38,7 +38,7 @@ Deletes the document referred to by this DocumentReference.
 Returns a promise that resolves once the document has been successfully deleted from the backend (Note that it won't resolve while you're offline).
 
 ### get
-[method]get() returns Promise containing [DocumentSnapshot](version /firestore/document-snapshot);[/method]
+[method]get() returns Promise containing [ref firestore.DocumentSnapshot];[/method]
 
 Reads the document referred to by this DocumentReference.
 
@@ -51,8 +51,8 @@ Attaches a listener for DocumentSnapshot events. You may either pass individual 
 
 | Parameter |         |
 | --------- | ------- |
-| optionsOrObserverOrOnNext  | **Object** or **function([DocumentSnapshot(version /firestore/document-snapshot))** <br /> This can be an observer object or an onNext function callback. It can also be an options object containing { includeMetadataChanges: true } to opt into events even when only metadata changed. |
-| observerOrOnNextOrOnError  | **Object** or **function([DocumentSnapshot(version /firestore/document-snapshot))** or  **function(Error)** <br /> If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
+| optionsOrObserverOrOnNext  | **Object** or **function([ref firestore.DocumentSnapshot])** <br /> This can be an observer object or an onNext function callback. It can also be an options object containing { includeMetadataChanges: true } to opt into events even when only metadata changed. |
+| observerOrOnNextOrOnError  | **Object** or **function([ref firestore.DocumentSnapshot]) ** or  **function(Error)** <br /> If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
 | onError  | **function(Error)** (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 
 ### set
@@ -79,17 +79,3 @@ Returns a promise that resolves once the data has been successfully written to t
 | Parameter |         |
 | --------- | ------- |
 | args  | **any type** <br /> Either an object containing all of the fields and values to update, or a series of arguments alternating between fields (as string or [FieldPath](https://firebase.google.com/docs/reference/js/firebase.firestore.FieldPath) objects) and values.. <br /> Value may be repeated. |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
