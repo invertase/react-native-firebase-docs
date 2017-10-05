@@ -162,36 +162,26 @@
   - title: Firestore
     path: firestore
     links:
-    - to: "/firestore/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/firestore/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/firestore/reference"
-      text: Reference
     - type: divider
-    - to: "/firestore/collection-reference"
-      text: CollectionReference
-    - to: "/firestore/document-reference"
-      text: DocumentReference
-    - to: "/firestore/document-snapshot"
-      text: DocumentSnapshot
-    - to: "/firestore/document-change"
-      text: DocumentChange
-    - to: "/firestore/firestore"
-      text: Firestore
-    - to: "/firestore/geopoint"
-      text: GeoPoint
-    - to: "/firestore/query"
-      text: Query
-    - to: "/firestore/query-snapshot"
-      text: QuerySnapshot
-    - to: "/firestore/write-batch"
-      text: WriteBatch
-    - type: divider
-    - to: "/firestore/field-value"
-      text: FieldValue
+    - type: reference
+      files:
+      - firestore
+      - CollectionReference
+      - DocumentChange
+      - DocumentReference
+      - DocumentSnapshot
+      - FieldValue
+      - Firestore
+      - GeoPoint
+      - QuerySnapshot
+      - Query
+      - WriteBatch
   - title: Remote Config
     path: config
     links:
