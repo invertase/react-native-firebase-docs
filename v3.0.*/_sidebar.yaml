@@ -130,8 +130,9 @@
     links:
     - to: "/core/default-app"
       text: Default App
-    - to: "/core/initialize-app"
+    - to: "/core/initialize-apps"
       text: Initializing Apps
+    - type: divider
     - to: "/core/reference"
       text: Reference
     - type: divider
