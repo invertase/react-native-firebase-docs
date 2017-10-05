@@ -11,11 +11,11 @@ An interstitial is a full screen advert which creates a new activity on top of R
 ### loadAd
 [method]loadAd(request) returns void;[/method]
 
-Starting loading an interstial from the Firebase servers with a given [AdRequest.build](version /admob/ad-request#build) payload.
+Starting loading an interstial from the Firebase servers with a given [ref admob.AdRequest#build] payload.
 
 | Parameter |         |
 | --------- | ------- |
-| request   | [**AdRequest.build**](version /admob/ad-request#build) <br /> An AdRequest.build object |
+| request   | **[ref admob.AdRequest#build]** <br /> An AdRequest.build object |
 
 ### on
 [method]loadAd(event, callback) returns void;[/method]
@@ -24,7 +24,7 @@ Listens for advert events. See [EventTypes](version /admob/reference#eventtypes)
 
 | Parameter |         |
 | --------- | ------- |
-| event   | [**EventTypes**](version /admob/reference#eventtypes) <br /> A single event type |
+| event   | [ref admob#EventTypes] <br /> A single event type |
 | callback   | **function** |
 
 ### isLoaded
