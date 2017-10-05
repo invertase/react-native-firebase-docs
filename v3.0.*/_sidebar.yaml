@@ -195,38 +195,44 @@
   - title: Remote Config
     path: config
     links:
-    - to: "/config/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/config/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/config/reference"
-      text: Reference
-    - to: "/config/example"
+    - to: "/example"
       text: Example
+    - type: divider
+    - type: reference
+      files:
+      - config
   - title: Storage
     path: storage
     links:
-    - to: "/storage/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/storage/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/storage/reference"
-      text: Reference
+    - type: divider
+    - type: reference
+      files:
+      - storage
   - title: Performance Monitoring
     path: perf-mon
     links:
-    - to: "/perf-mon/ios"
+    - to: "/ios"
       text: Install on iOS
       icon: apple
-    - to: "/perf-mon/android"
+    - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/perf-mon/reference"
-      text: Reference
+    - type: divider
+    - type: reference
+      files:
+      - perf-mon
 - title: "Explore"
   categories:
   - title: Library
