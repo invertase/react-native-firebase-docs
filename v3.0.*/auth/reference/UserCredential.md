@@ -5,13 +5,13 @@ A structure containing a User, an AuthCredential, the operationType, and any add
 ## Properties
 
 ### user
-[method]user returns nullable [User](version /auth/user)[/method]
+[method]user returns nullable [ref auth.User];[/method]
 
 ### credential
-[method]credential returns nullable [AuthCredential](version /auth/auth-credential)[/method]
+[method]credential returns nullable [ref auth.AuthCredential];[/method]
 
 ### operationType
-[method]operationType returns nullable string or undefined[/method]
+[method]operationType returns nullable string or undefined;[/method]
 
 ### additionalUserInfo
-[method]additionalUserInfo returns nullable [AdditionalUserInfo](version /auth/addtional-user-info) or undefined[/method]
+[method]additionalUserInfo returns nullable [ref auth.AdditionalUserInfo] or undefined;[/method]
