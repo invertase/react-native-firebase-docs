@@ -8,19 +8,19 @@ Read our documentation on [Sorting and filtering data](https://firebase.google.c
 
 ## Properties
 
-### ref
-[method]ref returns non-null [Ref](version /database/ref);[/method]
+### ref
+[method]ref returns non-null [ref database.Reference];[/method]
 
 Returns a Reference to the Query's location.
 
 ## Methods
 
-### endAt
-[method]endAt(value, key) returns [Query](version /database/query);[/method]
+### endAt
+[method]endAt(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified ending point.
 
-Using startAt(), endAt(), and equalTo() allows you to choose arbitrary starting and ending points for your queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
 
 The ending point is inclusive, so children with exactly the specified value will be included in the query. The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have a key name less than or equal to the specified key.
 
@@ -31,12 +31,12 @@ You can read more about endAt() in [Filtering data](https://firebase.google.com/
 | value  | **string** or **number** or **boolean** or **null** <br /> The value to end at. The argument type depends on which orderBy*() function was used in this query. Specify a value that matches the orderBy*() type. When used in combination with orderByKey(), the value must be a string. |
 | key  | **string** (optional) <br /> The child key to end at, among the children with the previously specified priority. This argument is only allowed if ordering by child, value, or priority. |
 
-### equalTo
-[method]equalTo(value, key) returns [Query](version /database/query);[/method]
+### equalTo
+[method]equalTo(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified ending point.
 
-Using startAt(), endAt(), and equalTo() allows you to choose arbitrary starting and ending points for your queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
 
 The ending point is inclusive, so children with exactly the specified value will be included in the query. The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have a key name less than or equal to the specified key.
 
@@ -58,10 +58,10 @@ Two Query objects are equivalent if they represent the same location, have the s
 
 | Parameter |         |
 | --------- | ------- |
-| query  | **[Query](version /database/query)** <br /> The query to compare against. |
+| query  | **[ref database.Query]** <br /> The query to compare against. |
 
 ### limitToFirst
-[method]isEqual(query) returns [Query](version /database/query);[/method]
+[method]isEqual(query) returns [ref database.Query];[/method]
 
 Generates a new Query limited to the first specific number of children.
 
@@ -74,11 +74,11 @@ You can read more about limitToFirst() in [Filtering data](https://firebase.goog
 | query  | **limit** <br /> The maximum number of nodes to include in this query. |
 
 ### limitToLast
-[method]limitToLast(limit) returns [Query](version /database/query);[/method]
+[method]limitToLast(limit) returns [ref database.Query];[/method]
 
 Generates a new Query object limited to the last specific number of children.
 
-The limitToLast() method is used to set a maximum number of children to be synced for a given callback. If we set a limit of 100, we will initially only receive up to 100 child_added events. If we have fewer than 100 messages stored in our Database, a child_added event will fire for each message. However, if we have over 100 messages, we will only receive a child_added event for the last 100 ordered messages. As items change, we will receive child_removed events for each item that drops out of the active list so that the total number stays at 100.
+The `limitToLast()` method is used to set a maximum number of children to be synced for a given callback. If we set a limit of 100, we will initially only receive up to 100 child_added events. If we have fewer than 100 messages stored in our Database, a child_added event will fire for each message. However, if we have over 100 messages, we will only receive a child_added event for the last 100 ordered messages. As items change, we will receive child_removed events for each item that drops out of the active list so that the total number stays at 100.
 
 | Parameter |         |
 | --------- | ------- |
@@ -87,9 +87,9 @@ The limitToLast() method is used to set a maximum number of children to be synce
 ### off
 [method]off(eventType, callback, context) returns void;[/method]
 
-Detaches a callback previously attached with on().
+Detaches a callback previously attached with `on()`.
 
-Detach a callback previously attached with on(). Note that if on() was called multiple times with the same eventType and callback, the callback will be called multiple times for each event, and off() must be called multiple times to remove the callback. Calling off() on a parent listener will not automatically remove listeners registered on child nodes, off() must also be called on any child listeners to remove the callback.
+Detach a callback previously attached with `on()`. Note that if on() was called multiple times with the same eventType and callback, the callback will be called multiple times for each event, and off() must be called multiple times to remove the callback. Calling off() on a parent listener will not automatically remove listeners registered on child nodes, off() must also be called on any child listeners to remove the callback.
 
 If a callback is not specified, all callbacks for the specified eventType will be removed. Similarly, if no eventType or callback is specified, all callbacks for the Reference will be removed.
 
@@ -145,7 +145,7 @@ This event will be triggered when a child's sort order changes such that its pos
 
 Listens for exactly one event of the specified event type, and then stops listening.
 
-This is equivalent to calling [on()](#on), and then calling [off()](#off) inside the callback function. See on() for details on the event types.
+This is equivalent to calling [ref database.Query#on], and then calling [ref database.Query#off] inside the callback function. See on() for details on the event types.
 
 | Parameter |         |
 | --------- | ------- |
@@ -155,7 +155,7 @@ This is equivalent to calling [on()](#on), and then calling [off()](#off) inside
 | context   | **Object** (optional) <br /> If provided, this object will be used as this when calling your callback(s). |
 
 ### orderByChild
-[method]orderByChild(path) returns [Query](version /database/query);[/method]
+[method]orderByChild(path) returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by the specified child key.
 
@@ -168,7 +168,7 @@ Firebase queries allow you to order your data by any child key on the fly. Howev
 | path   | **string** (optional) |
 
 ### orderByKey
-[method]orderByKey() returns [Query](version /database/query);[/method]
+[method]orderByKey() returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by key.
 
@@ -177,14 +177,14 @@ Sorts the results of a query by their (ascending) key values.
 You can read more about orderByKey() in [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data).
 
 ### orderByPriority
-[method]orderByPriority() returns [Query](version /database/query);[/method]
+[method]orderByPriority() returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by priority.
 
 Applications need not use priority but can order collections by ordinary properties (see [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data) for alternatives to priority).
 
 ### orderByValue
-[method]orderByValue() returns [Query](version /database/query);[/method]
+[method]orderByValue() returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by value.
 
@@ -193,15 +193,15 @@ If the children of a query are all scalar values (string, number, or boolean), y
 You can read more about orderByValue() in [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data).
 
 ### startAt
-[method]startAt(value, key) returns [Query](version /database/query);[/method]
+[method]startAt(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified starting point.
 
-Using startAt(), endAt(), and equalTo() allows you to choose arbitrary starting and ending points for your queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
 
 The starting point is inclusive, so children with exactly the specified value will be included in the query. The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have a key name greater than or equal to the specified key.
 
-You can read more about startAt() in [Filtering data](https://firebase.google.com/docs/database/web/lists-of-data#filtering_data).
+You can read more about `startAt()` in [Filtering data](https://firebase.google.com/docs/database/web/lists-of-data#filtering_data).
 
 | Parameter |         |
 | --------- | ------- |

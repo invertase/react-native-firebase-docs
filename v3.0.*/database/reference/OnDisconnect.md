@@ -10,7 +10,7 @@ Note that onDisconnect operations are only triggered once. If you want an operat
 
 ## Methods
 
-### cancel
+### cancel
 [method]cancel(onComplete) returns Promise containing void;[/method]
 
 Cancels all previously queued onDisconnect() set or update events for this location and all children.
@@ -30,7 +30,7 @@ ref.onDisconnect().set(false);
 ref.onDisconnect().cancel();
 ```
 
-### remove
+### remove
 [method]remove(onComplete) returns Promise containing void;[/method]
 
 Ensures the data at this location is deleted when the client is disconnected (due to closing the browser, navigating to a new page, or network issues).
@@ -39,7 +39,7 @@ Ensures the data at this location is deleted when the client is disconnected (du
 | --------- | ------- |
 | onComplete   | **function(nullable Error)** (optional) <br /> An optional callback function that will be called when synchronization to the server has completed. The callback will be passed a single parameter: null for success, or an Error object indicating a failure. |
 
-### set
+### set
 [method]set(value, onComplete) returns Promise containing void;[/method]
 
 Ensures the data at this location is set to the specified value when the client is disconnected (due to closing the browser, navigating to a new page, or network issues).
@@ -64,7 +64,7 @@ Ensures the data at this location is set to the specified value and priority whe
 | priority   | **number** or **string** or **null**  |
 | onComplete   | **function(nullable Error)** (optional) <br /> An optional callback function that will be called when synchronization to the server has completed. The callback will be passed a single parameter: null for success, or an Error object indicating a failure. |
 
-### update
+### update
 [method]update(values, onComplete) returns Promise containing void;[/method]
 
 Writes multiple values at this location when the client is disconnected (due to closing the browser, navigating to a new page, or network issues).
@@ -73,7 +73,7 @@ The values argument contains multiple property-value pairs that will be written 
 
 As opposed to the set() method, update() can be use to selectively update only the referenced properties at the current location (instead of replacing all the child properties at the current location).
 
-See more examples using the connected version of [update()](version /database/ref#update).
+See more examples using the connected version of [ref database.Reference#update].
 
 | Parameter |         |
 | --------- | ------- |
