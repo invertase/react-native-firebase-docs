@@ -1,6 +1,6 @@
 # ActionCodeInfo
 
-A response from [Auth#checkActionCode](version /auth/reference#checkActionCode).
+A response from [ref auth#checkActionCode].
 
 ## Properties
 
