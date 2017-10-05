@@ -1,4 +1,4 @@
-# Ref
+# Reference
 
 A Ref represents a specific location in your Database and can be used for reading or writing data to that Database location.
 
@@ -13,33 +13,33 @@ Writing is done with the set() method and reading can be done with the on() meth
 ### key
 [method]key returns string or null;[/method]
 
-The last part of the `Ref`'s path.
+The last part of the `Reference`'s path.
 
 For example, "ada" is the key for https://<DATABASE_NAME>.firebaseio.com/users/ada.
 
-The key of a root `Ref` is null.
+The key of a root `Reference` is null.
 
 ### parent
-[method]parent returns nullable [Ref](version /database/ref);[/method]
+[method]parent returns nullable [ref database.Reference];[/method]
 
-The parent location of a `Ref`.
+The parent location of a `Reference`.
 
-The parent of a root `Ref` is null.
+The parent of a root `Reference` is null.
 
 ### ref
-[method]ref returns [Ref](version /database/ref);[/method]
+[method]ref returns [ref database.Reference];[/method]
 
-Returns a `Ref` to the `Query`'s location.
+Returns a `Reference` to the `Query`'s location.
 
 ### root
-[method]ref returns [Ref](version /database/ref);[/method]
+[method]root returns [ref database.Reference];[/method]
 
-The root `Ref` of the Database.
+The root `Reference` of the Database.
 
 ## Methods
 
 ### child
-[method]child(path) returns [Ref](version /database/ref);[/method]
+[method]child(path) returns [ref database.Reference];[/method]
 
 Gets a Ref for the location at the specified relative path.
 
@@ -50,11 +50,11 @@ The relative path can either be a simple child name (for example, "ada") or a de
 | path   | **string** <br /> A relative path from this location to the desired child location. |
 
 ### endAt
-[method]endAt(value, key) returns [Query](version /database/query);[/method]
+[method]endAt(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified ending point.
 
-Using startAt(), endAt(), and equalTo() allows you to choose arbitrary starting and ending points for your queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
 
 The ending point is inclusive, so children with exactly the specified value will be included in the query. The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have a key name less than or equal to the specified key.
 
@@ -64,11 +64,11 @@ The ending point is inclusive, so children with exactly the specified value will
 | key   | **string** (optional) <br /> The child key to end at, among the children with the previously specified priority. This argument is only allowed if ordering by child, value, or priority. |
 
 ### equalTo
-[method]equalTo(value, key) returns [Query](version /database/query);[/method]
+[method]equalTo(value, key) returns [ref database.Query];[/method]
 
 Creates a Query that includes children that match the specified value.
 
-Using startAt(), endAt(), and equalTo() allows us to choose arbitrary starting and ending points for our queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows us to choose arbitrary starting and ending points for our queries.
 
 The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have exactly the specified key as their key name. This can be used to filter result sets with many matches for the same value.
 
@@ -82,31 +82,31 @@ The optional key argument can be used to further limit the range of the query. I
 
 Returns whether or not the current and provided queries represent the same location, have the same query parameters, and are from the same instance of firebase.app.App.
 
-Two Reference objects are equivalent if they represent the same location and are from the same instance of [FirebaseApp](version /core/firebase-app).
+Two Reference objects are equivalent if they represent the same location and are from the same instance of [ref core.FirebaseApp].
 
-Two Query objects are equivalent if they represent the same location, have the same query parameters, and are from the same instance of [FirebaseApp](version /core/firebase-app). Equivalent queries share the same sort order, limits, and starting and ending points.
+Two Query objects are equivalent if they represent the same location, have the same query parameters, and are from the same instance of [ref core.FirebaseApp]. Equivalent queries share the same sort order, limits, and starting and ending points.
 
 | Parameter |         |
 | --------- | ------- |
-| query   | **[Query](version /database/query)**  |
+| query   | **[ref database.Query]**  |
 
 ### limitToFirst
-[method]limitToFirst(limit) returns [Query](version /database/query);[/method]
+[method]limitToFirst(limit) returns [ref database.Query];[/method]
 
 Generates a new Query limited to the first specific number of children.
 
-The limitToFirst() method is used to set a maximum number of children to be synced for a given callback. If we set a limit of 100, we will initially only receive up to 100 child_added events. If we have fewer than 100 messages stored in our Database, a child_added event will fire for each message. However, if we have over 100 messages, we will only receive a child_added event for the first 100 ordered messages. As items change, we will receive child_removed events for each item that drops out of the active list so that the total number stays at 100.
+The `limitToFirst()` method is used to set a maximum number of children to be synced for a given callback. If we set a limit of 100, we will initially only receive up to 100 child_added events. If we have fewer than 100 messages stored in our Database, a child_added event will fire for each message. However, if we have over 100 messages, we will only receive a child_added event for the first 100 ordered messages. As items change, we will receive child_removed events for each item that drops out of the active list so that the total number stays at 100.
 
 | Parameter |         |
 | --------- | ------- |
 | limit   | **number** <br /> The maximum number of nodes to include in this query. |
 
 ### limitToLast
-[method]limitToLast(limit) returns [Query](version /database/query);[/method]
+[method]limitToLast(limit) returns [ref database.Query];[/method]
 
 Generates a new Query object limited to the last specific number of children.
 
-The limitToLast() method is used to set a maximum number of children to be synced for a given callback. If we set a limit of 100, we will initially only receive up to 100 child_added events. If we have fewer than 100 messages stored in our Database, a child_added event will fire for each message. However, if we have over 100 messages, we will only receive a child_added event for the last 100 ordered messages. As items change, we will receive child_removed events for each item that drops out of the active list so that the total number stays at 100.
+The `limitToLast()` method is used to set a maximum number of children to be synced for a given callback. If we set a limit of 100, we will initially only receive up to 100 child_added events. If we have fewer than 100 messages stored in our Database, a child_added event will fire for each message. However, if we have over 100 messages, we will only receive a child_added event for the last 100 ordered messages. As items change, we will receive child_removed events for each item that drops out of the active list so that the total number stays at 100.
 
 | Parameter |         |
 | --------- | ------- |
@@ -173,7 +173,7 @@ This event will be triggered when a child's sort order changes such that its pos
 
 Listens for exactly one event of the specified event type, and then stops listening.
 
-This is equivalent to calling [on()](#on), and then calling [off()](#off) inside the callback function. See on() for details on the event types.
+This is equivalent to calling on(), and then calling off() inside the callback function. See on() for details on the event types.
 
 | Parameter |         |
 | --------- | ------- |
@@ -183,14 +183,14 @@ This is equivalent to calling [on()](#on), and then calling [off()](#off) inside
 | context   | **Object** (optional) <br /> If provided, this object will be used as this when calling your callback(s). |
 
 ### onDisconnect
-[method]onDisconnect() returns [OnDisconnect](version /database/on-disconnect);[/method]
+[method]onDisconnect() returns [ref database.OnDisconnect];[/method]
 
 ### orderByChild
-[method]orderByChild(path) returns [Query](version /database/query);[/method]
+[method]orderByChild(path) returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by the specified child key.
 
-Queries can only order by one key at a time. Calling orderByChild() multiple times on the same query is an error.
+Queries can only order by one key at a time. Calling `orderByChild()` multiple times on the same query is an error.
 
 Firebase queries allow you to order your data by any child key on the fly. However, if you know in advance what your indexes will be, you can define them via the .indexOn rule in your Security Rules for better performance. See the [.indexOn](https://firebase.google.com/docs/database/security/indexing-data) rule for more information.
 
@@ -199,7 +199,7 @@ Firebase queries allow you to order your data by any child key on the fly. Howev
 | path   | **string** (optional) |
 
 ### orderByKey
-[method]orderByKey() returns [Query](version /database/query);[/method]
+[method]orderByKey() returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by key.
 
@@ -208,14 +208,14 @@ Sorts the results of a query by their (ascending) key values.
 You can read more about orderByKey() in [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data).
 
 ### orderByPriority
-[method]orderByPriority() returns [Query](version /database/query);[/method]
+[method]orderByPriority() returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by priority.
 
 Applications need not use priority but can order collections by ordinary properties (see [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data) for alternatives to priority).
 
 ### orderByValue
-[method]orderByValue() returns [Query](version /database/query);[/method]
+[method]orderByValue() returns [ref database.Query];[/method]
 
 Generates a new Query object ordered by value.
 
@@ -224,7 +224,7 @@ If the children of a query are all scalar values (string, number, or boolean), y
 You can read more about orderByValue() in [Sort data](https://firebase.google.com/docs/database/web/lists-of-data#sort_data).
 
 ### push
-[method]push(value, onComplete) returns [Ref](version /database/ref);[/method]
+[method]push(value, onComplete) returns [ref database.Reference];[/method]
 
 Generates a new child location using a unique key and returns its Reference.
 
@@ -300,11 +300,11 @@ Applications need not use priority but can order collections by ordinary propert
 | onComplete   | **function(nullable Error)** (optional) |
 
 ### startAt
-[method]startAt(value, key) returns [Query](version /database/query);[/method]
+[method]startAt(value, key) returns [ref database.Query];[/method]
 
 Creates a Query with the specified starting point.
 
-Using startAt(), endAt(), and equalTo() allows you to choose arbitrary starting and ending points for your queries.
+Using `startAt()`, `endAt()`, and `equalTo()` allows you to choose arbitrary starting and ending points for your queries.
 
 The starting point is inclusive, so children with exactly the specified value will be included in the query. The optional key argument can be used to further limit the range of the query. If it is specified, then children that have exactly the specified value must also have a key name greater than or equal to the specified key.
 
@@ -345,7 +345,7 @@ Note: When using transactions with Security and Firebase Rules in place, be awar
 | Parameter |         |
 | --------- | ------- |
 | transactionUpdate   | **function(any type)** <br /> A developer-supplied function which will be passed the current data stored at this location (as a JavaScript object). The function should return the new value it would like written (as a JavaScript object). If `undefined` is returned (i.e. you return with no arguments) the transaction will be aborted and the data at this location will not be modified. |
-| onComplete   | **function(nullable Error, boolean, nullable [DataSnapshot](version /database/data-snapshot))** (optional) <br /> A callback function that will be called when the transaction completes. The callback is passed three arguments: a possibly-null Error, a boolean indicating whether the transaction was committed, and a DataSnapshot indicating the final result. If the transaction failed abnormally, the first argument will be an Error object indicating the failure cause. If the transaction finished normally, but no data was committed because no data was returned from transactionUpdate, then second argument will be false. If the transaction completed and committed data to Firebase, the second argument will be true. Regardless, the third argument will be a DataSnapshot containing the resulting data in this location. |
+| onComplete   | **function(nullable Error, boolean, nullable [ref database.DataSnapshot])** (optional) <br /> A callback function that will be called when the transaction completes. The callback is passed three arguments: a possibly-null Error, a boolean indicating whether the transaction was committed, and a DataSnapshot indicating the final result. If the transaction failed abnormally, the first argument will be an Error object indicating the failure cause. If the transaction finished normally, but no data was committed because no data was returned from transactionUpdate, then second argument will be false. If the transaction completed and committed data to Firebase, the second argument will be true. Regardless, the third argument will be a DataSnapshot containing the resulting data in this location. |
 | applyLocally   | **boolean** (optional) <br /> By default, events are raised each time the transaction update function runs. So if it is run multiple times, you may see intermediate states. You can set this to false to suppress these intermediate states and instead wait until the transaction has completed before events are raised. |
 
 ### update
