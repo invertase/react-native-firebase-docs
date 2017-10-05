@@ -14,14 +14,14 @@ The key (last part of the path) of the location of this DataSnapshot.
 The last token in a Database location is considered its key. For example, "ada" is the key for the /users/ada/ node. Accessing the key on any DataSnapshot will return the key for the location that generated it. However, accessing the key on the root URL of a Database will return null.
 
 ### ref
-[method]ref returns [Ref](version /database/ref);[/method]
+[method]ref returns [ref database.Reference];[/method]
 
 The Reference for the location that generated this DataSnapshot.
 
 ## Methods
 
 ### child
-[method]child(ref) returns [DataSnapshot](version /database/data-snapshot);[/method]
+[method]child(ref) returns [ref database.DataSnapshot];[/method]
 
 Gets another DataSnapshot for the location at the specified relative path.
 
@@ -47,7 +47,7 @@ If no explicit orderBy*() method is used, results are returned ordered by key (u
 
 | Parameter |         |
 | --------- | ------- |
-| action  | **function(non-null [DataSnapshot](version /database/data-snapshot))** <br /> A function that will be called for each child DataSnapshot. The callback can return true to cancel further enumeration. |
+| action  | **function(non-null [ref database.DataSnapshot])** <br /> A function that will be called for each child DataSnapshot. The callback can return true to cancel further enumeration. |
 
 ### getPriority
 [method]getPriority() returns string or number or null;[/method]
@@ -89,6 +89,6 @@ Extracts a JavaScript value from a DataSnapshot.
 
 Depending on the data in a DataSnapshot, the val() method may return a scalar type (string, number, or boolean), an array, or an object. It may also return null, indicating that the DataSnapshot is empty (contains no data).
 
-## Unsupported Methods
+## Unsupported Methods
 
 ### exportVal
