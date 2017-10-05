@@ -233,6 +233,7 @@
     - type: reference
       files:
       - perf-mon
+      - Trace
 - title: "Explore"
   categories:
   - title: Library
