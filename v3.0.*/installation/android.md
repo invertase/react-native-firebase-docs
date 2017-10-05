@@ -1,6 +1,10 @@
 # Android Installation
 
-## 1. Setup google-services.json
+## 1) Link RNFirebase
+
+Run `react-native link react-native-firebase`
+
+## 2. Setup google-services.json
 
 A google-services.json file contains all of the information required by the Firebase Android SDK to connect to your Firebase project. To automatically generate the json file, [follow the instructions](https://firebase.google.com/docs/android/setup#add_firebase_to_your_app) on the Firebase console to "Add Firebase to your app".
 
@@ -26,38 +30,25 @@ To apply the plugin to your project, add the following to the **VERY BOTTOM** of
 apply plugin: 'com.google.gms.google-services'
 ```
 
-## 2. Link RNFirebase
+## 3. Add Firebase modules
 
-RNFirebase now needs to be linked into your Android project.
-
-### Add the project path
-
-Within your `android/settings.gradle`, add the following:
-
-```groovy
-include ':react-native-firebase'
-project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-```
-
-### Add RNFirebase & Firebase modules
-
-Both the RNFirebase module and the Firebase modules need to be installed as project dependencies. In the `android/app/build.gradle` file, add the following:
+The Firebase modules need to be installed as project dependencies. In the `android/app/build.gradle` file, add the following:
 
 ```groovy
 dependencies {
-  // RNFirebase dependency
+  // This should be here already
   compile(project(':react-native-firebase')) {
     transitive = false
   }
-  
-  // Firebase dependancies
+
+  // Firebase dependencies
   compile "com.google.android.gms:play-services-base:{{ android.firebase.version }}"
   compile "com.google.firebase:firebase-core:{{ android.firebase.version }}"
-  
+
   ...
 ```
 
-### Update Google Play service maven reposiory
+### Update Google Play service maven repository
 
 Google Play services from 11.2.0 onwards require their dependencies to be downloaded from Google's Maven respository so add the required reference to the repositories section of the project level `build.gradle` (`android/build.gradle`):
 
@@ -80,31 +71,6 @@ allprojects {
 }
 ```
 
-### Add RNFirebase as a React Native module
-
-To install `react-native-firebase` in your project, you'll need to import the packages you need from `io.invertase.firebase` in your project's `android/app/src/main/java/com/[app name]/MainApplication.java` and list them as packages for ReactNative in the `getPackages()` function:
-
-```java
-package com.youcompany.application;
-...
-
-import io.invertase.firebase.RNFirebasePackage; // <-- Add this line
-
-public class MainApplication extends Application implements ReactApplication {
-    // ...
-
-    @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-          new RNFirebasePackage()  // <-- Add this line
-      );
-    }
-  };
-
-}
-```
-
-## 3. Install modules
+## 4. Install modules
 
 The `RNFirebasePackage` only provides your application with access to [Core](version /core/reference) features. Check out the installation guides on the other modules for how to use other Firebase features.
