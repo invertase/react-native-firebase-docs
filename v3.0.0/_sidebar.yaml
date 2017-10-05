@@ -39,6 +39,10 @@
   categories:
   - title: Admob
     links:
+    - type: reference
+      files:
+      - admob
+      - NativeExpress
     - to: "/admob/ios"
       text: Install on iOS
       icon: apple
