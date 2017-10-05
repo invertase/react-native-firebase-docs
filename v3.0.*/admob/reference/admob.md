@@ -27,16 +27,16 @@ Opens a debug menu, allowing you to test your ads. This menu cannot be closed un
 ### interstitial
 [method]interstitial(unitId) returns [ref admob.Interstitial];[/method]
 
-Returns a new [Interstitial](version /admob/interstitial) to be loaded with a given unitId.
+Returns a new [ref admob.Interstitial] to be loaded with a given unitId.
 
 | Parameter |         |
 | --------- | ------- |
 | unitId   | **string** <br /> Ad unitId |
 
 ### rewarded
-[method]rewarded(unitId) returns [RewardedVideo](version /admob/rewarded-video);[/method]
+[method]rewarded(unitId) returns [ref admob.RewardedVideo];[/method]
 
-Returns a new [RewardedVideo](version /admob/rewarded-video) to be loaded with a given unitId.
+Returns a new [ref admob.RewardedVideo] to be loaded with a given unitId.
 
 | Parameter |         |
 | --------- | ------- |
@@ -45,24 +45,24 @@ Returns a new [RewardedVideo](version /admob/rewarded-video) to be loaded with a
 ## Statics
 
 ### Banner
-[method]Banner returns [Banner](version /admob/banner);[/method]
+[method]Banner returns [ref admob.Banner];[/method]
 
-Returns a [Banner](version /admob/banner) component.
+Returns a [ref admob.Banner] component.
 
 ### NativeExpress
-[method]NativeExpress returns [NativeExpress](version /admob/native-express);[/method]
+[method]NativeExpress returns [ref admob.NativeExpress];[/method]
 
-Returns a [NativeExpress](version /admob/native-express) component.
+Returns a [ref admob.NativeExpress] component.
 
 ### AdRequest
-[method]AdRequest returns [AdRequest](version /admob/ad-request);[/method]
+[method]AdRequest returns [ref admob.AdRequest];[/method]
 
-Returns a [AdRequest](version /admob/ad-request) class.
+Returns a [ref admob.AdRequest] class.
 
 ### VideoOptions
-[method]VideoOptions returns [VideoOptions](version /admob/video-options);[/method]
+[method]VideoOptions returns [ref admob.VideoOptions];[/method]
 
-Returns a [VideoOptions](version /admob/video-options) class.
+Returns a [ref admob.VideoOptions] class.
 
 ## Types
 
@@ -79,4 +79,4 @@ Returns an `Object` containing [RewardedVideo](#rewarded) event types.
 ### NativeExpressEventTypes
 [method]NativeExpressEventTypes returns [NativeExpressEventTypes](https://github.com/invertase/react-native-firebase/blob/master/lib/modules/admob/EventTypes.js#L18);[/method]
 
-Returns an `Object` containing [NativeExpress](#nativeexpress) event types.
+Returns an `Object` containing [NativeExpress](#NativeExpress) event types.
