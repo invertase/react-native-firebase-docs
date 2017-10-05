@@ -1,4 +1,4 @@
-### Default Firebase App
+# Default Firebase App
 
 After following the iOS & Android install guides and correctly setting up your google services plist/json files; the default app is automatically initialized and available for use in react-native-firebase.
 
@@ -12,16 +12,16 @@ console.log(firebase.database().app.name); // '[DEFAULT]'
 
 !> Calling `initializeApp()` for the default app will throw an 'app already initialized' error in a later release.
 
-### Enable Database Persistence
+# Enable Database Persistence
 
 Enabling database persistence (setPersistence) via JS for the default app is no longer supported. This breaking change was added in v3 to prevent several race condition issues around.
 
 You can still however easily enable this natively for the default app instance:
 
-#### Android
+## Android
 
 Add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` inside your `MainActivity.java` files `onCreate()` method.
 
-#### iOS
+## iOS
 
 Add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line inside your `AppDelegate.m` files `didFinishLaunchingWithOptions` method.
