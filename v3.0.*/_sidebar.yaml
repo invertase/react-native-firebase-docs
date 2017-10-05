@@ -54,7 +54,12 @@
     - type: reference
       files:
       - admob
+      - AdRequest
+      - Banner
+      - Interstitial
       - NativeExpress
+      - RewardedVideo
+      - VideoOptions
   - title: Analytics
     path: analytics
     links:
@@ -64,11 +69,13 @@
     - to: "/android"
       text: Install on Android
       icon: android
-    - to: "/reference"
-      text: Reference
     - type: divider
     - to: "/reserved-events"
       text: Reserved Events
+    - type: divider
+    - type: reference
+      files:
+      - analytics
   - title: Authentication
     path: auth
     links:
