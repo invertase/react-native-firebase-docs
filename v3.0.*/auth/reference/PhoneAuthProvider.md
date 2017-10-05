@@ -12,7 +12,7 @@ firebase.auth.PhoneAuthProvider
 ## Methods
 
 ### credential
-[method]credential(verificationId, code) returns [AuthCredential](version /auth/auth-credential)[/method]
+[method]credential(verificationId, code) returns [ref auth.AuthCredential][/method]
 
 | Parameter |         |
 | --------- | ------- |
