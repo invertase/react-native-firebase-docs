@@ -90,6 +90,8 @@
       icon: info-circle-o
     - to: "/social-auth"
       text: Social Auth
+    - to: "/phone-auth"
+      text: Phone Auth
     - type: divider
     - type: reference
       files:
