@@ -1,7 +1,8 @@
 # Authentication - Getting Started
 
 Firebase makes authentication super easy to implement out of the box whether you're looking for anonymous, email & password or social authentication.
-For newcomers, although the API is simple, actually implementing it into the flow of your app may seem tricky. The following guide will run through a few scenarios which you'll likely find coming across.
+
+For newcomers, although the API is simple, actually implementing it into the flow of your app may seem tricky. The following guide will run through a couple of scenarios which you'll likely find coming across.
 
 We'll only be using React Native & RNFirebase here to avoid any confusion, although you may want to hook this up with a state management tool like [Redux](http://redux.js.org/docs/introduction/) as your app becomes more complex.
 
@@ -10,6 +11,7 @@ RNFirebase uses the native Firebase SDKs so your authenticate state is saved to 
 ## Anonymous Auth
 
 Even though your app might not any required authentication, wouldn't it be great if you could somehow keep track of your users, giving them a unique identifier?
+
 This is exactly what anonymous auth does. It creates an account for the user without requiring them to autnenticate.
 
 > Ensure you've enabled "Anonymous" sign-in on the [Firebase console](https://console.firebase.google.com) under Authentication!
@@ -79,7 +81,7 @@ class App extends React.Component {
 export default App;
 ```
 
-Now the app wont render until the [ref auth#signInAnonymously] method has returned. You can now access the anonymous users details using the [ref auth#currentUser] property.
+Now the app wont render until the [ref auth#signInAnonymously] method has resolved. You can now access the anonymous users details using the [ref auth#currentUser] property.
 
 If the user closes and re-opens the app, Firebase will automatically sign them back in to the anonymous account they've already been assigned if available. 
 
@@ -167,6 +169,6 @@ class App extends React.Component {
 export default App;
 ```
 
-As the `onAuthStateChanged` listener returns a `[ref auth.User]` or `null`, we can directly pass this to our state.
+As the `onAuthStateChanged` listener returns a [ref auth.User] or `null`, we can directly pass this to our state.
 
 When an authentication event happens, user state will be updated with our user (logged in or account created) or `null` (logged out). If the user state is null, the login screen is shown.
