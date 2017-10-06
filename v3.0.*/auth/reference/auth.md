@@ -140,13 +140,15 @@ Asynchronously signs in with the given credentials.
 | auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification ID of the credential is not valid. |
 
 ### signInWithPhoneNumber
-[method]signInWithPhoneNumber(phoneNumber) returns TODO;[/method]
+[method]signInWithPhoneNumber(phoneNumber) returns Promise containing [ref auth.ConfirmationResult];[/method]
 
 Asynchronously signs in using a phone number.
 
+Returns a [ref auth.ConfirmationResult]. Use [ref auth.ConfirmationResult#confirm] with the verification code to confirm the phone number. In case of Android auto verification, use [ref auth#onAuthStateChanged] to listen incase the SMS is not shown to the user. See [this guide](version /auth/phone-auth#signInWithPhoneNumber) for more information.
+
 | Parameter |         |
 | --------- | ------- |
-| credential     | **string** <br /> Phone number containing country code |
+| phoneNumber | **string** <br /> Phone number containing country code (e.g. +44) |
 
 #### Error Codes
 
@@ -163,7 +165,10 @@ TODO
 
 #### Error Codes
 
-TODO
+| Code | Message |
+| --------- | ------- |
+| auth/invalid-email  | Thrown if the email address is not valid. |
+| auth/user-not-found | Thrown if there is no user corresponding to the email address. |
 
 ### sendPasswordResetEmail
 [method]sendPasswordResetEmail(email) returns Promise containing void;[/method]
