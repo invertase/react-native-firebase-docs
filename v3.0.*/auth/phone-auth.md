@@ -36,7 +36,7 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 ```
 
-The below is a full implementation example:
+### Full Example
 
 ```js
 import React, { Component } from 'react';
