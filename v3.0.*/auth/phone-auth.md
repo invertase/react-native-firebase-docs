@@ -6,9 +6,7 @@ RNFirebase provides two methods to sign users in with their phone number; [ref a
 
 `signInWithPhoneNumber` is a more straight-forward implementation of handling the auth flow, however it provides less flexibility to handle the various situations which may occur. 
 
-### Example
-
-1) Trigger phone auth - as per the Web SDK (without the need for captcha):
+### 1. Trigger phone auth
 
 ```js
 firebase.auth().signInWithPhoneNumber(phoneNumber)
@@ -16,7 +14,7 @@ firebase.auth().signInWithPhoneNumber(phoneNumber)
   .catch(error => /error);
 ```
 
-2) Confirm verification code - as per the Web SDK:
+### 2. Confirm verification code
 
 ```js
 confirmResult.confirm(verificationCode)
@@ -28,7 +26,7 @@ On iOS, this is all that is required.
 
 However Android also provides "auto verification" if Google Play service can automatically detect the incoming message (and doesn't display it!).
 
-3) [Android] Handle Auto Verification
+### 3. [Android] Handle Auto Verification
 
 To handle auto verification, we need to listen to [ref auth#onAuthStateChanged]:
 
