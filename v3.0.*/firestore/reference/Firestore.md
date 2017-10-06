@@ -9,12 +9,12 @@ Do not call this constructor directly. Instead, use `firebase.firestore()`.
 ## Methods
 
 ### batch
-[method]batch() returns [WriteBatch](version /firestore/write-batch)[/method]
+[method]batch() returns [ref firestore.WriteBatch];[/method]
 
 Creates a write batch, used for performing multiple writes as a single atomic operation.
 
 ### collection
-[method]collection(collectionPath) returns [CollectionReference](version /firestore/collection-reference)[/method]
+[method]collection(collectionPath) returns [ref firestore.CollectionReference];[/method]
 
 Gets a slash-separated path to a collection.
 
@@ -23,7 +23,7 @@ Gets a slash-separated path to a collection.
 | collectionPath  | **string** <br /> A slash-separated path to a collection. |
 
 ### doc
-[method]doc(documentPath) returns [DocumentReference](version /firestore/document-reference)[/method]
+[method]doc(documentPath) returns [ref firestore.DocumentReference];[/method]
 
 Gets a DocumentReference instance that refers to the document at the specified path.
 

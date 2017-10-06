@@ -4,13 +4,13 @@ A QuerySnapshot contains zero or more DocumentSnapshot objects representing the 
 
 ## Properties
 
-### docChanges
-[method]docChanges returns Array of [DocumentChange](version /firestore/document-change);[/method]
+### docChanges
+[method]docChanges returns Array of [ref firestore.DocumentChange];[/method]
 
 An array of the documents that changed since the last snapshot. If this is the first snapshot, all documents will be in the list as added changes.
 
-### docs
-[method]docs returns Array of [DocumentChange](version /firestore/document-change);[/method]
+### docs
+[method]docs returns Array of [ref firestore.DocumentChange];[/method]
 
 An array of all the documents in the QuerySnapshot.
 
@@ -19,23 +19,23 @@ An array of all the documents in the QuerySnapshot.
 
 True if there are no documents in the QuerySnapshot.
 
-### query
-[method]query returns [Query](version /firestore/query);[/method]
+### query
+[method]query returns [ref firestore.Query];[/method]
 
 The query you called get or onSnapshot on to get the QuerySnapshot.
 
-### size
+### size
 [method]size returns number;[/method]
 
 The number of documents in the QuerySnapshot.
 
 ## Methods
 
-### forEach
+### forEach
 [method]forEach(callback) returns void;[/method]
 
 Enumerates all of the documents in the QuerySnapshot.
 
 | Parameter |         |
 | --------- | ------- |
-| callback  | **function([DataSnapshot](version /firestore/data-snapshot))** |
+| callback  | **function([ref firestore.DataSnapshot])** |

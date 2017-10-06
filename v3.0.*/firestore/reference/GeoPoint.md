@@ -4,7 +4,7 @@
 firebase.firestore.geoPoint
 ```
 
-### geoPoint
+### geoPoint
 [method]geoPoint(latitude, longitude);[/method]
 
 An immutable object representing a geo point in Cloud Firestore. The geo point is represented as latitude/longitude pair.

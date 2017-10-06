@@ -15,11 +15,11 @@ Property of the DocumentSnapshot that signals whether or not the data exists. Tr
 Property of the DocumentSnapshot that provides the document's ID.
 
 ### ref
-[method]ref returns [DocumentReference](version /firestore/document-reference);[/method]
+[method]ref returns [ref firestore.DocumentReference];[/method]
 
 The DocumentReference for the document included in the DocumentSnapshot.
 
-## Methods
+## Methods
 
 ### data
 [method]data() returns Object;[/method]
