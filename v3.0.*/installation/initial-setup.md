@@ -12,9 +12,4 @@ You first need to have an active Firebase project, which can be created using th
 
 ## Install on your platform
 
-Both iOS and Android require different installations, please follow the guide for your specfic platform:
-
-TODO platform logos
-
-![Android](https://raw.githubusercontent.com/invertase/react-native-firebase-docs/master/android-logo.png =100x*)
-![iOS](https://raw.githubusercontent.com/invertase/react-native-firebase-docs/master/ios-logo.png =100x*)
+Both iOS and Android require different installations, please follow the guide for [Android](version /installation/android) or [iOS](version /installation/ios).
