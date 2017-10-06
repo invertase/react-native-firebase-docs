@@ -87,7 +87,7 @@
     - to: "/getting-started"
       text: Getting Started
       icon: info-circle-o
-    - to "/social-auth"
+    - to: "/social-auth"
       text: Social Auth
     - type: divider
     - type: reference
