@@ -86,7 +86,7 @@
       icon: android
     - to: "/getting-started"
       text: Getting Started
-      icon: android
+      icon: info-circle-o
     - type: divider
     - type: reference
       files:
