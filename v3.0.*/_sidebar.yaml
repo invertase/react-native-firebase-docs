@@ -99,6 +99,7 @@
       - ActionCodeInfo
       - AdditionalUserInfo
       - AuthCredential
+      - ConfirmationResult
       - EmailAuthProvider
       - FacebookAuthProvider
       - GithubAuthProvider
