@@ -137,7 +137,7 @@ Asynchronously signs in with the given credentials.
 | auth/user-not-found  | Thrown if signing in with a credential from [ref auth.EmailAuthProvider#credential] and there is no user corresponding to the given email. |
 | auth/wrong-password  | Thrown if signing in with a credential from [ref auth.EmailAuthProvider#credential] and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
 | auth/invalid-verification-code  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification code of the credential is not valid. |
-| auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential](version /auth/phone-auth-provider#credential) and the verification ID of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification ID of the credential is not valid. |
 
 ### signInWithPhoneNumber
 [method]signInWithPhoneNumber(phoneNumber) returns Promise containing [ref auth.ConfirmationResult];[/method]
