@@ -2,7 +2,7 @@
 
 Firebase makes authentication super easy to implement out of the box whether you're looking for anonymous, email & password or social authentication.
 
-For newcomers, although the API is simple, actually implementing it into the flow of your app may seem tricky. The following guide will run through a couple of scenarios which you'll likely find coming across.
+For newcomers, although the API is simple, actually implementing it into the flow of your app may seem tricky. The following guide will run through a couple of scenarios which you'll likely find yourself coming across.
 
 We'll only be using React Native & RNFirebase here to avoid any confusion, although you may want to hook this up with a state management tool like [Redux](http://redux.js.org/docs/introduction/) as your app becomes more complex.
 
