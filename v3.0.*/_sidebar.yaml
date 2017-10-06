@@ -84,6 +84,9 @@
     - to: "/android"
       text: Install on Android
       icon: android
+    - to: "/getting-started"
+      text: Getting Started
+      icon: android
     - type: divider
     - type: reference
       files:
