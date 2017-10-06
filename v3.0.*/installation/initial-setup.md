@@ -16,5 +16,5 @@ Both iOS and Android require different installations, please follow the guide fo
 
 TODO platform logos
 
-[Android](/docs/v3/installation/android)
-[iOS](/docs/v3/installation/ios)
+![Android](https://raw.githubusercontent.com/invertase/react-native-firebase-docs/master/android-logo.png =100x*)
+![iOS](https://raw.githubusercontent.com/invertase/react-native-firebase-docs/master/ios-logo.png =100x*)
