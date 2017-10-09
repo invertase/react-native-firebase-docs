@@ -247,7 +247,7 @@ Returns metadata about the code.
 | auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
 
 ### fetchProvidersForEmail
-[method]checkActionCode(email) returns Promise containing Array of string;[/method]
+[method]fetchProvidersForEmail(email) returns Promise containing Array of string;[/method]
 
 Gets the list of provider IDs that can be used to sign in for the given email address. Useful for an "identifier-first" sign-in flow.
 
