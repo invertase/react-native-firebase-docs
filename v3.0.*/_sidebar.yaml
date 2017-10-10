@@ -114,7 +114,7 @@
       icon: android
     - type: divider
     - to: "https://medium.com/@elliothesp/b338fb6525b9"
-      text: Getting Started
+      text: Building a TODO app
       type: external
       icon: info-circle-o
     - type: divider
