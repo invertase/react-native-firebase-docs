@@ -1,1 +1,39 @@
 # Android Installation
+
+First ensure you have followed the [initial setup guide](version /installation/initial-setup).
+
+## Add the dependency
+
+Add the Firebase Admob dependancy to `android/app/build.gradle`:
+
+```
+dependencies {
+  ...
+  compile "com.google.firebase:firebase-firestore:{{ android.firebase.version }}"
+}
+```
+
+## Install the RNFirebase Firestore package
+
+Add the `RNFirebaseFirestorePackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
+
+```java
+...
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.firestore.RNFirebaseFirestorePackage; // <-- Add this line
+
+public class MainApplication extends Application implements ReactApplication {
+    // ...
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new RNFirebasePackage(),
+          new RNFirebaseFirestorePackage() // <-- Add this line
+      );
+    }
+  };
+  // ...
+}
+```
