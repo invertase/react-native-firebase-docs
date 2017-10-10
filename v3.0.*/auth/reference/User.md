@@ -87,7 +87,7 @@ Refreshes the current user, if signed in.
 Send verification email to current user.
 
 ### toJSON
-[method]reload() returns Object;[/method]
+[method]toJSON() returns Object;[/method]
 
 Returns a JSON-serializable representation of this object.
 
