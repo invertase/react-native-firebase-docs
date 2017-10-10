@@ -109,6 +109,29 @@
       - User
       - UserCredential
       - UserInfo
+  - title: Cloud Firestore
+    path: firestore
+    links:
+    - to: "/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/android"
+      text: Install on Android
+      icon: android
+    - type: divider
+    - type: reference
+      files:
+      - firestore
+      - CollectionReference
+      - DocumentChange
+      - DocumentReference
+      - DocumentSnapshot
+      - FieldValue
+      - Firestore
+      - GeoPoint
+      - QuerySnapshot
+      - Query
+      - WriteBatch
   - title: Cloud Messaging
     path: messaging
     links:
@@ -168,29 +191,6 @@
       - Query
       - Reference
       - ServerValue
-  - title: Firestore
-    path: firestore
-    links:
-    - to: "/ios"
-      text: Install on iOS
-      icon: apple
-    - to: "/android"
-      text: Install on Android
-      icon: android
-    - type: divider
-    - type: reference
-      files:
-      - firestore
-      - CollectionReference
-      - DocumentChange
-      - DocumentReference
-      - DocumentSnapshot
-      - FieldValue
-      - Firestore
-      - GeoPoint
-      - QuerySnapshot
-      - Query
-      - WriteBatch
   - title: Remote Config
     path: config
     links:
