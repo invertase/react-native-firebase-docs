@@ -28,12 +28,6 @@
       text: Getting Started
     - to: "/testing"
       text: Testing
-  - title: Guides
-    links:
-    - to: "/guides/abc"
-      text: Guide 1
-    - to: "/guides/abc2"
-      text: Guide 2
       
 - title: Modules
   categories:
@@ -118,6 +112,11 @@
     - to: "/android"
       text: Install on Android
       icon: android
+    - type: divider
+    - to: "https://medium.com/@elliothesp/b338fb6525b9"
+      text: Getting Started
+      type: external
+      icon: info-circle-o
     - type: divider
     - type: reference
       files:
