@@ -5,7 +5,7 @@ firebase.database
 ```		
 
 ### database		
-[method]database(app) returns [ref databbase.Database];[/method]		
+[method]database(app) returns [ref database.Database];[/method]		
 
 Gets the [ref databbase.Database] service for the default app or a given app.		
  		
