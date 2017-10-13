@@ -30,7 +30,7 @@ Creates a new query where the results end at the provided document (inclusive). 
 | snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document the query results should end before or the field values to start this query at, in order of the query's order by. |
 
 ### get
-[method]get() returns Promise containing [QuerySnapshot](version /firestore/query-snapshot);[/method]
+[method]get() returns Promise containing [ref firestore.QuerySnapshot];[/method]
 
 Executes the query and returns the results as a QuerySnapshot.
 
