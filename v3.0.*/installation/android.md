@@ -73,4 +73,4 @@ allprojects {
 
 ## 4. Install modules
 
-The `RNFirebasePackage` only provides your application with access to [Core](version /core/reference) features. Check out the installation guides on the other modules for how to use other Firebase features.
+The `RNFirebasePackage` only provides your application with access to [Core](version /core/reference/core) features. Check out the installation guides on the other modules for how to use other Firebase features.
