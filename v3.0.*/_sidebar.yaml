@@ -247,6 +247,9 @@
       type: external
   - title: Community
     links:
+    - to: "https://stackoverflow.com/questions/tagged/react-native-firebase"
+      text: Stack Overflow (Tag)
+      type: external
     - to: "https://twitter.com/@rnfirebase"
       text: Twitter @RNFirebase
       type: external
