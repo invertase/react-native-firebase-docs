@@ -21,4 +21,4 @@ firebase.auth().signInAnonymously()
 
 ## Multiple app instances
 
-RNFirebase v3 supports multiple app instances out of the box. For more information on see the [initializing multiple apps documentation](version /core/initialize-apps).
+React Native Firebase supports multiple app instances. For more information see the [initializing multiple apps documentation](version /core/initialize-apps).
