@@ -25,7 +25,7 @@ The user's E.164 formatted phone number (if available).
 The URL of the user's profile picture (if available).
 
 ### providerId
-[method]photoURL returns string;[/method]
+[method]providerId returns string;[/method]
 
 The authentication provider ID for the current user. For example, 'facebook.com', or 'google.com'.
 
