@@ -18,8 +18,9 @@ LoginManager
   .logInWithReadPermissions(['public_profile', 'email'])
   .then((result) => {
     if (result.isCancelled) {
-      return Promise.resolve('cancelled');
+      return Promise.reject(new Error('The user cancelled the request'));
     }
+    
     console.log(`Login success with permissions: ${result.grantedPermissions.toString()}`);
     // get the access token
     return AccessToken.getCurrentAccessToken();
@@ -32,12 +33,7 @@ LoginManager
     return firebase.auth().signInWithCredential(credential);
   })
   .then((currentUser) => {
-    if (currentUser === 'cancelled') {
-      console.log('Login cancelled');
-    } else {
-      // now signed in
       console.warn(JSON.stringify(currentUser.toJSON()));
-    }
   })
   .catch((error) => {
     console.log(`Login fail with error: ${error}`);
@@ -46,7 +42,7 @@ LoginManager
 
 ## Google
 
-## Twitter
+## Twitter
 
 ## Github
 
