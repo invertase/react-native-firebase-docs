@@ -58,5 +58,11 @@ Returns all initilized apps.
 ### DEFAULT_APP_NAME
 [method]DEFAULT_APP_NAME returns string;[/method]
 
+[example]
+```js
+console.log(firebase.DEFAULT_APP_NAME);
+```
+[/example]
+
 ### googleApiAvailability
 [method]googleApiAvailability returns Object;[/method]
