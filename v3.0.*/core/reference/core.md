@@ -44,11 +44,15 @@ Set the global logging level for all logs.
 ### apps
 [method]apps returns Array of [ref core.FirebaseApp];[/method]
 
-[example]
+[collapse title=EXAMPLE]
 ```js
+const foo = 'bar';
+
+// test code
 console.log(firebase.apps);
+
 ```
-[/example]
+[/collapse]
 
 Returns all initilized apps.
 
@@ -58,11 +62,12 @@ Returns all initilized apps.
 ### DEFAULT_APP_NAME
 [method]DEFAULT_APP_NAME returns string;[/method]
 
-[example]
+[collapse]
+
 ```js
 console.log(firebase.DEFAULT_APP_NAME);
 ```
-[/example]
+[/collapse]
 
 ### googleApiAvailability
 [method]googleApiAvailability returns Object;[/method]
