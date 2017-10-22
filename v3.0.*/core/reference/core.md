@@ -41,11 +41,11 @@ Set the global logging level for all logs.
 
 ## Properties
 
-### apps
+### apps
 
 [method]apps returns Array of [ref core.FirebaseApp];[/method]
 
-[collapse title=EXAMPLE]
+[collapse EXAMPLE]
 ```js
 const foo = 'bar';
 
