@@ -4,9 +4,9 @@
 
 Add the Firebase Authentication dependancy to `android/app/build.gradle`:
 
-```
+```groovy
 dependencies {
-  ...
+  // ...
   compile "com.google.firebase:firebase-auth:{{ android.firebase.version }}"
 }
 ```
@@ -16,7 +16,7 @@ dependencies {
 Add the `RNFirebaseAnalyticsPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
-...
+// ...
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage; // <-- Add this line
 
