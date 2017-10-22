@@ -42,6 +42,7 @@ Set the global logging level for all logs.
 ## Properties
 
 ### apps
+
 [method]apps returns Array of [ref core.FirebaseApp];[/method]
 
 [collapse title=EXAMPLE]
