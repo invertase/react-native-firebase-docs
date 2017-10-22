@@ -8,7 +8,7 @@ First ensure you have followed the [initial setup guide](version /installation/i
 
 Add the following to your `Podfile`:
 
-```
+```ruby
 pod 'Firebase/Messaging'
 ```
 
@@ -29,13 +29,13 @@ In Xcode, enable the following capabilities:
 
 Add the following import to the top of your `ios/[App Name]/AppDelegate.h`:
 
-```
+```obj-c
 @import UserNotifications;
 ```
 
 Now change the interface descriptor to:
 
-```
+```obj-c
 @interface AppDelegate : UIResponder <UIApplicationDelegate,UNUserNotificationCenterDelegate>
 ```
 
@@ -43,13 +43,13 @@ Now change the interface descriptor to:
 
 Add the following import to the top of your `ios/[App Name]/AppDelegate.m`:
 
-```
+```obj-c
 #import "RNFirebaseMessaging.h"
 ```
 
 Add the following to the `didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method after `[FIRApp Configure]`:
 
-```
+```obj-c
 [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
 ```
 
