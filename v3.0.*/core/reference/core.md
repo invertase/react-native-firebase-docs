@@ -30,9 +30,14 @@ Initializes a new [ref core.FirebaseApp] instance.
 
 Returns a [ref core.FirebaseApp] instance by name.
 
+[collapse Parameters]
+
 | Parameter |         |
 | --------- | ------- |
 | name   | **string** (optional) <br /> Returns the default app instance if no value. |
+
+[/collapse]
+
 
 ### setLogLevel
 [method]setLogLevel(level) returns void;[/method]
@@ -49,30 +54,6 @@ Set the global logging level for all logs.
 
 [method]apps returns Array of [ref core.FirebaseApp];[/method]
 
-[collapse EXAMPLE]
-```js
-const foo = 'bar';
-
-// test code
-console.log(firebase.apps);
-
-```
-[/collapse]
-
 Returns all initilized apps.
 
-### SDK_VERSION
-[method]SDK_VERSION returns string;[/method]
 
-### DEFAULT_APP_NAME
-[method]DEFAULT_APP_NAME returns string;[/method]
-
-[collapse EXAMPLE]
-
-```js
-console.log(firebase.DEFAULT_APP_NAME);
-```
-[/collapse]
-
-### googleApiAvailability
-[method]googleApiAvailability returns Object;[/method]
