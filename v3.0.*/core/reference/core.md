@@ -44,9 +44,13 @@ Returns a [ref core.FirebaseApp] instance by name.
 
 Set the global logging level for all logs.
 
+[collapse Parameters]
+
 | Parameter |         |
 | --------- | ------- |
 | level   | **string** or **boolean** |
+
+[/collapse]
 
 ## Properties
 
