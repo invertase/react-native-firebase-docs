@@ -18,7 +18,7 @@ This is exactly what anonymous auth does. It creates an account for the user wit
 
 The best place to implement this would be in a "root" level component which contains the entire app, lets call this component `App`:
 
-```js
+```jsx
 import React from 'react';
 import { View, Text } from 'react-native';
 
@@ -40,7 +40,7 @@ export default App;
 Right now, we simply render out some text. Lets now anonymously authenticate the user before we show the app.
 We'll use the [ref auth#signInAnonymously] method to do this:
 
-```js
+```jsx
 import React from 'react';
 import { View, Text } from 'react-native';
 import firebase from 'react-native-firebase';
@@ -95,7 +95,7 @@ Luckily, Firebase makes this super easy by providing a [ref auth#signInWithEmail
 
 The best place to implement this would be in a "root" level component which contains the entire app, lets call this component `App`:
 
-```js
+```jsx
 import React from 'react';
 import { View, Text } from 'react-native';
 import firebase from 'react-native-firebase';
@@ -120,7 +120,7 @@ The main difference is that we need to keep track of the users current authentic
 
 We'll also keep track of the unsubscriber function for when the app unmounts.
 
-```js
+```jsx
 import React from 'react';
 import { View, Text } from 'react-native';
 import firebase from 'react-native-firebase';
