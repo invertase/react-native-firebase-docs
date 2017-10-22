@@ -1,60 +1,40 @@
 # Firestore
 
-```
-firebase.firestore
-```
+The Firebase Firestore service interface.
 
-### firestore
-[method]firestore(app) returns [ref firestore.Firestore];[/method]
+Do not call this constructor directly. Instead, use `firebase.firestore()`.
 
-Gets the [ref firestore.Firestore] service for the default app or a given app.
+> Please note that Persistence (offline support) is enabled by default with Firestore on iOS and Android.
 
-firebase.firestore() can be called with no arguments to access the default app's Firestore service or as firebase.firestore(app) to access the Firestore service associated with a specific app.
+## Methods
+
+### batch
+[method]batch() returns [ref firestore.WriteBatch];[/method]
+
+Creates a write batch, used for performing multiple writes as a single atomic operation.
+
+### collection
+[method]collection(collectionPath) returns [ref firestore.CollectionReference];[/method]
+
+Gets a slash-separated path to a collection.
 
 | Parameter |         |
 | --------- | ------- |
-| app  | **[ref core.FirebaseApp]** (optional) <br /> Optional app whose Firestore service to return. If not provided, the default Firestore service will be returned. <br /> Value must not be null. |
+| collectionPath  | **string** <br /> A slash-separated path to a collection. |
 
-## Interfaces
+### doc
+[method]doc(documentPath) returns [ref firestore.DocumentReference];[/method]
 
-### CollectionReference
+Gets a DocumentReference instance that refers to the document at the specified path.
 
-[ref firestore.CollectionReference]
+| Parameter |         |
+| --------- | ------- |
+| documentPath  | **string** <br /> A slash-separated path to a document. |
 
-### DocumentReference
+## Unsupported Methods
 
-[ref firestore.DocumentReference]
+### enablePersistence
 
-### DocumentSnapshot
+### runTransaction
 
-[ref firestore.DocumentSnapshot]
-
-### DocumentChange
-
-[ref firestore.DocumentChange]
-
-### Firestore
-
-[ref firestore.Firestore]
-
-### GeoPoint
-
-[ref firestore.GeoPoint]
-
-### Query
-
-[ref firestore.Query]
-
-### QuerySnapshot
-
-[ref firestore.QuerySnapshot]
-
-### WriteBatch
-
-[ref firestore.WriteBatch]
-
-## Statics
-
-### FieldValue
-
-[ref firestore.FieldValue]
+### settings

@@ -4,9 +4,9 @@
 
 Add the Firebase Performance Monitoring dependancy to `android/app/build.gradle`:
 
-```
+```groovy
 dependencies {
-  ...
+  // ...
   compile "com.google.firebase:firebase-perf:{{ android.firebase.version }}"
 }
 ```
@@ -32,7 +32,7 @@ apply plugin: "com.google.firebase.firebase-perf"
 Add the `RNFirebasePerformancePackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
-...
+// ...
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.perf.RNFirebasePerformancePackage; // <-- Add this line
 

@@ -4,9 +4,9 @@
 
 Add the Firebase Storage dependancy to `android/app/build.gradle`:
 
-```
+```groovy
 dependencies {
-  ...
+  // ...
   compile "com.google.firebase:firebase-storage:{{ android.firebase.version }}"
 }
 ```
@@ -16,7 +16,7 @@ dependencies {
 Add the `RNFirebaseStoragePackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
-...
+// ...
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.storage.RNFirebaseStoragePackage; // <-- Add this line
 

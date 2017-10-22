@@ -1,46 +1,43 @@
-# Realtime Database		
- 		
-```		
-firebase.database		
-```
+# Database
 
-### database		
-[method]database(app) returns [ref database.Database];[/method]
+The Firebase Database service interface.
 
-Gets the [ref databbase.Database] service for the default app or a given app.		
- 		
-firebase.database() can be called with no arguments to access the default app's Database service or as firebase.database(app) to access the Database service associated with a specific app.		
- 		
-firebase.database is also a namespace that can be used to access global constants and methods associated with the Database service.		
- 		
-| Parameter |         |		
-| --------- | ------- |		
-| app  | **[ref core.FirebaseApp]** (optional) <br /> Optional app whose Database service to return. If not provided, the default Database service will be returned. <br /> Value must not be null. |		
- 		
-## Interfaces		
- 		
-### Database		
- 		
-[ref database.Database]
- 		
-### DataSnapshot		
+Do not call this constructor directly. Instead, use `firebase.database()`.
 
-[ref database.DataSnapshot]
- 		
-### OnDisconnect		
+## Methods
 
-[ref database.OnDisconnect]
- 		
-### Query		
- 		
-[ref database.Query]
- 		
-### Reference		
- 		
-[ref database.Reference]
- 		
-## Statics		
- 		
-### ServerValue		
- 		
-[ref database.ServerValue]
+### goOffline
+[method]goOffline() returns void;[/method]
+
+Disconnects from the server (all Database operations will be completed offline).
+
+The client automatically maintains a persistent connection to the Database server, which will remain active indefinitely and reconnect when disconnected. However, the goOffline() and goOnline() methods may be used to control the client connection in cases where a persistent connection is undesirable.
+
+While offline, the client will no longer receive data updates from the Database. However, all Database operations performed locally will continue to immediately fire events, allowing your application to continue behaving normally. Additionally, each operation performed locally will automatically be queued and retried upon reconnection to the Database server.
+
+To reconnect to the Database and begin receiving remote events, see [ref database.Database#goOnline].
+
+### goOnline
+[method]goOnline() returns void;[/method]
+
+Reconnects to the server and synchronizes the offline Database state with the server state.
+
+This method should be used after disabling the active connection with goOffline(). Once reconnected, the client will transmit the proper data and fire the appropriate events so that your client "catches up" automatically.
+
+### ref
+[method]ref(path) returns [ref database.Reference];[/method]
+
+Returns a Reference representing the location in the Database corresponding to the provided path. If no path is provided, the Reference will point to the root of the Database.
+
+| Parameter |         |
+| --------- | ------- |
+| path  | **string** (optional) <br /> Optional path representing the location the returned Reference will point. If not provided, the returned Reference will point to the root of the Database. |
+
+### getServerTime
+[method]getServerTime() returns number;[/method]
+
+Gets the Firebase server current timestamp.
+
+## Unsupported Methods
+
+### refFromURL

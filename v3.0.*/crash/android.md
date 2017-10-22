@@ -6,9 +6,9 @@ First ensure you have followed the [initial setup guide](version /installation/i
 
 Add the Firebase Cloud Crash dependancy to `android/app/build.gradle`:
 
-```
+```groovy
 dependencies {
-  ...
+  // ...
   compile "com.google.firebase:firebase-crash:{{ android.firebase.version }}"
 }
 ```
@@ -18,7 +18,7 @@ dependencies {
 Add the `RNFirebaseCrashPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
-...
+// ...
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.crash.RNFirebaseCrashPackage; // <-- Add this line
 
