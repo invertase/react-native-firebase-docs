@@ -34,13 +34,11 @@ For other changes, clone the master branch and follow the contributing [guidelin
 
 ## Change log
 
-### CHANGE LOG STILL WIP.
-
 This release is mainly aimed at adding firebase 'core' functionality and further adjustments to bring the modules in line with the web sdk api. Additionally there's been a lot of internal code improvements aimed at performance and improving QoL for module development.
 
 Whilst every effort has been taken to document all breaking changes there may still be a chance that some undocumented breaking changes have snuck in as this was probably one of the largest releases to date code wise. 🙈 
 
-## Migration guide (WIP)
+## Migration guide
 
 ### Android
 - You can update all your Firebase dependencies to 11.2.0 in `android/app/build.gradle`
