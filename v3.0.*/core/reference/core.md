@@ -43,6 +43,7 @@ Set the global logging level for all logs.
 
 ### apps
 [method]apps returns Array of [ref core.FirebaseApp];[/method]
+
 [example]
 ```js
 console.log(firebase.apps);
