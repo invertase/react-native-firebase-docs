@@ -7,6 +7,8 @@
 
 Initializes a new [ref core.FirebaseApp] instance.
 
+[collapse Parameters]
+
 | Parameter |         |
 | --------- | ------- |
 | options   | **Object** |
@@ -20,6 +22,8 @@ Initializes a new [ref core.FirebaseApp] instance.
 | messagingSenderId   | **string** |
 | projectId   | **string** |
 | storageBucket   | **string** |
+
+[/collapse]
 
 ### app
 [method]app(name) returns [ref core.FirebaseApp];[/method]
@@ -63,7 +67,7 @@ Returns all initilized apps.
 ### DEFAULT_APP_NAME
 [method]DEFAULT_APP_NAME returns string;[/method]
 
-[collapse]
+[collapse EXAMPLE]
 
 ```js
 console.log(firebase.DEFAULT_APP_NAME);
