@@ -4,7 +4,7 @@
 
 After following the iOS & Android install guides and correctly setting up your google services plist/json files; the default app is automatically initialized and available for use in react-native-firebase.
 
-There's no need to call `initializeApp(opt)` in your JS code for the default app, import RNFirebase and use the default app straight away:
+There's no need to call `initializeApp(options)` in your JS code for the default app, import RNFirebase and use the default app straight away:
 
 ```javascript
 import firebase from 'react-native-firebase';
@@ -20,8 +20,16 @@ You can still however easily enable this natively for the default app instance:
 
 ### Android
 
-Add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` inside your `MainActivity.java` files `onCreate()` method.
+Add the below line inside your `MainActivity.java` file `onCreate()` method:
+
+```java
+FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+```
 
 ### iOS
 
-Add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line inside your `AppDelegate.m` files `didFinishLaunchingWithOptions` method.
+Add the below line after the `[FIRApp configure];` line inside your `AppDelegate.m` file `didFinishLaunchingWithOptions` method:
+
+```objectivec
+[FIRDatabase database].persistenceEnabled = YES;
+```
