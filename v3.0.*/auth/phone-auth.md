@@ -38,7 +38,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
 ### Full Example
 
-```js
+```jsx
 import React, { Component } from 'react';
 import { View, Button, Text, TextInput, Image } from 'react-native';
 
