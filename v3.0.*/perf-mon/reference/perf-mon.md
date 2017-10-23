@@ -15,6 +15,12 @@ The following methods are accessed via the Performance Monitoring instance `fire
 
 Enables or disables performance monitoring. 
 
+[collapse Example]
+```js
+firebase.perf().setPerformanceCollectionEnabled(false);
+```
+[/collapse]
+
 | Parameter |         |
 | --------- | ------- |
 | enabled   | **boolean** <br />Whether monitoring is enabled or disabled |
@@ -23,6 +29,13 @@ Enables or disables performance monitoring.
 [method]newTrace(id) returns [ref perf-mon.Trace];[/method]
 
 Returns a new instance of Trace. The id is the unique name of something you'd like to run performance monitoring against.
+
+[collapse Example]
+```js
+const trace = firebase.perf().newTrace('authentication');
+trace.start();
+```
+[/collapse]
 
 | Parameter |         |
 | --------- | ------- |
