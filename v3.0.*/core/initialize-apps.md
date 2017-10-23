@@ -6,7 +6,7 @@ App initialization in RNFirebase is for the most part the same as the web sdk, w
 
 ## Supported Modules
 
-Only 4 modules on the official firebase native SDK's support multiple apps, they are as follows:
+Only a few modules on the official firebase native SDK's support multiple apps:
 
  - Authentication
  - Database
