@@ -7,8 +7,6 @@
 
 Initializes a new [ref core.FirebaseApp] instance.
 
-[collapse Parameters]
-
 | Parameter |         |
 | --------- | ------- |
 | options   | **Object** |
@@ -23,20 +21,14 @@ Initializes a new [ref core.FirebaseApp] instance.
 | projectId   | **string** |
 | storageBucket   | **string** |
 
-[/collapse]
-
 ### app
 [method]app(name) returns [ref core.FirebaseApp];[/method]
 
 Returns a [ref core.FirebaseApp] instance by name.
 
-[collapse Parameters]
-
 | Parameter |         |
 | --------- | ------- |
 | name   | **string** (optional) <br /> Returns the default app instance if no value. |
-
-[/collapse]
 
 
 ### setLogLevel
@@ -44,13 +36,9 @@ Returns a [ref core.FirebaseApp] instance by name.
 
 Set the global logging level for all logs.
 
-[collapse Parameters]
-
 | Parameter |         |
 | --------- | ------- |
 | level   | **string** or **boolean** |
-
-[/collapse]
 
 ## Properties
 
