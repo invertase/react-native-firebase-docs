@@ -13,6 +13,15 @@ The following methods are accessed via the Analytics instance `firebase.analytic
 
 Log a custom event with optional params.
 
+[collapse Example]
+```js
+firebase.analytics().logEvent('add_to_cart', {
+  id: '123',
+  value: 100
+});
+```
+[/collapse]
+
 | Parameter |         |
 | --------- | ------- |
 | event   | **string**  |
@@ -22,6 +31,12 @@ Log a custom event with optional params.
 [method]setAnalyticsCollectionEnabled(enabled) returns void;[/method]
 
 If true, allows the device to collect analytical data and send it to Firebase.
+
+[collapse Example]
+```js
+firebase.analytics().setAnalyticsCollectionEnabled(false);
+```
+[/collapse]
 
 | Parameter |         |
 | --------- | ------- |
@@ -34,6 +49,12 @@ Sets the current screen name.
 
 ?> Whilst `screenClassOverride` is optional, it is recommended it is always sent as your current class name, for example on Android it will always show as 'MainActivity' if not specified.
 
+[collapse Example]
+```js
+firebase.analytics().setCurrentScreen('Homepage', 'App');
+```
+[/collapse]
+
 | Parameter |         |
 | --------- | ------- |
 | screenName   | **string**  |
@@ -44,6 +65,12 @@ Sets the current screen name.
 
 Sets the minimum engagement time required before starting a session. The default value is 10000 (10 seconds).
 
+[collapse Example]
+```js
+firebase.analytics().setMinimumSessionDuration(20000);
+```
+[/collapse]
+
 | Parameter |         |
 | --------- | ------- |
 | miliseconds   | **number**  |
@@ -52,6 +79,12 @@ Sets the minimum engagement time required before starting a session. The default
 [method]setSessionTimeoutDuration(miliseconds) returns void;[/method]
 
 Sets the duration of inactivity that terminates the current session. The default value is 1800000 (30 minutes).
+
+[collapse Example]
+```js
+firebase.analytics().setMinimumSessionDuration(900000);
+```
+[/collapse]
 
 | Parameter |         |
 | --------- | ------- |
@@ -62,6 +95,13 @@ Sets the duration of inactivity that terminates the current session. The default
 
 Gives a user a unique identification.
 
+[collapse Example]
+```js
+const user = firebase.auth().currentUser;
+firebase.analytics().setUserId(user.uid);
+```
+[/collapse]
+
 | Parameter |         |
 | --------- | ------- |
 | id   | **string**  |
@@ -70,6 +110,13 @@ Gives a user a unique identification.
 [method]setUserProperty(name, value) returns void;[/method]
 
 Sets a key/value pair of data on the current user.
+
+[collapse Example]
+```js
+firebase.analytics().setUserProperty('age', 18);
+```
+[/collapse]
+
 
 | Parameter |         |
 | --------- | ------- |
