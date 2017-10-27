@@ -56,7 +56,7 @@ Gets a config item by key. Returns a snapshot containing source (`default`, `rem
 | key   | **string** |
 
 ### getValues
-[method]getValue(keys) returns Promise containing object of snapshots;[/method]
+[method]getValues(keys) returns Promise containing object of snapshots;[/method]
 
 Gets multiple values by key. Returns an snapshot object of keys with the same object returned from [ref config#getValue], e.g. `snapshots.foo.val()`.
 
