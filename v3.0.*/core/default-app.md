@@ -20,7 +20,7 @@ You can still however easily enable this natively for the default app instance:
 
 ### Android
 
-Add the below line inside your `MainActivity.java` file `onCreate()` method:
+Add the below line inside your `MainApplication.java` file `onCreate()` method:
 
 ```java
 FirebaseDatabase.getInstance().setPersistenceEnabled(true);
