@@ -1,0 +1,6 @@
+android:
+  firebase:
+    version: 11.4.2
+    plugins: 1.1.1
+  google:
+    services: 3.1.1

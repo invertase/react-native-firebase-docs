@@ -1,0 +1,17 @@
+- module: crash
+  methods:
+  - setCrashCollectionEnabled
+  - isCrashCollectionEnabled
+  - log
+  - logcat
+  - report
+  
+- module: perf
+  methods:
+  - setPerformanceCollectionEnabled
+  - newTrace
+  classes:
+    Trace:
+    - start
+    - incrementCounter
+    - stop
