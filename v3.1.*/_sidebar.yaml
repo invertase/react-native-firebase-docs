@@ -190,19 +190,19 @@
       - Query
       - Reference
       - ServerValue
-    - title: Dynamic Links
-      path: links
-      links:
-      - to: "/ios"
-        text: Install on iOS
-        icon: apple
-      - to: "/android"
-        text: Install on Android
-        icon: android
-      - type: divider
-      - type: reference
-        files:
-        - links
+  - title: Dynamic Links
+    path: links
+    links:
+    - to: "/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/android"
+      text: Install on Android
+      icon: android
+    - type: divider
+    - type: reference
+      files:
+      - links
   - title: Remote Config
     path: config
     links:
