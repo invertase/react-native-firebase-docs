@@ -41,20 +41,20 @@ Run `pod update`.
 5. Update your `AppDelegate.m` file:
     1. Import RN Firebase Links header file:
     
-        ```objective-c
+        ```objectivec
         #import "RNFirebaseLinks.h"
         ```
         
     2. Add the following to the `didFinishLaunchingWithOptions` method before `[FIRApp Configure]`:
 
-        ```objective-c
+        ```objectivec
         [FIROptions defaultOptions].deepLinkURLScheme = CUSTOM_URL_SCHEME;
         ```
 
         ^-- where `CUSTOM_URL_SCHEME` is the custom URL scheme you defined in your Xcode project.
     3. For **iOS 8** and older add the following inside the `@implementation AppDelegate` annotation:
     
-        ```objective-c
+        ```objectivec
         - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
@@ -66,7 +66,7 @@ Run `pod update`.
         
     4.  For **iOS 9** and newer add the following inside the `@implementation AppDelegate` annotation:
     
-        ```objective-c
+        ```objectivec
         - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
