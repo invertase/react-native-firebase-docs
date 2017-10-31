@@ -17,6 +17,12 @@ While offline, the client will no longer receive data updates from the Database.
 
 To reconnect to the Database and begin receiving remote events, see [ref database.Database#goOnline].
 
+[collapse Example]
+```js
+firebase.database().goOffline();
+```
+[/collapse]
+
 ### goOnline
 [method]goOnline() returns void;[/method]
 
@@ -24,10 +30,24 @@ Reconnects to the server and synchronizes the offline Database state with the se
 
 This method should be used after disabling the active connection with goOffline(). Once reconnected, the client will transmit the proper data and fire the appropriate events so that your client "catches up" automatically.
 
+
+[collapse Example]
+```js
+firebase.database().goOnline();
+```
+[/collapse]
+
 ### ref
 [method]ref(path) returns [ref database.Reference];[/method]
 
 Returns a Reference representing the location in the Database corresponding to the provided path. If no path is provided, the Reference will point to the root of the Database.
+
+[collapse Example]
+```js
+const ref = firebase.database().ref('path');
+ref.update({ foo: 'bar' });
+```
+[/collapse]
 
 | Parameter |         |
 | --------- | ------- |
@@ -37,6 +57,12 @@ Returns a Reference representing the location in the Database corresponding to t
 [method]getServerTime() returns number;[/method]
 
 Gets the Firebase server current timestamp.
+
+[collapse Example]
+```js
+const serverTime = firebase.database().getServerTime();
+```
+[/collapse]
 
 ## Unsupported Methods
 
