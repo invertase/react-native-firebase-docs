@@ -27,13 +27,13 @@ Run `pod update`.
      https://app_code.app.goo.gl/apple-app-site-association
      ```
        
-       If your app is connected, the apple-app-site-association file contains a reference to your app's App Store ID and bundle ID. For example:
+     If your app is connected, the apple-app-site-association file contains a reference to your app's App Store ID and bundle ID. For example:
        
      ```javascript
      {"applinks":{"apps":[],"details":[{"appID":"1234567890.com.example.ios","paths":["/*"]}]}}
      ```
        
-       If the details field is empty, double-check that you specified your Team ID.
+     If the details field is empty, double-check that you specified your Team ID.
 3. In the Info tab of your app's XCode project, create a new URL type to be used for Dynamic Links. Set the `Identifier` field to a unique value and the URL scheme field to either your bundle identifier or a unique value.
 
 4. In the Capabilities tab of your app's Xcode project, enable Associated Domains and add the following to the Associated Domains list: `applinks:app_code.app.goo.gl` where `app_code` is your dynamic links domain application code as in step *1.2* above.
