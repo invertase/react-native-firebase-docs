@@ -17,6 +17,7 @@ Run `pod update`.
 1. In the Firebase console, open the Dynamic Links section.
     1. Accept the terms of service if you are prompted to do so.
     2. Take note of your project's Dynamic Links domain, which is displayed at the top of the Dynamic Links page. You need your project's Dynamic Links domain to programmatically create Dynamic Links. A Dynamic Links domain looks like app_code.app.goo.gl.
+    
         ![console](https://firebase.google.com/docs/dynamic-links/images/dynamic-links-domain.png)
 
 2. Ensure that your app's App Store ID and your Apple Developer Team ID is specified in your app's settings. To view and edit your app's settings, go to your Firebase project's Settings page and select your iOS app.
