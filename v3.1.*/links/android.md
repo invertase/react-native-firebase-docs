@@ -1,26 +1,24 @@
 # Android Installation
 
-First ensure you have followed the [initial setup guide](version /installation/initial-setup).
-
 ## Add the dependency
 
-Add the Firebase Remote Config dependancy to `android/app/build.gradle`:
+Add the Firebase Dynamic Links / Invites dependency to your `android/app/build.gradle` file:
 
 ```groovy
 dependencies {
   // ...
-  compile "com.google.firebase:firebase-config:{{ android.firebase.version }}"
+  compile "com.google.firebase:firebase-invites:{{ android.firebase.version }}"
 }
 ```
 
-## Install the RNFirebase Remote Config package
+## Install the RNFirebase Database package
 
-Add the `RNFirebaseRemoteConfigPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
+Add the `RNFirebaseLinksPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
 // ...
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage; // <-- Add this line
+import io.invertase.firebase.database.RNFirebaseLinksPackage; // <-- Add this line
 
 public class MainApplication extends Application implements ReactApplication {
     // ...
@@ -30,10 +28,33 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new RNFirebasePackage(),
-          new RNFirebaseRemoteConfigPackage() // <-- Add this line
+          new RNFirebaseLinksPackage() // <-- Add this line
       );
     }
   };
   // ...
 }
 ```
+
+
+## Configure Android Project
+
+1. In your [Firebase console](https://console.firebase.google.com/), open the Dynamic Links section.
+    1. Accept the terms of service if you are prompted to do so.
+    2. Take note of your project's Dynamic Links domain, which is displayed at the top of the Dynamic Links page. You need your project's Dynamic Links domain to programmatically create Dynamic Links. A Dynamic Links domain looks like app_code.app.goo.gl.
+
+        ![console](https://firebase.google.com/docs/dynamic-links/images/dynamic-links-domain.png)
+
+2. In your `android/app/src/main/AndroidManifest.xml` file, add a new intent filter to the activity that handles deep links for your app (for react-native this is usually the MainActivity), and specify the host and the scheme:
+
+    ```xml
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:host="your.dynamic.links.domain.example.com" android:scheme="http"/>
+        <data android:host="your.dynamic.links.domain.example.com" android:scheme="https"/>
+    </intent-filter>
+    ```
+
+?> For more information on Analytics for links or Handling Dynamic Links using App Links see the official [Firebase Android SDK docs](https://firebase.google.com/docs/dynamic-links/android/receive#record-analytics)
