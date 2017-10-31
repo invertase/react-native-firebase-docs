@@ -57,4 +57,4 @@ public class MainApplication extends Application implements ReactApplication {
     </intent-filter>
     ```
 
-?> For more information on Analytics for links or Handling Dynamic Links using App Links see the official [Firebase Android SDK docs](https://firebase.google.com/docs/dynamic-links/android/receive#record-analytics)
+> For more information on Analytics for links or Handling Dynamic Links using App Links see the official [Firebase Android SDK docs](https://firebase.google.com/docs/dynamic-links/android/receive#record-analytics)
