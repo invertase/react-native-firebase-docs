@@ -21,11 +21,11 @@ Run `pod update`.
 
 2. Ensure that your app's App Store ID and your Apple Developer Team ID is specified in your app's settings. To view and edit your app's settings, go to your Firebase project's Settings page and select your iOS app.
    You can confirm that your Firebase project is properly configured to use Dynamic Links in your iOS app by opening the following URL:
-       ```
+       ```text
        https://app_code.app.goo.gl/apple-app-site-association
        ```
        If your app is connected, the apple-app-site-association file contains a reference to your app's App Store ID and bundle ID. For example:
-       ```json
+       ```javascript
        {"applinks":{"apps":[],"details":[{"appID":"1234567890.com.example.ios","paths":["/*"]}]}}
        ```
        If the details field is empty, double-check that you specified your Team ID.
@@ -35,18 +35,18 @@ Run `pod update`.
 
 5. Update your `AppDelegate.m` file:
     1. Import RN Firebase Links header file:
-        ```obj-c
+        ```objective-c
         #import "RNFirebaseLinks.h"
         ```
     2. Add the following to the `didFinishLaunchingWithOptions` method before `[FIRApp Configure]`:
 
-        ```obj-c
+        ```objective-c
         [FIROptions defaultOptions].deepLinkURLScheme = CUSTOM_URL_SCHEME;
         ```
 
         ^-- where `CUSTOM_URL_SCHEME` is the custom URL scheme you defined in your Xcode project.
     3. For iOS 8 and older add the following inside the `@implementation AppDelegate` annotation:
-        ```obj-c
+        ```objective-c
         - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
@@ -56,7 +56,7 @@ Run `pod update`.
         }
         ```
     4.  For iOS 9 and new add the following inside the `@implementation AppDelegate` annotation:
-        ```obj-c
+        ```objective-c
         - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
