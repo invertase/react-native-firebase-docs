@@ -50,7 +50,7 @@ Run `pod update`.
         ```
 
         ^-- where `CUSTOM_URL_SCHEME` is the custom URL scheme you defined in your Xcode project.
-    3. For iOS 8 and older add the following inside the `@implementation AppDelegate` annotation:
+    3. For **iOS 8** and older add the following inside the `@implementation AppDelegate` annotation:
         ```objective-c
         - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
@@ -60,7 +60,7 @@ Run `pod update`.
                                           options:options];
         }
         ```
-    4.  For iOS 9 and new add the following inside the `@implementation AppDelegate` annotation:
+    4.  For **iOS 9** and newer add the following inside the `@implementation AppDelegate` annotation:
         ```objective-c
         - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
