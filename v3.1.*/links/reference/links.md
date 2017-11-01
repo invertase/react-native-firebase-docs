@@ -75,9 +75,9 @@ firebase.links()
 ```
 [/collapse]
 
-# Types
+## Types
 
-## LinkConfiguration
+### LinkConfiguration
 
 For more information [see reference](https://firebase.google.com/docs/reference/dynamic-links/link-shortener)
 
