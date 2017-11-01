@@ -9,12 +9,6 @@ React Native Firebase mimics the [Firebase REST API](https://firebase.google.com
 2. The response contains the URL string only.
 3. There is no `dynamicLinkInfo` element. Instead, all of the elements under it were moved into the top-level.
 
-The links module can be accessed in the following way:
-
-```javascript
-firebase.links()
-```
-
 ## Methods
 
 The following methods are accessed via the default app's Dynamic Links instance `firebase.links()`.
