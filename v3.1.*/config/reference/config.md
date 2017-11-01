@@ -8,7 +8,7 @@ firebase.config
 
 The following methods are accessed via the Config instance `firebase.config()`.
 
-### logEvent
+### enableDeveloperMode
 [method]enableDeveloperMode() returns void;[/method]
 
 Enable Remote Config developer mode to allow for frequent refreshes of the cache.
