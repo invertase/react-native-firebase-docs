@@ -14,7 +14,7 @@ React Native Firebase mimics the [Firebase REST API](https://firebase.google.com
 The following methods are accessed via the default app's Dynamic Links instance `firebase.links()`.
 
 ### createDynamicLink
-[method]createDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration) returns Promise<String>;[/method]
+[method]createDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration) returns Promise<string>;[/method]
 
 Creates a standard dynamic link.
 
@@ -42,7 +42,7 @@ firebase.links()
 [/collapse]
 
 ### createShortDynamicLink
-[method]createShortDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration) returns Promise<String>;[/method]
+[method]createShortDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration) returns Promise<string>;[/method]
 
 Creates a short dynamic link.
 
@@ -68,6 +68,47 @@ firebase.links()
     });
 ```
 [/collapse]
+
+### getInitialLink
+[method]getInitialLink() returns Promise<string|null>;[/method]
+
+Returns the URL that the app has been launched from. If the app was not launched from a URL the return value will be null.
+
+[collapse Example]
+```javascript
+firebase.links()
+    .getInitialLink()
+    .then((url) => {
+        if (url) {
+            // app opened from a url
+        } else {
+           // app NOT opened from a url
+        }
+    });
+```
+[/collapse]
+
+### onLink
+[method]onLink(listener: Function<string>) returns Function;[/method]
+
+Subscribe to URL open events while the app is still running.
+
+The listener is called from URL open events whilst the app is still running, use [getInitialLink](#getInitialLink) for URLs which cause the app to open from a previously closed / not running state.
+
+Returns an unsubscribe function, call the returned function to unsubscribe from all future events.
+
+[collapse Example]
+```javascript
+// subscribe
+const unsubscribe = firebase.links().onLink((url) => {
+  // ...
+});
+
+// unsubscribe
+unsubscribe();
+```
+[/collapse]
+
 
 ## Types
 
