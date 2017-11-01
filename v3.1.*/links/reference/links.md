@@ -78,28 +78,28 @@ For more information [see reference](https://firebase.google.com/docs/reference/
 [collapse Type Definitiion]
 ```typescript
 {
-  dynamicLinkDomain: 'string',
   link: 'string',
-  androidInfo: ?{
+  dynamicLinkDomain: 'string',
+  androidInfo?: {
+    androidLink?: 'string',
     androidPackageName: 'string',
-    androidFallbackLink: ?'string',
-    androidMinPackageVersionCode: ?'string',
-    androidLink: ?'string',
+    androidFallbackLink?: 'string',
+    androidMinPackageVersionCode?: 'string',
   },
-  iosInfo: ?{
+  iosInfo?: {
     iosBundleId: 'string',
-    iosFallbackLink: ?'string',
-    iosCustomScheme: ?'string',
-    iosIpadFallbackLink: ?'string',
-    iosIpadBundleId: ?'string',
-    iosAppStoreId: ?'string',
+    iosAppStoreId?: 'string',
+    iosFallbackLink?: 'string',
+    iosCustomScheme?: 'string',
+    iosIpadBundleId?: 'string',
+    iosIpadFallbackLink?: 'string',
   },
-  socialMetaTagInfo: ?{
+  socialMetaTagInfo?: {
     socialTitle: 'string',
-    socialDescription: 'string',
     socialImageLink: 'string',
+    socialDescription: 'string',
   },
-  suffix: {
+  suffix?: {
     option: 'string',
   },
 }
