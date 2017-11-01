@@ -116,7 +116,7 @@ unsubscribe();
 
 For more information about each parameter below see the parameters section of the official Firebase docs [here.](https://firebase.google.com/docs/reference/dynamic-links/link-shortener)
 
-[collapse Type Definitiion]
+[collapse Definition]
 ```typescript
 {
   link: 'string',
