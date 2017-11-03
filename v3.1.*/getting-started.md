@@ -22,7 +22,7 @@ All in all, RNFirebase provides much faster performance over the web SDK and pro
 | ---------------------- | :---: | :---: | :---: | :---: | :---: |
 | **AdMob**                  | ❌ | ✅ | ✅ | ✅ | ❌ |
 | **Analytics**              | ✅ | ✅ | ✅ | ✅ | ❌ |
-| **App Indexing**           | ❌ | ❌ | ❌ | ✅ | ❌ |
+| **App Indexing**           | ❌ | ❌ | ❌ | ❌ | ❌ |
 | **Authentication**         | ✅ | ✅ | ✅ | ✅ | ✅ |
 | _-- Phone Auth_            | ❌ | ❌ | ✅ | ✅ | ❌ |
 | **Core**                   | ❌ |**?**| ✅ | ✅ | ✅ |
