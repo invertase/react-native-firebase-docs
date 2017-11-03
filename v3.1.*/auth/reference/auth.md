@@ -24,7 +24,7 @@ Returns an unsubscriber function.
 
 > This is an experimental feature and is only part of React Native Firebase.
 
-Adds a listener to observe changes to the [ref auth.User] object. This is a superset of everything from [ref auth.auth#onAuthStateChanged], [ref auth.auth#onIdTokenChanged] and user changes. This goal of this method is to provide easier listening to **all** user changes such as `emailVerified` without manually having to call `.reload()`.
+Adds a listener to observe changes to the [ref auth.User] object. This is a superset of everything from [ref auth.auth#onAuthStateChanged], [ref auth.auth#onIdTokenChanged] and user changes. This goal of this method is to provide easier listening to **all** user changes, such as when credentials are linked and unlinked, without manually having to call `.reload()`.
 
 Returns an unsubscriber function.
 
