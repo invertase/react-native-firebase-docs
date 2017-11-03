@@ -19,6 +19,53 @@ Returns an unsubscriber function.
 | --------- | ------- |
 | listener  | **function([ref auth.User] or null)** |
 
+### onUserChanged
+[method]onUserChanged(listener) returns function;[/method]
+
+> This is an experimental feature and is only part of React Native Firebase.
+
+Adds an observer for changes to the currentUser object, this is a superset of everything from onAuthStateChanged, onIdTokenChanged and user changes. This goal of this
+method is to provide easier listening to **all** user changes such as `emailVerified` without manually having to call `.reload()`.
+
+Returns an unsubscriber function.
+
+| Parameter |         |
+| --------- | ------- |
+| listener  | **function([ref auth.User] or null)** |
+
+[collapse Example]
+```jsx
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import firebase from 'react-native-firebase;
+
+export default class MyComponent extends Component {
+
+    componentDidMount() {
+        this.unsubscribe = firebase.auth().onUserChanged(this.onUserChanged);
+    }
+
+    componentWillUnmount() {
+       if (this.unsubscribe) this.unsubscribe();
+    }
+
+    onUserChanged = (currentUser) => {
+        if (currentUser) {
+            console.log(currentUser.toJSON())
+        }
+    }
+
+    render () {
+        return (
+            <View>
+                <Text>Hello World</Text>
+            </View>
+        );
+    }
+}
+```
+[/collapse]
+
 
 ### onIdTokenChanged
 [method]onIdTokenChanged(listener) returns function;[/method]
