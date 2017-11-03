@@ -38,7 +38,6 @@ All in all, RNFirebase provides much faster performance over the web SDK and pro
 | _-- Transactions_          | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Remote Config**          | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Storage**                | ✅ | ✅ | ✅ | ✅ |**?**|
-### Supported versions
 
 ---
 ### Supported versions - React Native / Firebase
