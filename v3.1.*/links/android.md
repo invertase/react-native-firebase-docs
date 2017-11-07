@@ -11,14 +11,14 @@ dependencies {
 }
 ```
 
-## Install the RNFirebase Database package
+## Install the RNFirebase Links package
 
 Add the `RNFirebaseLinksPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
 // ...
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.database.RNFirebaseLinksPackage; // <-- Add this line
+import io.invertase.firebase.links.RNFirebaseLinksPackage; // <-- Add this line
 
 public class MainApplication extends Application implements ReactApplication {
     // ...
