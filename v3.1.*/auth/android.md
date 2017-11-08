@@ -13,7 +13,7 @@ dependencies {
 
 ## Install the RNFirebase Authentication package
 
-Add the `RNFirebaseAnalyticsPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
+Add the `RNFirebaseAuthPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
 // ...
