@@ -36,6 +36,8 @@ B) Within the `didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` meth
 
 Firebase recommends using Cocoapods to install the Firebase SDK.
 
+We don't recommend it, but if for some reason you are unable to use Cocoapods, then you need to manually add the Firebase frameworks to an `ios/Firebase` folder for them to be recognised.
+
 ### 4.0) If you don't already have Cocoapods set up
 Follow the instructions to install Cocoapods and create your Podfile [here](https://firebase.google.com/docs/ios/setup#add_the_sdk).
 
