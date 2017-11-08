@@ -26,6 +26,12 @@ Add the below line inside your `MainApplication.java` file `onCreate()` method:
 FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 ```
 
+You also need to explicitly add the `FirebaseDatabase` import with the rest of the imports near the top of your `MainApplication.java` file:
+
+```java
+import com.google.firebase.database.FirebaseDatabase;
+```
+
 ### iOS
 
 Add the below line after the `[FIRApp configure];` line inside your `AppDelegate.m` file `didFinishLaunchingWithOptions` method:

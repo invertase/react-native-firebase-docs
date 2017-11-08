@@ -22,6 +22,12 @@ You can still however easily enable this natively for the default app instance:
 
 Add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` inside your `MainActivity.java` files `onCreate()` method.
 
+You also need to explicitly add the `FirebaseDatabase` import with the rest of the imports near the top of your `MainApplication.java` file:
+
+```java
+import com.google.firebase.database.FirebaseDatabase;
+```
+
 ### iOS
 
 Add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line inside your `AppDelegate.m` files `didFinishLaunchingWithOptions` method.
