@@ -13,6 +13,11 @@ The following methods are accessed via the Config instance `firebase.config()`.
 
 Enable Remote Config developer mode to allow for frequent refreshes of the cache.
 
+[collapse Example]
+```
+firebase.config().enableDeveloperMode();
+```
+[collapse]
 ### setDefaults
 [method]setDefaults(defaults) returns void;[/method]
 
@@ -41,10 +46,27 @@ Thrown errors can be one of the following:
 | config/no_fetch_yet   | Config has never been fetched |
 | config/throttled   | Config fetch was throttled |
 
+[collapse Example]
+```
+firebase.config().fetch()
+```
+[collapse]
+
 ### activateFetched
 [method]activateFetched() returns Promise containing boolean;[/method]
 
 Moves fetched data in the apps active config. Always successfully resolves with a boolean value of whether the fetched config was moved successfully.
+
+[collapse Example]
+```
+firebase.config().fetch()
+  .then(() => firebase.config().activateFetched())
+  .then(() => {
+    // Chain additional firebase config methods if needed
+  })
+  .catch((error) => console.log(`Error processing config: ${error}`))
+```
+[collapse]
 
 ### getValue
 [method]getValue(key) returns Promise containing snapshot;[/method]
@@ -55,14 +77,44 @@ Gets a config item by key. Returns a snapshot containing source (`default`, `rem
 | --------- | ------- |
 | key   | **string** |
 
+[collapse Example]
+```
+firebase.config().fetch()
+  .then(() => firebase.config().activateFetched())
+  .then(() => firebase.config().getValue('some_remote_config_key'))
+  .then((data) => {
+    // Do something with data
+  })
+  .catch((error) => console.log(`Error processing config: ${error}`))
+```
+[collapse]
+
 ### getValues
-[method]getValue(keys) returns Promise containing object of snapshots;[/method]
+[method]getValues(array) returns Promise containing object of snapshots;[/method]
 
 Gets multiple values by key. Returns an snapshot object of keys with the same object returned from [ref config#getValue], e.g. `snapshots.foo.val()`.
 
 | Parameter |         |
 | --------- | ------- |
-| keys   | **Array<string>** |
+| array   | **Array<string>** <br /> An array of keys from which to get values |
+  
+[collapse Example]
+```
+firebase.config().fetch()
+  .then(() => firebase.config().activateFetched())
+  .then(() => firebase.config().getKeysByPrefix('some_key_prefix_'))
+  .then((arr) => firebase.config().getValues(arr))
+  .then((objects) => {
+    let data = {};
+    // Retrieve values
+    Object.keys(objects).forEach((key) => {
+      data[key] = objects[key].val();
+      // Do something with data
+    });
+  })
+  .catch((error) => console.log(`Error processing config: ${error}`))
+```
+[collapse]
 
 ### getKeysByPrefix
 [method]getKeysByPrefix(prefix) returns Promise containing array of strings;[/method]
@@ -72,6 +124,18 @@ Returns all keys as an array by a prefix. If no prefix is defined all keys are r
 | Parameter |         |
 | --------- | ------- |
 | prefix    | **string** (optional) |
+
+
+[collapse Example]
+```
+firebase.config().fetch()
+  .then(() => firebase.config().activateFetched())
+  .then(() => {
+    let keys = firebase.config().getKeysByPrefix('some_key_prefix_')
+  })
+  .catch((error) => console.log(`Error processing config: ${error}`))
+```
+[collapse]
 
 ### setDefaultsFromResource
 [method]setDefaultsFromResource(filename) returns void;[/method]
