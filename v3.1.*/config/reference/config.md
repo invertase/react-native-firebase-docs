@@ -14,7 +14,7 @@ The following methods are accessed via the Config instance `firebase.config()`.
 Enable Remote Config developer mode to allow for frequent refreshes of the cache.
 
 [collapse Example]
-```
+```js
 firebase.config().enableDeveloperMode();
 ```
 [collapse]
@@ -47,7 +47,7 @@ Thrown errors can be one of the following:
 | config/throttled   | Config fetch was throttled |
 
 [collapse Example]
-```
+```js
 firebase.config().fetch()
 ```
 [collapse]
@@ -58,7 +58,7 @@ firebase.config().fetch()
 Moves fetched data in the apps active config. Always successfully resolves with a boolean value of whether the fetched config was moved successfully.
 
 [collapse Example]
-```
+```js
 firebase.config().fetch()
   .then(() => firebase.config().activateFetched())
   .then(() => {
@@ -78,7 +78,7 @@ Gets a config item by key. Returns a snapshot containing source (`default`, `rem
 | key   | **string** |
 
 [collapse Example]
-```
+```js
 firebase.config().fetch()
   .then(() => firebase.config().activateFetched())
   .then(() => firebase.config().getValue('some_remote_config_key'))
@@ -99,7 +99,7 @@ Gets multiple values by key. Returns an snapshot object of keys with the same ob
 | array   | **Array<string>** <br /> An array of keys from which to get values |
   
 [collapse Example]
-```
+```js
 firebase.config().fetch()
   .then(() => firebase.config().activateFetched())
   .then(() => firebase.config().getKeysByPrefix('some_key_prefix_'))
@@ -127,7 +127,7 @@ Returns all keys as an array by a prefix. If no prefix is defined all keys are r
 
 
 [collapse Example]
-```
+```js
 firebase.config().fetch()
   .then(() => firebase.config().activateFetched())
   .then(() => {
