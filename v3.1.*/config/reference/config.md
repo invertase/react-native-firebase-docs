@@ -18,6 +18,7 @@ Enable Remote Config developer mode to allow for frequent refreshes of the cache
 firebase.config().enableDeveloperMode();
 ```
 [/collapse]
+
 ### setDefaults
 [method]setDefaults(defaults) returns void;[/method]
 
