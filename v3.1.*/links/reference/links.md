@@ -14,7 +14,7 @@ React Native Firebase mimics the [Firebase REST API](https://firebase.google.com
 The following methods are accessed via the default app's Dynamic Links instance `firebase.links()`.
 
 ### createDynamicLink
-[method]createDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration) returns Promise<string>;[/method]
+[method]createDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration)) returns Promise<string>;[/method]
 
 Creates a standard dynamic link.
 
@@ -42,7 +42,7 @@ firebase.links()
 [/collapse]
 
 ### createShortDynamicLink
-[method]createShortDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration) returns Promise<string>;[/method]
+[method]createShortDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration)) returns Promise<string>;[/method]
 
 Creates a short dynamic link.
 
