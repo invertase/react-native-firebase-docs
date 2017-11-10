@@ -17,7 +17,7 @@ Enable Remote Config developer mode to allow for frequent refreshes of the cache
 ```js
 firebase.config().enableDeveloperMode();
 ```
-[collapse]
+[/collapse]
 ### setDefaults
 [method]setDefaults(defaults) returns void;[/method]
 
@@ -50,7 +50,7 @@ Thrown errors can be one of the following:
 ```js
 firebase.config().fetch()
 ```
-[collapse]
+[/collapse]
 
 ### activateFetched
 [method]activateFetched() returns Promise containing boolean;[/method]
@@ -66,7 +66,7 @@ firebase.config().fetch()
   })
   .catch((error) => console.log(`Error processing config: ${error}`))
 ```
-[collapse]
+[/collapse]
 
 ### getValue
 [method]getValue(key) returns Promise containing snapshot;[/method]
@@ -87,7 +87,7 @@ firebase.config().fetch()
   })
   .catch((error) => console.log(`Error processing config: ${error}`))
 ```
-[collapse]
+[/collapse]
 
 ### getValues
 [method]getValues(array) returns Promise containing object of snapshots;[/method]
@@ -114,7 +114,7 @@ firebase.config().fetch()
   })
   .catch((error) => console.log(`Error processing config: ${error}`))
 ```
-[collapse]
+[/collapse]
 
 ### getKeysByPrefix
 [method]getKeysByPrefix(prefix) returns Promise containing array of strings;[/method]
@@ -135,7 +135,7 @@ firebase.config().fetch()
   })
   .catch((error) => console.log(`Error processing config: ${error}`))
 ```
-[collapse]
+[/collapse]
 
 ### setDefaultsFromResource
 [method]setDefaultsFromResource(filename) returns void;[/method]
