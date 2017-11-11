@@ -17,7 +17,7 @@ npm install react-native-firebase@latest --save`
 ## 3) Update your code to reflect deprecations/breaking changes if needed:
 
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] enabling database persistence (setPersistence) via JS is no longer supported - this is to prevent several race conditions. See sub points on how to enable these natively.
-  - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainActivity` `onCreate` method.
+  - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainApplication` `onCreate` method.
   - [ios]  add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line  inside your `AppDelegate` `didFinishLaunchingWithOptions` method.
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [app] `new RNFirebase()` is no longer supported. See below for information about app initialisation.
 - ![#f03c15](https://placehold.it/15/fdfd96/000000?text=+) **[deprecated]** [app] `initializeApp()` for apps that are already initialised natively (i.e. the default app initialised via google-services plist/json) will now log a deprecation warning.
