@@ -17,13 +17,13 @@ npm install react-native-firebase@latest --save`
 ## 3) Update your code to reflect deprecations/breaking changes if needed:
 
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] enabling database persistence (setPersistence) via JS is no longer supported - this is to prevent several race conditions. See sub points on how to enable these natively.
-  - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainActivity` `onCreate` method.
+  - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainApplication` `onCreate` method.
   - [ios]  add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line  inside your `AppDelegate` `didFinishLaunchingWithOptions` method.
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [app] `new RNFirebase()` is no longer supported. See below for information about app initialisation.
 - ![#f03c15](https://placehold.it/15/fdfd96/000000?text=+) **[deprecated]** [app] `initializeApp()` for apps that are already initialised natively (i.e. the default app initialised via google-services plist/json) will now log a deprecation warning.
   - As these apps are already initialised natively there's no need to call `initializeApp` in your JS code. For now, calling it will just return the app that's already internally initialised - in a future version this will throw an `already initialized` exception.
   - Accessing apps can now be done the same way as the web sdk, simply call `firebase.app()` to get the default app, or with the name of specific app as the first arg, e.g. `const meow = firebase.app('catsApp');` to get a specific app.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [auth] Third party providers now user `providerId` rather than `provider` as per the Web SDK.  If you are manually creating your credentials, you will need to update the field name.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [auth] Third party providers now use `providerId` rather than `provider` as per the Web SDK.  If you are manually creating your credentials, you will need to update the field name.
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] Error messages and codes internally re-written to match the web sdk
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] `ref.isEqual` now checks the query modifiers as well as the ref path (was just path before). With the release of multi apps/core support this check now also includes whether the refs are for the same app.
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] on/off behaviour changes. Previous `off` behaviour was incorrect. A `SyncTree/Repo` implementation was added to provide the correct behaviour you'd expect in the web sdk. Whilst this is a breaking change it shouldn't be much of an issue if you've previously setup your on/off handling correctly. See #160 for specifics of this change.
