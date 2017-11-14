@@ -1,13 +1,5 @@
 # iOS Installation
 
-First ensure you have followed the [initial setup guide](version /installation/initial-setup).
+Ensure you have followed the [initial setup guide](version /installation/initial-setup).
 
-## Add the pod
-
-Add the following to your `Podfile`:
-
-```ruby
-pod 'Firebase/Analytics'
-```
-
-Run `pod update`.
+That is it, Analytics doesn't need anything else to work.
