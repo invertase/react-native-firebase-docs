@@ -20,7 +20,7 @@ You can still however easily enable this natively for the default app instance:
 
 ### Android
 
-Add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` inside your `MainActivity.java` files `onCreate()` method.
+Add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` inside your `MainApplication.java` files `onCreate()` method.
 
 You also need to explicitly add the `FirebaseDatabase` import with the rest of the imports near the top of your `MainApplication.java` file:
 

@@ -11,7 +11,7 @@ and follow the migration guide below (there isn't much to change).
 ## Known Issues
 
  - Currently no way (in JS) to set database persistence, you can however set this natively:
-    - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainActivity` `onCreate` method.
+    - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainApplication` `onCreate` method.
     - [ios] add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line  inside your `AppDelegate` `didFinishLaunchingWithOptions` method.
  - Currently no way to enable RNFirebase debug logging.
  - [android] no play store/play services version checks and associated methods.
