@@ -26,11 +26,13 @@ A) At the top of the file:
 #import <Firebase.h>
 ```
 
-B) Within the `didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method, before the `return`:
+B) At the beginning of the `didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method add the following line:
 
 ```objectivec
 [FIRApp configure];
 ```
+
+**WARNING: It is recommended to add the line within the method BEFORE creating the RCTRootView. Otherwise the initialization can happen too late after already being needed in your JavaScript code**
 
 ## 4. Setup Firebase Pods
 
