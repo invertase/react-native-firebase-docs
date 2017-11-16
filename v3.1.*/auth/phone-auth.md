@@ -234,7 +234,7 @@ firebase.auth()
 
         // Do something with your new credential, e.g.:
         // firebase.auth().signInWithCredential(credential);
-        // firebase.auth().linkWithCredential(credential);
+        // firebase.auth().currentUser.linkWithCredential(credential);
         // etc ...
         break;
     }
