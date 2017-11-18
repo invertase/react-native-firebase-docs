@@ -53,22 +53,27 @@ The `react-native-google-sign` library allows us to login (using `GoogleSignin`)
 ```js
 import { GoogleSignin } from 'react-native-google-signin';
 
-// ... somewhere in your login screen component
-GoogleSignin
-  .signIn()
-  .then((data) => {
-    // create a new firebase credential with the token
-    const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken);
-    
-    // login with credential
-    return firebase.auth().signInWithCredential(credential);
+// Calling this function will open Google for login.
+export const googleLogin = () => {
+  // Add configuration settings here:
+  return GoogleSignin.configure()
+  .then(() => {
+    GoogleSignin.signIn()
+    .then((data) => {
+      // create a new firebase credential with the token
+      const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken)
+
+      // login with credential
+      return firebase.auth().signInWithCredential(credential)
+    })
+    .then((currentUser) => {
+      console.info(JSON.stringify(currentUser.toJSON()))
+    })
+    .catch((error) => {
+      console.error(`Login fail with error: ${error}`)
+    })
   })
-  .then((currentUser) => {
-    console.warn(JSON.stringify(currentUser.toJSON()));
-  })
-  .catch((error) => {
-    console.log(`Login fail with error: ${error}`);
-  });
+}
 
 ```
 
