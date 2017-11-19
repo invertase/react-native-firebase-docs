@@ -12,32 +12,36 @@ The `react-native-fbsdk` library allows us to first login (using `LoginManager`)
 
 ```js
 import { AccessToken, LoginManager } from 'react-native-fbsdk';
+import firebase from 'react-native-firebase'
 
-// ... somewhere in your login screen component
-LoginManager
-  .logInWithReadPermissions(['public_profile', 'email'])
-  .then((result) => {
-    if (result.isCancelled) {
-      return Promise.reject(new Error('The user cancelled the request'));
-    }
-    
-    console.log(`Login success with permissions: ${result.grantedPermissions.toString()}`);
-    // get the access token
-    return AccessToken.getCurrentAccessToken();
-  })
-  .then(data => {
-    // create a new firebase credential with the token
-    const credential = firebase.auth.FacebookAuthProvider.credential(data.accessToken);
-
-    // login with credential
-    return firebase.auth().signInWithCredential(credential);
-  })
-  .then((currentUser) => {
-      console.warn(JSON.stringify(currentUser.toJSON()));
-  })
-  .catch((error) => {
-    console.log(`Login fail with error: ${error}`);
-  });
+// Calling the following function will open the FB login dialogue:
+const facebookLogin = () => {
+  return LoginManager
+    .logInWithReadPermissions(['public_profile', 'email'])
+    .then((result) => {
+      if (!result.isCancelled) {
+        console.log(`Login success with permissions: ${result.grantedPermissions.toString()}`)
+        // get the access token
+        return AccessToken.getCurrentAccessToken()
+      }
+    })
+    .then(data => {
+      if (data) {
+        // create a new firebase credential with the token
+        const credential = firebase.auth.FacebookAuthProvider.credential(data.accessToken)
+        // login with credential
+        return firebase.auth().signInWithCredential(credential)
+      }
+    })
+    .then((currentUser) => {
+      if (currentUser) {
+        console.info(JSON.stringify(currentUser.toJSON()))
+      }
+    })
+    .catch((error) => {
+      console.log(`Login fail with error: ${error}`)
+    })
+}
 ```
 
 ## Google
@@ -49,22 +53,27 @@ The `react-native-google-sign` library allows us to login (using `GoogleSignin`)
 ```js
 import { GoogleSignin } from 'react-native-google-signin';
 
-// ... somewhere in your login screen component
-GoogleSignin
-  .signIn()
-  .then((data) => {
-    // create a new firebase credential with the token
-    const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken);
-    
-    // login with credential
-    return firebase.auth().signInWithCredential(credential);
+// Calling this function will open Google for login.
+export const googleLogin = () => {
+  // Add configuration settings here:
+  return GoogleSignin.configure()
+  .then(() => {
+    GoogleSignin.signIn()
+    .then((data) => {
+      // create a new firebase credential with the token
+      const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken)
+
+      // login with credential
+      return firebase.auth().signInWithCredential(credential)
+    })
+    .then((currentUser) => {
+      console.info(JSON.stringify(currentUser.toJSON()))
+    })
+    .catch((error) => {
+      console.error(`Login fail with error: ${error}`)
+    })
   })
-  .then((currentUser) => {
-    console.warn(JSON.stringify(currentUser.toJSON()));
-  })
-  .catch((error) => {
-    console.log(`Login fail with error: ${error}`);
-  });
+}
 
 ```
 
