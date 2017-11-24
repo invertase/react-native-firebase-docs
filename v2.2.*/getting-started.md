@@ -16,8 +16,8 @@ Each platform uses a different setup method after creating the project.
 
 ### iOS
 
-For iOS, follow the instructions [here](/installation-ios).
+For iOS, follow the instructions [here](installation-ios).
 
 ### Android
 
-For Android, follow the instructions [here](/installation-android).
+For Android, follow the instructions [here](installation-android).
