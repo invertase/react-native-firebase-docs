@@ -12,7 +12,7 @@ RNFirebase uses the native Firebase SDKs so your authenticate state is saved to 
 
 Even though your app might not any required authentication, wouldn't it be great if you could somehow keep track of your users, giving them a unique identifier?
 
-This is exactly what anonymous auth does. It creates an account for the user without requiring them to autnenticate.
+This is exactly what anonymous auth does. It creates an account for the user without requiring them to authenticate.
 
 > Ensure you've enabled "Anonymous" sign-in on the [Firebase console](https://console.firebase.google.com) under Authentication!
 
