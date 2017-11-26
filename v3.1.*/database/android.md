@@ -2,7 +2,7 @@
 
 ## Add the dependency
 
-Add the Firebase Realtime Database dependancy to `android/app/build.gradle`:
+Add the Firebase Realtime Database dependency to `android/app/build.gradle`:
 
 ```groovy
 dependencies {
