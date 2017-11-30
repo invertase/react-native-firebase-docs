@@ -306,12 +306,6 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 
 Sets the current language to the default device preference.
 
-#### Error Codes
-
-| Code | Message |
-| --------- | ------- |
-| auth/invalid-email  | Thrown if the email address is not valid. |
-
 ## Properties
 
 The following properties are accessed via the Auth instance `firebase.auth()`.
