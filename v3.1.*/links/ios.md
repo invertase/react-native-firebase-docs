@@ -55,7 +55,7 @@ Run `pod update`.
     3. For **iOS 8** and older add the following inside the `@implementation AppDelegate` annotation:
     
         ```objectivec
-        - (BOOL)application:(UIApplication *)app
+        - (BOOL)application:(UIApplication *)application
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
             return [RNFirebaseLinks application:application
@@ -67,7 +67,7 @@ Run `pod update`.
     4.  For **iOS 9** and newer add the following inside the `@implementation AppDelegate` annotation:
     
         ```objectivec
-        - (BOOL)application:(UIApplication *)app
+        - (BOOL)application:(UIApplication *)application
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
             return [RNFirebaseLinks application:application
