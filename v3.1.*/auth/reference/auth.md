@@ -301,6 +301,11 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 | --------- | ------- |
 | email     | **string** |
 
+### useDeviceLanguage
+[method]useDeviceLanguage() returns void;[/method]
+
+Sets the current language to the default device preference.
+
 #### Error Codes
 
 | Code | Message |
@@ -315,6 +320,21 @@ The following properties are accessed via the Auth instance `firebase.auth()`.
 [method]currentUser returns [ref auth.User] or null;[/method]
 
 The currently signed-in user (or null if no user signed in).
+
+### languageCode
+[method]languageCode returns String or null;[/method]
+
+The current Auth instance's language code. This is a readable/writable property. When set to null, the default Firebase Console language setting is applied. The language code will propagate to email action templates (password reset, email verification and email change revocation) and SMS templates for phone authentication operations provided the specified providers support localization with the language code specified.
+
+[collapse Example]
+```js
+console.log(firebase.auth().languageCode); // null
+firebase.auth().languageCode = 'fr';
+console.log(firebase.auth().languageCode); // 'fr'
+firebase.auth().useDeviceLanguage();
+console.log(firebase.auth().languageCode); // 'en'
+```
+[/collapse]
 
 ## Unsupported Methods
 
