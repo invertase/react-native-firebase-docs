@@ -156,6 +156,19 @@
       files:
       - core 
       - FirebaseApp
+  - title: Crashlytics
+    path: crashlytics
+    links:
+    - to: "/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/android"
+      text: Install on Android
+      icon: android
+    - type: divider  
+    - type: reference
+      files:
+      - crashlytics 
   - title: Crash Reporting
     path: crash
     links:

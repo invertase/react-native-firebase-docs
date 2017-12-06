@@ -32,7 +32,7 @@ Logs a message that will be sent with a [ref crash#report].
 | message   | **string** |
 
 ### logcat
-[method]isCrashCollectionEnabled(level, tag, message) returns void;[/method]
+[method]logcat(level, tag, message) returns void;[/method]
 
 [android] Logs a message that will appear in a subsequent crash report as well as in [logcat](https://developer.android.com/studio/command-line/logcat.html).
 [ios] Logs the message in the subsequest crash report only (same as log).
