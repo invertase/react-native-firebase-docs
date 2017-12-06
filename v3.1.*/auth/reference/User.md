@@ -92,7 +92,7 @@ Send verification email to current user.
 Returns a JSON-serializable representation of this object.
 
 ### unlink
-[method]unlink(providerId) returns [ref auth.User];[/method]
+[method]unlink(providerId) returns Promise containing [ref auth.User];[/method]
 
 Unlinks a provider from a user account.
 
