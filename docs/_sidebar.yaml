@@ -55,7 +55,7 @@
       text: Documentation
   - title: Storage
     links:
-    - to: "/Storage"
+    - to: "/storage"
       text: Documentation
   - title: Performance Monitoring
     links:
