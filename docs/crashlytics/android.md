@@ -37,6 +37,7 @@ buildscript {
     }
     // ...
 }
+```
 
 At the top of your `android/app/build.gradle` file, below other plugins, apply the `io.fabric` plugin:
 
