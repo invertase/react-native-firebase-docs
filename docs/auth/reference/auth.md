@@ -217,7 +217,7 @@ TODO
 | auth/user-not-found | Thrown if there is no user corresponding to the email address. |
 
 ### sendPasswordResetEmail
-[method]sendPasswordResetEmail(email) returns Promise containing void;[/method]
+[method]sendPasswordResetEmail(email, actionCodeSettings) returns Promise containing void;[/method]
 
 Sends a password reset email to the given email address.
 
@@ -226,6 +226,7 @@ To complete the password reset, call [ref auth#confirmPasswordReset] with the co
 | Parameter |         |
 | --------- | ------- |
 | email     | **string** |
+| actionCodeSettings | **[ref auth.ActionCodeSettings]** (optional)
 
 #### Error Codes
 

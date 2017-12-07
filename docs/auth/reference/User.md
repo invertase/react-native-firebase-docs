@@ -82,9 +82,13 @@ Re-authenticates a user using a fresh credential. Use before operations such as 
 Refreshes the current user, if signed in.
 
 ### sendEmailVerification
-[method]sendEmailVerification() returns Promise containing void;[/method]
+[method]sendEmailVerification(actionCodeSettings) returns Promise containing void;[/method]
 
 Send verification email to current user.
+
+| Parameter |         |
+| --------- | ------- |
+| actionCodeSettings | **[ref auth.ActionCodeSettings]** (optional)
 
 ### toJSON
 [method]toJSON() returns Object;[/method]

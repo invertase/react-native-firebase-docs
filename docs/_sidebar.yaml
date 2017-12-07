@@ -91,6 +91,7 @@
       files:
       - auth
       - ActionCodeInfo
+      - ActionCodeSettings
       - AdditionalUserInfo
       - AuthCredential
       - ConfirmationResult
