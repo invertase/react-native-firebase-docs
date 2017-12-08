@@ -72,6 +72,14 @@ Follow the instructions to install Cocoapods and create your Podfile [here](http
 - Uncomment the `# platform :ios, '9.0'` line by removing the `#` character
 - Change the version as required
 
+4) After installation you encounter an error like `RNFirebase core module was not found natively on iOS`.
+
+**Resolution**
+- It's most likely you did not run `pod update` to get the latest pod versions
+- Run `pod update`
+- You should see updated versions of your pods installed
+- You may need to re-run `pod install`
+
 ### 4.1) Check the Podfile platform version
 We recommend using a minimum platform version of at least 9.0 for your application to ensure that the correct version of the Firebase libraries are used.  To do this, you need to uncomment or make sure the following line is present at the top of your `Podfile`:
 
