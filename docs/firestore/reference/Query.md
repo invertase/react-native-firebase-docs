@@ -18,7 +18,7 @@ Creates a new query where the results end at the provided document (inclusive). 
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document the query results should end at or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | The snapshot of the document the query results should end at or the field values to start this query at, in order of the query's order by. |
 
 ### endBefore
 [method]endBefore(snapshotOrVarArgs) returns [ref firestore.Query];[/method]
@@ -27,7 +27,7 @@ Creates a new query where the results end at the provided document (inclusive). 
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document the query results should end before or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | The snapshot of the document the query results should end before or the field values to start this query at, in order of the query's order by. |
 
 ### get
 [method]get() returns Promise containing [ref firestore.QuerySnapshot];[/method]
@@ -74,7 +74,7 @@ Creates a new query where the results start after the provided document (exclusi
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
 
 ### startAt
 [method]startAt(snapshotOrVarArgs) returns [ref firestore.Query];[/method]
@@ -83,7 +83,7 @@ Creates a new query where the results start at the provided document (inclusive)
 
 | Parameter |         |
 | --------- | ------- |
-| snapshotOrVarArgs  | **[ref firestore.DocumentSnapshot]** <br /> The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
+| snapshotOrVarArgs  | The snapshot of the document to start after or the field values to start this query at, in order of the query's order by. |
 
 ### where
 [method]where(fieldPath, opStr, value) returns [ref firestore.Query];[/method]

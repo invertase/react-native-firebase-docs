@@ -52,7 +52,7 @@ Attaches a listener for DocumentSnapshot events. You may either pass individual 
 | Parameter |         |
 | --------- | ------- |
 | optionsOrObserverOrOnNext  | **Object** or **function([ref firestore.DocumentSnapshot])** <br /> This can be an observer object or an onNext function callback. It can also be an options object containing { includeMetadataChanges: true } to opt into events even when only metadata changed. |
-| observerOrOnNextOrOnError  | **Object** or **function([ref firestore.DocumentSnapshot]) ** or  **function(Error)** <br /> If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
+| observerOrOnNextOrOnError  | **Object** or **function([ref firestore.DocumentSnapshot])** or  **function(Error)** <br /> If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
 | onError  | **function(Error)** (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 
 ### set
