@@ -9,7 +9,7 @@ firebase.fabric.crashlytics
 The following methods are accessed via the Crashlytics instance `firebase.fabric.crashlytics()`.
 
 ### crash
-[method]crash returns void;[/method]
+[method]crash() returns void;[/method]
 
 Forces a crash. Useful for testing your application is set up correctly.
 
