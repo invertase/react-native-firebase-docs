@@ -72,11 +72,13 @@ Creates a new query where the results are limited to the specified number of doc
 | limit  | **number** <br /> The maximum number of items to return. |
 
 ### onSnapshot
-[method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError, onCompletion) returns void;[/method]
+[method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError, onCompletion) returns function();[/method]
 
 Attaches a listener for QuerySnapshot events. You may either pass individual onNext and onError callbacks or pass a single observer object with next and error callbacks.
 
 NOTE: Although an onCompletion callback can be provided, it will never be called because the snapshot stream is never-ending.
+
+Returns an unsubscribe function.
 
 | Parameter |         |
 | --------- | ------- |

@@ -45,9 +45,11 @@ Reads the document referred to by this DocumentReference.
 Note: get() attempts to provide up-to-date data when possible by waiting for data from the server, but it may return cached data or fail if you are offline and the server cannot be reached.
 
 ### onSnapshot
-[method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError) returns void;[/method]
+[method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError) returns function();[/method]
 
 Attaches a listener for DocumentSnapshot events. You may either pass individual onNext and onError callbacks or pass a single observer object with next and error callbacks.
+
+Returns an unsubscribe function.
 
 | Parameter |         |
 | --------- | ------- |
