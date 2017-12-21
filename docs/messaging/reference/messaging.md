@@ -50,7 +50,7 @@ Reset Instance ID and revokes all tokens.
 
 On the event a devices FCM token is refreshed by Google, the new token is returned in a callback listener.
 
-Returns an unsubsciber function.
+Returns an unsubscribe function.
 
 | Parameter |         |
 | --------- | ------- |
