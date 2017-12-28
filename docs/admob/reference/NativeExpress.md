@@ -1,6 +1,13 @@
 # Native Express
 
 ```
+IMPORTANT:
+The native express ad format is being discontinued. Starting October 23, 2017, you'll no longer be able to create new native express ad units. Existing native express ad units will stop serving ads on March 1, 2018.
+
+Source: https://developers.google.com/admob/android/native-express#nativeexpressadview
+```
+
+```
 firebase.admob.NativeExpress
 ```
 
