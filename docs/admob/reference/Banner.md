@@ -4,7 +4,7 @@
 firebase.admob.Banner
 ```
 
-AdMob Banners in RNFirebase are exported as a usable React component, allowing you to integrate it easily into your existing app very easily.
+AdMob Banners in RNFirebase are exported as a usable React component, allowing you to integrate it easily into your existing app.
 
 ## Props
 
