@@ -129,6 +129,7 @@
       - DocumentSnapshot
       - FieldValue
       - Firestore
+      - FirestoreError
       - GeoPoint
       - Query
       - QueryListenOptions
@@ -159,7 +160,7 @@
     - type: reference
       files:
       - core 
-      - FirebaseApp
+      - App
   - title: Crashlytics
     path: crashlytics
     links:

@@ -3,9 +3,9 @@
 ## Methods
 
 ### initializeApp
-[method]initializeApp(options, name) returns [ref core.FirebaseApp];[/method]
+[method]initializeApp(options, name) returns [ref core.App];[/method]
 
-Initializes a new [ref core.FirebaseApp] instance.
+Initializes a new [ref core.App] instance.
 
 [collapse Parameters]
 
@@ -26,9 +26,9 @@ Initializes a new [ref core.FirebaseApp] instance.
 [/collapse]
 
 ### app
-[method]app(name) returns [ref core.FirebaseApp];[/method]
+[method]app(name) returns [ref core.App];[/method]
 
-Returns a [ref core.FirebaseApp] instance by name.
+Returns a [ref core.App] instance by name.
 
 [collapse Parameters]
 
@@ -56,7 +56,7 @@ Set the global logging level for all logs.
 
 ### apps
 
-[method]apps returns Array of [ref core.FirebaseApp];[/method]
+[method]apps returns Array of [ref core.App];[/method]
 
 Returns all initilized apps.
 

@@ -312,7 +312,7 @@ Sets the current language to the default device preference.
 The following properties are accessed via the Auth instance `firebase.auth()`.
 
 ### app
-[method]app return [ref core.FirebaseApp];[/method]
+[method]app return [ref core.App];[/method]
 
 The app associated with this Auth service instance.
 

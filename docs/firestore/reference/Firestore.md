@@ -9,7 +9,7 @@ Do not call this constructor directly. Instead, use `firebase.firestore()`.
 ## Properties
 
 ### app
-[method]app return [ref core.FirebaseApp];[/method]
+[method]app return [ref core.App];[/method]
 
 The app associated with this Firestore service instance.
 

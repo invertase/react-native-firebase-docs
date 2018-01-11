@@ -82,9 +82,9 @@ The optional key argument can be used to further limit the range of the query. I
 
 Returns whether or not the current and provided queries represent the same location, have the same query parameters, and are from the same instance of firebase.app.App.
 
-Two Reference objects are equivalent if they represent the same location and are from the same instance of [ref core.FirebaseApp].
+Two Reference objects are equivalent if they represent the same location and are from the same instance of [ref core.App].
 
-Two Query objects are equivalent if they represent the same location, have the same query parameters, and are from the same instance of [ref core.FirebaseApp]. Equivalent queries share the same sort order, limits, and starting and ending points.
+Two Query objects are equivalent if they represent the same location, have the same query parameters, and are from the same instance of [ref core.App]. Equivalent queries share the same sort order, limits, and starting and ending points.
 
 | Parameter |         |
 | --------- | ------- |

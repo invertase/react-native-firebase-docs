@@ -85,7 +85,7 @@ This release introduces full [firebase core](https://firebase.google.com/docs/re
 - ![#f03c15](https://placehold.it/15/fdfd96/000000?text=+) **[deprecation]** `initializeApp()` for apps that are already initialised natively (i.e. the default app initialised via google-services plist/json) will now log a deprecation warning. 
     - As these apps are already initialised natively there's no need to call `initializeApp` in your JS code. For now, calling it will just return the app that's already internally initialised - in a future version this will throw an `already initialized` exception.
     - Accessing apps can now be done the same way as the web sdk, simply call `firebase.app()` to get the default app, or with the name of specific app as the first arg, e.g. `const meow = firebase.app('catsApp');` to get a specific app.
-- `FirebaseApp.extendApp(props: Object)` support added.
+- `App.extendApp(props: Object)` support added.
 - RNFirebase no longer requires a singleton exported instance of your app to work (though you can still do this if you'd like). You can now just import RNFirebase in any module and straight away access all the initialised apps. e.g. : 
 ```javascript 
 import firebase from 'react-native-firebase';

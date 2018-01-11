@@ -53,7 +53,7 @@ Returns an unsubscribe function.
 
 | Parameter |         |
 | --------- | ------- |
-| optionsOrObserverOrOnNext  | **Object** or **function([ref firestore.DocumentSnapshot])** <br /> This can be an observer object or an onNext function callback. It can also be a [ref firestore.DocumentListenOptions] object to opt into events even when only metadata changed. |
+| optionsOrObserverOrOnNext  | **[ref firestore.DocumentListenOptions]** or **Object** or **function([ref firestore.DocumentSnapshot])** <br /> This can be an observer object or an onNext function callback. It can also be a [ref firestore.DocumentListenOptions] object to opt into events even when only metadata changed. |
 | observerOrOnNextOrOnError  | **Object** or **function([ref firestore.DocumentSnapshot])** or  **function(Error)** <br /> If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
 | onError  | **function(Error)** (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 
