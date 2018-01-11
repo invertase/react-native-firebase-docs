@@ -19,6 +19,11 @@ An array of all the documents in the QuerySnapshot.
 
 True if there are no documents in the QuerySnapshot.
 
+### metadata
+[method]metadata returns [ref firestore.SnapshotMetadata];[/method]
+
+Metadata about this snapshot, concerning its source and if it has local modifications.
+
 ### query
 [method]query returns [ref firestore.Query];[/method]
 

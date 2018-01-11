@@ -74,7 +74,7 @@ Creates a new query where the results are limited to the specified number of doc
 ### onSnapshot
 [method]onSnapshot(optionsOrObserverOrOnNext, observerOrOnNextOrOnError, onError, onCompletion) returns function();[/method]
 
-Attaches a listener for QuerySnapshot events. You may either pass individual onNext and onError callbacks or pass a single observer object with next and error callbacks.
+Attaches a listener for QuerySnapshot events. You may either pass individual `onNext` and `onError` callbacks or pass a single observer object with `next` and `error` callbacks.
 
 NOTE: Although an onCompletion callback can be provided, it will never be called because the snapshot stream is never-ending.
 
@@ -82,7 +82,7 @@ Returns an unsubscribe function.
 
 | Parameter |         |
 | --------- | ------- |
-| optionsOrObserverOrOnNext  | This can be an observer object or an onNext function callback. It can also be an options object containing { includeMetadataChanges: true } to opt into events even when only metadata changed. |
+| optionsOrObserverOrOnNext  | This can be an observer object or an onNext function callback. This can be an observer object or an onNext function callback. It can also be a [ref firestore.QueryListenOptions] object to opt into events even when only metadata changed. |
 | observerOrOnNextOrOnError  | If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
 | onError  | (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 | onCompletion  | Value must not be null. |

@@ -124,13 +124,16 @@
       - firestore
       - CollectionReference
       - DocumentChange
+      - DocumentListenOptions
       - DocumentReference
       - DocumentSnapshot
       - FieldValue
       - Firestore
       - GeoPoint
-      - QuerySnapshot
       - Query
+      - QueryListenOptions
+      - QuerySnapshot
+      - SnapshotMetadata
       - WriteBatch
   - title: Cloud Messaging
     path: messaging

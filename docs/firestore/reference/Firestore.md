@@ -6,6 +6,13 @@ Do not call this constructor directly. Instead, use `firebase.firestore()`.
 
 > Please note that Persistence (offline support) is enabled by default with Firestore on iOS and Android.
 
+## Properties
+
+### app
+[method]app return [ref core.FirebaseApp];[/method]
+
+The app associated with this Firestore service instance.
+
 ## Methods
 
 ### batch

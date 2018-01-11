@@ -14,6 +14,11 @@ Property of the DocumentSnapshot that signals whether or not the data exists. Tr
 
 Property of the DocumentSnapshot that provides the document's ID.
 
+### metadata
+[method]metadata returns [ref firestore.SnapshotMetadata];[/method]
+
+Metadata about the DocumentSnapshot, including information about its source and local modifications.
+
 ### ref
 [method]ref returns [ref firestore.DocumentReference];[/method]
 

@@ -52,7 +52,7 @@ NOTE: Although an onCompletion callback can be provided, it will never be called
 
 | Parameter |         |
 | --------- | ------- |
-| optionsOrObserverOrOnNext  | This can be an observer object or an onNext function callback. It can also be an options object containing { includeMetadataChanges: true } to opt into events even when only metadata changed. |
+| optionsOrObserverOrOnNext  | This can be an observer object or an onNext function callback. It can also be a [ref firestore.QueryListenOptions] object to opt into events even when only metadata changed. |
 | observerOrOnNextOrOnError  | If you provided options, this will be an observer object or your onNext callback. Else, it is an optional onError callback. |
 | onError  | (optional) <br /> If you didn't provide options and didn't use an observer object, this is the optional onError callback. |
 | onCompletion  | Value must not be null. |
