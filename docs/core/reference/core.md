@@ -60,4 +60,10 @@ Set the global logging level for all logs.
 
 Returns all initilized apps.
 
+### SDK_VERSION
+
+[method]SDK_VERSION returns string;[/method]
+
+The current SDK version.
+
 
