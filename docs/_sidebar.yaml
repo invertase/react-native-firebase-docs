@@ -127,6 +127,7 @@
       - DocumentListenOptions
       - DocumentReference
       - DocumentSnapshot
+      - FieldPath
       - FieldValue
       - Firestore
       - FirestoreError

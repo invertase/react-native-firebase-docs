@@ -94,7 +94,7 @@ Creates a new query where the results are sorted by the specified field, in desc
 
 | Parameter |         |
 | --------- | ------- |
-| fieldPath  | **string** <br /> The field to sort by. |
+| fieldPath  | **string** or **[ref firestore.FieldPath]** <br /> The field to sort by. |
 | directionStr  | **string** (optional) <br /> Optional direction to sort by (asc or desc). If not specified, the default order is ascending. |
 
 ### startAfter
@@ -122,6 +122,6 @@ Creates a new query that returns only documents that include the specified field
 
 | Parameter |         |
 | --------- | ------- |
-| fieldPath  | **string** <br /> The path to compare. |
+| fieldPath  | **string** or **[ref firestore.FieldPath]** <br /> The path to compare. |
 | opStr  | **string** <br /> The operation string (e.g "<", "<=", "==", ">", ">="). |
 | value  | The value for comparison. |

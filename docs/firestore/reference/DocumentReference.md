@@ -80,4 +80,4 @@ Returns a promise that resolves once the data has been successfully written to t
 
 | Parameter |         |
 | --------- | ------- |
-| args  | **any type** <br /> Either an object containing all of the fields and values to update, or a series of arguments alternating between fields (as string or [FieldPath](https://firebase.google.com/docs/reference/js/firebase.firestore.FieldPath) objects) and values.. <br /> Value may be repeated. |
+| args  | **any type** <br /> Either an object containing all of the fields and values to update, or a series of arguments alternating between fields (as string or [ref firestore.FieldPath] objects) and values.. <br /> Value may be repeated. |
