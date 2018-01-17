@@ -64,9 +64,13 @@ On a new message, the payload object is passed to the listener callback. This me
 Returns an unsubsciber function.
 
 ### [ios] requestPermissions
-[method]requestPermissions() returns void;[/method]
+[method]requestPermissions() returns Promise<Object>;[/method]
 
-Requests app notification permissions in an Alert dialog.
+Requests app notification permissions in an Alert dialog. 
+
+On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
+
+In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
 
 ### setBadgeNumber
 [method]setBadgeNumber(value) returns void;[/method]
