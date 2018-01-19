@@ -9,6 +9,9 @@ firebase.auth.PhoneAuthProvider
 ### PROVIDER_ID
 [method]PROVIDER_ID returns string;[/method]
 
+### providerId
+[method]providerId returns string;[/method]
+
 ## Methods
 
 ### credential
