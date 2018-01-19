@@ -96,6 +96,7 @@
       - AuthCredential
       - ConfirmationResult
       - EmailAuthProvider
+      - Error
       - FacebookAuthProvider
       - GithubAuthProvider
       - GoogleAuthProvider
