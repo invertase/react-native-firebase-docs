@@ -13,7 +13,7 @@ dependencies {
 
 ## Install the RNFirebase Database package
 
-Add the `RNFirebaseMessagingPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
+Add the `RNFirebaseDatabasePackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
 // ...

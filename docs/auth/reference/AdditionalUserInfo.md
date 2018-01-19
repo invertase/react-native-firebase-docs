@@ -4,11 +4,14 @@ A structure containing additional user information from a federated identity pro
 
 ## Properties
 
-### providerId
-[method]providerId returns string;[/method]
+### isNewUser
+[method]isNewUser returns boolean;[/method]
 
 ### profile
 [method]providerId returns nullable Object;[/method]
+
+### providerId
+[method]providerId returns string;[/method]
 
 ### username
 [method]username returns nullable string or undefined;[/method]

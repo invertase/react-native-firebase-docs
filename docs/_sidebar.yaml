@@ -96,6 +96,7 @@
       - AuthCredential
       - ConfirmationResult
       - EmailAuthProvider
+      - Error
       - FacebookAuthProvider
       - GithubAuthProvider
       - GoogleAuthProvider
@@ -129,7 +130,6 @@
       - DocumentSnapshot
       - FieldPath
       - FieldValue
-      - Firestore
       - FirestoreError
       - GeoPoint
       - Query
