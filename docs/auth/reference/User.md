@@ -181,6 +181,11 @@ Returns `true` if the user's email address has been verified.
 
 Returns `true` if the user is anonymous.
 
+### metadata
+[method]metadata returns [ref auth.UserMetadata];[/method]
+
+Additional metadata about the user.
+
 ### photoURL
 [method]photoURL returns string or null;[/method]
 

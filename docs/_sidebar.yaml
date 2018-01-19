@@ -105,6 +105,7 @@
       - User
       - UserCredential
       - UserInfo
+      - UserMetadata
   - title: Cloud Firestore
     path: firestore
     links:
