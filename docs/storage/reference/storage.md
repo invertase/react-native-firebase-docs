@@ -15,6 +15,14 @@ The following properties are accessed via `firebase.storage()`.
 
 The app associated with the Storage service instance.
 
+[collapse Example]
+```js
+const { app } = firebase.storage();
+console.log(app.name);
+```
+[/collapse]
+
+
 ### maxOperationRetryTime
 [method]maxOperationRetryTime returns Number;[/method]
 
@@ -28,14 +36,6 @@ The maximum time to retry operations other than uploads or downloads in millisec
 Currently **NOT yet implemented**.
 
 The maximum time to retry uploads in milliseconds.
-
-
-[collapse Example]
-```js
-const { app } = firebase.storage();
-console.log(app.name);
-```
-[/collapse]
 
 ## Methods
 
