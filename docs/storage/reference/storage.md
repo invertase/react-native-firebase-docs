@@ -53,7 +53,7 @@ const otherStorage = firebase.storage(otherApp);
 [/collapse]
 
 ### ref
-[method]ref(path) returns [ref storage.StorageTask];[/method]
+[method]ref(path) returns [ref storage.Reference];[/method]
 
 Returns a reference for the given path in the default bucket.
 
@@ -70,7 +70,7 @@ const ref = firebase.storage().ref('path/to/image.jpg');
 [/collapse]
 
 ### refFromURL
-[method]refFromURL(url) returns [ref storage.StorageTask];[/method]
+[method]refFromURL(url) returns [ref storage.Reference];[/method]
 
 Returns a reference for the given absolute URL.
 
