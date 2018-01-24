@@ -427,6 +427,27 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 | --------- | ------- |
 | email     | **string** |
 
+### verifyPasswordResetCode
+
+[method]verifyPasswordResetCode(code) returns Promise containing string;[/method]
+
+Checks a password reset code sent to the user by email or other out-of-band mechanism.
+
+Returns the user's email address if valid.
+
+| Parameter |         |
+| --------- | ------- |
+| code      | **string** |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/expired-action-code  | Thrown if the password reset code has expired. |
+| auth/invalid-action-code | Thrown if the password reset code is invalid. This can happen if the code is malformed or has already been used. |
+| auth/user-disabled  | Thrown if the user corresponding to the given password reset code has been disabled. |
+| auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
+
 ## Properties
 
 The following properties are accessed via the Auth instance `firebase.auth()`.
