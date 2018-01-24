@@ -28,10 +28,50 @@ Returns the current token if it has not expired, otherwise this will refresh the
 | --------- | ------- |
 | forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
 
+### getToken
+[method]getToken(forceRefresh) returns Promise containing string;[/method]
+
+Returns a JWT token used to identify the user to a Firebase service.
+
+Returns the current token if it has not expired, otherwise this will refresh the token and return a new one.
+
+This property is deprecated. Use [ref auth.User#getIdToken] instead.
+
+| Parameter |         |
+| --------- | ------- |
+| forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
+
+### linkAndRetrieveDataWithCredential
+[method]linkAndRetrieveDataWithCredential(credential) returns Promise containing [ref auth.UserCredential];[/method]
+
+Links the user account with the given credentials, and returns any available additional user information, such as user name.
+
+This method will be renamed to `linkWithCredential` replacing the existing method with the same name in the next major version change.
+
+| Parameter |         |
+| --------- | ------- |
+| credential   | **[ref auth.AuthCredential]** <br /> The auth credential. <br /> Value must not be null. |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/provider-already-linked  | Thrown if the provider has already been linked to the user. This error is thrown even if this is not the same provider's account that is currently linked to the user. |
+| auth/invalid-credential  | Thrown if the provider's credential is not valid. This can happen if it has already expired when calling link, or if it used invalid token(s). See the Firebase documentation for your provider, and make sure you pass in the correct parameters to the credential method. |
+| auth/credential-already-in-use  | Thrown if the account corresponding to the credential already exists among your users, or is already linked to a Firebase User. For example, this error could be thrown if you are upgrading an anonymous user to a Google user by linking a Google credential to it and the Google credential used is already associated with an existing Firebase Google user. The fields error.email, error.phoneNumber, and error.credential ([ref auth.AuthCredential]) may be provided, depending on the type of credential. You can recover from this error by signing in with error.credential directly via [ref auth#signInWithCredential]. |
+| auth/email-already-in-use  | Thrown if the email corresponding to the credential already exists among your users. When thrown while linking a credential to an existing user, an error.email and error.credential [ref auth.AuthCredential] fields are also provided. You have to link the credential to the existing user with that email if you wish to continue signing in with that credential. To do so, call [ref auth.Auth#fetchProvidersForEmail], sign in to error.email via one of the providers returned and then [ref auth.User#linkWithCredential] the original credential to that newly signed in user |
+| auth/operation-not-allowed  | Thrown if you have not enabled the provider in the Firebase Console. Go to the Firebase Console for your project, in the Auth section and the **Sign in Method** tab and configure the provider. |
+| auth/invalid-email  | Thrown if the email used in a [ref auth.EmailAuthProvider#credential] is invalid. |
+| auth/wrong-password  | Thrown if the password used in a [ref auth.EmailAuthProvider#credential] is not correct or when the user associated with the email does not have a password. |
+| auth/invalid-verification-code  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification ID of the credential is not valid. |
+
 ### linkWithCredential
 [method]linkWithCredential(credential) returns Promise containing [ref auth.User];[/method]
 
 Links the user account with the given credentials, and returns any available additional user information, such as user name.
+
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.User#linkAndRetrieveDataWithCredential].
 
 | Parameter |         |
 | --------- | ------- |
@@ -52,13 +92,34 @@ Links the user account with the given credentials, and returns any available add
 | auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification ID of the credential is not valid. |
 
 ### reauthenticateAndRetrieveDataWithCredential
+[method]reauthenticateAndRetrieveDataWithCredential(credential) returns Promise containing [ref auth.UserCredential];[/method]
 
-TODO @salakar @chrisbianca
+Re-authenticates a user using a fresh credential. Use before operations such as [ref auth.User#updatePassword] that require tokens from recent sign-in attempts.
+
+This method will be renamed to `reauthenticateWithCredential` replacing the existing method with the same name in the next major version change.
+
+| Parameter |         |
+| --------- | ------- |
+| credential   | **[ref auth.AuthCredential]** <br /> The auth credential. <br /> Value must not be null. |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/user-mismatch  | Thrown if the credential given does not correspond to the user. |
+| auth/user-not-found  | Thrown if the credential given does not correspond to any existing user. |
+| auth/invalid-credential  | Thrown if the provider's credential is not valid. This can happen if it has already expired when calling link, or if it used invalid token(s). See the Firebase documentation for your provider, and make sure you pass in the correct parameters to the credential method. |
+| auth/invalid-email  | Thrown if the email used in a [ref auth.EmailAuthProvider#credential] is invalid. |
+| auth/wrong-password  | Thrown if the password used in a [ref auth.EmailAuthProvider#credential] is not correct or when the user associated with the email does not have a password. |
+| auth/invalid-verification-code  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification ID of the credential is not valid. |
 
 ### reauthenticateWithCredential
 [method]reauthenticateWithCredential(credential) returns Promise containing void;[/method]
 
 Re-authenticates a user using a fresh credential. Use before operations such as [ref auth.User#updatePassword] that require tokens from recent sign-in attempts.
+
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.User#reauthenticateAndRetrieveDataWithCredential].
 
 | Parameter |         |
 | --------- | ------- |
@@ -186,6 +247,11 @@ Returns `true` if the user is anonymous.
 
 Additional metadata about the user.
 
+### phoneNumber
+[method]phoneNumber returns string or null;[/method]
+
+The phone number normalized based on the E.164 standard (e.g. +16505550101) for the current user. This is null if the user has no phone credential linked to the account.
+
 ### photoURL
 [method]photoURL returns string or null;[/method]
 
@@ -201,11 +267,6 @@ Additional provider-specific information about the user.
 
 The authentication provider ID for the current user. For example, 'facebook.com', or 'google.com'.
 
-### refreshToken
-[method]refreshToken returns string;[/method]
-
-A refresh token for the user account. Use only for advanced scenarios that require explicitly refreshing tokens.
-
 ### uid
 [method]uid returns string;[/method]
 
@@ -214,8 +275,6 @@ The user's unique ID.
 ## Unsupported Methods
 
 The following methods are not supported in RNFirebase as they cannot work in the React Native environment or have a different implementation.
-
-### linkAndRetrieveDataWithCredential
 
 ### linkWithPhoneNumber
 
@@ -231,4 +290,8 @@ The following methods are not supported in RNFirebase as they cannot work in the
 
 ### updatePhoneNumber
 
-### get refreshToken
+## Unsupported properties
+
+The following properties are not supported in RNFirebase as they cannot work in the React Native environment or have a different implementation.
+
+### refreshToken

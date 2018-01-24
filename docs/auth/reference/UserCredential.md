@@ -7,11 +7,15 @@ A structure containing a User, an AuthCredential, the operationType, and any add
 ### user
 [method]user returns nullable [ref auth.User];[/method]
 
-### credential
-[method]credential returns nullable [ref auth.AuthCredential];[/method]
-
-### operationType
-[method]operationType returns nullable string or undefined;[/method]
-
 ### additionalUserInfo
 [method]additionalUserInfo returns nullable [ref auth.AdditionalUserInfo] or undefined;[/method]
+
+## Unsupported Methods
+
+The following methods are not supported in RNFirebase as they cannot work in the React Native environment or have a different implementation.
+
+### credential
+<!--[method]credential returns nullable [ref auth.AuthCredential];[/method]-->
+
+### operationType
+<!--[method]operationType returns nullable string or undefined;[/method]-->
