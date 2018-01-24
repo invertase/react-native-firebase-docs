@@ -63,6 +63,16 @@ On a new message, the payload object is passed to the listener callback. This me
 
 Returns an unsubsciber function.
 
+### cancelLocalNotification
+[method]cancelLocalNotification(id) returns void;[/method]
+
+Cancels a location notification by ID, or all notifications by *.
+
+### removeDeliveredNotification
+[method]removeDeliveredNotification(id) returns void;[/method]
+
+Removes all delivered notifications from device by ID, or all notifications by *.
+
 ### [ios] requestPermissions
 [method]requestPermissions() returns void;[/method]
 
