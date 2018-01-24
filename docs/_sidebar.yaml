@@ -251,6 +251,8 @@
     - type: reference
       files:
       - storage
+      - StorageTask
+      - Reference
   - title: Performance Monitoring
     path: perf-mon
     links:
