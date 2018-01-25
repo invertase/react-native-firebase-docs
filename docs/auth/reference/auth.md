@@ -302,11 +302,6 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 | --------- | ------- |
 | email     | **string** |
 
-### useDeviceLanguage
-[method]useDeviceLanguage() returns void;[/method]
-
-Sets the current language to the default device preference.
-
 ## Properties
 
 The following properties are accessed via the Auth instance `firebase.auth()`.
@@ -349,3 +344,7 @@ The following methods are not supported in RNFirebase as they cannot work in the
 ### signInWithPopup
 
 ### signInWithRedirect
+
+### useDeviceLanguage
+
+An outstanding iOS SDK bug is preventing `useDeviceLanguage` from being supported. Until this is fix, we recommend using `languageCode` to set the language by using an external [library](https://github.com/rebeccahughes/react-native-device-info) to get the device locale.
