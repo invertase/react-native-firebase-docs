@@ -74,9 +74,13 @@ Cancels a location notification by ID, or all notifications by *.
 Removes all delivered notifications from device by ID, or all notifications by *.
 
 ### [ios] requestPermissions
-[method]requestPermissions() returns void;[/method]
+[method]requestPermissions() returns Promise<Object>;[/method]
 
-Requests app notification permissions in an Alert dialog.
+Requests app notification permissions in an Alert dialog. 
+
+On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
+
+In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
 
 On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
 

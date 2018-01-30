@@ -100,11 +100,14 @@
       - FacebookAuthProvider
       - GithubAuthProvider
       - GoogleAuthProvider
+      - OAuthCredential
+      - OAuthProvider
       - PhoneAuthProvider
       - TwitterAuthProvider
       - User
       - UserCredential
       - UserInfo
+      - UserMetadata
   - title: Cloud Firestore
     path: firestore
     links:
@@ -128,6 +131,7 @@
       - DocumentListenOptions
       - DocumentReference
       - DocumentSnapshot
+      - FieldPath
       - FieldValue
       - FirestoreError
       - GeoPoint

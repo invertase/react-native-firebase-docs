@@ -87,6 +87,8 @@ Signs out the current user.
 
 Asynchronously signs in as an anonymous user.
 
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#signInAnonymouslyAndRetrieveData].
+
 If there is already an anonymous user signed in, that user will be returned; otherwise, a new anonymous user identity will be created and returned.
 
 #### Error Codes
@@ -95,10 +97,54 @@ If there is already an anonymous user signed in, that user will be returned; oth
 | --------- | ------- |
 | auth/operation-not-allowed   | Thrown if anonymous accounts are not enabled. Enable anonymous accounts in the Firebase Console, under the Auth tab.  |
 
+### signInAnonymouslyAndRetrieveData
+[method]signInAnonymously() returns Promise containing [ref auth.UserCredential];[/method]
+
+Signs in a user anonymously and returns any additional user info data or credentials.
+
+This method will be renamed to `signInAnonymously` replacing the existing method with the same name in the next major version change.
+
+If there is already an anonymous user signed in, that user with additional date will be returned; otherwise, a new anonymous user identity will be created and returned.
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/operation-not-allowed   | Thrown if anonymous accounts are not enabled. Enable anonymous accounts in the Firebase Console, under the Auth tab.  |
+
+### createUserAndRetrieveDataWithEmailAndPassword
+[method]createUserAndRetrieveDataWithEmailAndPassword(email, password) returns Promise containing [ref auth.UserCredential];[/method]
+
+Creates a new user account associated with the specified email address and password and returns any additional user info data or credentials.
+
+This method will be renamed to `createUserWithEmailAndPassword` replacing the existing method with the same name in the next major version change.
+
+On successful creation of the user account, this user will also be signed in to your application.
+
+User account creation can fail if the account already exists or the password is invalid.
+
+Note: The email address acts as a unique identifier for the user and enables an email-based password reset. This function will create a new user account and set the initial user password.
+
+Parameter |         |
+| --------- | ------- |
+| email     | **string**  |
+| password     | **string** |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/invalid-email  | Thrown if the email address is not valid. |
+| auth/user-disabled  | Thrown if the user corresponding to the given email has been disabled. |
+| auth/user-not-found | Thrown if there is no user corresponding to the given email. |
+| auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
+
 ### createUserWithEmailAndPassword
 [method]createUserWithEmailAndPassword(email, password) returns Promise containing [ref auth.User];[/method]
 
 Creates a new user account associated with the specified email address and password.
+
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#createUserAndRetrieveDataWithEmailAndPassword].
 
 On successful creation of the user account, this user will also be signed in to your application.
 
@@ -120,10 +166,85 @@ Note: The email address acts as a unique identifier for the user and enables an 
 | auth/user-not-found | Thrown if there is no user corresponding to the given email. |
 | auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
 
+### signInAndRetrieveDataWithCredential
+[method]signInAndRetrieveDataWithCredential(credential) returns Promise containing [ref auth.UserCredential];[/method]
+
+Asynchronously signs in with the given credentials, and returns any available additional user information, such as user name.
+
+This method will be renamed to `signInWithCredential` replacing the existing method with the same name in the next major version change.
+
+| Parameter |         |
+| --------- | ------- |
+| credential     | **Credential** <br /> A credential returned from a provider. |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchProvidersForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
+| auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
+| auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
+| auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
+| auth/user-not-found  | Thrown if signing in with a credential from [ref auth.EmailAuthProvider#credential] and there is no user corresponding to the given email. |
+| auth/wrong-password  | Thrown if signing in with a credential from [ref auth.EmailAuthProvider#credential] and the password is invalid for the given email, or if the account corresponding to the email does not have a password set. |
+| auth/invalid-verification-code  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification code of the credential is not valid. |
+| auth/invalid-verification-id  | Thrown if the credential is a [ref auth.PhoneAuthProvider#credential] and the verification ID of the credential is not valid. |
+
+### signInAndRetrieveDataWithCustomToken
+[method]signInAndRetrieveDataWithCustomToken(customToken) returns Promise containing [ref auth.UserCredential];[/method]
+
+Signs in a user asynchronously using a custom token and returns any additional user info data or credentials.
+
+This method will be renamed to `signInWithCustomToken` replacing the existing method with the same name in the next major version change.
+
+Custom tokens are used to integrate Firebase Auth with existing auth systems, and must be generated by the auth backend.
+
+Fails with an error if the token is invalid, expired, or not accepted by the Firebase Auth service.
+
+| Parameter |         |
+| --------- | ------- |
+| customToken     | **string**  |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/custom-token-mismatch  | Thrown if the custom token is for a different Firebase App. |
+| auth/invalid-custom-token  | Thrown if the custom token format is incorrect. |
+
+### signInAndRetrieveDataWithEmailAndPassword
+[method]signInAndRetrieveDataWithEmailAndPassword(email, password) returns Promise containing [ref auth.UserCredential];[/method]
+
+Asynchronously signs in using an email and password and returns any additional user info data or credentials.
+
+This method will be renamed to `signInWithEmailAndPassword` replacing the existing method with the same name in the next major version change.
+
+Fails with an error if the email address and password do not match.
+
+Note: The user's password is NOT the password used to access the user's email account. The email address serves as a unique identifier for the user, and the password is used to access the user's account in your Firebase project.
+
+See also: [ref auth.Auth#createUserAndRetrieveDataWithEmailAndPassword].
+
+| Parameter |         |
+| --------- | ------- |
+| email     | **string**  |
+| password     | **string** |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/invalid-email  | Thrown if the email address is not valid. |
+| auth/user-disabled  | Thrown if the user corresponding to the given email has been disabled. |
+| auth/user-not-found | Thrown if there is no user corresponding to the given email. |
+| auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
+
 ### signInWithEmailAndPassword
 [method]signInWithEmailAndPassword(email, password) returns Promise containing [ref auth.User];[/method]
 
 Asynchronously signs in using an email and password.
+
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#signInAndRetrieveDataWithEmailAndPassword].
 
 Fails with an error if the email address and password do not match.
 
@@ -148,6 +269,8 @@ Fails with an error if the email address and password do not match.
 
 Asynchronously signs in using a custom token.
 
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#signInAndRetrieveDataWithCustomToken].
+
 Custom tokens are used to integrate Firebase Auth with existing auth systems, and must be generated by the auth backend.
 
 Fails with an error if the token is invalid, expired, or not accepted by the Firebase Auth service.
@@ -167,6 +290,8 @@ Fails with an error if the token is invalid, expired, or not accepted by the Fir
 [method]signInWithCredential(credential) returns Promise containing [ref auth.User];[/method]
 
 Asynchronously signs in with the given credentials.
+
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#signInAndRetrieveDataWithCredential].
 
 | Parameter |         |
 | --------- | ------- |
@@ -302,6 +427,27 @@ Gets the list of provider IDs that can be used to sign in for the given email ad
 | --------- | ------- |
 | email     | **string** |
 
+### verifyPasswordResetCode
+
+[method]verifyPasswordResetCode(code) returns Promise containing string;[/method]
+
+Checks a password reset code sent to the user by email or other out-of-band mechanism.
+
+Returns the user's email address if valid.
+
+| Parameter |         |
+| --------- | ------- |
+| code      | **string** |
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/expired-action-code  | Thrown if the password reset code has expired. |
+| auth/invalid-action-code | Thrown if the password reset code is invalid. This can happen if the code is malformed or has already been used. |
+| auth/user-disabled  | Thrown if the user corresponding to the given password reset code has been disabled. |
+| auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
+
 ## Properties
 
 The following properties are accessed via the Auth instance `firebase.auth()`.
@@ -326,8 +472,6 @@ The current Auth instance's language code. This is a readable/writable property.
 console.log(firebase.auth().languageCode); // null
 firebase.auth().languageCode = 'fr';
 console.log(firebase.auth().languageCode); // 'fr'
-firebase.auth().useDeviceLanguage();
-console.log(firebase.auth().languageCode); // 'en'
 ```
 [/collapse]
 
@@ -339,8 +483,6 @@ The following methods are not supported in RNFirebase as they cannot work in the
 
 ### setPersistence
 
-### signInAndRetrieveDataWithCredential
-
 ### signInWithPopup
 
 ### signInWithRedirect
@@ -348,3 +490,4 @@ The following methods are not supported in RNFirebase as they cannot work in the
 ### useDeviceLanguage
 
 An outstanding iOS SDK bug is preventing `useDeviceLanguage` from being supported. Until this is fix, we recommend using `languageCode` to set the language by using an external [library](https://github.com/rebeccahughes/react-native-device-info) to get the device locale.
+

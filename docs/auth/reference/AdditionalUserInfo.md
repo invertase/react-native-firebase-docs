@@ -8,7 +8,7 @@ A structure containing additional user information from a federated identity pro
 [method]isNewUser returns boolean;[/method]
 
 ### profile
-[method]providerId returns nullable Object;[/method]
+[method]profile returns nullable Object;[/method]
 
 ### providerId
 [method]providerId returns string;[/method]

@@ -36,6 +36,6 @@ Retrieves all fields in the document as an object.
 
 | Parameter |         |
 | --------- | ------- |
-| fieldPath  | **string** <br /> The path (e.g. 'foo' or 'foo.bar') to a specific field. |
+| fieldPath  | **string** or **[ref firestore.FieldPath]** <br /> The path (e.g. 'foo' or 'foo.bar') to a specific field. |
 
 
