@@ -290,6 +290,6 @@
     - to: "https://twitter.com/@rnfirebase"
       text: Twitter @RNFirebase
       type: external
-    - to: "https://discordapp.com/invite/t6bdqMs"
+    - to: "https://discord.gg/C9aK28N"
       text: Chat on Discord
       type: external
