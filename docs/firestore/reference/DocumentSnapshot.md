@@ -10,7 +10,7 @@ A DocumentSnapshot contains data read from a document in your Cloud Firestore da
 Property of the DocumentSnapshot that signals whether or not the data exists. True if the document exists.
 
 ### id
-[method]exists returns string;[/method]
+[method]id returns string;[/method]
 
 Property of the DocumentSnapshot that provides the document's ID.
 
