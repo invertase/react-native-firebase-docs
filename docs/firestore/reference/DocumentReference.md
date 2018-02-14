@@ -67,7 +67,7 @@ Returns a promise that resolves once the data has been successfully written to t
 | Parameter |         |
 | --------- | ------- |
 | data  | **Object** <br /> An object of the fields and values for the document. <br /> Value must not be null. |
-| options  | **Object** (optional) <br /> An object to configure the set behavior. Pass {merge: true} to only replace the values specified in the data argument. Fields omitted will remain untouched. <br /> Value must not be null. |
+| options  | **[ref firestore.SetOptions]** (optional) <br /> An object to configure the set behavior. Pass {merge: true} to only replace the values specified in the data argument. Fields omitted will remain untouched. <br /> Value must not be null. |
 
 ### update
 [method]update(...args) returns Promise containing void;[/method]

@@ -138,6 +138,7 @@
       - Query
       - QueryListenOptions
       - QuerySnapshot
+      - SetOptions
       - SnapshotMetadata
       - WriteBatch
   - title: Cloud Messaging
