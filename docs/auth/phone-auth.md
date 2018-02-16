@@ -126,7 +126,7 @@ export default class PhoneAuthTest extends Component {
   renderMessage() {
     const { message } = this.state;
   
-    if (!!message.length) return null;
+    if (!message.length) return null;
   
     return (
       <Text style={{ padding: 5, backgroundColor: '#000', color: '#fff' }}>{message}</Text>
