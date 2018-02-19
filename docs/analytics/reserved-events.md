@@ -1,6 +1,8 @@
 # Reserved Events
 
-A number of methods are provided to help tailor analytics specifically for your own app. The Firebase SDK includes a number of pre-set events which are automatically handled, and cannot be used with custom [logEvent](version /analytics/reference#logevent) events:
+A number of methods are provided to help tailor analytics specifically for your own app, however the Firebase SDK includes a number of pre-set events which are automatically handled and cannot be used with custom [logEvent](version /analytics/reference#logevent) events. 
+
+!> Attempting to use one of these events will throw an exception.
 
 ```js
 const reserved = [
