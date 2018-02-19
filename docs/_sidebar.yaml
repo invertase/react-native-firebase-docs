@@ -27,8 +27,7 @@
     - to: "/contributing"
       text: Getting Started
     - to: "/testing"
-      text: Testing
-      
+      text: Testing      
 - title: Modules
   categories:
   - title: Admob
@@ -67,7 +66,8 @@
       text: Reserved Events
     - type: divider
     - to: "https://blog.theodo.fr/2018/01/building-google-analytics-funnel-firebase-react-native/"
-      text: Building a Google Analytics Funnel
+      text: Building a GA Funnel
+      type: external
       icon: info-circle-o
     - type: divider
     - type: reference
@@ -156,7 +156,8 @@
       icon: android
     - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
-      text: Push Notifications using Cloud Functions
+      text: With Cloud Functions
+      type: external
       icon: info-circle-o
     - type: divider
     - type: reference
