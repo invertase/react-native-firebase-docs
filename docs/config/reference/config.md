@@ -93,7 +93,7 @@ firebase.config().fetch()
 ### getValues
 [method]getValues(array) returns Promise containing object of snapshots;[/method]
 
-Gets multiple values by key. Returns an snapshot object of keys with the same object returned from [ref config#getValue], e.g. `snapshots.foo.val()`.
+Gets multiple values by key. Returns a snapshot object with snapshot keys e.g. `snapshots.foo.val()`.
 
 | Parameter |         |
 | --------- | ------- |
@@ -131,8 +131,9 @@ Returns all keys as an array by a prefix. If no prefix is defined all keys are r
 ```js
 firebase.config().fetch()
   .then(() => firebase.config().activateFetched())
-  .then(() => {
-    let keys = firebase.config().getKeysByPrefix('some_key_prefix_')
+  .then(() => firebase.config().getKeysByPrefix('some_key_prefix_'))
+  .then((keys) => {
+     console.log(keys[0]);
   })
   .catch((error) => console.log(`Error processing config: ${error}`))
 ```
