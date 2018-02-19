@@ -28,10 +28,7 @@ We provide several options for you to get started with React Native Firebase, se
 ---
 
 ## Supported Firebase Features
-> The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native.
-
-
-> '**?**' indicates partial support
+> The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native. A '**?**' indicates partial support.
 
 | Firebase Features      | v1.x.x  | v2.x.x  | v3.x.x | v3.1.x | v3.2.x | Web SDK |
 | ---------------------- | :---: | :---: | :---: | :---: | :---: | :---: |
