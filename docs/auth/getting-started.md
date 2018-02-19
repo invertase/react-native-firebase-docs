@@ -14,7 +14,7 @@ Even though your app might not any required authentication, wouldn't it be great
 
 This is exactly what anonymous auth does. It creates an account for the user without requiring them to authenticate.
 
-> Ensure you've enabled "Anonymous" sign-in on the [Firebase console](https://console.firebase.google.com) under Authentication!
+> Ensure you've enabled `Anonymous` sign-in on the [Firebase console](https://console.firebase.google.com) under Authentication!
 
 The best place to implement this would be in a "root" level component which contains the entire app, lets call this component `App`:
 
@@ -91,7 +91,7 @@ Another common scenario would be requiring your users to sign into an account be
 
 Luckily, Firebase makes this super easy by providing a [ref auth#signInWithEmailAndPassword] method. If you also need a registration screen use [ref auth#createUserWithEmailAndPassword] instead. 
 
-> Ensure you've enabled "Email/Password" sign-in on the [Firebase console](https://console.firebase.google.com) under Authentication!
+> Ensure you've enabled `Email/Password` sign-in on the [Firebase console](https://console.firebase.google.com) under Authentication!
 
 The best place to implement this would be in a "root" level component which contains the entire app, lets call this component `App`:
 
