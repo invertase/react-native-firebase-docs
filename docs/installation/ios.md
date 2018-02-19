@@ -1,6 +1,6 @@
 # iOS Installation
 
-!> Please note that there is a known issue when using Cocoapods with the `use_frameworks!` enabled.  This is explained [here](https://github.com/invertase/react-native-firebase/issues/252#issuecomment-316340974).  Unfortunately we don't currently have a workaround, but are engaging with Firebase directly to try and resolve the problem.
+!> Please note that there is a known issue when using Cocoapods with the `use_frameworks!` enabled. This is explained [here](https://github.com/invertase/react-native-firebase/issues/252#issuecomment-316340974). Unfortunately we don't currently have a workaround, but are engaging with Firebase directly to try and resolve the problem.
 
 ## 1. Link React Native Firebase
 
@@ -36,7 +36,7 @@ B) At the beginning of the `didFinishLaunchingWithOptions:(NSDictionary *)launch
 [FIRApp configure];
 ```
 
-?> It is recommended to add the line within the method BEFORE creating the RCTRootView. Otherwise the initialization can happen too late after already being needed in your JavaScript code
+?> It is recommended to add the line within the method **BEFORE** creating the **RCTRootView**. Otherwise the initialization can occur after already being required in your JavaScript code - leading to `app not initialised` exceptions.
 
 ## 4. Setup Firebase Pods
 
@@ -58,6 +58,8 @@ Follow the instructions to install Cocoapods and create your Podfile [here](http
 - Remove the duplicate `tvOSTests` target nested within the main project target
 - Re-run `pod install`.
 
+---
+
 2) When running `pod install` you may encounter a number of warnings relating to `target overrides 'OTHER_LDFLAGS'`.
 
 **Resolution:**
@@ -70,12 +72,16 @@ Follow the instructions to install Cocoapods and create your Podfile [here](http
 -- Add `$(inherited)` as the top line if it doesn't already exist
 - Re-run `pod install`
 
+---
+
 3) When running `pod install` you may encounter a warning that a default iOS platform has been assigned.  If you wish to specify a different minimum version:
 
 **Resolution**
 - Open your Podfile
 - Uncomment the `# platform :ios, '9.0'` line by removing the `#` character
 - Change the version as required
+
+---
 
 4) After installation you encounter an error like `RNFirebase core module was not found natively on iOS`.
 
@@ -87,12 +93,14 @@ Follow the instructions to install Cocoapods and create your Podfile [here](http
 
 [/collapse]
 
-### 4.1) Check the Podfile platform version
+### 4.1. Check the Podfile platform version
 We recommend using a minimum platform version of at least 9.0 for your application to ensure that the correct version of the Firebase libraries are used.  To do this, you need to uncomment or make sure the following line is present at the top of your `Podfile`:
 
-`platform :ios, '9.0'`
+```ruby
+platform :ios, '9.0'
+```
 
-### 4.2) Add the required pods
+### 4.2. Add the required pods
 Simply add the following to your `Podfile` either at the top level, or within the main project target:
 
 ```ruby
