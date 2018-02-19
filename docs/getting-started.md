@@ -1,35 +1,26 @@
-<p align="center">
-  <a href="https://rnfirebase.io">
-    <img src="http://i.imgur.com/01XQL0x.png"><br/>
-  </a>
-  <h2 align="center">React Native Firebase</h2>
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/react-native-firebase"><img src="https://img.shields.io/npm/dm/react-native-firebase.svg?style=flat-square" alt="NPM downloads"></a>
-  <a href="https://www.npmjs.com/package/react-native-firebase"><img src="https://img.shields.io/npm/v/react-native-firebase.svg?style=flat-square" alt="NPM version"></a>
-  <a href="/LICENSE"><img src="https://img.shields.io/npm/l/react-native-firebase.svg?style=flat-square" alt="License"></a>
-  <a href="#backers"><img src="https://opencollective.com/react-native-firebase/backers/badge.svg" alt="Backers on Open Collective"></a>
-  <a href="#sponsors"><img src="https://opencollective.com/react-native-firebase/sponsors/badge.svg" alt="Sponsors on Open Collective"></a>
-  <a href="https://discord.gg/C9aK28N"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?style=flat-square" alt="Chat"></a>
-  <a href="https://twitter.com/rnfirebase"><img src="https://img.shields.io/twitter/follow/rnfirebase.svg?style=social&label=Follow" alt="Follow on Twitter"></a>
-</p>
-
 ## Introduction
 
-**RNFirebase** makes using [Firebase](http://firebase.com) with React Native simple. It is a _light-weight_ layer sitting on-top of the native Firebase libraries for both iOS and Android which mirrors the Firebase Web SDK as closely as possible.
+**React Native Firebase** makes using [Firebase](http://firebase.com) with React Native simple. It provides a _light-weight_ layer on-top of the native Firebase SDKs (iOS & Android) whilst mirroring the Firebase Web SDKs API as closely as possible.
 
-Although the [Firebase Web SDK](https://www.npmjs.com/package/firebase) library will work with React Native, it is mainly built for the web.
+## Why 
 
-RNFirebase provides a JavaScript bridge to the native Firebase SDKs for both iOS and Android therefore Firebase will run on the native thread, allowing the rest of your app to run on the [JS thread](https://facebook.github.io/react-native/docs/performance.html#javascript-frame-rate). The Firebase Web SDK also runs on the JS thread, therefore potentially affecting the frame rate causing jank with animations, touch events etc.
+Although the some features from the [Firebase Web SDK](https://www.npmjs.com/package/firebase) will generally work with React Native, it is mainly built for the web and as such has a limited compatible feature set.
 
-The native SDKs also allow us to hook into device sdk's which are not possible with the web SDK, for example crash reporting, offline realtime database support, analytics and more!
+We use the Firebase Native SDKs allowing us to provide APIs to a vast majority of Firebase products and services.
 
-All in all, RNFirebase provides much faster performance (~2x) over the web SDK and provides device sdk's not found in the web sdk (see the feature table below).
+See the [Supported Firebase Features](#supported-firebase-features) table below to compare our supported features.
 
-**To get started**, [follow our installation guide](version /installation/initial-setup).
+## Getting Started
 
----
+We provide several options for you to get started with React Native Firebase, select a method from the table below that matches your requirements:
+
+| Manual Integration  | Basic Starter Kit | Premium Starter Kits |
+|:-------------------:|:-----------------:|:--------------------:|
+| ![manual][manual] | ![basic][basic] | ![premium][premium] |
+| Manually integrate React Native Firebase into your project by following our Android and iOS setup guides. | We've installed React Native Firebase into the standard React Native template app with only minimal steps for you to get going.      | Don't want to start from scratch? Use one of our premium starter kits to kick start development for your next app. |
+| Recommended for **experienced** React Native **developers** and **existing** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. |
+| [![continue][btn-guide]](version /installation/initial-setup) | [![btn-kit][btn-kit]](http://invertase.link/get-started-basic) | [![btn-kits][btn-kit]](http://invertase.link/get-started-premium) |
+
 
 ## Supported Firebase Features
 > The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native.
@@ -90,9 +81,9 @@ Detailed changes for each release are documented in the [releases notes](https:/
 
 <hr>
 
-## Supporting RNFirebase
+## Supporting React Native Firebase
 
-RNFirebase is an Apache-2.0 licensed open source project. It's an independent project with its ongoing development made possible entirely thanks to the support by these awesome [sponsors](#sponsors) and [backers](#backers). If you'd like to join them, please consider:
+React Native Firebase is an Apache-2.0 licensed open source project. It's an independent project with its ongoing development made possible entirely thanks to the support by these awesome [sponsors](#sponsors) and [backers](#backers). If you'd like to join them, please consider:
 
 - [Become a backer or sponsor on Open Collective](https://opencollective.com/react-native-firebase).
 
@@ -121,9 +112,16 @@ Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com
 
 Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request.
 
-Thank you to all the people who have already contributed to RNFirebase!
+Thank you to all the people who have already contributed to React Native Firebase!
 
 <a href="graphs/contributors"><img src="https://opencollective.com/react-native-firebase/contributors.svg?width=890" /></a>
 
 <hr>
 
+
+[manual]: https://rnfirebase.io/static/media/docs-vector.cb67f7d6.png "Recommended for experienced React Native developers and existing React Native projects."
+[basic]: https://rnfirebase.io/static/media/starter-project-vector.e45d010a.png "Recommended for beginners and new React Native projects."
+[premium]: https://rnfirebase.io/static/media/premium-kits-vector.dc0245df.png "Recommended for beginners and new React Native projects."
+[btn-guide]: https://i.imgur.com/Tmp5hku.png "View the integration guide"
+[btn-kit]: https://i.imgur.com/N7GUGXo.png "Go to the basic starter kit repo"
+[btn-kits]: https://i.imgur.com/1rmzlpV.png "Go to the basic starter kit repo"
