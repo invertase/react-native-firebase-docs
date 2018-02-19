@@ -3,9 +3,9 @@
 A number of methods are provided to help tailor analytics specifically for your own app, however the Firebase SDK includes a number of pre-set events which are automatically handled and cannot be used with custom [logEvent](version /analytics/reference/analytics#logevent) events. 
 
 !> Attempting to use one of these events will throw an exception.
-
-
-```js
+ 
+ 
+```javascript
 const reserved = [
   'app_clear_data',
   'app_uninstall',
