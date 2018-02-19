@@ -133,7 +133,7 @@ firebase.config().fetch()
   .then(() => firebase.config().activateFetched())
   .then(() => firebase.config().getKeysByPrefix('some_key_prefix_'))
   .then((keys) => {
-     console.log(keys[0].val())
+     console.log(keys[0]);
   })
   .catch((error) => console.log(`Error processing config: ${error}`))
 ```
