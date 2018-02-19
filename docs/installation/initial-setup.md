@@ -6,18 +6,20 @@ Install React Native Firebase from npm:
 npm install --save react-native-firebase
 ```
 
-## Creating a Firebase project
+## Firebase project
 
 The first thing you'll need to have is an active Firebase project.
 
-If you already have an existing project you can skip to [Platform Specific Installation](#platform-specific-installation)
+If you already have an existing project you can skip to the [Platform Specific Installation](#platform-specific-installation) section.
+
+#### Creating a new project
 
  - Visit the [Firebase console](https://firebase.google.com/console).
  - Click the `Add project` box as shown below: 
  
  ![Dashboard](https://i.imgur.com/ZsSH1bJ.png)
 
- - A dialog will appear as show below
+ - A dialog will appear as shown below
    - Enter your new **project name** and modify the **project id** and **region** if necessary
    - Click `Create Project` when finished
    - Your project will now be created - this can take a few seconds
