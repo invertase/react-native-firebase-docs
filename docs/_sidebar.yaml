@@ -66,6 +66,10 @@
     - to: "/reserved-events"
       text: Reserved Events
     - type: divider
+    - to: "https://blog.theodo.fr/2018/01/building-google-analytics-funnel-firebase-react-native/"
+      text: Building a Google Analytics Funnel
+      icon: info-circle-o
+    - type: divider
     - type: reference
       files:
       - analytics
@@ -150,7 +154,11 @@
     - to: "/android"
       text: Install on Android
       icon: android
-    - type: divider  
+    - type: divider
+    - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
+      text: Push Notifications using Cloud Functions
+      icon: info-circle-o
+    - type: divider
     - type: reference
       files:
       - messaging
