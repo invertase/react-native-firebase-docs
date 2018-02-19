@@ -2,8 +2,9 @@
 
 A number of methods are provided to help tailor analytics specifically for your own app. The Firebase SDK includes a number of pre-set events which are automatically handled, and cannot be used with custom [logEvent](version /analytics/reference#logevent) events:
 
-```
- 'app_clear_data',
+```js
+const reserved = [
+  'app_clear_data',
   'app_uninstall',
   'app_update',
   'error',
@@ -26,4 +27,5 @@ A number of methods are provided to help tailor analytics specifically for your 
   'ad_exposure',
   'adunit_exposure',
   'ad_activeiew',
+];
 ```
