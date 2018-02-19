@@ -2,9 +2,13 @@
 
 !> Please note that there is a known issue when using Cocoapods with the `use_frameworks!` enabled.  This is explained [here](https://github.com/invertase/react-native-firebase/issues/252#issuecomment-316340974).  Unfortunately we don't currently have a workaround, but are engaging with Firebase directly to try and resolve the problem.
 
-## 1) Link RNFirebase
+## 1. Link React Native Firebase
 
-Run `react-native link react-native-firebase`
+Run:
+
+```bash
+react-native link react-native-firebase
+```
 
 ## 2. Setup GoogleService-Info.plist
 
@@ -32,7 +36,7 @@ B) At the beginning of the `didFinishLaunchingWithOptions:(NSDictionary *)launch
 [FIRApp configure];
 ```
 
-**WARNING: It is recommended to add the line within the method BEFORE creating the RCTRootView. Otherwise the initialization can happen too late after already being needed in your JavaScript code**
+?> It is recommended to add the line within the method BEFORE creating the RCTRootView. Otherwise the initialization can happen too late after already being needed in your JavaScript code
 
 ## 4. Setup Firebase Pods
 
@@ -43,9 +47,10 @@ We don't recommend it, but if for some reason you are unable to use Cocoapods, t
 ### 4.0) If you don't already have Cocoapods set up
 Follow the instructions to install Cocoapods and create your Podfile [here](https://firebase.google.com/docs/ios/setup#add_the_sdk).
 
-**NOTE: The Podfile needs to be initialised in the `ios` directory of your project. Make sure to update cocoapods libs first by running `pod update`**
+> The Podfile needs to be initialised in the `ios` directory of your project. Make sure to update cocoapods libs first by running `pod update`
 
-#### Troubleshooting
+[collapse Troubleshooting]
+
 1) When running `pod install` you may encounter an error saying that a `tvOSTests` target is declared twice. This appears to be a bug with `pod init` and the way that react native is set up.
 
 **Resolution:**
@@ -80,6 +85,8 @@ Follow the instructions to install Cocoapods and create your Podfile [here](http
 - You should see updated versions of your pods installed
 - You may need to re-run `pod install`
 
+[/collapse]
+
 ### 4.1) Check the Podfile platform version
 We recommend using a minimum platform version of at least 9.0 for your application to ensure that the correct version of the Firebase libraries are used.  To do this, you need to uncomment or make sure the following line is present at the top of your `Podfile`:
 
@@ -95,8 +102,8 @@ pod 'Firebase/Core'
 
 Run `pod install`.
 
-**NOTE: You need to use the `ios/[YOUR APP NAME].xcworkspace` instead of the `ios/[YOUR APP NAME].xcproj` file from now on.**
+> You need to use the `ios/[YOUR APP NAME].xcworkspace` instead of the `ios/[YOUR APP NAME].xcproj` file from now on.
 
 ## 5. Install modules
 
-`RNFirebase` only provides your application with access to [Core](version /core/reference) features. Check out the installation guides on the other modules for how to use other Firebase features.
+`React Native Firebase` only provides your application with access to [Core](version /core/reference) features. Check out the installation guides on the other modules for how to use other Firebase features.
