@@ -10,6 +10,8 @@ In contrast we use the Firebase Native SDKs - this allows us to provide APIs to 
 
 See the [Supported Firebase Features](#Supported-Firebase-Features) table below to compare our supported features.
 
+---
+
 ## Getting Started
 
 We provide several options for you to get started with React Native Firebase, select a method from the table below that matches your requirements:
@@ -21,6 +23,7 @@ We provide several options for you to get started with React Native Firebase, se
 |  | Recommended for **experienced** React Native **developers** and **existing** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. |
 |  | [![continue][btn-guide]](version /installation/initial-setup) | [![btn-kit][btn-kit]](http://invertase.link/get-started-basic) | [![btn-kits][btn-kits]](http://invertase.link/get-started-premium) |
 
+---
 
 ## Supported Firebase Features
 > The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native.
@@ -51,6 +54,7 @@ We provide several options for you to get started with React Native Firebase, se
 | **Storage**                | ✅ | ✅ | ✅ | ✅ | ✅ |**?**|
 
 ---
+
 ### Supported versions - React Native / Firebase
 
 > The table below shows the supported versions of React Native and the Firebase SDKs for different versions of `react-native-firebase`
@@ -91,16 +95,7 @@ React Native Firebase is an Apache-2.0 licensed open source project. It's an ind
 
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/react-native-firebase#sponsor)]
 
-<a href="https://opencollective.com/react-native-firebase/sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/9/avatar.svg"></a>
+<a href="https://opencollective.com/react-native-firebase/sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/0/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/1/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/2/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/3/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/4/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/5/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/6/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/7/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/8/avatar.svg"></a><a href="https://opencollective.com/react-native-firebase/sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/9/avatar.svg"></a>
 
 ### Backers
 
@@ -110,14 +105,13 @@ Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com
 
 ### Contributing
 
-Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request.
+Please make sure to read the [Contributing Guide](https://github.com/invertase/react-native-firebase/blob/master/CONTRIBUTING.md) before making a pull request.
 
 Thank you to all the people who have already contributed to React Native Firebase!
 
 <a href="graphs/contributors"><img src="https://opencollective.com/react-native-firebase/contributors.svg?width=890" /></a>
 
 <hr>
-
 
 [manual]: https://rnfirebase.io/static/media/docs-vector.cb67f7d6.png "Recommended for experienced React Native developers and existing React Native projects."
 [basic]: https://rnfirebase.io/static/media/starter-project-vector.e45d010a.png "Recommended for beginners and new React Native projects."
