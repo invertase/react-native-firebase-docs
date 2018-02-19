@@ -6,9 +6,9 @@
 
 Although the some features from the [Firebase Web SDK](https://www.npmjs.com/package/firebase) will generally work with React Native, it is mainly built for the web and as such has a limited compatible feature set.
 
-We use the Firebase Native SDKs allowing us to provide APIs to a vast majority of Firebase products and services.
+In contrast we use the Firebase Native SDKs - this allows us to provide APIs to a vast majority of Firebase products and services.
 
-See the [Supported Firebase Features](#supported-firebase-features) table below to compare our supported features.
+See the [Supported Firebase Features](#Supported-Firebase-Features) table below to compare our supported features.
 
 ## Getting Started
 
