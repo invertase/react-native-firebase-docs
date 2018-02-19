@@ -2,6 +2,8 @@
 
 **React Native Firebase** makes using [Firebase](http://firebase.com) with React Native simple. It provides a _light-weight_ layer on-top of the native Firebase SDKs (iOS & Android) whilst mirroring the Firebase Web SDKs API as closely as possible.
 
+---
+
 ## Why 
 
 Although the some features from the [Firebase Web SDK](https://www.npmjs.com/package/firebase) will generally work with React Native, it is mainly built for the web and as such has a limited compatible feature set.
@@ -53,7 +55,6 @@ We provide several options for you to get started with React Native Firebase, se
 | **Remote Config**          | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Storage**                | ✅ | ✅ | ✅ | ✅ | ✅ |**?**|
 
----
 
 ### Supported versions - React Native / Firebase
 
@@ -83,7 +84,7 @@ For feature requests please use our [Canny Board](http://invertase.link/requests
 
 Detailed changes for each release are documented in the [releases notes](https://github.com/invertase/react-native-firebase/releases).
 
-<hr>
+---
 
 ## Supporting React Native Firebase
 
