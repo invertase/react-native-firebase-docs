@@ -2,7 +2,7 @@
 
 Install React Native Firebase from npm:
 
-```
+```bash
 npm install --save react-native-firebase
 ```
 
@@ -37,3 +37,38 @@ Both Android and iOS require additional installation steps, please follow the pl
  
  - [Android](version /installation/android) 
  - [iOS](version /installation/ios).
+ 
+---
+ 
+## Usage
+
+Once you've completed setting up React Native Firebase you can now use the library within your JavaScript code like any other node module
+
+> The default app is pre-initialized natively therefore there is **no** need to call `initializeApp` for the default app instance.
+
+### Example Usage
+
+```javascript
+import firebase from 'react-native-firebase';
+
+firebase.auth()
+  .signInAnonymouslyAndRetrieveData()
+  .then(credential => {
+    if (credential) {
+      console.log('default app user ->', credential.user.toJSON());
+    }
+  });
+```
+
+### Creating multiple app instances
+
+React Native Firebase supports multiple app instances. For more information see the [initializing multiple apps documentation](version /core/initialize-apps).
+
+---
+
+## Guides
+
+ - [Getting started with Firebase Authentication on React Native](https://blog.invertase.io/getting-started-with-firebase-authentication-on-react-native-a1ed3d2d6d91)
+ - [Getting started with Cloud Firestore on React Native](https://blog.invertase.io/getting-started-with-cloud-firestore-on-react-native-b338fb6525b9)
+ 
+Help us [keep React Native Firebase awesome](https://blog.invertase.io/keeping-react-native-firebase-awesome-8723470d2d26).
