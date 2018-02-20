@@ -21,7 +21,9 @@
       text: Android
       icon: android
     - to: "/installation/javascript"
-      text: JavaScript
+      text: Usage
+    - to: "/installation/basic-kit"
+      text: Initial Setup
   - title: Contributing
     links:
     - to: "/contributing"
