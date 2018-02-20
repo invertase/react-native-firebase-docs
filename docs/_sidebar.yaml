@@ -23,7 +23,7 @@
     - to: "/installation/javascript"
       text: Usage
     - to: "/installation/basic-kit"
-      text: Initial Setup
+      text: Basic Starter Kit
   - title: Contributing
     links:
     - to: "/contributing"
