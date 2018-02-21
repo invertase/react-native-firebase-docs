@@ -6,11 +6,11 @@ Unfortunately, XCode can get in a bit of a mess every now and again, particularl
 
 To do this, try the following in xcode:
 
-```
+```javascript
 1) Do product > clean
 2) Close Xcode
 3) Re-run pod install (from the command line)
 4) Re-open the .xcworkspace
 5) Do product > clean
 6) Try a build
-``
+```
