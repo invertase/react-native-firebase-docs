@@ -4,7 +4,7 @@ A basic react native app with [`react-native-firebase`](https://github.com/inver
 
 ## Getting Started
 
-If you're only developing for one platform you can ignore the steps below that are tagged with the platform you don't require.
+> If you're only developing for one platform you can ignore the steps below that are tagged with the platform you don't require.
 
 ### 1) Clone & Install Dependencies
 
@@ -21,7 +21,7 @@ If you're only developing for one platform you can ignore the steps below that a
 
 ### 2) Rename Project
 
-**You will need to be running Node verison 7.6 or greater for the rename functionality to work**
+?> **You will need to be running Node verison 7.6 or greater for the rename functionality to work**
 
 - 2.0) **[iOS]** `cd ..` to return to the root directory of the project
 - 2.1) `npm run rename` - you'll be prompted to enter a project name and company name
