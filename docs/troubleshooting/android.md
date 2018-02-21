@@ -62,40 +62,104 @@ recommend using the native Android Studio emulators to reduce the chance of thes
 
 ## Turning off Google Play Services availability errors
 
-G.P.S errors can be turned off using a config option like so:
+Google Play Services errors can be turned off using a config option like so:
 
 ```javascript
-const firebase = RNFirebase.initializeApp({
-  errorOnMissingPlayServices: false,
-});
+firebase.utils().errorOnMissingPlayServices = false;
+firebase.utils().promptOnMissingPlayServices = false;
 ```
-This will stop your app from immediately red-boxing or crashing, but won't solve the underlying issue of G.P.S not being available or of the correct version. This will mean certain functionalities won't work properly and your app may even crash.
+
+This must be called at the module scope, outside any classes, preferably before any other usages of `react-native-firebase` so that it's disabled before the internal logic takes over.
 
 ## Checking for Google Play Services availability with React Native Firebase
 
-React Native Firebase actually has a useful helper object for checking G.P.S availability:
+React Native Firebase actually has a useful helper object for checking Google Play Services availability.  The following examples show how to use this helper:
+
+### Basic Google Play Services check
+
+Call this function in your startup logic, before `react-native-firebase` usage.
+
+This example does pretty much what promptOnMissingPlayServices = true does.
 
 ```javascript
-const availability = firebase.googleApiAvailability;
+async function checkPlayServicesBasicExample() {
+  const utils = firebase.utils();
+
+  const {
+    isAvailable,
+    hasResolution,
+    isUserResolvableError,
+  } = utils.playServicesAvailability;
+
+  // all good and valid \o/
+  if (isAvailable) return Promise.resolve();
+
+  // if the user can resolve the issue i.e by updating play services
+  // then call Google Play's own/default prompting functionality
+  if (isUserResolvableError) {
+    return utils.promptForPlayServices();
+  }
+
+  // call Google Play's own/default resolution functionality
+  if (hasResolution) {
+    return utils.resolutionForPlayServices();
+  }
+
+  // There's no way to resolve play services on this device
+  // probably best to show a dialog / force crash the app
+  return Promise.reject(
+    new Error('Unable to find a valid play services version.')
+  );
+}
 ```
 
-The availability object would then have the following properties that you can run checks against:
+### Advanced Google Play Service check
+
+Call this function in your startup logic, before `react-native-firebase` usage.
+
+This example shows usage of status codes to allow custom dialogs/user feedback.
 
 ```javascript
-isAvailable: boolean
+async function checkPlayServicesAdvancedExample() {
+  const utils = firebase.utils();
+
+  const {
+    status,
+    isAvailable,
+    hasResolution,
+    isUserResolvableError,
+  } = utils.playServicesAvailability;
+
+  // all good and valid \o/
+  if (isAvailable) return Promise.resolve();
+
+  // if the user can resolve the issue i.e by updating play services
+  // then call Google Play's own/default prompting functionality
+  if (isUserResolvableError || hasResolution) {
+    switch (status) {
+      case 1:
+        // SERVICE_MISSING - Google Play services is missing on this device.
+        // show something to user
+        // and then attempt to install if necessary
+        return utils.makePlayServicesAvailable();
+      case 2:
+        // SERVICE_VERSION_UPDATE_REQUIRED - The installed version of Google Play services is out of date.
+        // show something to user
+        // and then attempt to update if necessary
+        return utils.resolutionForPlayServices();
+      // TODO handle other cases as necessary, see link below for all codes and descriptions
+      // TODO e.g. https://developers.google.com/android/reference/com/google/android/gms/common/ConnectionResult#SERVICE_VERSION_UPDATE_REQUIRED
+      default:
+        // some default dialog / component?
+        if (isUserResolvableError) return utils.promptForPlayServices();
+        if (hasResolution) return utils.resolutionForPlayServices();
+    }
+  }
+
+  // There's no way to resolve play services on this device
+  // probably best to show a dialog / force crash the app
+  return Promise.reject(
+    new Error('Unable to find a valid play services version.')
+  );
+}
 ```
-
-and if not available (isAvailable === false):
-
-```javascript
-isUserResolvableError: boolean
-```
-
-This variable indicates whether or not the end user can fix the issue, for example by downloading the required version of Google Play Services. In a case such as a GenyMotion emulator, this would return false for missing G.P.S, as the end user can't add the package directly.
-
-```javascript
-error: string
-```
-This error will match the messages and error codes mentioned above, and can be found here:
-
-https://developers.google.com/android/reference/com/google/android/gms/common/ConnectionResult#SERVICE_VERSION_UPDATE_REQUIRED
