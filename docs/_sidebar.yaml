@@ -24,6 +24,14 @@
       text: Usage
     - to: "/installation/basic-kit"
       text: Basic Starter Kit
+  - title: Troubleshooting
+    links:
+    - to: "/troubleshooting/ios"
+      text: iOS
+      icon: apple
+    - to: "/troubleshooting/android"
+      text: Android
+      icon: android
   - title: Contributing
     links:
     - to: "/contributing"
