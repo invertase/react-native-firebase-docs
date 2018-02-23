@@ -25,8 +25,6 @@ In Xcode, enable the following capabilities:
 1) Push Notifications
 2) Background modes > Remote notifications
 
-```
-
 ## Debugging
 
 If you're having problems with messages not being received, check out the following blog post for help:

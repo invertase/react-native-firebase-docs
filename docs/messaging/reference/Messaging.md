@@ -2,7 +2,7 @@
 
 Firebase Cloud Messaging ([FCM](https://firebase.google.com/docs/cloud-messaging/)) allows you to send push messages at no cost to both Android & iOS platforms. 
 
-This `messaging` module deals with pure data-only messages only.  If you're interested in sending and receiving notifications, please take a look at the [ref notifications.Notifications]
+This `messaging` module deals with pure data-only messages only.  If you're interested in sending and receiving notifications, please take a look at the [ref notifications.Notifications] module.
 
 !> On iOS, your app first needs to [ref Messaging#requestPermission] in order to receive Cloud Messages.
 
@@ -29,7 +29,7 @@ Returns true if permission is granted, false otherwise.
 ### onMessage
 [method]onMessage(nextOrObserver) returns function();[/method]
 
-When a push message is received and the user is currently on a page for your origin, the message is passed to the page and an onMessage() event is dispatched with the payload of the push message.
+When a push message is received, the onMessage() event is dispatched with the payload of the push message.
 
 Returns an unsubscribe function.
 

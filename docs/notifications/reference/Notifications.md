@@ -1,62 +1,131 @@
 # Notifications
 
+This `notifications` module deals with Notification and Notification + Data messages.  If you're interested in sending and receiving just data messages, please take a look at the [ref messaging.Messaging] module.
+
+!> On iOS, your app first needs to [ref Messaging#requestPermission] in order to receive Notifications.
+
 ## Methods
 
-The following methods are accessed via the Cloud Messaging instance firebase.messaging().
+The following methods are accessed via the Notifications instance firebase.notifications().
+
+This `messaging` module deals with pure data-only messages only.  If you're interested in sending and receiving notifications, please take a look at the [ref notifications.Notifications]
+
+### cancelAllNotifications
+[method]cancelAllNotifications() returns void;[/method]
+
+Cancels all pending notifications.
+
+### cancelNotification
+[method]cancelNotification(notificationId) returns void;[/method]
+
+Cancels a pending notification with the specified ID.
+
+| Parameter |         |
+| --------- | ------- |
+| notificationId   | **string** <br /> The ID of the notification to be cancelled. |
+
+### displayNotification
+[method]displayNotification(notification) returns Promise;[/method]
+
+Displays the specified notification straight away.
+
+!> It is not possible to display a notification whilst the app is in the foreground on iOS 8 and 9.
+
+Returns a promise that resolves if the notification is displayed, otherwise it is rejected with an error.
+
+| Parameter |         |
+| --------- | ------- |
+| notification   | **[ref notifications.Notification]** <br /> The notification to display.  |
+
+### getBadge
+[method]getBadge() returns Promise containing number;[/method]
+
+Returns the current badge number on the app icon.
+
+!> On Android, we make use of the ShortcutBadger library to display badges.
+
 ### getInitialNotification
-[method]getInitialNotification() returns Promise containing Object;[/method]
+[method]getInitialNotification() returns Promise containing nullable [ref notification.NotificationPressed];[/method]
 
-When the application has been opened from a notification, `getInitialNotification` is called and the notification payload is returned. Use [ref messaging#onMessage] for notifications when the app is running.
+Due to the delay in the React Native bridge, the `onNotification` listeners will not be available at startup, so this method can be used to check to see if the application was opened by a notification.
 
-### deleteInstanceId
-[method]deleteInstanceId() returns Promise containing void;[/method]
+For notifications when the app is running, see [ref notifications#onNotification], [ref notifications#onNotificationDisplayed] and [ref notifications#onNotificationPressed].
 
-Reset Instance ID and revokes all tokens.
+Returns the notification that caused the application to open if available, and the action that was invoked when it was clicked on.
 
-### onTokenRefresh
-[method]onTokenRefresh(listener) returns function();[/method]
+### getScheduledNotifications
+[method]getScheduledNotifications() returns Promise containing array of [ref notification.Notification];[/method]
 
-On the event a devices FCM token is refreshed by Google, the new token is returned in a callback listener.
+Returns an array of all scheduled notifications.
+
+### onNotification
+[method]onNotification(nextOrObserver) returns function();[/method]
+
+When a notification is received, but not displayed, the listener is invoked with the notification.
 
 Returns an unsubscribe function.
 
-| Parameter |         |
+Parameter |         |
 | --------- | ------- |
-| listener   | **function(string)** <br /> A listener function called when a new token is generated. |
+| nextOrObserver   | **function([ref notifications.Notification])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is received but not displayed. |
 
-### cancelLocalNotification
-[method]cancelLocalNotification(id) returns void;[/method]
+### onNotificationDisplayed
+[method]onNotificationDisplayed(nextOrObserver) returns function();[/method]
 
-Cancels a location notification by ID, or all notifications by *.
+When a notification is displayed, the listener is invoked with the notification.
+
+Returns an unsubscribe function.
+
+Parameter |         |
+| --------- | ------- |
+| nextOrObserver   | **function([ref notifications.Notification])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is displayed. |
+
+### onNotificationPressed
+[method]onNotificationPressed(nextOrObserver) returns function();[/method]
+
+When a notification is pressed, the listener is invoked with the notification and the action that was invoked when it was clicked on.
+
+Returns an unsubscribe function.
+
+Parameter |         |
+| --------- | ------- |
+| nextOrObserver   | **function([ref notifications.NotificationPressed])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is pressed. |
+
+### removeAllDeliveredNotifications
+[method]removeAllDeliveredNotifications() returns void;[/method]
+
+Cancels all pending notifications.
 
 ### removeDeliveredNotification
-[method]removeDeliveredNotification(id) returns void;[/method]
+[method]removeDeliveredNotification(notificationId) returns void;[/method]
 
-Removes all delivered notifications from device by ID, or all notifications by *.
-
-### [ios] requestPermissions
-[method]requestPermissions() returns Promise<Object>;[/method]
-
-Requests app notification permissions in an Alert dialog. 
-
-On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
-
-In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
-
-On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
-
-In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
-
-### setBadgeNumber
-[method]setBadgeNumber(value) returns void;[/method]
-
-Sets the badge number on the app icon.
+Removes a delivered notification with the specified ID.
 
 | Parameter |         |
 | --------- | ------- |
-| value   | **number**  |
+| notificationId   | **string** <br /> The ID of the notification to be removed. |
 
-### getBadgeNumber
-[method]getBadgeNumber() returns Promise containing number;[/method]
+### scheduleNotification
+[method]scheduleNotification(notification, schedule) returns Promise;[/method]
 
-Returns the current badge number on the app icon.
+Displays the specified notification according to the supplied schedule.
+
+!> It is not possible to display a notification whilst the app is in the foreground on iOS 8 and 9.
+
+Returns a promise that resolves if the notification is scheduled, otherwise it is rejected with an error.
+
+| Parameter |         |
+| --------- | ------- |
+| notification   | **[ref notifications.Notification]** <br /> The notification to display.  |
+| schedule   | **[ref notifications.Schedule]** <br /> The schedule to control when the notification is displayed.  |
+
+### setBadge
+[method]setBadge(badge) returns void;[/method]
+
+Sets the current badge number on the app icon.
+
+!> On Android, we make use of the ShortcutBadger library to display badges.
+
+| Parameter |         |
+| --------- | ------- |
+| badge   | **number** <br /> The badge number to display. |
