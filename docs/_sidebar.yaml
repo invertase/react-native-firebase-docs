@@ -172,7 +172,8 @@
     - type: divider
     - type: reference
       files:
-      - messaging
+      - Messaging
+      - RemoteMessage
   - title: Core / App
     path: core
     links:
@@ -245,6 +246,24 @@
     - type: reference
       files:
       - links
+  - title: Notifications
+    path: notifications
+    links:
+    - to: "/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/android"
+      text: Install on Android
+      icon: android
+    - type: divider
+    - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
+      text: With Cloud Functions
+      type: external
+      icon: info-circle-o
+    - type: divider
+    - type: reference
+      files:
+      - Notifications
   - title: Remote Config
     path: config
     links:

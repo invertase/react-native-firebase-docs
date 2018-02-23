@@ -1,16 +1,72 @@
 # Cloud Messaging
 
-Firebase Cloud Messaging ([FCM](https://firebase.google.com/docs/cloud-messaging/)) allows you to send push messages at no cost to both Android & iOS platforms.
+Firebase Cloud Messaging ([FCM](https://firebase.google.com/docs/cloud-messaging/)) allows you to send push messages at no cost to both Android & iOS platforms. 
 
-As the Firebase Web SDK has limited messaging functionality, the following methods within `react-native-firebase` have been created to handle FCM in the React Native environment.
+This `messaging` module deals with pure data-only messages only.  If you're interested in sending and receiving notifications, please take a look at the [ref notifications.Notifications]
 
-Badge notification is well known on the iOS platform, but also supported by different Android devices / launchers. This library uses the [ShortcutBadger](https://github.com/leolin310148/ShortcutBadger) library to set the badge number also on Android. A list of supported launcher can be found there.
-
-!> On iOS, your app first needs to [ref messaging#requestPermission] in order to receive Cloud Messages.
+!> On iOS, your app first needs to [ref Messaging#requestPermission] in order to receive Cloud Messages.
 
 ## Methods
 
 The following methods are accessed via the Cloud Messaging instance firebase.messaging().
+
+### getToken
+[method]getToken() returns Promise containing String;[/method]
+
+After calling requestPermission() you can call this method to get an FCM registration token that can be used to send push messages to this user.
+
+The generated registration token is used to identify the web app instance and periodically sends data to the Firebase backend. To stop this, call firebase.messaging.Messaging#deleteToken.
+
+Returns the FCM token;
+
+### hasPermission
+[method]hasPermission() returns Promise containing boolean;[/method]
+
+Checks if the user has granted the appropriate permissions to be able to send and receive messages.
+
+Returns true if permission is granted, false otherwise.
+
+### onMessage
+[method]onMessage(nextOrObserver) returns function();[/method]
+
+When a push message is received and the user is currently on a page for your origin, the message is passed to the page and an onMessage() event is dispatched with the payload of the push message.
+
+Returns an unsubscribe function.
+
+Parameter |         |
+| --------- | ------- |
+| nextOrObserver   | **function([ref messaging.RemoteMessage])** or **Object** <br /> This function, or observer object with `next` defined, is called when a data-only message is received. |
+
+### onTokenRefresh
+[method]onTokenRefresh(nextOrObserver) returns function();[/method]
+
+You should listen for token refreshes so your web app knows when FCM has invalidated your existing token.
+
+Returns an unsubscribe function.
+
+Parameter |         |
+| --------- | ------- |
+| nextOrObserver   | **function(string)** or **Object** <br /> This function, or observer object with `next` defined, is called when a token refresh has occurred with the new token. |
+
+### requestPermission
+[method]requestPermission() returns Promise;[/method]
+
+Notification permissions are required to send a user push messages. Calling this method displays the permission dialog to the user and resolves if the permission is granted.
+
+Returns a promise that resolves if permission is granted, otherwise, it is rejected with an error.
+
+### sendMessage
+[method]sendMessage(message) returns Promise;[/method]
+
+Sends a remote message upstream to your app server.
+
+When there is an active connection the message will be sent immediately, otherwise the message will be queued up to the time to live (TTL) set in the message.
+
+Returns a promise that resolves if the messages is sent, otherwise it is rejected with an error.
+
+| Parameter |         |
+| --------- | ------- |
+| message   | **[ref messaging.RemoteMessage]** <br /> The remote message to send.  |
 
 ### subscribeToTopic
 [method]subscribeToTopic(topic) returns void;[/method]
@@ -19,7 +75,7 @@ Subscribes the device to a topic.
 
 | Parameter |         |
 | --------- | ------- |
-| topic   | **string**  |
+| topic   | **string** The name of the topic to subscribe to. |
 
 ### unsubscribeFromTopic
 [method]unsubscribeFromTopic(topic) returns void;[/method]
@@ -28,74 +84,4 @@ Unsubscribes the device to a topic.
 
 | Parameter |         |
 | --------- | ------- |
-| topic   | **string**  |
-
-### getInitialNotification
-[method]getInitialNotification() returns Promise containing Object;[/method]
-
-When the application has been opened from a notification, `getInitialNotification` is called and the notification payload is returned. Use [ref messaging#onMessage] for notifications when the app is running.
-
-### getToken
-[method]getToken() returns Promise containing string;[/method]
-
-Returns the devices FCM token. This token can be used in the Firebase console to send messages to directly.
-
-### deleteInstanceId
-[method]deleteInstanceId() returns Promise containing void;[/method]
-
-Reset Instance ID and revokes all tokens.
-
-### onTokenRefresh
-[method]onTokenRefresh(listener) returns function();[/method]
-
-On the event a devices FCM token is refreshed by Google, the new token is returned in a callback listener.
-
-Returns an unsubscribe function.
-
-| Parameter |         |
-| --------- | ------- |
-| listener   | **function(string)** <br /> A listener function called when a new token is generated. |
-
-### onMessage
-[method]onMessage() returns function();[/method]
-
-On a new message, the payload object is passed to the listener callback. This method is only triggered when the app is running. Use [ref messaging#getInitialNotification] for notifications which cause the app to open.
-
-Returns an unsubsciber function.
-
-### cancelLocalNotification
-[method]cancelLocalNotification(id) returns void;[/method]
-
-Cancels a location notification by ID, or all notifications by *.
-
-### removeDeliveredNotification
-[method]removeDeliveredNotification(id) returns void;[/method]
-
-Removes all delivered notifications from device by ID, or all notifications by *.
-
-### [ios] requestPermissions
-[method]requestPermissions() returns Promise<Object>;[/method]
-
-Requests app notification permissions in an Alert dialog. 
-
-On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
-
-In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
-
-On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
-
-In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
-
-### setBadgeNumber
-[method]setBadgeNumber(value) returns void;[/method]
-
-Sets the badge number on the app icon.
-
-| Parameter |         |
-| --------- | ------- |
-| value   | **number**  |
-
-### getBadgeNumber
-[method]getBadgeNumber() returns Promise containing number;[/method]
-
-Returns the current badge number on the app icon.
+| topic   | **string** The name of the topic to unsubscribe from. |
