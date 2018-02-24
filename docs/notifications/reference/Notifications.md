@@ -45,11 +45,11 @@ Returns the current badge number on the app icon.
 !> On Android, we make use of the ShortcutBadger library to display badges.
 
 ### getInitialNotification
-[method]getInitialNotification() returns Promise containing nullable [ref notification.NotificationPressed];[/method]
+[method]getInitialNotification() returns Promise containing nullable [ref notification.NotificationOpened];[/method]
 
 Due to the delay in the React Native bridge, the `onNotification` listeners will not be available at startup, so this method can be used to check to see if the application was opened by a notification.
 
-For notifications when the app is running, see [ref notifications#onNotification], [ref notifications#onNotificationDisplayed] and [ref notifications#onNotificationPressed].
+For notifications when the app is running, see [ref notifications#onNotification], [ref notifications#onNotificationDisplayed] and [ref notifications#onNotificationOpened].
 
 Returns the notification that caused the application to open if available, and the action that was invoked when it was clicked on.
 
@@ -80,16 +80,16 @@ Parameter |         |
 | --------- | ------- |
 | nextOrObserver   | **function([ref notifications.Notification])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is displayed. |
 
-### onNotificationPressed
-[method]onNotificationPressed(nextOrObserver) returns function();[/method]
+### onNotificationOpened
+[method]onNotificationOpened(nextOrObserver) returns function();[/method]
 
-When a notification is pressed, the listener is invoked with the notification and the action that was invoked when it was clicked on.
+When a notification is opened, the listener is invoked with the notification and the action that was invoked when it was clicked on.
 
 Returns an unsubscribe function.
 
 Parameter |         |
 | --------- | ------- |
-| nextOrObserver   | **function([ref notifications.NotificationPressed])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is pressed. |
+| nextOrObserver   | **function([ref notifications.NotificationOpened])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is opened. |
 
 ### removeAllDeliveredNotifications
 [method]removeAllDeliveredNotifications() returns void;[/method]
