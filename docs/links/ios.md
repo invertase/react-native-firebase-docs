@@ -83,3 +83,24 @@ Run `pod update`.
                                 restorationHandler:restorationHandler];
         }
         ```
+
+    > You might run into situation when you need to handle more than one link configuration
+    > i.e. when using Facebook SDK to handle push notification / login links
+    > if that is the case you can perform check below
+
+    ```objectivec
+    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+        // Set handled link to facebook sdk check
+        BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+
+        // If link was not matched against facebook SDK
+        if (!handled) {
+            // Set handled link to RNFirebase
+            handled = [RNFirebaseLinks application:application openURL:url options:options];
+        } 
+
+        return handled;
+    }
+    ```
+        
+    
