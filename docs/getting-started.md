@@ -20,7 +20,7 @@ We provide several options for you to get started with React Native Firebase, se
 
 |  | Manual Integration  | Free Starter Kit | Premium Starter Kits |
 |:---:|:-------------------:|:-----------------:|:--------------------:|
-|  | ![manual][manual] | ![basic][basic] | ![premium][premium] |
+|  | [![manual][manual]](version /installation/initial-setup) | [![basic][basic]](version /installation/basic-kit) | [![premium][premium]](/kits) |
 |  | Manually integrate React Native Firebase into your project by following our Android and iOS setup guides. | We've installed React Native Firebase into the standard React Native template app with only minimal steps for you to get going.      | Don't want to start from scratch? Use one of our premium starter kits to kick start development for your next app. |
 |  | Recommended for **experienced** React Native **developers** and **existing** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. |
 |  | [![continue][btn-guide]](version /installation/initial-setup) | [![btn-kit][btn-kit]](version /installation/basic-kit) | [![btn-kits][btn-kits]](/kits) |
