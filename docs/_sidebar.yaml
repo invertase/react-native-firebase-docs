@@ -264,6 +264,10 @@
     - type: reference
       files:
       - Notifications
+      - IOSNotification
+      - IOSAttachment
+      - IOSAttachmentOptions
+      - Notification
   - title: Remote Config
     path: config
     links:

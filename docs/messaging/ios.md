@@ -2,7 +2,7 @@
 
 First ensure you have followed the [initial setup guide](version /installation/initial-setup).
 
-?> FCM does not work on the iOS simulator, you must test is using a real device. This is a restriction enforced by Apple.
+?> FCM does not work on the iOS simulator, you must test them using a real device. This is a restriction enforced by Apple.
 
 ## Add the pod
 

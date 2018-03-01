@@ -2,7 +2,7 @@
 
 First ensure you have followed the [initial setup guide](version /installation/initial-setup) and the [messaging setup guide](version /messaging/ios).
 
-?> Notifications do not work on the iOS simulator, you must test is using a real device. This is a restriction enforced by Apple.
+?> Remote notifications do not work on the iOS simulator, you must test them using a real device. This is a restriction enforced by Apple.
 
 ## Update `AppDelegate.m`
 
