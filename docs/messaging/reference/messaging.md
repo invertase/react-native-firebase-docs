@@ -6,7 +6,7 @@ As the Firebase Web SDK has limited messaging functionality, the following metho
 
 Badge notification is well known on the iOS platform, but also supported by different Android devices / launchers. This library uses the [ShortcutBadger](https://github.com/leolin310148/ShortcutBadger) library to set the badge number also on Android. A list of supported launcher can be found there.
 
-!> On iOS, your app first needs to [ref messaging#requestPermission] in order to receive Cloud Messages.
+!> On iOS, your app first needs to [ref messaging#requestPermissions] in order to receive Cloud Messages.
 
 ## Methods
 
