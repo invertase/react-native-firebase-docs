@@ -73,8 +73,10 @@ Cancels a location notification by ID, or all notifications by *.
 
 Removes all delivered notifications from device by ID, or all notifications by *.
 
-### [ios] requestPermissions
+### requestPermissions
 [method]requestPermissions() returns Promise<Object>;[/method]
+
+**iOS Only**
 
 Requests app notification permissions in an Alert dialog. 
 
