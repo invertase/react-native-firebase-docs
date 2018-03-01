@@ -8,8 +8,6 @@
       text: Release Notes
     - to: "/migration-guide"
       text: Migration Guide
-    - to: "/faqs"
-      text: FAQs
   - title: Installation
     links:
     - to: "/installation/initial-setup"
