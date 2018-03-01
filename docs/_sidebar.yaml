@@ -276,6 +276,7 @@
       - IOSAttachment
       - IOSAttachmentOptions
       - Notification
+      - NotificationOpened
   - title: Remote Config
     path: config
     links:

@@ -45,7 +45,7 @@ Returns the current badge number on the app icon.
 !> On Android, we make use of the ShortcutBadger library to display badges.
 
 ### getInitialNotification
-[method]getInitialNotification() returns Promise containing nullable [ref notification.NotificationOpened];[/method]
+[method]getInitialNotification() returns Promise containing nullable [ref notifications.NotificationOpened];[/method]
 
 Due to the delay in the React Native bridge, the `onNotification` listeners will not be available at startup, so this method can be used to check to see if the application was opened by a notification.
 
@@ -54,7 +54,7 @@ For notifications when the app is running, see [ref notifications#onNotification
 Returns the notification that caused the application to open if available, and the action that was invoked when it was clicked on.
 
 ### getScheduledNotifications
-[method]getScheduledNotifications() returns Promise containing array of [ref notification.Notification];[/method]
+[method]getScheduledNotifications() returns Promise containing Array of [ref notifications.Notification];[/method]
 
 Returns an array of all scheduled notifications.
 
@@ -94,7 +94,7 @@ Parameter |         |
 ### removeAllDeliveredNotifications
 [method]removeAllDeliveredNotifications() returns void;[/method]
 
-Cancels all pending notifications.
+Removes all delivered notifications.
 
 ### removeDeliveredNotification
 [method]removeDeliveredNotification(notificationId) returns void;[/method]

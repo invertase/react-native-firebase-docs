@@ -45,7 +45,7 @@ Whether the notification should be colorized.
 The large text at the right-hand side of the notification.
 
 ### defaults
-[method]defaults returns nullable array of [ref notifications.AndroidDefaults];[/method]
+[method]defaults returns nullable Array of [ref notifications.AndroidDefaults];[/method]
 
 The default notification options that will be used.
 
@@ -100,7 +100,7 @@ If the sound, vibrate and ticker should be played if the notification is not alr
 The progress of the notification.
 
 ### remoteInputHistory
-[method]remoteInputHistory returns nullable array of string;[/method]
+[method]remoteInputHistory returns nullable Array of string;[/method]
 
 The remote input history.
 
