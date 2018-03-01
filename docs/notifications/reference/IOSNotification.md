@@ -1,5 +1,9 @@
 # IOSNotification
 
+iOS specific notification settings.
+
+> Some of these settings apply only to iOS 8/9, or iOS 10+.  These are flagged as appropriate.
+
 ## Properties
 
 ### alertAction
@@ -7,14 +11,14 @@
 
 Gets the alert action of the notification.
 
-iOS 8 and 9 only.
+> iOS 8 and 9 only.
 
 ### attachments
 [method]attachments returns Array of [ref notifications.IOSAttachment];[/method]
 
 Gets the attachments for the notification.
 
-iOS 10+.
+> iOS 10+.
 
 ### badge
 [method]badge returns nullable string;[/method]
@@ -31,7 +35,7 @@ Gets the optional category for the notification.
 
 Gets whether the notification has an action or not.
 
-iOS 8 and 9 only.
+> iOS 8 and 9 only.
 
 ### launchImage
 [method]launchImage returns nullable string;[/method]
@@ -43,7 +47,7 @@ Gets the launch image to use with the notification.
 
 Gets the optional thread ID for the notification.
 
-iOS 10+.
+> iOS 10+.
 
 ## Methods
 
@@ -52,7 +56,7 @@ iOS 10+.
 
 Adds an attachment to the notification.
 
-iOS 10+.
+> iOS 10+.
 
 | Parameter |         |
 | --------- | ------- |
@@ -65,7 +69,7 @@ iOS 10+.
 
 Sets the alert action for the notification.
 
-iOS 8 and 9 only.
+> iOS 8 and 9 only.
 
 | Parameter |         |
 | --------- | ------- |
@@ -94,7 +98,7 @@ Sets the category for the notification.
 
 Sets whether the notification has an action.
 
-iOS 8 and 9 only.
+> iOS 8 and 9 only.
 
 | Parameter |         |
 | --------- | ------- |
@@ -113,6 +117,8 @@ Sets the launch image for the notification.
 [method]setThreadIdentifier(threadIdentifier) returns [ref notifications.Notification];[/method]
 
 Sets the thread ID for the notification.
+
+> iOS 10+.
 
 | Parameter |         |
 | --------- | ------- |

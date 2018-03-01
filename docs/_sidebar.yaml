@@ -264,6 +264,14 @@
     - type: reference
       files:
       - Notifications
+      - AndroidBadgeIconType
+      - AndroidCategory
+      - AndroidDefaults
+      - AndroidGroupAlert
+      - AndroidLights
+      - AndroidNotification
+      - AndroidProgress
+      - AndroidVisibility
       - IOSNotification
       - IOSAttachment
       - IOSAttachmentOptions
