@@ -20,7 +20,7 @@ We provide several options for you to get started with React Native Firebase, se
 
 |  | Manual Integration  | Free Starter Kit | Premium Starter Kits |
 |:---:|:-------------------:|:-----------------:|:--------------------:|
-|  | ![manual][manual] | ![basic][basic] | ![premium][premium] |
+|  | [![manual][manual]](version /installation/initial-setup) | [![basic][basic]](version /installation/basic-kit) | [![premium][premium]](/kits) |
 |  | Manually integrate React Native Firebase into your project by following our Android and iOS setup guides. | We've installed React Native Firebase into the standard React Native template app with only minimal steps for you to get going.      | Don't want to start from scratch? Use one of our premium starter kits to kick start development for your next app. |
 |  | Recommended for **experienced** React Native **developers** and **existing** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. |
 |  | [![continue][btn-guide]](version /installation/initial-setup) | [![btn-kit][btn-kit]](version /installation/basic-kit) | [![btn-kits][btn-kits]](/kits) |
@@ -60,7 +60,7 @@ We provide several options for you to get started with React Native Firebase, se
 |                        | 1.X.X       | 2.0.X       | 2.1.X / 2.2.X   | 3.0.X    |  3.1.X      |  3.2.X   |
 |------------------------|-------------|-------------|-----------------|----------|-------------|----------|
 | React Native           | 0.36 - 0.39 | 0.40 - 0.46 | 0.47 +          | 0.48 +   | 0.48 - 0.49 | 0.50 +   |
-| Firebase Android SDK   | 10.2.0 +    | 11.0.0 +    | 11.0.0 +        | 11.4.2 + | 11.6.0 +    | 11.6.2 + |
+| Firebase Android SDK   | 10.2.0 +    | 11.0.0 +    | 11.0.0 +        | 11.4.2 + | 11.6.0 +    | 11.8.0 + |
 | Firebase iOS SDK       | 3.15.0 +    | 4.0.0 +     | 4.0.0 +         | 4.3.0 +  | 4.5.0 +     | 4.7.0 +  |
 
 ---
