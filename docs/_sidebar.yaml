@@ -266,6 +266,7 @@
       - AndroidCategory
       - AndroidDefaults
       - AndroidGroupAlert
+      - AndroidImportance
       - AndroidLights
       - AndroidNotification
       - AndroidProgress
