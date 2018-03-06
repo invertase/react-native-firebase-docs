@@ -264,11 +264,14 @@
       - Notifications
       - AndroidBadgeIconType
       - AndroidCategory
+      - AndroidChannel
+      - AndroidChannelGroup
       - AndroidDefaults
       - AndroidGroupAlert
       - AndroidImportance
       - AndroidLights
       - AndroidNotification
+      - AndroidNotifications
       - AndroidProgress
       - AndroidVisibility
       - IOSNotification

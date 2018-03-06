@@ -8,7 +8,7 @@ This `messaging` module deals with pure data-only messages only.  If you're inte
 
 ## Methods
 
-The following methods are accessed via the Cloud Messaging instance firebase.messaging().
+The following methods are accessed via the Cloud Messaging instance `firebase.messaging()`.
 
 ### getToken
 [method]getToken() returns Promise containing String;[/method]

@@ -4,11 +4,16 @@ This `notifications` module deals with Notification and Notification + Data mess
 
 !> On iOS, your app first needs to [ref Messaging#requestPermission] in order to receive Notifications.
 
+## Properties
+
+### android
+[method]android returns [ref notifications.AndroidNotifications];[/method]
+
+Access Android specific notification methods.
+
 ## Methods
 
-The following methods are accessed via the Notifications instance firebase.notifications().
-
-This `messaging` module deals with pure data-only messages only.  If you're interested in sending and receiving notifications, please take a look at the [ref notifications.Notifications]
+The following methods are accessed via the Notifications instance `firebase.notifications()`.
 
 ### cancelAllNotifications
 [method]cancelAllNotifications() returns void;[/method]
