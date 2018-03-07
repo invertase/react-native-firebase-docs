@@ -6,7 +6,7 @@
 
 Data-only messages contain a map of key / value pairs and do not display any visible notification. As such, they will never be intercepted by the Mobile Device's OS.
 
-Data-only messages are handled by the RNFirebase messaging module's `onMessageReceived` method.
+Data-only messages are handled by the RNFirebase Messaging module's `onMessageReceived` method.
 
 Data-only messages behave as follows:
 
@@ -20,7 +20,7 @@ Data-only messages behave as follows:
 
 Notification-only messages are used to display a visible notification on devices. They are intercepted by the Mobile Device's OS and will be delivered to the notification tray when the app is in the background or closed.
 
-Notification-only messages are handled by the RNFirebase notifications module's `onNotificationReceived` and `onNotificationOpened` methods.
+Notification-only messages are handled by the RNFirebase [Notifications module's](version /notifications/introduction) `onNotificationReceived` and `onNotificationOpened` methods.
 
 Notification-only messages behave as follows:
 
@@ -34,7 +34,7 @@ Notification-only messages behave as follows:
 
 Notification + Data messages are used to display a visible notification on devices with a data payload for consumption by the app. They are intercepted by the Mobile Device's OS and will be delivered to the notification tray when the app is in the background or closed.
 
-Notification + Data messages are handled by the RNFirebase notifications module's `onNotificationReceived` and `onNotificationOpened` methods.
+Notification + Data messages are handled by the RNFirebase [Notifications module's](version /notifications/introduction) `onNotificationReceived` and `onNotificationOpened` methods.
 
 Notification + Data messages behave as follows:
 
