@@ -50,7 +50,7 @@ Returns the current badge number on the app icon.
 !> On Android, we make use of the ShortcutBadger library to display badges.
 
 ### getInitialNotification
-[method]getInitialNotification() returns Promise containing nullable [ref notifications.NotificationOpened];[/method]
+[method]getInitialNotification() returns Promise containing nullable [ref notifications.NotificationOpen];[/method]
 
 Due to the delay in the React Native bridge, the `onNotification` listeners will not be available at startup, so this method can be used to check to see if the application was opened by a notification.
 
@@ -94,7 +94,7 @@ Returns an unsubscribe function.
 
 Parameter |         |
 | --------- | ------- |
-| nextOrObserver   | **function([ref notifications.NotificationOpened])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is opened. |
+| nextOrObserver   | **function([ref notifications.NotificationOpen])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is opened. |
 
 ### removeAllDeliveredNotifications
 [method]removeAllDeliveredNotifications() returns void;[/method]

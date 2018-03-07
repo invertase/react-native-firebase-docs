@@ -1,4 +1,4 @@
-# NotificationOpened
+# NotificationOpen
 
 Object giving information about the action that was taken when a specific notification was opened.
 

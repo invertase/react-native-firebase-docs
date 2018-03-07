@@ -163,6 +163,9 @@
       text: Install on Android
       icon: android
     - type: divider
+    - to: "/receiving-messages"
+      text: Receiving Messages
+    - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
       text: With Cloud Functions
       type: external
@@ -254,6 +257,9 @@
       text: Install on Android
       icon: android
     - type: divider
+    - to: "/receiving-notifications"
+      text: Receiving Notifications
+    - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
       text: With Cloud Functions
       type: external
@@ -278,7 +284,7 @@
       - IOSAttachment
       - IOSAttachmentOptions
       - Notification
-      - NotificationOpened
+      - NotificationOpen
   - title: Remote Config
     path: config
     links:
