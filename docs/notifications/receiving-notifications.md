@@ -118,10 +118,13 @@ import type { Notification, NotificationOpen } from 'react-native-firebase';
 
 async componentDidMount() {
     const notificationOpen: NotificationOpen = await firebase.notifications().getInitialNotification();
-    // Get the action triggered by the notification being opened
-    const action = notificationOpen.action;
-    // Get information about the notification that was opened
-    const notification: Notification = notificationOpen.notification;
+    if (notificationOpen) {
+        // App was opened by a notification
+        // Get the action triggered by the notification being opened
+        const action = notificationOpen.action;
+        // Get information about the notification that was opened
+        const notification: Notification = notificationOpen.notification;
+    }
 }
 ```
 
