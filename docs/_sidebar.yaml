@@ -259,6 +259,8 @@
       text: Install on Android
       icon: android
     - type: divider
+    - to: "/introduction"
+      text: Introduction
     - to: "/receiving-notifications"
       text: Receiving Notifications
     - type: divider
