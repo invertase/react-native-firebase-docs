@@ -172,7 +172,7 @@
     - to: "/topics"
       text: Topics
     - to: "/upstream-messages"
-      text: Send Upstream Messages
+      text: Sending Upstream Messages
     - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
       text: With Cloud Functions
@@ -269,6 +269,13 @@
       text: Introduction
     - to: "/receiving-notifications"
       text: Receiving Notifications
+    - to: "/displaying-notifications"
+      text: Displaying Notifications
+    - to: "/scheduling-notifications"
+      text: Scheduling Notifications
+    - to: "/android-channels"
+      text: Android Notification Channels
+      icon: android
     - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
       text: With Cloud Functions
