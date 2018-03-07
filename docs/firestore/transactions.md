@@ -20,7 +20,9 @@ When using transactions the following points should be kept in mind:
 
 ## Examples
 
-### Increment a value transactionally
+### Increment a value
+
+This example demonstrates incrementing a number transactionally even if a doc does not already exist and then returning the new value as the transaction result.
 
 ```javascript
 import { firestore } from 'react-native-firebase';
@@ -29,29 +31,84 @@ const ref = firestore.collection('cities').doc('London');
 
 firestore
   .runTransaction(async transaction => {
-      const doc = await transaction.get(ref);
-      
-      // if it does not exist set the population to one
-      if (!doc.exists) {
-          transaction.set(ref, { population: 1 });          
-          // return the new value so we know what the new population is
-          return 1;
-      }
-      
-      // exists already so lets increment it + 1      
-      const newPopulation = doc.data().population + 1;
-      
-      transaction.update(ref, {
-          population: newPopulation,
-      });
-      
+    const doc = await transaction.get(ref);
+
+    // if it does not exist set the population to one
+    if (!doc.exists) {
+      transaction.set(ref, { population: 1 });
       // return the new value so we know what the new population is
-      return newPopulation;      
+      return 1;
+    }
+
+    // exists already so lets increment it + 1
+    const newPopulation = doc.data().population + 1;
+
+    transaction.update(ref, {
+      population: newPopulation,
+    });
+
+    // return the new value so we know what the new population is
+    return newPopulation;
   })
-  .then((newPopulation) => {
-      console.log(`Transaction successfully committed and new population is '${newPopulation}'.`);
+  .then(newPopulation => {
+    console.log(
+      `Transaction successfully committed and new population is '${newPopulation}'.`
+    );
   })
-  .catch((error) => {
-      console.log('Transaction failed: ', error);
+  .catch(error => {
+    console.log('Transaction failed: ', error);
   });
 ```
+
+
+### Abort a transaction
+
+This example extends on the previous example and aborts the transaction if the population is greater than 5.
+
+
+```javascript
+import { firestore } from 'react-native-firebase';
+
+const ref = firestore.collection('cities').doc('London');
+
+firestore
+  .runTransaction(async transaction => {
+    const doc = await transaction.get(ref);
+
+    // if it does not exist set the population to one
+    if (!doc.exists) {
+      transaction.set(ref, { population: 1 });
+      // return the new value so we know what the new population is
+      return 1;
+    }
+
+    // exists already so lets increment it + 1
+    const newPopulation = doc.data().population + 1;
+
+    if (newPopulation <= 5) {
+      transaction.update(ref, {
+        population: newPopulation,
+      });
+    } else {
+      // returning a promise reject will abort the transaction
+      return Promise.reject(new Error('Population too big!'));
+    }
+
+    // return the new value so we know what the new population is
+    return newPopulation;
+  })
+  .then(newPopulation => {
+    console.log(
+      `Transaction successfully committed and new population is '${newPopulation}'.`
+    );
+  })
+  .catch(error => {
+    if (error.message.contains('Population too big')) {
+      // Population too big - handle this specific error
+    } else {
+      console.log('Transaction failed: ', error);
+    }
+  });
+```
+
+
