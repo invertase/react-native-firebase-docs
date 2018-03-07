@@ -169,6 +169,10 @@
       text: Device Registration Token 
     - to: "/receiving-messages"
       text: Receiving Messages
+    - to: "/topics"
+      text: Topics
+    - to: "/upstream-messages"
+      text: Send Upstream Messages
     - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"
       text: With Cloud Functions

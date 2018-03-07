@@ -37,7 +37,7 @@ firebase.messaging().getToken()
 
 ## 2) Monitor token generation
 
-The `onTokenRefresh` callback fires whenever a new token is generated, with the latest registration token.
+The `onTokenRefresh` callback fires with the latest registration token whenever a new token is generated.
 
 ```js
 componentDidMount() {
