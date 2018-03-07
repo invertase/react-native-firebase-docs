@@ -55,19 +55,19 @@ firebase.messaging().requestPermission()
 
 To receive messages, we make use of the `onMessageReceived` method.  This will be triggered when the device receives a `data` only message from FCM. 
 
-> For `notification` only or `notification + data` messages, please see the [notifications section](version /notifications/receiving-notifications).
+> For `notification` only or `notification + data` messages, please see the [Notifications Module](version /notifications/receiving-notifications).
 
 ```js
 // Optional: Flow type
-import type { Message } from 'react-native-firebase';
+import type { RemoteMessage } from 'react-native-firebase';
 
 componentDidMount() {
-    this.messageListener = firebase.messaging().onMessage(message: Message => {
+    this.messageReceivedListener = firebase.messaging().onMessageReceived(message: RemoteMessage => {
         // Process your message as required
     });
 }
 
 componentWillUnmount() {
-    this.messageListener();
+    this.messageReceivedListener();
 }
 ```
