@@ -274,7 +274,7 @@
     - to: "/scheduling-notifications"
       text: Scheduling Notifications
     - to: "/android-channels"
-      text: Android Notification Channels
+      text: Notification Channels
       icon: android
     - type: divider
     - to: "https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386"

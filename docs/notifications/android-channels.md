@@ -18,7 +18,7 @@ const channel = new firebase.notifications.Android.Channel()
 firebase.notifications().android.createChannel(channel);
 ```
 
-For full reference documentation, please see [ref notifications.AndroidNotificationChannel] and [ref notifications.AndroidNotifications].
+For full reference documentation, please see [ref notifications.AndroidChannel] and [ref notifications.AndroidNotifications].
 
 ## Creating a Notification Channel Group
 
@@ -34,4 +34,4 @@ const channelGroup = new firebase.notifications.Android.ChannelGroup()
 firebase.notifications().android.createChannelGroup(channelGroup);
 ```
 
-For full reference documentation, please see [ref notifications.AndroidNotificationChannelGroup] and [ref notifications.AndroidNotifications].
+For full reference documentation, please see [ref notifications.AndroidChannelGroup] and [ref notifications.AndroidNotifications].
