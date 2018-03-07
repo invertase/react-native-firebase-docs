@@ -47,7 +47,7 @@ Executes the given updateFunction and then attempts to commit the changes applie
 
 | Parameter |         |
 | --------- | ------- |
-| updateFunction | function(non-null [ref firestore.Transaction]) <br /> The function to execute within the transaction context. |
+| updateFunction | **function**(non-null [ref firestore.Transaction]) <br /> The function to execute within the transaction context. |
 
 
 ## Unsupported Methods
