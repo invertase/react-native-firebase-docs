@@ -38,10 +38,22 @@ Gets a DocumentReference instance that refers to the document at the specified p
 | --------- | ------- |
 | documentPath  | **string** <br /> A slash-separated path to a document. |
 
+### runTransaction
+[method]runTransaction(updateFunction) returns Promise;[/method]
+
+Executes the given updateFunction and then attempts to commit the changes applied within the transaction. If any document read within the transaction has changed, Cloud Firestore retries the updateFunction. If it fails to commit after 5 attempts, the transaction fails.
+
+> For more information on transactions and examples see our transactions section of the docs: (version /firestore/transactions)
+
+| Parameter |         |
+| --------- | ------- |
+| updateFunction | function(non-null [ref firestore.Transaction]) <br /> The function to execute within the transaction context. |
+
+
 ## Unsupported Methods
 
 ### enablePersistence
 
-### runTransaction
+
 
 ### settings
