@@ -50,7 +50,7 @@ Within the application component, add the messaging service and instance ID serv
       <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
   </service>
-  <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService" android:exported="false">
+  <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService">
     <intent-filter>
       <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
     </intent-filter>

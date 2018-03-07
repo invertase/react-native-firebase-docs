@@ -18,13 +18,19 @@ Add the following to the `didFinishLaunchingWithOptions:(NSDictionary *)launchOp
 [RNFirebaseNotifications configure];
 ```
 
-Add the following methods:
+Add the following method:
 
 ```objectivec
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
   [[RNFirebaseNotifications instance] didReceiveLocalNotification:notification];
 }
+```
 
+## Remote Notifications (Optional)
+
+If you would like to support Remote Notifications via FCM, add the following methods to your `ios/[App Name]/AppDelegate.m`:
+
+```objectivec
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
                                                        fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler{
   [[RNFirebaseNotifications instance] didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];

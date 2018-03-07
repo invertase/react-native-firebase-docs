@@ -47,7 +47,10 @@ Set app [launch mode](https://inthecheesefactory.com/blog/understand-android-act
 >
 ```
 
-(Optional) If you would like to schedule local notifications then you also need to add the following to the application component:
+## Scheduled Notifications (Optional)
+
+If you would like to schedule local notifications then you also need to add the following to the application component of `android/app/src/main/AndroidManifest.xml`:
+
 ```xml
 <application ...>
   <receiver android:name="io.invertase.firebase.notifications.RNFirebaseNotificationReceiver"/>

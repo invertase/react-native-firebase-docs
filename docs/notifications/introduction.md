@@ -13,7 +13,7 @@ Remote notifications:
 - Intercepted by the Mobile Device's OS.
 - Delivered to the notification tray when the app is in the background or closed.
 
-> The React Native Firebase Notifications Module deals with notification-only and notification + data FCM remote messages: <br /> <br/> For data-only FCM messages please see the [Messaging module](version /messaging/introduction).
+> The React Native Firebase Notifications Module deals with notification-only and notification + data FCM remote messages. <br /> <br/> For data-only FCM messages please see the [Messaging module](version /messaging/introduction).
 
 Remote notifications behave as follows:
 

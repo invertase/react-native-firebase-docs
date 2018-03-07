@@ -165,6 +165,8 @@
     - type: divider
     - to: "/introduction"
       text: Introduction
+    - to: "/device-token"
+      text: Device Registration Token 
     - to: "/receiving-messages"
       text: Receiving Messages
     - type: divider
