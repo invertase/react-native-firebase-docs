@@ -12,7 +12,6 @@ When using transactions the following points should be kept in mind:
 
 - **Transactions** will **fail** when the client is **offline**.
 - **Read** operations are **asynchronous** (Promises).
-- **Read** operations must come **before write** operations.
 - Your **updateFunction** **can return** a **Promise**.
 - **Write** operations are **synchronous** but don't apply until after your `updateFunction` has finished executing.
 - Your transaction `updateFunction` might run more than once if a concurrent edit affects a document that the transaction reads.
