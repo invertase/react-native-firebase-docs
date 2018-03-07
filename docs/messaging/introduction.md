@@ -4,7 +4,7 @@ Firebase Cloud Messaging allows remote messages to be delivered to your applicat
 
 ## Data-only messages
 
-- Contains a map of key / value pairs for consumption by the app. 
+- Contain a map of key / value pairs for consumption by the app. 
 - Do not display any visible notification.
 - Never intercepted by the Mobile Device's OS.
 - Handled by the RNFirebase Messaging module's `onMessageReceived` method.
@@ -33,7 +33,7 @@ Firebase Cloud Messaging allows remote messages to be delivered to your applicat
 ## Notification + Data messages
 
 - Used to display a visible notification on devices.
-- Contains a map of key / value pairs for consumption by the app only if the notification is opened or already in the foreground.
+- Contain a map of key / value pairs for consumption by the app if it is in the foreground, or if the notification is subsequently opened.  **If the notification is not opened, this data will never become available to the app.**
 - Intercepted by the Mobile Device's OS.
 - Delivered to the notification tray when the app is in the background or closed.
 - Handled by the RNFirebase [Notifications module's](version /notifications/introduction) `onNotificationDisplayed`, `onNotificationReceived` and `onNotificationOpened` methods.
