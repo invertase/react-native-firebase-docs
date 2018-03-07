@@ -12,8 +12,8 @@ Data-only messages behave as follows:
 
 |         | App in foreground           | App in background            | App closed |
 | ------- | --------------------------- | ---------------------------- | -----------|
-| Android | Trigger `onMessageReceived` | Triggers `onMessageReceived`  | Trigger `onMessageReceived` |
-| iOS     | Trigger `onMessageReceived` | Triggers `onMessageReceived` if `content_available` set to `true` | Received when app is next opened |
+| Android | `onMessageReceived` triggered | `onMessageReceived` triggered  | `onMessageReceived` triggered |
+| iOS     | `onMessageReceived` triggered | `onMessageReceived` triggered if `content_available` set to `true` | Received when app is next opened |
 
 
 ### Notification-only messages
@@ -26,9 +26,9 @@ Notification-only messages behave as follows:
 
 |         | App in foreground           | App in background            | App closed |
 | ------- | --------------------------- | ---------------------------- | -----------|
-| Android | Trigger `onNotificationReceived` | Triggers `onNotificationOpened` if the notification is tapped | Will be handled by `getInitialNotification` if the notification is tapped and opens the app |
-| iOS     | Trigger `onNotificationReceived` | Trigger `onNotificationReceived` if `content_available` set to `true` <br />Triggers `onNotificationOpened` if the notification is tapped | Handled by `getInitialNotification` if the notification is tapped and opens the app |
-| Notes   | No visible notification is shown to the user, it is up to you to display notifications manually | The notification is presented to the user by the Mobile Device's OS | The notification is presented to the user by the Mobile Device's OK |
+| Android | `onNotificationReceived` triggered | `onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
+| iOS     | `onNotificationReceived` triggered | `onNotificationReceived` triggered if `content_available` set to `true` <br />`onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
+| Notes   | No visible notification is shown to the user, it is up to you to display notifications manually | The notification is presented to the user by the Mobile Device's OS | The notification is presented to the user by the Mobile Device's OS |
 
 ### Notification + Data messages
 
@@ -40,6 +40,6 @@ Notification + Data messages behave as follows:
 
 |         | App in foreground           | App in background            | App closed |
 | ------- | --------------------------- | ---------------------------- | -----------|
-| Android | Trigger `onNotificationReceived` | Triggers `onNotificationOpened` if the notification is tapped | Will be handled by `getInitialNotification` if the notification is tapped and opens the app |
-| iOS     | Trigger `onNotificationReceived` | Trigger `onNotificationReceived` if `content_available` set to `true` <br />Triggers `onNotificationOpened` if the notification is tapped | Handled by `getInitialNotification` if the notification is tapped and opens the app |
-| Notes   | No visible notification is shown to the user, it is up to you to display notifications manually | The notification is presented to the user by the Mobile Device's OS | The notification is presented to the user by the Mobile Device's OK |
+| Android | `onNotificationReceived` triggered | `onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
+| iOS     | `onNotificationReceived` triggered | `onNotificationReceived` triggered if `content_available` set to `true` <br />`onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
+| Notes   | No visible notification is shown to the user, it is up to you to display notifications manually | The notification is presented to the user by the Mobile Device's OS | The notification is presented to the user by the Mobile Device's OS |
