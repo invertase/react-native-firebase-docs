@@ -103,7 +103,7 @@ firestore
     );
   })
   .catch(error => {
-    if (error.message.contains('Population too big')) {
+    if (error.message.includes('too big')) {
       // Population too big - handle this specific error
     } else {
       console.log('Transaction failed: ', error);
