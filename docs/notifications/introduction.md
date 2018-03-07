@@ -6,14 +6,14 @@ React Native Firebase's Notifications module has support for both remote (FCM) a
 
 Firebase Cloud Messaging (FCM) allows notifications to be displayed by your application remotely.  To try and keep things simple and easier to understand, we have divided the React Native Firebase functionality clearly between data-only and notification messages.
 
-The React Native Firebase Notifications Module deals with notification-only and notification + data FCM remote messages:
+Remote notifications:
 
 - Used to display a visible notification on devices.
 - Contain an optional data payload (map of key / value pairs) for consumption by the app if it is in the foreground, or if the notification is subsequently opened.  **If the notification is not opened, this data will never become available to the app.**
 - Intercepted by the Mobile Device's OS.
 - Delivered to the notification tray when the app is in the background or closed.
 
-> For data-only FCM messages please see the [Messaging module](version /messaging/introduction).
+> The React Native Firebase Notifications Module deals with notification-only and notification + data FCM remote messages: <br /> <br/> For data-only FCM messages please see the [Messaging module](version /messaging/introduction).
 
 Remote notifications behave as follows:
 

@@ -4,9 +4,7 @@ Firebase Cloud Messaging (FCM) offers a broad range of messaging options and cap
 
 To try and keep things simple and easier to understand, we have divided the React Native Firebase functionality clearly between data-only and notification messages.
 
-The React Native Firebase Messaging Module deals exclusively with data-only messages.
-
-> For notification-only and notification + data FCM messages please see the [Notifications module](version /notifications/introduction).
+> The React Native Firebase Messaging Module deals exclusively with data-only messages. <br /> <br/> For notification-only and notification + data FCM messages please see the [Notifications module](version /notifications/introduction).
 
 ## Message types
 
