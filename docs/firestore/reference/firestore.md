@@ -54,6 +54,8 @@ Executes the given updateFunction and then attempts to commit the changes applie
 
 ### enablePersistence
 
+### enableNetwork
 
+### disableNetwork
 
 ### settings
