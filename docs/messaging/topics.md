@@ -31,4 +31,4 @@ firebase.messaging().unsubscribeFromTopic(topicName);
 
 FCM delivers topic messages in the same way as other downstream messages.
 
-To receive messages, make use of the `onMessageReceived` method described in [Receiving Messages](version /messaging/receiving-messages).
+To receive messages, make use of the `onMessage` method described in [Receiving Messages](version /messaging/receiving-messages).

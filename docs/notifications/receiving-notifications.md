@@ -64,7 +64,7 @@ Notifications encompass three different types:
 A notification will trigger one of two listeners depending on the state of your application:
 
 - `onNotificationDisplayed` - Triggered when a particular notification has been displayed
-- `onNotificationReceived` - Triggered when a particular notification has been received
+- `onNotification` - Triggered when a particular notification has been received
 
 ```js
 // Optional: Flow type
@@ -74,14 +74,14 @@ componentDidMount() {
     this.notificationDisplayedListener = firebase.notifications().onNotificationDisplayed(notification: Notification => {
         // Process your notification as required
     });
-    this.notificationReceivedListener = firebase.notifications().onNotificationReceived(notification: Notification => {
+    this.notificationListener = firebase.notifications().onNotification(notification: Notification => {
         // Process your notification as required
     });
 }
 
 componentWillUnmount() {
     this.notificationDisplayedListener();
-    this.notificationReceivedListener();
+    this.notificationListener();
 }
 ```
 

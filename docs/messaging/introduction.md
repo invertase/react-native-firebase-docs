@@ -34,8 +34,8 @@ FCM can send a notification message including an optional data payload. In such 
 
 |         | App in foreground           | App in background            | App closed |
 | ------- | --------------------------- | ---------------------------- | -----------|
-| Android | `onMessageReceived` triggered | `onMessageReceived` triggered  | `onMessageReceived` triggered |
-| iOS     | `onMessageReceived` triggered | `onMessageReceived` triggered if `content_available` set to `true` | Received when app is next opened |
+| Android | `onMessage` triggered | `onMessage` triggered  | `onMessage` triggered |
+| iOS     | `onMessage` triggered | `onMessage` triggered if `content_available` set to `true` | Received when app is next opened |
 
 
 ### Notification-only and Notification + Data messages
