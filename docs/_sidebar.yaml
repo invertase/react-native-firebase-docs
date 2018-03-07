@@ -163,6 +163,8 @@
       text: Install on Android
       icon: android
     - type: divider
+    - to: "/introduction"
+      text: Introduction
     - to: "/receiving-messages"
       text: Receiving Messages
     - type: divider

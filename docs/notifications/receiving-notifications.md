@@ -55,11 +55,11 @@ firebase.messaging().requestPermission()
 
 Notifications encompass three different types:
 
-- `notification-only` messages from FCM
+- `notification` only messages from FCM
 - `notification + data` messages from FCM
 - `local` notifications
 
-> For `data-only` FCM messages, please see the [messaging section](version /messaging/receiving-messages).
+> For `data` only FCM messages, please see the [messaging section](version /messaging/receiving-messages).
 
 A notification will trigger one of two listeners depending on the state of your application:
 
