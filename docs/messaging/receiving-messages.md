@@ -98,8 +98,12 @@ import type { RemoteMessage } from 'react-native-firebase';
 
 export default async (message: RemoteMessage) => {
     // handle your message
+    
+    return Promise.resolve();
 }
 ```
+
+> This method must return a promise.
 
 ### 3) Register the background handler
 
