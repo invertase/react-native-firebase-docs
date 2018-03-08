@@ -53,12 +53,27 @@ firebase.messaging().requestPermission()
 
 ## 3) Listen for FCM messages
 
-To receive messages, we make use of the `onMessage` method.  This will be triggered when the device receives a `data` only message from FCM. 
+We class Messages as: 
 
-> For `notification` only or `notification + data` messages, please see the [Notifications Module](version /notifications/receiving-notifications).
+- data-only messages from FCM
+
+> For notification-only or notification + data messages, please see the [Notifications Module](version /notifications/receiving-notifications).
+
+A message will trigger the `onMessage` listener when the application receives a message in the foreground.
 
 ```js
+// Optional: Flow type
+import type { RemoteMessage } from 'react-native-firebase';
 
+componentDidMount() {
+    this.messageListener = firebase.messaging().onMessage(message: RemoteMessage => {
+        // Process your message as required
+    });
+}
+
+componentWillUnmount() {
+    this.messageListener();
+}
 ```
 
 ## 4) (Optional)(Android-only) Listen for FCM messages in the background
