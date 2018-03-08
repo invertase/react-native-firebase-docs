@@ -20,7 +20,7 @@ Remote notifications behave as follows:
 |         | App in foreground           | App in background            | App closed |
 | ------- | --------------------------- | ---------------------------- | -----------|
 | Android | `onNotification` triggered | `onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
-| iOS     | `onNotification` triggered | `onNotificationDisplayed` triggered if `content_available` set to `true` <br />`onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
+| iOS     | `onNotification` triggered | `onNotificationDisplayed` triggered if `content_available` set to `true` <br /><br />`onNotificationOpened` triggered if the notification is tapped | `getInitialNotification` is populated if the notification is tapped and opens the app |
 | Notes   | No visible notification is shown to the user, it is up to you to display notifications manually | The notification is presented to the user by the Mobile Device's OS | The notification is presented to the user by the Mobile Device's OS |
 
 ## Local Notifications
