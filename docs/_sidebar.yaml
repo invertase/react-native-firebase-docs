@@ -237,7 +237,6 @@
       files:
       - database
       - DataSnapshot
-      - Database
       - OnDisconnect
       - Query
       - Reference
