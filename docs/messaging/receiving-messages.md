@@ -103,7 +103,7 @@ export default async (message: RemoteMessage) => {
 }
 ```
 
-> This method must return a promise.
+> This handler method must return a promise and resolve within 60 seconds.
 
 ### 3) Register the background handler
 
