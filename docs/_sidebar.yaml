@@ -267,7 +267,7 @@
     - type: divider
     - type: reference
       files:
-        instanceid
+      - instanceid
   - title: Notifications
     path: notifications
     links:
