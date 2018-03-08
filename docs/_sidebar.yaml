@@ -130,6 +130,9 @@
       text: Install on Android
       icon: android
     - type: divider
+    - to: "/transactions"
+      text: Transactions
+      icon: info-circle-o
     - to: "https://medium.com/@elliothesp/b338fb6525b9"
       text: Building a TODO app
       type: external
