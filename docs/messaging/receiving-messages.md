@@ -57,6 +57,10 @@ To receive messages, we make use of the `onMessage` method.  This will be trigge
 
 > For `notification` only or `notification + data` messages, please see the [Notifications Module](version /notifications/receiving-notifications).
 
+```js
+
+```
+
 ## 4) (Optional)(Android-only) Listen for FCM messages in the background
 
 Android allows you to act on data-only messages when your application is closed or running in the background.  This is particularly useful if you'd like to be able to show heads-up notifications to your user.
