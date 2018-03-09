@@ -5,7 +5,14 @@ firebase.notifications.Android.ChannelGroup
 ```
 
 ### Constructor
-[method]new firebase.notifications.Android.ChannelGroup();[/method]
+[method]new firebase.notifications.Android.ChannelGroup(groupId, name);[/method]
+
+A grouping of related notification channels. e.g., channels that all belong to a single account.
+
+| Parameter |         |
+| --------- | ------- |
+| groupId   | **string** |
+| name      | **string** |
 
 ## Properties
 
@@ -18,23 +25,3 @@ Returns the id of this channel group.
 [method]name returns string;[/method]
 
 The user visible name of this channel group.
-
-## Methods
-
-### setGroupId
-[method]setGroupId(groupId) returns [ref notifications.AndroidChannelGroup];[/method]
-
-| Parameter |         |
-| --------- | ------- |
-| groupId  | **string** |
-
-Sets the id of this channel group.
-
-### setName
-[method]setName(name) returns [ref notifications.AndroidChannelGroup];[/method]
-
-| Parameter |         |
-| --------- | ------- |
-| name  | **string** |
-
-Sets the user visible name of this channel group.

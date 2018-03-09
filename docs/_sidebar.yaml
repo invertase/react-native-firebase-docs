@@ -300,6 +300,7 @@
     - type: reference
       files:
       - Notifications
+      - AndroidAction
       - AndroidBadgeIconType
       - AndroidCategory
       - AndroidChannel
@@ -311,6 +312,8 @@
       - AndroidNotification
       - AndroidNotifications
       - AndroidProgress
+      - AndroidRemoteInput
+      - AndroidSemanticAction
       - AndroidVisibility
       - IOSNotification
       - IOSAttachment

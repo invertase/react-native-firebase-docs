@@ -13,3 +13,10 @@ The action that was used when the notification was opened.
 [method]notification returns [ref notifications.Notification];[/method]
 
 Information about the notification that was opened.
+
+### results
+[method]results returns nullable Object;[/method]
+
+If the notification contains a [ref notifications.AndroidRemoteInput] then this object will be populated with the user's input.
+
+> Android only

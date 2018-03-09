@@ -5,7 +5,15 @@ firebase.notifications.Android.Channel
 ```
 
 ### Constructor
-[method]new firebase.notifications.Android.Channel();[/method]
+[method]new firebase.notifications.Android.Channel(channelId, name, importance);[/method]
+
+A representation of settings that apply to a collection of similarly themed notifications.
+
+| Parameter |         |
+| --------- | ------- |
+| channelId | **string** |
+| name      | **string** |
+| importance | **[ref notifications.AndroidImportance]** |
 
 ## Properties
 
@@ -75,15 +83,6 @@ The vibration pattern for notifications posted to this channel.
 
 Sets whether or not notifications posted to this channel can interrupt the user in INTERRUPTION_FILTER_PRIORITY mode.
 
-### setChannelId
-[method]setChannelId(bypassDnd) returns [ref notifications.AndroidChannel];[/method]
-
-| Parameter |         |
-| --------- | ------- |
-| channelId  | **string** |
-
-Sets the id of this channel.
-
 ### setDescription
 [method]setDescription(description) returns [ref notifications.AndroidChannel];[/method]
 
@@ -102,15 +101,6 @@ Sets the user visible description of this channel.
 
 Sets what group this channel belongs to.
 
-### setImportance
-[method]setImportance(importance) returns [ref notifications.AndroidChannel];[/method]
-
-| Parameter |         |
-| --------- | ------- |
-| importance  | **[ref notifications.AndroidImportance]** |
-
-Sets the level of interruption of this notification channel.
-
 ### setLightColor
 [method]setLightColor(lightColor) returns [ref notifications.AndroidChannel];[/method]
 
@@ -128,15 +118,6 @@ Sets the notification light color for notifications posted to this channel, if l
 | lockScreenVisibility  | **[ref notifications.AndroidVisibility]** |
 
 Sets whether notifications posted to this channel appear on the lockscreen or not, and if so, whether they appear in a redacted form.
-
-### setName
-[method]setName(name) returns [ref notifications.AndroidChannel];[/method]
-
-| Parameter |         |
-| --------- | ------- |
-| name  | **string** |
-
-Sets the user visible name of this channel.
 
 ### setShowBadge
 [method]setShowBadge(showBadge) returns [ref notifications.AndroidChannel];[/method]

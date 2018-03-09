@@ -151,6 +151,29 @@ A timestamp related to this notification, in milliseconds, since the epoch.
 
 ## Methods
 
+### addAction
+[method]addAction(action) returns [ref notifications.Notification];[/method]
+
+Add an action to this notification. Actions are typically displayed by the system as a button adjacent to the notification content. 
+Action buttons won't appear on platforms prior to Android 4.1.
+
+| Parameter |         |
+| --------- | ------- |
+| action  | **[ref notification.AndroidAction]** |
+
+### addPerson
+[method]addPerson(person) returns [ref notifications.Notification];[/method]
+
+Add a person that is relevant to this notification.
+
+Depending on user preferences, this annotation may allow the notification to pass through interruption filters, and to appear more prominently in the user interface.
+
+The person should be specified by the String representation of a CONTENT_LOOKUP_URI.
+
+| Parameter |         |
+| --------- | ------- |
+| person  | **string** |
+
 ### setAutoCancel
 [method]setAutoCancel(autoCancel) returns [ref notifications.Notification];[/method]
 
