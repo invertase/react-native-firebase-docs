@@ -11,6 +11,11 @@ This `notifications` module deals with Notification and Notification + Data mess
 
 Access Android specific notification methods.
 
+### ios
+[method]ios returns [ref notifications.IOSNotifications];[/method]
+
+Access iOS specific notification methods.
+
 ## Methods
 
 The following methods are accessed via the Notifications instance `firebase.notifications()`.

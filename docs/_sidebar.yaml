@@ -315,9 +315,14 @@
       - AndroidRemoteInput
       - AndroidSemanticAction
       - AndroidVisibility
-      - IOSNotification
+      - IOSAction
+      - IOSActionOptions
       - IOSAttachment
       - IOSAttachmentOptions
+      - IOSCategory
+      - IOSCategoryOptions
+      - IOSNotification
+      - IOSNotifications
       - Notification
       - NotificationOpen
   - title: Remote Config
