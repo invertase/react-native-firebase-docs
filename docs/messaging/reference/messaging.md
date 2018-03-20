@@ -84,10 +84,6 @@ On iOS 9 or below, there's no way to tell whether the user accepted or rejected 
 
 In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
 
-On iOS 9 or below, there's no way to tell whether the user accepted or rejected the permissions popup - in this case the resolved object will have a property called `status` with a value of `"unknown"`
-
-In all other cases the resolved object will have a `granted` property which is a boolean value of `true` or `false`.
-
 ### setBadgeNumber
 [method]setBadgeNumber(value) returns void;[/method]
 
