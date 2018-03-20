@@ -45,6 +45,7 @@ We provide several options for you to get started with React Native Firebase, se
 | **Crash Reporting**        | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Dynamic Links**          | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ |
 | **Invites**                | ❌ | ❌ |**?**|**?**|**?**| ❌ |
+| **InstanceID**             | ❌ | ❌ | ❌ | ❌ |**?**| ❌ |
 | **Performance Monitoring** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Realtime Database**      | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | _-- Offline Persistence_   | ✅ | ✅ | ✅ | ✅ | ✅ |**?**|
