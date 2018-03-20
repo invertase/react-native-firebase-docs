@@ -9,7 +9,7 @@ Add the `RNFirebaseNotificationsPackage` to your `android/app/src/main/java/com/
 ```java
 // ...
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.messaging.RNFirebaseNotificationsPackage; // <-- Add this line
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage; // <-- Add this line
 
 public class MainApplication extends Application implements ReactApplication {
     // ...
