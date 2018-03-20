@@ -30,21 +30,21 @@ We provide several options for you to get started with React Native Firebase, se
 ## Supported Firebase Features
 > The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native. A '**?**' indicates partial support.
 
-| Firebase Features      | v1.x.x  | v2.x.x  | v3.x.x | v3.1.x | v3.2.x | Web SDK |
+| Firebase Features      | v2.x.x  | v3.x.x | v3.1.x | v3.2.x | v4.0.x | Web SDK |
 | ---------------------- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **AdMob**                  | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| **AdMob**                  | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Analytics**              | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **App Indexing**           | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | **Authentication**         | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| _-- Phone Auth_            | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ |
-| **Core**                   | ❌ |**?**| ✅ | ✅ | ✅ | ✅ |
-|  _-- Multiple Apps_        | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ |
-| **Cloud Firestore**        | ❌ | ❌ | ✅ | ✅ | ✅ |**?**|
+| _-- Phone Auth_            | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| **Core**                   |**?**| ✅ | ✅ | ✅ | ✅ | ✅ |
+|  _-- Multiple Apps_        | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Cloud Firestore**        | ❌ | ✅ | ✅ | ✅ | ✅ |**?**|
 | **Cloud Messaging (FCM)**  | ✅ | ✅ | ✅ | ✅ | ✅ |**?**|
-| **Crashlytics**            | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| **Crashlytics**            | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ |
 | **Crash Reporting**        | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| **Dynamic Links**          | ❌ | ❌ | ❌ | ✅ | ✅ | ❌ |
-| **Invites**                | ❌ | ❌ | ❌ |**?**|**?**| ❌ |
+| **Dynamic Links**          | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ |
+| **Invites**                | ❌ | ❌ |**?**|**?**|**?**| ❌ |
 | **Performance Monitoring** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Realtime Database**      | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | _-- Offline Persistence_   | ✅ | ✅ | ✅ | ✅ | ✅ |**?**|
@@ -57,11 +57,11 @@ We provide several options for you to get started with React Native Firebase, se
 
 > The table below shows the supported versions of React Native and the Firebase SDKs for different versions of `react-native-firebase`
 
-|                        | 1.X.X       | 2.0.X       | 2.1.X / 2.2.X   | 3.0.X    |  3.1.X      |  3.2.X   |
-|------------------------|-------------|-------------|-----------------|----------|-------------|----------|
-| React Native           | 0.36 - 0.39 | 0.40 - 0.46 | 0.47 +          | 0.48 +   | 0.48 - 0.49 | 0.50 +   |
-| Firebase Android SDK   | 10.2.0 +    | 11.0.0 +    | 11.0.0 +        | 11.4.2 + | 11.6.0 +    | 11.8.0 + |
-| Firebase iOS SDK       | 3.15.0 +    | 4.0.0 +     | 4.0.0 +         | 4.3.0 +  | 4.5.0 +     | 4.7.0 +  |
+|                        | 2.1.x / 2.2.x   | 3.0.x    |  3.1.x      |  3.2.x   |  4.0.x   |
+|------------------------|-----------------|----------|-------------|----------|----------|
+| React Native           | 0.47 +          | 0.48 +   | 0.48 - 0.49 | 0.50 +   | 0.52 +   |
+| Firebase Android SDK   | 11.0.0 +        | 11.4.2 + | 11.6.0 +    | 11.8.0 + | 11.8.0 + |
+| Firebase iOS SDK       | 4.0.0 +         | 4.3.0 +  | 4.5.0 +     | 4.7.0 +  | 4.8.0 +  |
 
 ---
 
