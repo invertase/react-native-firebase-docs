@@ -159,7 +159,7 @@ Action buttons won't appear on platforms prior to Android 4.1.
 
 | Parameter |         |
 | --------- | ------- |
-| action  | **[ref notification.AndroidAction]** |
+| action  | **[ref notifications.AndroidAction]** |
 
 ### addPerson
 [method]addPerson(person) returns [ref notifications.Notification];[/method]
