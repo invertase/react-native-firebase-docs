@@ -257,6 +257,13 @@
     - type: reference
       files:
       - links
+      - AnalyticsParameters
+      - AndroidParameters
+      - DynamicLink
+      - IOSParameters
+      - ITunesParameters
+      - NavigationParameters
+      - SocialParameters
   - title: InstanceID
     path: instanceid
     links:

@@ -16,13 +16,6 @@ To send an Invitation, first populate it by using the `setX` methods described b
 | title    | **string** |
 | message     | **string** |
 
-### Invitation
-[method]new Invitation();[/method]
-
-A RemoteMessage can be sent and received through FCM.
-
-To send a RemoteMessage, first populate it by using the `setX` methods described below, then pass it to `firebase.messaging().sendMessage(message)`;
-
 ## Properties
 
 ### android

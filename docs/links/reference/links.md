@@ -14,27 +14,23 @@ React Native Firebase mimics the [Firebase REST API](https://firebase.google.com
 The following methods are accessed via the default app's Dynamic Links instance `firebase.links()`.
 
 ### createDynamicLink
-[method]createDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration)) returns Promise<string>;[/method]
+[method]createDynamicLink(link) returns Promise<string>;[/method]
 
 Creates a standard dynamic link.
 
 | Parameter | Type |
 | --------- | ------- |
-| parameters   | **[LinkConfiguration](#LinkConfiguration)**  |
+| link   | **[ref links:DynamicLink]**  |
 
 [collapse Example]
 ```javascript
+const link = 
+  new firebase.links.DynamicLink('https://example.com?param1=foo&param2=bar', 'abc123.app.goo.gl')
+    .android.setPackageName('com.example.android')
+    .ios.setBundleId('com.example.ios');
+
 firebase.links()
-    .createDynamicLink({
-      dynamicLinkDomain: "abc123.app.goo.gl",
-      link: "https://example.com?param1=foo&param2=bar",
-      androidInfo: {
-        androidPackageName: "com.example.android"
-      },
-      iosInfo: {
-        iosBundleId: "com.example.ios"
-      }
-    })
+    .createDynamicLink(link)
     .then((url) => {
       // ...
     });
@@ -42,27 +38,24 @@ firebase.links()
 [/collapse]
 
 ### createShortDynamicLink
-[method]createShortDynamicLink(parameters: [LinkConfiguration](#LinkConfiguration)) returns Promise<string>;[/method]
+[method]createShortDynamicLink(link, type) returns Promise<string>;[/method]
 
 Creates a short dynamic link.
 
 | Parameter | Type |
 | --------- | ------- |
-| parameters   | **[LinkConfiguration](#LinkConfiguration)**  |
+| link   | **[ref links:DynamicLink]**  |
+| type   | **(Optional)`SHORT` or `UNGUESSABLE`**  |
 
 [collapse Example]
 ```javascript
+const link = 
+  new firebase.links.DynamicLink('https://example.com?param1=foo&param2=bar', 'abc123.app.goo.gl')
+    .android.setPackageName('com.example.android')
+    .ios.setBundleId('com.example.ios');
+
 firebase.links()
-    .createShortDynamicLink({
-      dynamicLinkDomain: "abc123.app.goo.gl",
-      link: "https://example.com?param1=foo&param2=bar",
-      androidInfo: {
-        androidPackageName: "com.example.android"
-      },
-      iosInfo: {
-        iosBundleId: "com.example.ios"
-      }
-    })
+    .createShortDynamicLink(link, 'UNGUESSABLE')
     .then((url) => {
       // ...
     });
@@ -106,43 +99,5 @@ const unsubscribe = firebase.links().onLink((url) => {
 
 // unsubscribe
 unsubscribe();
-```
-[/collapse]
-
-
-## Types
-
-### LinkConfiguration
-
-For more information about each parameter below see the parameters section of the official Firebase docs [here.](https://firebase.google.com/docs/reference/dynamic-links/link-shortener)
-
-[collapse Definition]
-```typescript
-{
-  link: 'string',
-  dynamicLinkDomain: 'string',
-  androidInfo?: {
-    androidLink?: 'string',
-    androidPackageName: 'string',
-    androidFallbackLink?: 'string',
-    androidMinPackageVersionCode?: 'string',
-  },
-  iosInfo?: {
-    iosBundleId: 'string',
-    iosAppStoreId?: 'string',
-    iosFallbackLink?: 'string',
-    iosCustomScheme?: 'string',
-    iosIpadBundleId?: 'string',
-    iosIpadFallbackLink?: 'string',
-  },
-  socialMetaTagInfo?: {
-    socialTitle: 'string',
-    socialImageLink: 'string',
-    socialDescription: 'string',
-  },
-  suffix?: {
-    option: 'string',
-  },
-}
 ```
 [/collapse]
