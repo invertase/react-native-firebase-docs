@@ -28,7 +28,13 @@ Add the following method:
 
 ## Remote Notifications (Optional)
 
-If you would like to support Remote Notifications via FCM, add the following methods to your `ios/[App Name]/AppDelegate.m`:
+If you would like to support Remote Notifications via FCM, also add the following import to the top of your `ios/[App Name]/AppDelegate.m`:
+
+```objectivec
+#import "RNFirebaseMessaging.h"
+```
+
+Then add the following methods to your `ios/[App Name]/AppDelegate.m`:
 
 ```objectivec
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo
