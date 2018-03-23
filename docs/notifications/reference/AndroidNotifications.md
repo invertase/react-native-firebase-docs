@@ -6,11 +6,6 @@ This deals with Android-specific Notification functionality.
 
 The following methods are accessed via the AndroidNotifications instance `firebase.notifications().android`
 
-createChannel(channel: AndroidChannel): Promise<void> {
-    createChannelGroup(channelGroup: AndroidChannelGroup): Promise<void> {
-        createChannelGroups(channelGroups: AndroidChannelGroup[]): Promise<void> {
-            createChannels(channels: AndroidChannel[]): Promise<void> {
-
 
 ### createChannel
 [method]createChannel(channel) returns Promise;[/method]
