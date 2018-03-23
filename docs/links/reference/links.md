@@ -20,7 +20,7 @@ Creates a standard dynamic link.
 
 | Parameter | Type |
 | --------- | ------- |
-| link   | **[ref links:DynamicLink]**  |
+| link   | **[ref links.DynamicLink]**  |
 
 [collapse Example]
 ```javascript
@@ -44,7 +44,7 @@ Creates a short dynamic link.
 
 | Parameter | Type |
 | --------- | ------- |
-| link   | **[ref links:DynamicLink]**  |
+| link   | **[ref links.DynamicLink]**  |
 | type   | **(Optional)`SHORT` or `UNGUESSABLE`**  |
 
 [collapse Example]
