@@ -1,20 +1,33 @@
-# v4.0.0-alpha Changelog
+# v4.0.0 Changelog
 
 TL;DR: The one everybody has been waiting for: our overhaul of messaging and notification functionality to make it more reliable, better documented and easier to use.
 
-Install using `npm install --save react-native-firebase@next`
+Plus, we've got Firebase Invites, Multi-Database url support and an overhaul of Dynamic Links
 
-Highlights:
-- Better separation of concerns: `messaging`, `notifications` and `iid`
+Notification highlights:
+- Better separation of concerns: `messaging`, `notifications` and `instanceid`
 - Fully documented API
 - Builder classes provide a type safe way to construct [messages](https://rnfirebase.io/docs/v4.0.x/messaging/reference/RemoteMessage) and [notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notification)
 - Clearer distinction between Android and IOS specific functionality
 - Support for Android Notification Channels, Android Actions and Remote Input
 
-TODO:
+Outstanding functionality:
 - Support for iOS notification categories
+- Support for BigTextStyle and BigPictureStyle Android notifications
 
-## An overview 
+----
+
+## Quick Start
+
+Install using:
+ 
+```
+npm install --save react-native-firebase@next
+```
+
+----
+
+## Messaging 
 
 ### Messaging vs Notifications
 
@@ -71,9 +84,37 @@ firebase.notifications().onNotification((notification: Notification) => {
 
 When the app is in the background, the OS will automatically handle the notification display when a remote or local notification is received.  If you wish to display a heads up notification on Android, we recommend you look at sending data only messages to your app.  These can be handled when your app is in the background or closed by following the instructions here: https://rnfirebase.io/docs/v4.0.x/messaging/receiving-messages#4)-(Optional)(Android-only)-Listen-for-FCM-messages-in-the-background
 
+----
+
+## Firebase Invites
+
+We've added full support for Firebase Invites: [iOS](https://rnfirebase.io/docs/v4.0.x/invites/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/invites/android)
+
+----
+
+## Dynamic Links
+
+We've rolled out the `Builder` approach to Dynamic Links.  Check out the [createDynamicLink](https://rnfirebase.io/docs/v4.0.x/links/reference/links#createDynamicLink) docs and [Dynamic Link](https://rnfirebase.io/docs/v4.0.x/links/reference/DynamicLink) reference docs
+
+!> This is a breaking change
+
+----
+
+## Database
+
+Database now supports using multiple database instances via database urls e.g.:
+
+```js
+const dbShard = firebase.database('https://rnfirebase-3.firebaseio.com/');
+```
+
+> Big shout out to @akshetpandey and @Chenjh1992 for their help getting this pushed through on #881 
+
+----
+
 ## Upgrade instructions
 
-As you can imagine, this is a completely breaking change, so you'll want to follow the installation instructions available here:
+As you can imagine, for Messaging and Notifications this is a completely breaking change, so you'll want to follow the installation instructions available here:
 
 - Messaging: [iOS](https://rnfirebase.io/docs/v4.0.x/messaging/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/messaging/android)
 - Notifications: [iOS](https://rnfirebase.io/docs/v4.0.x/notifications/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/messaging/android)
@@ -82,8 +123,28 @@ There are a number of guides available: [Messaging](https://rnfirebase.io/docs/v
 
 Reference can be found here: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/reference/Messaging) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notifications)
 
+### Dynamic Links
+
+- For dynamic links on iOS, you need to make a subtle change to your `AppDelegate.m`:
+
+```objectivec
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    return [[RNFirebaseLinks instance] application:application openURL:url options:options];
+}
+
+- (BOOL)application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+ restorationHandler:(void (^)(NSArray *))restorationHandler {
+     return [[RNFirebaseLinks instance] application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
+}
+```
+
+----
+
 ## Feedback
 
-We want your feedback!!
+We want your feedback!
 
 If you have any comments and suggestions or want to report an issue, come find us on [Discord](https://discord.gg/C9aK28N)
