@@ -5,7 +5,7 @@ TL;DR: The one everybody has been waiting for: our overhaul of messaging and not
 Install using `npm install --save react-native-firebase@next`
 
 Highlights:
-- Better separation of concerns: `messaging`, `notifications` and `instanceid`
+- Better separation of concerns: `messaging`, `notifications` and `iid`
 - Fully documented API
 - Builder classes provide a type safe way to construct [messages](https://rnfirebase.io/docs/v4.0.x/messaging/reference/RemoteMessage) and [notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notification)
 - Clearer distinction between Android and IOS specific functionality

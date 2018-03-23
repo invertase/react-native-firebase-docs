@@ -41,7 +41,7 @@ We provide several options for you to get started with React Native Firebase, se
 |  _-- Multiple Apps_        |   ❌   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |
 | **Cloud Firestore**        |   ❌   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   | **?**  |
 |  _-- Transactions          |   ❌   |   ❌   |   ❌   |   ❌   |   ✅   |   ✅   |   ✅   |   
-| **Cloud Messaging (FCM)**  |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   | **?**  |
+| **Cloud Messaging (FCM)**  |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ❌   |
 | **Crashlytics**            |   ❌   |   ❌   |   ❌   |   ✅   |   ✅   |   ✅   |   ❌   |
 | **Crash Reporting**        |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ❌   |
 | **Dynamic Links**          |   ❌   |   ❌   |   ✅   |   ✅   |   ✅   |   ✅   |   ❌   |

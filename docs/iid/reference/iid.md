@@ -1,12 +1,12 @@
-# InstanceID
+# Instance ID
 
 ```
-firebase.instanceid
+firebase.iid
 ```
 
 ## Methods
 
-The following methods are accessed via the InstanceID instance `firebase.instanceid()`.
+The following methods are accessed via the Instance ID instance `firebase.iid()`.
 
 ### get
 [method]get() returns Promise containing string;[/method]

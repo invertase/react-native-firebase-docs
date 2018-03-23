@@ -264,8 +264,8 @@
       - ITunesParameters
       - NavigationParameters
       - SocialParameters
-  - title: InstanceID
-    path: instanceid
+  - title: Instance ID
+    path: iid
     links:
     - to: "/ios"
       text: Install on iOS
@@ -276,7 +276,7 @@
     - type: divider
     - type: reference
       files:
-      - instanceid
+      - iid
   - title: Invites
     path: invites
     links:
