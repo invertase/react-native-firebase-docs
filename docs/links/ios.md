@@ -52,35 +52,20 @@ Run `pod update`.
         ```
 
         ^-- where `CUSTOM_URL_SCHEME` is the custom URL scheme you defined in your Xcode project.
-    3. For **iOS 8** and older add the following inside the `@implementation AppDelegate` annotation:
-    
-        ```objectivec
-        - (BOOL)application:(UIApplication *)application
-                    openURL:(NSURL *)url
-                    options:(NSDictionary<NSString *, id> *)options {
-            return [RNFirebaseLinks application:application
-                                          openURL:url
-                                          options:options];
-        }
-        ```
         
-    4.  For **iOS 9** and newer add the following inside the `@implementation AppDelegate` annotation:
+    3.  Add the following inside the `@implementation AppDelegate` annotation:
     
         ```objectivec
         - (BOOL)application:(UIApplication *)application
                     openURL:(NSURL *)url
                     options:(NSDictionary<NSString *, id> *)options {
-            return [RNFirebaseLinks application:application
-                                        openURL:url
-                                        options:options];
+            return [[RNFirebaseLinks instance] application:application openURL:url options:options];
         }
 
         - (BOOL)application:(UIApplication *)application
         continueUserActivity:(NSUserActivity *)userActivity
          restorationHandler:(void (^)(NSArray *))restorationHandler {
-             return [RNFirebaseLinks application:application
-                              continueUserActivity:userActivity
-                                restorationHandler:restorationHandler];
+             return [[RNFirebaseLinks instance] application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
         }
         ```
 
@@ -93,14 +78,10 @@ Run `pod update`.
     openURL:(NSURL *)url 
     options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     
-        BOOL handled = [[FBSDKApplicationDelegate sharedInstance] 
-        application:application 
-        openURL:url 
-        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] 
-        annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+        BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
         
         if (!handled) {
-            handled = [RNFirebaseLinks application:application openURL:url options:options];
+            handled = [[RNFirebaseLinks instance] application:application openURL:url options:options];
         } 
 
         return handled;
