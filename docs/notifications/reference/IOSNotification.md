@@ -2,7 +2,7 @@
 
 iOS specific notification settings.
 
-> Some of these settings apply only to iOS 8/9, or iOS 10+.  These are flagged as appropriate.
+> Some of these settings apply only to iOS 9, or iOS 10+.  These are flagged as appropriate.
 
 ## Properties
 
@@ -11,7 +11,7 @@ iOS specific notification settings.
 
 Gets the alert action of the notification.
 
-> iOS 8 and 9 only.
+> iOS 9 only.
 
 ### attachments
 [method]attachments returns Array of [ref notifications.IOSAttachment];[/method]
@@ -35,7 +35,7 @@ Gets the optional category for the notification.
 
 Gets whether the notification has an action or not.
 
-> iOS 8 and 9 only.
+> iOS 9 only.
 
 ### launchImage
 [method]launchImage returns nullable string;[/method]
@@ -69,7 +69,7 @@ Adds an attachment to the notification.
 
 Sets the alert action for the notification.
 
-> iOS 8 and 9 only.
+> iOS 9 only.
 
 | Parameter |         |
 | --------- | ------- |
@@ -98,7 +98,7 @@ Sets the category for the notification.
 
 Sets whether the notification has an action.
 
-> iOS 8 and 9 only.
+> iOS 9 only.
 
 | Parameter |         |
 | --------- | ------- |

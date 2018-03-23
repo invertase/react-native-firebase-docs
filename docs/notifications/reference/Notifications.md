@@ -34,7 +34,7 @@ Cancels a pending notification with the specified ID.
 
 Displays the specified notification straight away.
 
-!> It is not possible to display a notification whilst the app is in the foreground on iOS 8 and 9.
+!> It is not possible to display a notification whilst the app is in the foreground on iOS 9.
 
 Returns a promise that resolves if the notification is displayed, otherwise it is rejected with an error.
 
@@ -115,7 +115,7 @@ Removes a delivered notification with the specified ID.
 
 Displays the specified notification according to the supplied schedule.
 
-!> It is not possible to display a notification whilst the app is in the foreground on iOS 8 and 9.
+!> It is not possible to display a notification whilst the app is in the foreground on iOS 9.
 
 Returns a promise that resolves if the notification is scheduled, otherwise it is rejected with an error.
 

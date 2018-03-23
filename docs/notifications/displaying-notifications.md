@@ -2,7 +2,7 @@
 
 When your app is in the foreground, you can choose to present a notification to the user.
 
-> iOS 8 and 9 do not support displaying a notification whilst the app is in the foreground
+> iOS 9 does not support displaying a notification whilst the app is in the foreground
 
 ## 1) Building a notification
 
