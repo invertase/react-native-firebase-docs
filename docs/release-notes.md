@@ -4,14 +4,16 @@ TL;DR: The one everybody has been waiting for: our overhaul of messaging and not
 
 Plus, we've got Firebase Invites, Multi-Database url support and an overhaul of Dynamic Links
 
-Notification highlights:
+**Notification highlights:**
+
 - Better separation of concerns: `messaging`, `notifications` and `instanceid`
 - Fully documented API
 - Builder classes provide a type safe way to construct [messages](https://rnfirebase.io/docs/v4.0.x/messaging/reference/RemoteMessage) and [notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notification)
 - Clearer distinction between Android and IOS specific functionality
 - Support for Android Notification Channels, Android Actions and Remote Input
 
-Outstanding functionality:
+**Outstanding functionality:**
+
 - Support for iOS notification categories
 - Support for BigTextStyle and BigPictureStyle Android notifications
 
