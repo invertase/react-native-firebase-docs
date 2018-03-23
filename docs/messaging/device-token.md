@@ -41,7 +41,7 @@ The `onTokenRefresh` callback fires with the latest registration token whenever 
 
 ```js
 componentDidMount() {
-    this.onTokenRefreshListener = firebase.messaging().onTokenRefreshed(fcmToken: string => {
+    this.onTokenRefreshListener = firebase.messaging().onTokenRefresh(fcmToken: string => {
         // Process your token as required
     });
 }
