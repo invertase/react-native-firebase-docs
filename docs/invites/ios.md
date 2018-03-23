@@ -42,8 +42,4 @@ continueUserActivity:(NSUserActivity *)userActivity
 
 > Take a look at our [social auth guide](version /auth/social-auth) for how to use Google Sign In with `react-native-firebase`.
 
-Add custom URL schemes to your Xcode project:
-
-    1. Open your project configuration: double-click the project name in the left tree view. Select your app from the TARGETS section, then select the Info tab, and expand the URL Types section.
-    
-    2. Click the + button, and add a URL scheme for your reversed client ID. To find this value, open the GoogleService-Info.plist configuration file, and look for the REVERSED_CLIENT_ID key. Copy the value of that key, and paste it into the URL Schemes box on the configuration page. Leave the other fields blank.
+To add custom URL schemes to your Xcode project see [this quick tutorial](https://codorial.com/g/invertase/tutorials/ios-xcode-custom-url-scheme/) - the `URL Schemes` is usually your reversed client ID. To find this value, open your `GoogleService-Info.plist` configuration file, and look for the `REVERSED_CLIENT_ID` key. Copy the value of that key, and paste it into the URL Schemes box on the configuration page.
