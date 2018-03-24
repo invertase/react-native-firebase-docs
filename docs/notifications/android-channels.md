@@ -8,10 +8,7 @@ To allow React Native Firebase to work seamlessly across all versions of Android
 
 ```js
 // Build a channel
-const channel = new firebase.notifications.Android.Channel()
-  .setChannelId('test-channel')
-  .setName('Test Channel')
-  .setImportance(firebase.notifications.Android.Importance.Max)
+const channel = new firebase.notifications.Android.Channel('test-channel', 'Test Channel', firebase.notifications.Android.Importance.Max)
   .setDescription('My apps test channel');
   
 // Create the channel
@@ -26,9 +23,7 @@ React Native Firebase also supports the concept of [Notification Channel Groups]
 
 ```js
 // Build a channel group
-const channelGroup = new firebase.notifications.Android.ChannelGroup()
-  .setGroupId('test-group')
-  .setName('Test Channel Group');
+const channelGroup = new firebase.notifications.Android.ChannelGroup('test-group', 'Test Channel Group');
 
 // Create the channel group
 firebase.notifications().android.createChannelGroup(channelGroup);
