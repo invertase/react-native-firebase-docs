@@ -14,6 +14,16 @@ Whether the notification should be automatically canceled when the user clicks i
 
 Which icon to display as a badge for this notification.
 
+### bigPicture
+[method]bigPicture returns nullable Object;[/method]
+
+Information about the BigPictureStyle that should be used.
+
+### bigText
+[method]bigText returns nullable Object;[/method]
+
+Information about the BigTextStyle that should be used.
+
 ### category
 [method]category returns nullable [ref notifications.AndroidCategory];[/method]
 
@@ -191,6 +201,29 @@ Sets which icon to display as a badge for this notification.
 | Parameter |         |
 | --------- | ------- |
 | badgeIconType  | **[ref notifications.AndroidBadgeIconType]** |
+
+### setBigPicture
+[method]setBigPicture(picture, largeIcon, contentTitle, summaryText) returns [ref notifications.Notification];[/method]
+
+Sets the information required to use BigPictureStyle.
+
+| Parameter |         |
+| --------- | ------- |
+| picture  | **string** <br />The bitmap to be used as the payload for the BigPicture notification. |
+| largeIcon  | **string** (optional) <br />Override the large icon when the big notification is shown. |
+| contentTitle  | **string** (optional) <br />Overrides ContentTitle in the big form of the template. |
+| summaryText  | **string** (optional) <br />Set the first line of text after the detail section in the big form of the template. |
+
+### setBigText
+[method]setBigText(text, contentTitle, summaryText) returns [ref notifications.Notification];[/method]
+
+Sets the information required to use BigTextStyle.
+
+| Parameter |         |
+| --------- | ------- |
+| text  | **string** <br />The longer text to be displayed in the big form of the template in place of the content text. |
+| contentTitle  | **string** (optional) <br />Overrides ContentTitle in the big form of the template. |
+| summaryText  | **string** (optional) <br />Set the first line of text after the detail section in the big form of the template. |
 
 ### setCategory
 [method]setCategory(category) returns [ref notifications.Notification];[/method]
