@@ -29,6 +29,11 @@ Gets a slash-separated path to a collection.
 | --------- | ------- |
 | collectionPath  | **string** <br /> A slash-separated path to a collection. |
 
+### disableNetwork
+[method]disableNetwork() returns Promise containing void;[/method]
+
+Disables network usage for this instance. It can be re-enabled via `enableNetwork()`. While the network is disabled, any snapshot listeners or get() calls will return results from cache, and any write operations will be queued until the network is restored.
+
 ### doc
 [method]doc(documentPath) returns [ref firestore.DocumentReference];[/method]
 
@@ -37,6 +42,11 @@ Gets a DocumentReference instance that refers to the document at the specified p
 | Parameter |         |
 | --------- | ------- |
 | documentPath  | **string** <br /> A slash-separated path to a document. |
+
+### enableNetwork
+[method]enableNetwork() returns Promise containing void;[/method]
+
+Re-enables use of the network for this Firestore instance after a prior call to `disableNetwork()`.
 
 ### runTransaction
 [method]runTransaction(updateFunction) returns Promise;[/method]
