@@ -87,6 +87,8 @@ componentWillUnmount() {
 
 ## 4) Listen for a Notification being opened
 
+> On Android, unfortunately there is no way to access the title and body of an opened remote notification.  You can use the `data` part of the remote notification to supply this information if it's required.
+
 ### App in Foreground and background
 If your app is in the foreground, or background, you can listen for when a notification is clicked / tapped / opened as follows:
 

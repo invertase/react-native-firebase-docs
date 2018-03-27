@@ -90,6 +90,8 @@ Parameter |         |
 
 When a notification is opened, the listener is invoked with the notification and the action that was invoked when it was clicked on.
 
+> On Android, unfortunately there is no way to access the title and body of an opened remote notification.  You can use the `data` part of the remote notification to supply this information if it's required.
+
 Returns an unsubscribe function.
 
 Parameter |         |
