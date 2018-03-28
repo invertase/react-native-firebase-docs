@@ -49,14 +49,14 @@ Parameter |         |
 | nextOrObserver   | **function(string)** or **Object** <br /> This function, or observer object with `next` defined, is called when a token refresh has occurred with the new token. |
 
 ### requestPermission
-[method]requestPermission() returns Promise;[/method]
+[method]requestPermission() returns Promise containing void;[/method]
 
 Notification permissions are required to send a user push messages. Calling this method displays the permission dialog to the user and resolves if the permission is granted.
 
 Returns a promise that resolves if permission is granted, otherwise, it is rejected with an error.
 
 ### sendMessage
-[method]sendMessage(message) returns Promise;[/method]
+[method]sendMessage(message) returns Promise containing void;[/method]
 
 Sends a remote message upstream to your app server.
 
@@ -69,7 +69,7 @@ Returns a promise that resolves if the messages is sent, otherwise it is rejecte
 | message   | **[ref messaging.RemoteMessage]** <br /> The remote message to send.  |
 
 ### subscribeToTopic
-[method]subscribeToTopic(topic) returns void;[/method]
+[method]subscribeToTopic(topic) returns Promise containing void;[/method]
 
 Subscribes the device to a topic.
 
@@ -78,9 +78,9 @@ Subscribes the device to a topic.
 | topic   | **string** The name of the topic to subscribe to. |
 
 ### unsubscribeFromTopic
-[method]unsubscribeFromTopic(topic) returns void;[/method]
+[method]unsubscribeFromTopic(topic) returns Promise containing void;[/method]
 
-Unsubscribes the device to a topic.
+Unsubscribes the device from a topic.
 
 | Parameter |         |
 | --------- | ------- |

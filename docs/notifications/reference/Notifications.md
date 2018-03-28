@@ -16,12 +16,12 @@ Access Android specific notification methods.
 The following methods are accessed via the Notifications instance `firebase.notifications()`.
 
 ### cancelAllNotifications
-[method]cancelAllNotifications() returns void;[/method]
+[method]cancelAllNotifications() returns Promise containing void;[/method]
 
 Cancels all pending notifications.
 
 ### cancelNotification
-[method]cancelNotification(notificationId) returns void;[/method]
+[method]cancelNotification(notificationId) returns Promise containing void;[/method]
 
 Cancels a pending notification with the specified ID.
 
@@ -99,12 +99,12 @@ Parameter |         |
 | nextOrObserver   | **function([ref notifications.NotificationOpen])** or **Object** <br /> This function, or observer object with `next` defined, is called when a notification is opened. |
 
 ### removeAllDeliveredNotifications
-[method]removeAllDeliveredNotifications() returns void;[/method]
+[method]removeAllDeliveredNotifications() returns Promise containing void;[/method]
 
 Removes all delivered notifications.
 
 ### removeDeliveredNotification
-[method]removeDeliveredNotification(notificationId) returns void;[/method]
+[method]removeDeliveredNotification(notificationId) returns Promise containing void;[/method]
 
 Removes a delivered notification with the specified ID.
 
@@ -127,7 +127,7 @@ Returns a promise that resolves if the notification is scheduled, otherwise it i
 | schedule   | **[ref notifications.Schedule]** <br /> The schedule to control when the notification is displayed.  |
 
 ### setBadge
-[method]setBadge(badge) returns void;[/method]
+[method]setBadge(badge) returns Promise containing void;[/method]
 
 Sets the current badge number on the app icon.
 
