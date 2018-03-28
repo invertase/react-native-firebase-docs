@@ -30,7 +30,7 @@ B) At the beginning of the `didFinishLaunchingWithOptions:(NSDictionary *)launch
 
 ?> It is recommended to add the line within the method **BEFORE** creating the **RCTRootView**. Otherwise the initialization can occur after already being required in your JavaScript code - leading to `app not initialised` exceptions.
 
-### 1.3. Install Firebase Pods
+### 1.3. Install Firebase Library
 
 #### Option 1: Cocoapods (Recommended)
 
