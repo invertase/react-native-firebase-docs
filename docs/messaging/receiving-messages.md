@@ -82,6 +82,8 @@ Android allows you to act on data-only messages when your application is closed 
 
 To allow this to work, we make use of React Native's built-in [Headless JS](https://facebook.github.io/react-native/docs/headless-js-android.html) functionality.
 
+> You will need to specify the FCM message priority as `high` for this functionality to work.  If this isn't set, the app is not given permission to launch the background message handler.
+
 ### 1) Add Service to Android Manifest
 
 Firstly, check that you've followed the optional steps in the [Android Installation guide](version /installation/android).
