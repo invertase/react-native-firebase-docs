@@ -9,7 +9,7 @@ Add the Firebase Performance Monitoring dependancy to `android/app/build.gradle`
 ```groovy
 dependencies {
   // ...
-  compile "com.google.firebase:firebase-perf:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-perf:{{ android.firebase.version }}"
 }
 ```
 

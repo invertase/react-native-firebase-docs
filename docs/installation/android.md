@@ -42,8 +42,8 @@ dependencies {
   }
 
   // Firebase dependencies
-  compile "com.google.android.gms:play-services-base:{{ android.firebase.version }}"
-  compile "com.google.firebase:firebase-core:{{ android.firebase.version }}"
+  implementation "com.google.android.gms:play-services-base:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-core:{{ android.firebase.version }}"
 
   ...
 ```

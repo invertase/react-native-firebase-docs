@@ -9,7 +9,7 @@ Add the Firebase Remote Config dependancy to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  compile "com.google.firebase:firebase-config:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-config:{{ android.firebase.version }}"
 }
 ```
 

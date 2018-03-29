@@ -9,7 +9,7 @@ Add the Firebase Crashlytics dependency to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  compile('com.crashlytics.sdk.android:crashlytics:{{ android.fabric.version }}@aar') {
+  implementation('com.crashlytics.sdk.android:crashlytics:{{ android.fabric.version }}@aar') {
     transitive = true
   }
 }

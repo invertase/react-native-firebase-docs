@@ -7,7 +7,7 @@ Add the Firebase Dynamic Links / Invites dependency to your `android/app/build.g
 ```groovy
 dependencies {
   // ...
-  compile "com.google.firebase:firebase-invites:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-invites:{{ android.firebase.version }}"
 }
 ```
 
