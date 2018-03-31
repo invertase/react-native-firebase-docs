@@ -47,6 +47,11 @@ The user specified importance.
 
 The notification light color for notifications posted to this channel.
 
+### lightsEnabled
+[method]lightsEnabled returns nullable boolean;[/method]
+
+If notifications posted to this channel should show lights.
+
 ### lockScreenVisibility
 [method]lockScreenVisibility returns nullable [ref notifications.AndroidVisibility];[/method]
 
@@ -67,12 +72,35 @@ Whether notifications posted to this channel can appear as badges in a Launcher 
 
 The notification sound for this channel.
 
+### vibrationEnabled
+[method]vibrationEnabled returns nullable boolean;[/method]
+
+If notifications posted to this channel should vibrate.
+
 ### vibrationPattern
 [method]vibrationPattern returns nullable Array of number;[/method]
 
 The vibration pattern for notifications posted to this channel.
 
 ## Methods
+
+### enableLights
+[method]enableLights(lightsEnabled) returns [ref notifications.AndroidChannel];[/method]
+
+| Parameter |         |
+| --------- | ------- |
+| lightsEnabled  | **boolean** |
+
+Sets whether notifications posted to this channel should display notification lights, on devices that support that feature.
+
+### enableVibration
+[method]enableVibration(vibrationEnabled) returns [ref notifications.AndroidChannel];[/method]
+
+| Parameter |         |
+| --------- | ------- |
+| vibrationEnabled  | **boolean** |
+
+Sets whether notification posted to this channel should vibrate. The vibration pattern can be set with `setVibrationPattern`. 
 
 ### setBypassDnd
 [method]setBypassDnd(bypassDnd) returns [ref notifications.AndroidChannel];[/method]
