@@ -74,7 +74,7 @@ componentDidMount() {
     this.notificationDisplayedListener = firebase.notifications().onNotificationDisplayed(notification: Notification => {
         // Process your notification as required
     });
-    this.notificationListener = firebase.notifications().onNotification(notification: Notification => {
+    this.notificationListener = firebase.notifications().onNotification((notification: Notification) => {
         // Process your notification as required
     });
 }
