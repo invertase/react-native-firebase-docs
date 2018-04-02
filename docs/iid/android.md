@@ -9,7 +9,7 @@ Add the `RNFirebaseInstanceIdPackage` to your `android/app/src/main/java/com/[ap
 ```java
 // ...
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.analytics.RNFirebaseInstanceIdPackage; // <-- Add this line
+import io.invertase.firebase.instanceid.RNFirebaseInstanceIdPackage; // <-- Add this line
 
 public class MainApplication extends Application implements ReactApplication {
     // ...
