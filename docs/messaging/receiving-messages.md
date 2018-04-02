@@ -66,7 +66,7 @@ A message will trigger the `onMessage` listener when the application receives a 
 import type { RemoteMessage } from 'react-native-firebase';
 
 componentDidMount() {
-    this.messageListener = firebase.messaging().onMessage(message: RemoteMessage => {
+    this.messageListener = firebase.messaging().onMessage((message: RemoteMessage) => {
         // Process your message as required
     });
 }

@@ -71,7 +71,7 @@ A notification will trigger one of two listeners depending on the state of your 
 import type { Notification } from 'react-native-firebase';
 
 componentDidMount() {
-    this.notificationDisplayedListener = firebase.notifications().onNotificationDisplayed(notification: Notification => {
+    this.notificationDisplayedListener = firebase.notifications().onNotificationDisplayed((notification: Notification) => {
         // Process your notification as required
     });
     this.notificationListener = firebase.notifications().onNotification((notification: Notification) => {
@@ -97,7 +97,7 @@ If your app is in the foreground, or background, you can listen for when a notif
 import type { Notification, NotificationOpen } from 'react-native-firebase';
 
 componentDidMount() {
-    this.notificationOpenedListener = firebase.notifications().onNotificationOpened(notificationOpen: NotificationOpen => {
+    this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen: NotificationOpen) => {
         // Get the action triggered by the notification being opened
         const action = notificationOpen.action;
         // Get information about the notification that was opened
@@ -138,7 +138,7 @@ import type { Notification, NotificationOpen } from 'react-native-firebase';
 
 componentDidMount() {
     firebase.notifications().getInitialNotification()
-      .then(notificationOpen: NotificationOpen => {
+      .then((notificationOpen: NotificationOpen) => {
         if (notificationOpen) {
           // App was opened by a notification
           // Get the action triggered by the notification being opened
