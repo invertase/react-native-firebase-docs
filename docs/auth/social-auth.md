@@ -36,9 +36,9 @@ const facebookLogin = async () => {
     const credential = firebase.auth.FacebookAuthProvider.credential(data.accessToken);
 
     // login with credential
-    const currentUser = await firebase.auth().signInWithCredential(credential);
+    const currentUser = await firebase.auth().signInAndRetrieveDataWithCredential(credential);
 
-    console.info(JSON.stringify(currentUser.toJSON()))
+    console.info(JSON.stringify(currentUser.user.toJSON()))
   } catch (e) {
     console.error(e);
   }
@@ -65,9 +65,9 @@ export const googleLogin = async () => {
     // create a new firebase credential with the token
     const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken)
     // login with credential
-    const currentUser = await firebase.auth().signInWithCredential(credential);
+    const currentUser = await firebase.auth().signInAndRetrieveDataWithCredential(credential);
     
-    console.info(JSON.stringify(currentUser.toJSON()));
+    console.info(JSON.stringify(currentUser.user.toJSON()));
   } catch (e) {
     console.error(e);
   }
