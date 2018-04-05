@@ -2,20 +2,18 @@
 
 TL;DR: The one everybody has been waiting for: our overhaul of messaging and notification functionality to make it more reliable, better documented and easier to use.
 
-Plus, we've got Firebase Invites, Multi-Database url support and an overhaul of Dynamic Links
+Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dynamic Links and some other minor fixes.
 
 **Notification highlights:**
-
 - Better separation of concerns: `messaging`, `notifications` and `instanceid`
 - Fully documented API
 - Builder classes provide a type safe way to construct [messages](https://rnfirebase.io/docs/v4.0.x/messaging/reference/RemoteMessage) and [notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notification)
 - Clearer distinction between Android and IOS specific functionality
 - Support for Android Notification Channels, Android Actions and Remote Input
+- Support for BigTextStyle and BigPictureStyle Android notifications
 
 **Outstanding functionality:**
-
 - Support for iOS notification categories
-- Support for BigTextStyle and BigPictureStyle Android notifications
 
 ----
 
@@ -76,7 +74,7 @@ With our previous implementation, we relied on the `show_in_foreground` flag exi
 
 The `show_in_foreground` flag no longer exists and instead you can use the listeners described above to give better control, e.g.
 
-```
+```js
 firebase.notifications().onNotification((notification: Notification) => {
   // You've received a notification that hasn't been displayed by the OS
   // To display it whilst the app is in the foreground, simply call the following
@@ -102,19 +100,69 @@ We've rolled out the `Builder` approach to Dynamic Links.  Check out the [create
 
 ----
 
+## Cloud Firestore
+
+- Added support for `disableNetwork` and `enableNetwork`
+- Added typescript definitions for Transactions
+
+----
+
+## Authentication
+
+- Fixed issue with null photo URL when updating a user profile #911
+
+----
+
 ## Database
 
-Database now supports using multiple database instances via database urls e.g.:
-
+- Fixed issue with server time offset #910
+- Database now supports using multiple database instances via database urls e.g.:
 ```js
 const dbShard = firebase.database('https://rnfirebase-3.firebaseio.com/');
 ```
-
 > Big shout out to @akshetpandey and @Chenjh1992 for their help getting this pushed through on #881 
+
+## Crashlytics
+
+- Crashlytics now lives at the top level under `firebase.crashlytics()`
 
 ----
 
 ## Upgrade instructions
+
+```
+npm install --save react-native-firebase@next
+```
+
+### Gradle
+
+Due to some breaking changes in v12 of the Android libs, you'll need to upgrade your Gradle version to at least v4.4 and make a few other tweaks as follows:
+
+1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
+2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
+```
+buildscript {
+    repositories {
+        jcenter()
+        google()  // <-- Check this line exists
+        ...
+    }
+```
+3) In `android/build.gradle` update Android build tools to version `3.1.0`:
+```
+classpath 'com.android.tools.build:gradle:3.1.0'
+```
+4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
+```
+implementation(project(':react-native-firebase')) {
+    transitive = false
+}
+```
+5) In `android/app/build.gradle`, update all the firebase and gms dependencies to 12.0.1
+
+6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
+
+### Messaging / Notifications
 
 As you can imagine, for Messaging and Notifications this is a completely breaking change, so you'll want to follow the installation instructions available here:
 
@@ -143,10 +191,18 @@ continueUserActivity:(NSUserActivity *)userActivity
 }
 ```
 
+### Crashlytics
+
+- All Crashlytics methods have been moved from `firebase.fabric.crashlytics()` to `firebase.crashlytics()`
+
+### Crash Reporting
+
+- Crash reporting is now flagged as deprecated.  We recommend you upgrade to Crashlytics which is now Firebase's recommended crash tool.
+
 ----
 
 ## Feedback
 
-We want your feedback!
+We want your feedback!!
 
 If you have any comments and suggestions or want to report an issue, come find us on [Discord](https://discord.gg/C9aK28N)
