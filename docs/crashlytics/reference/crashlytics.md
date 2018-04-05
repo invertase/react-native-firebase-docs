@@ -1,12 +1,12 @@
 # Crashlytics
 
 ```
-firebase.fabric.crashlytics
+firebase.crashlytics
 ```
 
 ## Methods 
 
-The following methods are accessed via the Crashlytics instance `firebase.fabric.crashlytics()`.
+The following methods are accessed via the Crashlytics instance `firebase.crashlytics()`.
 
 ### crash
 [method]crash() returns void;[/method]
