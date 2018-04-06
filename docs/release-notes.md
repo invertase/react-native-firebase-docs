@@ -12,7 +12,7 @@ Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dyn
 - Support for Android Notification Channels, Android Actions and Remote Input
 - Support for BigTextStyle and BigPictureStyle Android notifications
 
-**Outstanding functionality:**
+**Outstanding functionality (to be added in a later release):**
 - Support for iOS notification categories
 
 ----
@@ -22,7 +22,7 @@ Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dyn
 Install using:
  
 ```
-npm install --save react-native-firebase@next
+npm install --save react-native-firebase
 ```
 
 ----
@@ -96,7 +96,7 @@ We've added full support for Firebase Invites: [iOS](https://rnfirebase.io/docs/
 
 We've rolled out the `Builder` approach to Dynamic Links.  Check out the [createDynamicLink](https://rnfirebase.io/docs/v4.0.x/links/reference/links#createDynamicLink) docs and [Dynamic Link](https://rnfirebase.io/docs/v4.0.x/links/reference/DynamicLink) reference docs
 
-!> This is a breaking change
+!> This is a breaking change.
 
 ----
 
@@ -131,7 +131,7 @@ const dbShard = firebase.database('https://rnfirebase-3.firebaseio.com/');
 ## Upgrade instructions
 
 ```
-npm install --save react-native-firebase@next
+npm install --save react-native-firebase@latest
 ```
 
 ### Gradle
@@ -140,7 +140,8 @@ Due to some breaking changes in v12 of the Android libs, you'll need to upgrade 
 
 1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
 2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
-```
+
+```groovy
 buildscript {
     repositories {
         jcenter()
@@ -148,16 +149,21 @@ buildscript {
         ...
     }
 ```
+
 3) In `android/build.gradle` update Android build tools to version `3.1.0`:
-```
+
+```groovy
 classpath 'com.android.tools.build:gradle:3.1.0'
 ```
+
 4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
-```
+
+```groovy
 implementation(project(':react-native-firebase')) {
     transitive = false
 }
 ```
+
 5) In `android/app/build.gradle`, update all the firebase and gms dependencies to 12.0.1
 
 6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
