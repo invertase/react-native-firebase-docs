@@ -49,7 +49,7 @@ const facebookLogin = async () => {
 
 We recommend using [react-native-google-signin](https://github.com/devfd/react-native-google-signin) for Google authentication.  This module handles the flow of logging in a user and obtaining their `accessToken` and `idToken` by wrapping around the offical Google login library. This means you get a much smoother experience than using a standard OAuth library, particularly on Android.
 
-The `react-native-google-sign` library allows us to login (using `GoogleSignin`) which returns an optional `accessToken` and `idToken`. Once we have the two tokens we need to create a credential using [ref auth.GoogleAuthProvider#credential] and then sign in with that credential using [ref auth#signInWithCredential]:
+The `react-native-google-signin` library allows us to login (using `GoogleSignin`) which returns an optional `accessToken` and `idToken`. Once we have the two tokens we need to create a credential using [ref auth.GoogleAuthProvider#credential] and then sign in with that credential using [ref auth#signInWithCredential]:
 
 ```js
 import { GoogleSignin } from 'react-native-google-signin';
@@ -59,14 +59,14 @@ export const googleLogin = async () => {
   try {
     // Add any configuration settings here:
     await GoogleSignin.configure();
-    
+
     const data = await GoogleSignin.signIn();
-    
+
     // create a new firebase credential with the token
     const credential = firebase.auth.GoogleAuthProvider.credential(data.idToken, data.accessToken)
     // login with credential
     const currentUser = await firebase.auth().signInAndRetrieveDataWithCredential(credential);
-    
+
     console.info(JSON.stringify(currentUser.user.toJSON()));
   } catch (e) {
     console.error(e);
@@ -80,4 +80,3 @@ export const googleLogin = async () => {
 ## Github
 
 ## Custom Provider
-
