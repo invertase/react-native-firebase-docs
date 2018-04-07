@@ -1,6 +1,6 @@
 # React Native Firebase Docs
 
-This repoistory contains the documentation for the [RNFirebase documenatation](https://rnfirebase.io/docs).
+This repository contains the documentation for the [RNFirebase documentation](https://rnfirebase.io/docs).
 
 ## Internal Links
 
