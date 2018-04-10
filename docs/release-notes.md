@@ -179,6 +179,13 @@ There are a number of guides available: [Messaging](https://rnfirebase.io/docs/v
 
 Reference can be found here: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/reference/Messaging) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notifications)
 
+Some key things to note:
+
+- The iOS `AppDelegate.m` will need to be completely updated
+- All packages in `AndroidManifest.xml` will need to be updated
+- `firebase.messaging().requestPermissions()` is now `firebase.messaging().requestPermission()`
+- `firebase.messaging().setBadgeNumber()` and `firebase.messaging().getBadgeNumber()` are now `firebase.notifications().setBadge()` and `firebase.notifications().getBadge()`
+
 ### Dynamic Links
 
 - For dynamic links on iOS, you need to make a subtle change to your `AppDelegate.m`:
