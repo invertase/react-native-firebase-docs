@@ -91,7 +91,7 @@ Parameter |         |
 When a notification is opened, the listener is invoked with the notification and the action that was invoked when it was clicked on.
 `onNotificationOpened` returns a function which can be used to unsubscribe, recommend adding this function to componentWillUnmount().
 
-###### Sample Usage
+[example Example]
 ```javascript
 
 let notification = new firebase.notifications.Notification()
@@ -107,6 +107,7 @@ firebase.notifications().onNotificationOpened((notificationOpen) => {
     console.log(notificationOpen.notification.data); // returns { key2: false, key: true }
 });
 ```
+[/example]
 
 > On Android, unfortunately there is no way to access the title and body of an opened remote notification.  You can use the `data` part of the remote notification to supply this information if it's required.
 
