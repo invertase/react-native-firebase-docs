@@ -59,6 +59,16 @@ Executes the given updateFunction and then attempts to commit the changes applie
 | --------- | ------- |
 | updateFunction | **function**(non-null [ref firestore.Transaction]) <br /> The function to execute within the transaction context. |
 
+## Static Methods
+
+### setLogLevel
+[method]setLogLevel(logLevel) returns void;[/method]
+
+Sets the verbosity of Cloud Firestore logs (debug, error, or silent).
+
+| Parameter |         |
+| --------- | ------- |
+| logLevel  | **string** <br /> The verbosity you set for activity and error logging. Can be any of the following values: <br /> - **debug** for the most verbose logging level, primarily for debugging.<br /> - **error** to log errors only.<br /> - **silent** to turn off logging.|
 
 ## Unsupported Methods
 
