@@ -9,15 +9,15 @@ Specifies custom configurations for your Cloud Firestore instance. You must set 
 
 The hostname to connect to.
 
+### persistence
+[method]persistence returns nullable boolean;[/method]
+
+Whether to use persistence.
+
 ### ssl
 [method]ssl returns nullable boolean;[/method]
 
 Whether to use SSL when connecting.
-
-### host
-[method]host returns nullable boolean;[/method]
-
-The hostname to connect to.
 
 ## Unsupported Properties
 
