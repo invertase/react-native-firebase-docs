@@ -70,6 +70,12 @@ Sets the verbosity of Cloud Firestore logs (debug, error, or silent).
 | --------- | ------- |
 | logLevel  | **string** <br /> The verbosity you set for activity and error logging. Can be any of the following values: <br /> - **debug** for the most verbose logging level, primarily for debugging.<br /> - **error** to log errors only.<br /> - **silent** to turn off logging.|
 
+[collapse Example]
+```js
+firebase.firestore.setLogLevel('debug');
+```
+[/collapse]
+
 ## Unsupported Methods
 
 ### enablePersistence
