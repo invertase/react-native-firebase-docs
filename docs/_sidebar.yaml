@@ -156,6 +156,7 @@
       - SetOptions
       - Settings
       - SnapshotMetadata
+      - Transaction
       - WriteBatch
   - title: Cloud Messaging
     path: messaging

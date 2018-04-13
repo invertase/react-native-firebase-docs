@@ -22,10 +22,9 @@ Whether to use SSL when connecting.
 ## Unsupported Properties
 
 ### timestampsInSnapshots
-
-!> Currently will have no affect, as it is not supported on both iOS and Android.
-
 [method]timestampsInSnapshots returns nullable boolean;[/method]
+
+!> Currently will have no effect, as it is not supported on both iOS and Android.
 
 Enables the use of `Timestamp`s for timestamp fields in `DocumentSnapshot`s.
 
