@@ -59,6 +59,17 @@ Executes the given updateFunction and then attempts to commit the changes applie
 | --------- | ------- |
 | updateFunction | **function**(non-null [ref firestore.Transaction]) <br /> The function to execute within the transaction context. |
 
+
+### settings
+
+[method]settings() returns Promise containing void;[/method]
+
+Specifies custom settings to be used to configure the Firestore instance. Must be set before invoking any other methods.
+
+| Parameter |         |
+| --------- | ------- |
+| settings | **[ref firestore.Settings]** <br /> The settings for your Cloud Firestore instance. <br /> Value must not be null. |
+
 ## Static Methods
 
 ### setLogLevel
@@ -80,8 +91,4 @@ firebase.firestore.setLogLevel('debug');
 
 ### enablePersistence
 
-### enableNetwork
-
-### disableNetwork
-
-### settings
+Use `firebase.firestore().settings()` instead.
