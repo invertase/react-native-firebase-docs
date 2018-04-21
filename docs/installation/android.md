@@ -60,8 +60,10 @@ buildscript {
     repositories {
         jcenter()
         google()  // <-- Check this line exists
-        ...
+        // ...
     }
+    // ...
+}
 ```
 
 3) In `android/build.gradle` update Android build tools to version `3.1.0`:
