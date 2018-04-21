@@ -17,7 +17,7 @@ Notification messages contain a predefined set of user-visible keys. Data messag
 
 |                      | Use scenario | How to send |
 | -------------------- | ------------ | ----------- |
-| Data message         | Client app is responsible for processing data messages. Data messages have only custom key-value pairs. | In a trusted environment such as Cloud Functions or your app server, use the Admin SDK or the FCM Server Protocols: Set the data key only. |
+| Data message         | Client app is responsible for processing data messages. Data messages have only custom key-value pairs. | In a trusted environment such as Cloud Functions or your app server, use the Admin SDK or the FCM Server Protocols: Set the data key only. <br/> <br/> Data messages cannot be sent from the Firebase console.|
 | Notification message | FCM automatically displays the message to end-user devices on behalf of the client app. | 1. In a trusted environment such as Cloud Functions or your app server, use the Admin SDK or the FCM Server Protocols: Set the notification key. May have optional data payload. Always collapsible. <br /><br /> 2. Use the Notifications composer: Enter the Message Text, Title, etc., and send. Add optional data payload by providing Custom data. |
 
 Use notification messages when you want FCM to handle displaying a notification on your client app's behalf. Use data messages when you want to process the messages on your client app.
