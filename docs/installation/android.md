@@ -55,7 +55,7 @@ Due to some breaking changes in v12 of the Android Firebase libraries, you'll ne
 1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
 2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
 
-```
+```groovy
 buildscript {
     repositories {
         jcenter()
@@ -66,13 +66,13 @@ buildscript {
 
 3) In `android/build.gradle` update Android build tools to version `3.1.0`:
 
-```
+```groovy
 classpath 'com.android.tools.build:gradle:3.1.0'
 ```
 
 4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
 
-```
+```groovy
 implementation(project(':react-native-firebase')) {
     transitive = false
 }
