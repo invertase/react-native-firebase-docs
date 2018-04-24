@@ -23,7 +23,7 @@ buildscript {
   dependencies {
     // ...
     classpath 'com.google.gms:google-services:{{ android.google.services }}'
-    classpath 'io.fabric.tools:gradle:{{ android.fabric.gradle }}'
+    classpath 'io.fabric.tools:gradle:{{ android.fabric.tools }}'
   }
 }
 ```
