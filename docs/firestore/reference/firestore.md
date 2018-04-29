@@ -62,7 +62,7 @@ Executes the given updateFunction and then attempts to commit the changes applie
 
 ### settings
 
-[method]settings() returns Promise containing void;[/method]
+[method]settings(settings) returns Promise containing void;[/method]
 
 Specifies custom settings to be used to configure the Firestore instance. Must be set before invoking any other methods.
 
