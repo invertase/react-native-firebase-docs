@@ -80,7 +80,7 @@ implementation(project(':react-native-firebase')) {
 }
 ```
 
-5) In `android/app/build.gradle`, update all the firebase and gms dependencies to 12.0.1
+5) In `android/app/build.gradle`, update all the firebase and gms dependencies to {{ android.firebase.version }}
 
 6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
 
