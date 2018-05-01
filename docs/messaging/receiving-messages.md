@@ -121,3 +121,15 @@ AppRegistry.registerHeadlessTask('RNFirebaseBackgroundMessage', () => bgMessagin
 ```
 
 > The headless task must be registered as `RNFirebaseBackgroundMessage`.
+
+### 4) Check `MainApplication.java`
+
+In your `MainApplication.java` you need to check that `SoLoader` is initialised in the `onCreate` method.  This was added in a recent version of React Native and may have been missed during an upgrade.
+
+```java
+@Override
+public void onCreate() { // <-- Check this block exists
+  super.onCreate();
+  SoLoader.init(this, /* native exopackage */ false); // <-- Check this line exists within the block
+}
+```

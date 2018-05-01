@@ -34,7 +34,7 @@ Gets the custom data associated with the notification.
 Gets the iOS specific properties of the notification.
 
 ### notificationId
-[method]collapseKey returns string;[/method]
+[method]notificationId returns string;[/method]
 
 Gets the ID of the notification.
 
