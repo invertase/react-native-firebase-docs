@@ -141,6 +141,7 @@
     - type: reference
       files:
       - firestore
+      - Blob
       - CollectionReference
       - DocumentChange
       - DocumentListenOptions
