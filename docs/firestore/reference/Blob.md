@@ -4,17 +4,6 @@
 firebase.firestore.Blob
 ```
 
-### FieldPath
-[method]new FieldPath(...var_args);[/method]
-
-A FieldPath refers to a field in a document. The path may consist of a single field name (referring to a top-level field in the document), or a list of field names (referring to a nested field in the document).
-
-Create a FieldPath by providing field names. If more than one field name is provided, the path will point to a nested field in a document.
-
-| Parameter |         |
-| --------- | ------- |
-| var_args  | A list of field names. <br /> Value may be repeated. |
-
 ## Static Methods
 
 ### fromBase64String
