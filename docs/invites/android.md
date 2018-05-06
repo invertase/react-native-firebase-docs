@@ -9,7 +9,7 @@ Add the `RNFirebaseInvitesPackage` to your `android/app/src/main/java/com/[app n
 ```java
 // ...
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.links.RNFirebaseInvitesPackage; // <-- Add this line
+import io.invertase.firebase.invites.RNFirebaseInvitesPackage; // <-- Add this line
 
 public class MainApplication extends Application implements ReactApplication {
     // ...

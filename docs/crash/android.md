@@ -9,7 +9,7 @@ Add the Firebase Cloud Crash dependancy to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-crash:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-crash:{{ android.firebase.crash }}"
 }
 ```
 

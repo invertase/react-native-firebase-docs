@@ -9,7 +9,7 @@ Add the Firebase Cloud Messaging dependency and optional ShortcutBadger dependen
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-messaging:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-messaging:{{ android.firebase.messaging }}"
   implementation 'me.leolin:ShortcutBadger:1.1.21@aar' // <-- Add this line if you wish to use badge on Android
 }
 ```

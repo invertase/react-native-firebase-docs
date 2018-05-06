@@ -7,7 +7,7 @@ Add the Firebase Authentication dependancy to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-auth:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-auth:{{ android.firebase.auth }}"
 }
 ```
 

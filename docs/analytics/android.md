@@ -9,7 +9,7 @@ Add the Firebase Analytics dependancy to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-analytics:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-analytics:{{ android.firebase.analytics }}"
 }
 ```
 

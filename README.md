@@ -1,6 +1,6 @@
 # React Native Firebase Docs
 
-This repoistory contains the documentation for the [RNFirebase documenatation](https://rnfirebase.io/docs).
+This repository contains the documentation for the [RNFirebase documentation](https://rnfirebase.io/docs).
 
 ## Internal Links
 
@@ -55,12 +55,12 @@ Each version has a custom config file (`_config.yaml`) which is converted . The 
 {
   android: {
     firebase: {
-      version: '11.4.2',
+      core: '11.4.2',
     },
   },
 }
 ```
 
 ```
-{{ android.firebase.version }} // 11.4.2
+{{ android.firebase.core }} // 11.4.2
 ```

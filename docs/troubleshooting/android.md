@@ -16,6 +16,10 @@ It's not a good idea to modify the version within the library's build.gradle, as
 A good break down of this process can be found here:
 https://medium.com/@suchydan/how-to-solve-google-play-services-version-collision-in-gradle-dependencies-ef086ae5c75f
 
+## Missing Byte Code (build time error)
+
+When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
+
 ## NoSuchMethodError: No virtual method (run time error)
 
 A common run time error when using `react-native-firebase` is of the form:
