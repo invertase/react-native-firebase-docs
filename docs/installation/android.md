@@ -19,7 +19,7 @@ buildscript {
   // ...
   dependencies {
     // ...
-    classpath 'com.google.gms:google-services:{{ android.google.services }}'
+    classpath 'com.google.gms:google-services:{{ android.gms.google-services }}'
   }
 }
 ```
@@ -42,11 +42,45 @@ dependencies {
   }
 
   // Firebase dependencies
-  implementation "com.google.android.gms:play-services-base:{{ android.firebase.version }}"
-  implementation "com.google.firebase:firebase-core:{{ android.firebase.version }}"
+  implementation "com.google.android.gms:play-services-base:{{ android.gms.play-services-base }}"
+  implementation "com.google.firebase:firebase-core:{{ android.firebase.core }}"
 
   ...
 ```
+
+### Update Gradle
+
+Due to some breaking changes in v12+ of the Android Firebase libraries, you'll need to upgrade your Gradle version to at least v4.4 and make a few other tweaks as follows:
+
+1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
+2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
+
+```groovy
+buildscript {
+    repositories {
+        jcenter()
+        google()  // <-- Check this line exists
+        // ...
+    }
+    // ...
+}
+```
+
+3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}`:
+
+```groovy
+classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
+```
+
+4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
+
+```groovy
+implementation(project(':react-native-firebase')) {
+    transitive = false
+}
+```
+
+5) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
 
 ### Update Google Play service maven repository
 
@@ -64,9 +98,7 @@ allprojects {
         // -------------------------------------------------
         // Add this below the existing maven property above
         // -------------------------------------------------
-        maven {
-            url 'https://maven.google.com'
-        }
+        google()
     }
 }
 ```

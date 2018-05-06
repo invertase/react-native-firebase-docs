@@ -209,8 +209,8 @@ Sets the information required to use BigPictureStyle.
 
 | Parameter |         |
 | --------- | ------- |
-| picture  | **string** <br />The bitmap to be used as the payload for the BigPicture notification. |
-| largeIcon  | **string** (optional) <br />Override the large icon when the big notification is shown. |
+| picture  | **string** <br /> The bitmap to be used as the payload for the BigPicture notification. Can be an image url such as `https://example.com/filename.jpg`, a local file url or the filename of a mipmap resource in android such as `ic_launcher`. |
+| largeIcon  | **string** (optional) <br />Override the large icon when the big notification is shown. Can be an image url such as `https://example.com/filename.jpg`, a local file url or the filename of a mipmap resource in android such as `ic_launcher`. |
 | contentTitle  | **string** (optional) <br />Overrides ContentTitle in the big form of the template. |
 | summaryText  | **string** (optional) <br />Set the first line of text after the detail section in the big form of the template. |
 

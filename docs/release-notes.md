@@ -12,7 +12,7 @@ Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dyn
 - Support for Android Notification Channels, Android Actions and Remote Input
 - Support for BigTextStyle and BigPictureStyle Android notifications
 
-**Outstanding functionality:**
+**Outstanding functionality (to be added in a later release):**
 - Support for iOS notification categories
 
 ----
@@ -22,7 +22,7 @@ Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dyn
 Install using:
  
 ```
-npm install --save react-native-firebase@next
+npm install --save react-native-firebase
 ```
 
 ----
@@ -96,7 +96,7 @@ We've added full support for Firebase Invites: [iOS](https://rnfirebase.io/docs/
 
 We've rolled out the `Builder` approach to Dynamic Links.  Check out the [createDynamicLink](https://rnfirebase.io/docs/v4.0.x/links/reference/links#createDynamicLink) docs and [Dynamic Link](https://rnfirebase.io/docs/v4.0.x/links/reference/DynamicLink) reference docs
 
-!> This is a breaking change
+!> This is a breaking change.
 
 ----
 
@@ -131,7 +131,7 @@ const dbShard = firebase.database('https://rnfirebase-3.firebaseio.com/');
 ## Upgrade instructions
 
 ```
-npm install --save react-native-firebase@next
+npm install --save react-native-firebase@latest
 ```
 
 ### Gradle
@@ -140,7 +140,8 @@ Due to some breaking changes in v12 of the Android libs, you'll need to upgrade 
 
 1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
 2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
-```
+
+```groovy
 buildscript {
     repositories {
         jcenter()
@@ -148,30 +149,57 @@ buildscript {
         ...
     }
 ```
-3) In `android/build.gradle` update Android build tools to version `3.1.0`:
+
+3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}` and google services to version `{{ android.gms.google-services }}`:
+
+```groovy
+classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
+classpath 'com.google.gms:google-services:{{ android.gms.google-services }}'
 ```
-classpath 'com.android.tools.build:gradle:3.1.0'
-```
+
 4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
-```
+
+```groovy
 implementation(project(':react-native-firebase')) {
     transitive = false
 }
 ```
-5) In `android/app/build.gradle`, update all the firebase and gms dependencies to 12.0.1
 
-6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
+5) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
+
+- **com.google.android.gms:play-services-base**: {{ android.gms.play-services-base }}
+- **com.google.firebase:firebase-core**: {{ android.firebase.core }}
+- **com.google.firebase:firebase-ads**: {{ android.firebase.ads }}
+- **com.google.firebase:firebase-auth**: {{ android.firebase.auth }}
+- **com.google.firebase:firebase-config**: {{ android.firebase.config }}
+- **com.google.firebase:firebase-crash**: {{ android.firebase.crash }}
+- **com.google.firebase:firebase-database**: {{ android.firebase.database }}
+- **com.google.firebase:firebase-invites**: {{ android.firebase.invites }}
+- **com.google.firebase:firebase-firestore**: {{ android.firebase.firestore }}
+- **com.google.firebase:firebase-messaging**: {{ android.firebase.messaging }}
+- **com.google.firebase:firebase-perf**: {{ android.firebase.perf }}
+- **com.google.firebase:firebase-storage**: {{ android.firebase.storage }}
+- **com.crashlytics.sdk.android:crashlytics**:  {{ android.firebase.crashlytics }}
+
+6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
 
 ### Messaging / Notifications
 
 As you can imagine, for Messaging and Notifications this is a completely breaking change, so you'll want to follow the installation instructions available here:
 
 - Messaging: [iOS](https://rnfirebase.io/docs/v4.0.x/messaging/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/messaging/android)
-- Notifications: [iOS](https://rnfirebase.io/docs/v4.0.x/notifications/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/messaging/android)
+- Notifications: [iOS](https://rnfirebase.io/docs/v4.0.x/notifications/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/notifications/android)
 
 There are a number of guides available: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/introduction) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/introduction)
 
 Reference can be found here: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/reference/Messaging) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notifications)
+
+Some key things to note:
+
+- The iOS `AppDelegate.m` will need to be completely updated
+- All packages in `AndroidManifest.xml` will need to be updated
+- `firebase.messaging().requestPermissions()` is now `firebase.messaging().requestPermission()`
+- `firebase.messaging().setBadgeNumber()` and `firebase.messaging().getBadgeNumber()` are now `firebase.notifications().setBadge()` and `firebase.notifications().getBadge()`
 
 ### Dynamic Links
 

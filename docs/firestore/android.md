@@ -9,7 +9,7 @@ Add the Firebase Firestore dependency to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-firestore:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-firestore:{{ android.firebase.firestore }}"
 }
 ```
 
