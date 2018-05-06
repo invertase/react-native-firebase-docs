@@ -150,10 +150,11 @@ buildscript {
     }
 ```
 
-3) In `android/build.gradle` update Android build tools to version `3.1.0`:
+3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}` and google services to version `{{ android.google.services }}`:
 
 ```groovy
-classpath 'com.android.tools.build:gradle:3.1.0'
+classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
+classpath 'com.google.gms:google-services:{{ android.google.services }}'
 ```
 
 4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.

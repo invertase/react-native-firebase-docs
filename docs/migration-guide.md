@@ -1,8 +1,6 @@
-# Migration Guide - v2 to v3
+# Migration Guide - v3 to v4
 
-The below is a quick summary of steps to take when migrating from v2 to v3 of RNFirebase. Please see the [v3 change log](https://github.com/invertase/react-native-firebase/releases/tag/v3.0.0) for detailed changes.
-
-> Please note, we're now using `Apache License 2.0` to license this library.
+The below is a quick summary of steps to take when migrating from v3 to v4 of RNFirebase. Please see the [v4 change log](https://github.com/invertase/react-native-firebase/releases/tag/v4.0.0) for detailed changes.
 
 ## 1) Install the latest version of RNFirebase:
 
@@ -10,68 +8,90 @@ The below is a quick summary of steps to take when migrating from v2 to v3 of RN
 npm install react-native-firebase@latest --save`
 ```
 
-## 2) Upgrade react-native version (only if you're currently lower than v0.48):
+## 2) Android
 
-- Follow the instructions [here](https://facebook.github.io/react-native/docs/upgrading.html)
+### Gradle
 
-## 3) Update your code to reflect deprecations/breaking changes if needed:
+Due to some breaking changes in v12 of the Android libs, you'll need to upgrade your Gradle version to at least v4.4 and make a few other tweaks as follows:
 
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] enabling database persistence (setPersistence) via JS is no longer supported - this is to prevent several race conditions. See sub points on how to enable these natively.
-  - [android] add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` to your `MainApplication` `onCreate` method.
-  - [ios]  add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line  inside your `AppDelegate` `didFinishLaunchingWithOptions` method.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [app] `new RNFirebase()` is no longer supported. See below for information about app initialisation.
-- ![#f03c15](https://placehold.it/15/fdfd96/000000?text=+) **[deprecated]** [app] `initializeApp()` for apps that are already initialised natively (i.e. the default app initialised via google-services plist/json) will now log a deprecation warning.
-  - As these apps are already initialised natively there's no need to call `initializeApp` in your JS code. For now, calling it will just return the app that's already internally initialised - in a future version this will throw an `already initialized` exception.
-  - Accessing apps can now be done the same way as the web sdk, simply call `firebase.app()` to get the default app, or with the name of specific app as the first arg, e.g. `const meow = firebase.app('catsApp');` to get a specific app.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [auth] Third party providers now use `providerId` rather than `provider` as per the Web SDK.  If you are manually creating your credentials, you will need to update the field name.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] Error messages and codes internally re-written to match the web sdk
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] `ref.isEqual` now checks the query modifiers as well as the ref path (was just path before). With the release of multi apps/core support this check now also includes whether the refs are for the same app.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [database] on/off behaviour changes. Previous `off` behaviour was incorrect. A `SyncTree/Repo` implementation was added to provide the correct behaviour you'd expect in the web sdk. Whilst this is a breaking change it shouldn't be much of an issue if you've previously setup your on/off handling correctly. See #160 for specifics of this change.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **[breaking]** [storage] UploadTaskSnapshot -> `downloadUrl` renamed to `downloadURL` to match web sdk
-
-## 4) Android - Update `android/build.gradle`:
-
-- Check you are using google-services 3.1.0 or greater:
-- You must add `maven { url 'https://maven.google.com' }` to your `android/build.gradle` as follows:
+1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
+2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
 
 ```groovy
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         jcenter()
+        google()  // <-- Check this line exists
+        ...
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
-        classpath 'com.google.gms:google-services:3.1.0' // CHECK VERSION HERE
+```
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
+3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}`:
 
-allprojects {
-    repositories {
-        mavenLocal()
-        jcenter()
-        maven {
-            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url "$rootDir/../node_modules/react-native/android"
-        }
-        // ADD THIS SECTION HERE
-        maven {
-            url 'https://maven.google.com'
-        }
-    }
+```groovy
+classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
+```
+
+4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
+
+```groovy
+implementation(project(':react-native-firebase')) {
+    transitive = false
 }
 ```
 
-## 5) Android - Update `app/build.gradle`:
+5) In `android/app/build.gradle`, update all the firebase and gms dependencies to 12.0.1
 
-- You must update all your Firebase & play services dependencies to 11.4.2.
+6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
 
-## 6) iOS - Update podfile:
+## 3) Module-specific instructions
 
-- You need to check that you're running at least version 4.3.0 of the Firebase Pods
+### Messaging / Notifications
+
+As you can imagine, for Messaging and Notifications this is a completely breaking change, so you'll want to follow the installation instructions available here:
+
+- Messaging: [iOS](https://rnfirebase.io/docs/v4.0.x/messaging/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/messaging/android)
+- Notifications: [iOS](https://rnfirebase.io/docs/v4.0.x/notifications/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/notifications/android)
+
+There are a number of guides available: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/introduction) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/introduction)
+
+Reference can be found here: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/reference/Messaging) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notifications)
+
+Some key things to note:
+
+- The iOS `AppDelegate.m` will need to be completely updated
+- All packages in `AndroidManifest.xml` will need to be updated
+- `firebase.messaging().requestPermissions()` is now `firebase.messaging().requestPermission()`
+- `firebase.messaging().setBadgeNumber()` and `firebase.messaging().getBadgeNumber()` are now `firebase.notifications().setBadge()` and `firebase.notifications().getBadge()`
+
+### Dynamic Links
+
+- For dynamic links on iOS, you need to make a subtle change to your `AppDelegate.m`:
+
+```objectivec
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    return [[RNFirebaseLinks instance] application:application openURL:url options:options];
+}
+
+- (BOOL)application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+ restorationHandler:(void (^)(NSArray *))restorationHandler {
+     return [[RNFirebaseLinks instance] application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
+}
+```
+
+### Crashlytics
+
+- All Crashlytics methods have been moved from `firebase.fabric.crashlytics()` to `firebase.crashlytics()`
+
+### Crash Reporting
+
+- Crash reporting is now flagged as deprecated.  We recommend you upgrade to Crashlytics which is now Firebase's recommended crash tool.
+
+## 3) iOS - Update podfile:
+
+- You need to check that you're running at least version 4.11.0 of the Firebase Pods
   - Run `pod outdated`
   - Run `pod update`
