@@ -18,7 +18,7 @@ https://medium.com/@suchydan/how-to-solve-google-play-services-version-collision
 
 ## Missing Byte Code (build time error)
 
-When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
+When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
 
 ## NoSuchMethodError: No virtual method (run time error)
 

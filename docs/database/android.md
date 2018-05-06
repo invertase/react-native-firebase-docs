@@ -7,7 +7,7 @@ Add the Firebase Realtime Database dependency to `android/app/build.gradle`:
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-database:{{ android.firebase.version }}"
+  implementation "com.google.firebase:firebase-database:{{ android.firebase.database }}"
 }
 ```
 

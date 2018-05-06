@@ -150,11 +150,11 @@ buildscript {
     }
 ```
 
-3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}` and google services to version `{{ android.google.services }}`:
+3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}` and google services to version `{{ android.gms.google-services }}`:
 
 ```groovy
 classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
-classpath 'com.google.gms:google-services:{{ android.google.services }}'
+classpath 'com.google.gms:google-services:{{ android.gms.google-services }}'
 ```
 
 4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
@@ -165,9 +165,23 @@ implementation(project(':react-native-firebase')) {
 }
 ```
 
-5) In `android/app/build.gradle`, update all the firebase and gms dependencies to 12.0.1
+5) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
 
-6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.0 of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
+- **com.google.android.gms:play-services-base**: {{ android.gms.play-services-base }}
+- **com.google.firebase:firebase-core**: {{ android.firebase.core }}
+- **com.google.firebase:firebase-ads**: {{ android.firebase.ads }}
+- **com.google.firebase:firebase-auth**: {{ android.firebase.auth }}
+- **com.google.firebase:firebase-config**: {{ android.firebase.config }}
+- **com.google.firebase:firebase-crash**: {{ android.firebase.crash }}
+- **com.google.firebase:firebase-database**: {{ android.firebase.database }}
+- **com.google.firebase:firebase-invites**: {{ android.firebase.invites }}
+- **com.google.firebase:firebase-firestore**: {{ android.firebase.firestore }}
+- **com.google.firebase:firebase-messaging**: {{ android.firebase.messaging }}
+- **com.google.firebase:firebase-perf**: {{ android.firebase.perf }}
+- **com.google.firebase:firebase-storage**: {{ android.firebase.storage }}
+- **com.crashlytics.sdk.android:crashlytics**:  {{ android.firebase.crashlytics }}
+
+6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
 
 ### Messaging / Notifications
 

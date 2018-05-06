@@ -6,6 +6,21 @@ android:
     version: 2.9.1
   firebase:
     version: 15.0.0
+    ads: 15.0.0
+    analytics: 15.0.2
+    auth: 15.1.0
+    config: 15.0.2
+    core: 15.0.2
+    crash: 15.0.2
+    crashlytics: 2.9.1
+    database: 15.0.0
+    firestore: 16.0.0
+    functions: 15.0.0
+    invites: 15.0.1
+    messaging: 15.0.2
+    perf: 15.1.0
+    storage: 15.0.2
     plugins: 1.1.1
-  google:
-    services: 3.2.1
+  gms:
+    google-services: 3.2.1
+    play-services-base: 15.0.0
