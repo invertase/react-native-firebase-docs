@@ -104,7 +104,7 @@ continueUserActivity:(NSUserActivity *)userActivity
 
 - Crash reporting is now flagged as deprecated.  We recommend you upgrade to Crashlytics which is now Firebase's recommended crash tool.
 
-## 3) iOS - Update podfile:
+## 4) iOS - Update podfile:
 
 - You need to check that you're running at least version 4.11.0 of the Firebase Pods
   - Run `pod outdated`

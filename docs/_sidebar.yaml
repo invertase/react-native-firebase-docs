@@ -6,8 +6,6 @@
       text: Getting Started
     - to: "/release-notes"
       text: Release Notes
-    - to: "/migration-guide"
-      text: Migration Guide
   - title: Installation
     links:
     - to: "/installation/initial-setup"
@@ -20,6 +18,8 @@
       icon: android
     - to: "/installation/javascript"
       text: Usage
+    - to: "/installation/migration-guide"
+      text: Migration Guide
     - to: "/installation/basic-kit"
       text: Basic Starter Kit
   - title: Troubleshooting
