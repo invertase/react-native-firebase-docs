@@ -71,6 +71,8 @@ throw new functions.https.HttpsError(
 
 ### FunctionsErrorCode
 
+Statics for these also exist for equality comparisons e.g. `firebase.functions.HttpsErrorCode.CANCELLED` outputs `cancelled`;
+
 ```ts
 type FunctionsErrorCode =
   | 'ok'

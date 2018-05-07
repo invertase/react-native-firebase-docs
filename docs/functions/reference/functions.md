@@ -4,6 +4,12 @@
 firebase.functions
 ```
 
+## Reference Material
+
+ - [Official Firebase Functions Documentation](https://firebase.google.com/docs/functions/callable)
+ - [RNFirebase - Functions Test Suite](https://github.com/invertase/react-native-firebase/blob/master/bridge/e2e/functions/functions.e2e.js)
+ - [RNFirebase - Test Cloud Function](https://github.com/invertase/react-native-firebase/tree/master/bridge/functions)
+
 ## Methods
 
 The following methods are accessed via the Functions instance `firebase.functions()`.
@@ -24,12 +30,12 @@ const httpsCallable = firebase.functions().httpsCallable('myFooBarFn');
 
 httpsCallable({ some: 'args' })
     .then(({ data }) => {
-        console.log(data.someResponse);
+        console.log(data.someResponse); // hello world
     })
     .catch(httpsError => {
-        console.log(httpsError.code);
-        console.log(httpsError.message);
-        console.log(httpsError.details.foo);
+        console.log(httpsError.code); // invalid-argument
+        console.log(httpsError.message); // Your error message goes here
+        console.log(httpsError.details.foo); // bar
     })
 ```
 [/collapse]
@@ -68,12 +74,3 @@ type HttpsCallableResult = {
 ### HttpsCallablePromise
 
 [method] type HttpsCallablePromise = Promise<HttpsCallableResult>| Promise<[ref functions.HttpsError]>; [/method]
-
-
-----
-
-## Links
-
- - [Official Firebase Functions Documentation](https://firebase.google.com/docs/functions/callable)
- - [RNFirebase - Functions Test Suite](https://github.com/invertase/react-native-firebase/blob/master/bridge/e2e/functions/functions.e2e.js)
- - [RNFirebase - Test Cloud Function](https://github.com/invertase/react-native-firebase/tree/master/bridge/functions)
