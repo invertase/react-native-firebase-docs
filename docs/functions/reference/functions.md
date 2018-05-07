@@ -9,7 +9,7 @@ firebase.functions
 The following methods are accessed via the Functions instance `firebase.functions()`.
 
 ### httpsCallable
-[method]httpsCallable(name: string) returns (data?: any): [HttpsCallablePromise](#types) => {};[/method]
+[method]httpsCallable(name: string) returns (data?: any): [HttpsCallablePromise](#Types) => {};[/method]
 
 Gets an `HttpsCallable` instance that refers to the function with the given name.
 
@@ -38,7 +38,7 @@ type HttpsCallableResult = {
 ### HttpsCallablePromise
 
 ```ts
-type HttpsCallablePromise = Promise<HttpsCallableResult>  | Promise<[ref functions.HttpsError]>;
+type HttpsCallablePromise = Promise<HttpsCallableResult>| Promise<HttpsError>;
 ```
 
 ## Links
