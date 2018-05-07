@@ -38,7 +38,7 @@ httpsCallable({ some: 'args' })
 ```js
 const functions = require('firebase-functions');
 
-exports.runTest = functions.https.onCall(data => {
+exports.myFooBarFn = functions.https.onCall(data => {
     console.log(data.some);
 
     if (!data.some) {
