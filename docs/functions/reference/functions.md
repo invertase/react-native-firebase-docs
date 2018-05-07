@@ -41,6 +41,8 @@ type HttpsCallableResult = {
 type HttpsCallablePromise = Promise<HttpsCallableResult>| Promise<HttpsError>;
 ```
 
+----
+
 ## Links
 
  - [Official Firebase Functions Documentation](https://firebase.google.com/docs/functions/callable)
