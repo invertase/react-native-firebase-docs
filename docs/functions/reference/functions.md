@@ -18,9 +18,39 @@ Gets an `HttpsCallable` instance that refers to the function with the given name
 | name      | **string** <br /> The name of the https callable function. |
 
 
-[collapse Example]
+[collapse RNFirebase Client SDK Example]
 ```js
 const httpsCallable = firebase.functions().httpsCallable('myFooBarFn');
+
+httpsCallable({ some: 'args' })
+    .then(({ data }) => {
+        console.log(data.someResponse);
+    })
+    .catch(httpsError => {
+        console.log(httpsError.code);
+        console.log(httpsError.message);
+        console.log(httpsError.details.foo);
+    })
+```
+[/collapse]
+
+[collapse Firebase Cloud Function Example]
+```js
+const functions = require('firebase-functions');
+
+exports.runTest = functions.https.onCall(data => {
+    console.log(data.some);
+
+    if (!data.some) {
+        throw new functions.https.HttpsError(
+          'invalid-argument', // code
+          'Your error message goes here', // message
+          { foo: 'bar' }, // details - optional and can be anything JSON serializable
+        );
+    }
+
+    return { someResponse: 'hello world' };
+});
 ```
 [/collapse]
 
@@ -37,9 +67,8 @@ type HttpsCallableResult = {
 
 ### HttpsCallablePromise
 
-```ts
-type HttpsCallablePromise = Promise<HttpsCallableResult>| Promise<HttpsError>;
-```
+[method] type HttpsCallablePromise = Promise<HttpsCallableResult>| Promise<[ref functions.HttpsError]>; [/method]
+
 
 ----
 
