@@ -4,7 +4,7 @@ First ensure you have followed the [initial setup guide](version /installation/i
 
 ## Add the dependency
 
-Add the Firebase Performance Monitoring dependancy to `android/app/build.gradle`:
+Add the Firebase Performance Monitoring dependency to `android/app/build.gradle`:
 
 ```groovy
 dependencies {

@@ -2,7 +2,7 @@
 
 ## Add the dependency
 
-Add the Firebase Authentication dependancy to `android/app/build.gradle`:
+Add the Firebase Authentication dependency to `android/app/build.gradle`:
 
 ```groovy
 dependencies {
