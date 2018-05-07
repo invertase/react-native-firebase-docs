@@ -4,10 +4,12 @@
 type HttpsError implements Error
 ```
 
+----
+
 ## Properties
 
 ### code
-[method]code returns [FunctionsErrorCode](#types);[/method]
+[method]code returns [FunctionsErrorCode](#Types);[/method]
 
 A standard error code as returned by the first arg of your thrown error on cloud functions.
 
@@ -57,6 +59,8 @@ These values can also be access via statics, e.g. `firebase.functions.HttpsError
 - 'unauthenticated': The request does not have valid authentication
   credentials for the operation.
 
+----
+
 ### message
 [method]message returns string;[/method]
 
@@ -71,6 +75,7 @@ throw new functions.https.HttpsError(
 );
 ```
 
+----
 
 ### details
 [method]details returns ?any;[/method]
@@ -85,6 +90,8 @@ throw new functions.https.HttpsError(
   { foo: 'bar' }, // <---- THIS
 );
 ```
+
+----
 
 ## Types
 
