@@ -144,15 +144,14 @@
       - Blob
       - CollectionReference
       - DocumentChange
-      - DocumentListenOptions
       - DocumentReference
       - DocumentSnapshot
       - FieldPath
       - FieldValue
       - FirestoreError
       - GeoPoint
+      - MetadataChanges
       - Query
-      - QueryListenOptions
       - QuerySnapshot
       - SetOptions
       - Settings
