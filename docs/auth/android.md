@@ -11,6 +11,8 @@ dependencies {
 }
 ```
 
+?> If you plan to make use of Email sign-in links then you'll also need to follow the [Dynamic Links for Android installation guide]](version /links/android).
+
 ## Install the RNFirebase Authentication package
 
 Add the `RNFirebaseAuthPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
