@@ -444,23 +444,23 @@ To complete sign in with the email link, call [ref auth.auth#signInWithEmailLink
 
 [collapse Example]
 ```js
-    const email = 'foo@example.com';
-    const actionCodeSettings = {
-        url: 'http://example.com/something?foobar=1234',
-        handleCodeInApp: true, // must always be true for sendSignInLinkToEmail
-        iOS: {
-          bundleId: 'com.testing',
-        },
-        android: {
-          packageName: 'com.testing',
-          installApp: true,
-          minimumVersion: '12',
-        },
-    };
+const email = 'foo@example.com';
+const actionCodeSettings = {
+    url: 'http://example.com/something?foobar=1234',
+    handleCodeInApp: true, // must always be true for sendSignInLinkToEmail
+    iOS: {
+      bundleId: 'com.testing',
+    },
+    android: {
+      packageName: 'com.testing',
+      installApp: true,
+      minimumVersion: '12',
+    },
+};
 
-    firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
-        // .then()
-        // .catch(error) -> error.code
+firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
+    // .then()
+    // .catch(error) -> error.code
 ```
 [/collapse]
 
