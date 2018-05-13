@@ -37,9 +37,7 @@ The Firebase modules need to be installed as project dependencies. In the `andro
 ```groovy
 dependencies {
   // This should be here already
-  compile(project(':react-native-firebase')) {
-    transitive = false
-  }
+  implementation project(':react-native-firebase')
 
   // Firebase dependencies
   implementation "com.google.android.gms:play-services-base:{{ android.gms.play-services-base }}"
