@@ -477,6 +477,67 @@ firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
 | auth/invalid-continue-uri | The continue URL provided in the request is invalid. |
 | auth/unauthorized-continue-uri | The domain of the continue URL is not whitelisted. Whitelist the domain in the Firebase console. |
 
+### signInWithEmailLink
+[method]signInWithEmailLink(email, emailLink) returns Promise containing [ref auth.UserCredential];[/method]
+
+Asynchronously signs in using an email and sign-in email link.
+
+Fails with an error if the email address is invalid or the email link has expired.
+
+> Use [ref auth.user#isSignInWithEmailLink] to check if an inbound dynamic link is a sign-in link. None sign-in links will fail.
+
+| Parameter |         |
+| --------- | ------- |
+| email     | **string** |
+| emailLink | **string**
+
+[collapse Example]
+```js
+const email = 'foo@example.com';
+
+// link from firebase.links().getInitialLink() or it's link listener
+const link = '';
+
+firebase.auth().signInWithEmailLink(email, link);
+    // .then()
+    // .catch(error) -> error.code
+```
+[/collapse]
+
+### isSignInWithEmailLink
+[method]isSignInWithEmailLink(emailLink) returns boolean;[/method]
+
+Checks if an incoming link is a sign-in with email link. Use on incoming links via [ref links.links#getInitialLink] or [ref links.links#onLink]
+
+| Parameter |         |
+| --------- | ------- |
+| emailLink | **string**
+
+[collapse Example]
+```js
+firebase.links()
+    .getInitialLink()
+    .then((url) => {
+        if (firebase.auth().isSignInWithEmailLink(url)) {
+            // call signInWithEmailLink or make a credential from the url using
+            // firebase.auth.EmailAuthProvider.credentialWithLink(email, url)
+            // and use any of the credential based auth flows with it, e.g. linkWithCredential
+        } else {
+           // not a sign-in link - must be some other type of link
+        }
+    });
+```
+[/collapse]
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/invalid-email  | Thrown if the email address is not valid. |
+| auth/expired-action-code  | Thrown if the email link has expired. |
+| auth/user-disabled  | Thrown if the user corresponding to the given email has been disabled. |
+
+
 ### verifyPasswordResetCode
 
 [method]verifyPasswordResetCode(code) returns Promise containing string;[/method]
