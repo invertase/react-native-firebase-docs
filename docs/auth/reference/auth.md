@@ -529,15 +529,6 @@ firebase.links()
 ```
 [/collapse]
 
-#### Error Codes
-
-| Code | Message |
-| --------- | ------- |
-| auth/invalid-email  | Thrown if the email address is not valid. |
-| auth/expired-action-code  | Thrown if the email link has expired. |
-| auth/user-disabled  | Thrown if the user corresponding to the given email has been disabled. |
-
-
 ### verifyPasswordResetCode
 
 [method]verifyPasswordResetCode(code) returns Promise containing string;[/method]
