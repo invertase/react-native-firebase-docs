@@ -11,7 +11,7 @@ dependencies {
 }
 ```
 
-?> If you plan to make use of Email sign-in links then you'll also need to follow the [Dynamic Links for Android installation guide]](version /links/android).
+?> If you plan to make use of Email sign-in links then you'll also need to follow the [Dynamic Links for Android installation guide](version /links/android).
 
 ## Install the RNFirebase Authentication package
 

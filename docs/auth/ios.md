@@ -12,4 +12,4 @@ pod 'Firebase/Auth'
 
 Run `pod update`.
 
-?> If you plan to make use of email sign-in links then you'll also need to follow the [Dynamic Links for iOS installation guide]](version /links/iOS).
+?> If you plan to make use of email sign-in links then you'll also need to follow the [Dynamic Links for iOS installation guide](version /links/ios).
