@@ -37,9 +37,7 @@ The Firebase modules need to be installed as project dependencies. In the `andro
 ```groovy
 dependencies {
   // This should be here already
-  compile(project(':react-native-firebase')) {
-    transitive = false
-  }
+  implementation project(':react-native-firebase')
 
   // Firebase dependencies
   implementation "com.google.android.gms:play-services-base:{{ android.gms.play-services-base }}"
@@ -75,9 +73,7 @@ classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
 4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
 
 ```groovy
-implementation(project(':react-native-firebase')) {
-    transitive = false
-}
+implementation project(':react-native-firebase')
 ```
 
 5) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
