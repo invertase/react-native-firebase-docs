@@ -484,7 +484,7 @@ Asynchronously signs in using an email and sign-in email link.
 
 Fails with an error if the email address is invalid or the email link has expired.
 
-> Use [ref auth.user#isSignInWithEmailLink] to check if an inbound dynamic link is a sign-in link. None sign-in links will fail.
+> Use [ref auth.auth#isSignInWithEmailLink] to check if an inbound dynamic link is a sign-in link. None sign-in links will fail.
 
 | Parameter |         |
 | --------- | ------- |
