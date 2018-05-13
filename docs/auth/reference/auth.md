@@ -181,7 +181,7 @@ This method will be renamed to `signInWithCredential` replacing the existing met
 
 | Code | Message |
 | --------- | ------- |
-| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchProvidersForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchSignInMethodsForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
@@ -301,7 +301,7 @@ This method will be deprecated and will be updated to resolve with a `firebase.a
 
 | Code | Message |
 | --------- | ------- |
-| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchProvidersForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchSignInMethodsForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
@@ -418,10 +418,12 @@ Returns metadata about the code.
 | auth/user-disabled  | Thrown if the user corresponding to the given password reset code has been disabled. |
 | auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
 
-### fetchProvidersForEmail
-[method]fetchProvidersForEmail(email) returns Promise containing Array of string;[/method]
+### fetchSignInMethodsForEmail
+[method]fetchSignInMethodsForEmail(email) returns Promise containing Array of string;[/method]
 
-Gets the list of provider IDs that can be used to sign in for the given email address. Useful for an "identifier-first" sign-in flow.
+Returns a list of authentication methods that can be used to sign in a given user (identified by its main email address).
+
+Useful for an "identifier-first" sign-in flow.
 
 | Parameter |         |
 | --------- | ------- |
