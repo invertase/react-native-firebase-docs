@@ -4,23 +4,23 @@ First ensure you have followed the [initial setup guide](version /installation/i
 
 ## Add the dependency
 
-Add the Firebase Analytics dependency to `android/app/build.gradle`:
+Add the Firebase Functions dependency to `android/app/build.gradle`:
 
 ```groovy
 dependencies {
   // ...
-  implementation "com.google.firebase:firebase-analytics:{{ android.firebase.analytics }}"
+  implementation "com.google.firebase:firebase-functions:{{ android.firebase.functions }}"
 }
 ```
 
-## Install the RNFirebase Analytics package
+## Install the RNFirebase Functions package
 
-Add the `RNFirebaseAnalyticsPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
+Add the `RNFirebaseFunctionsPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
 
 ```java
 // ...
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage; // <-- Add this line
+import io.invertase.firebase.functions.RNFirebaseFunctionsPackage; // <-- Add this line
 
 public class MainApplication extends Application implements ReactApplication {
     // ...
@@ -30,7 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new RNFirebasePackage(),
-          new RNFirebaseAnalyticsPackage() // <-- Add this line
+          new RNFirebaseFunctionsPackage() // <-- Add this line
       );
     }
   };

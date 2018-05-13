@@ -144,21 +144,34 @@
       - Blob
       - CollectionReference
       - DocumentChange
-      - DocumentListenOptions
       - DocumentReference
       - DocumentSnapshot
       - FieldPath
       - FieldValue
       - FirestoreError
       - GeoPoint
+      - MetadataChanges
       - Query
-      - QueryListenOptions
       - QuerySnapshot
       - SetOptions
       - Settings
       - SnapshotMetadata
       - Transaction
       - WriteBatch
+  - title: Cloud Functions
+    path: functions
+    links:
+    - to: "/ios"
+      text: Install on iOS
+      icon: apple
+    - to: "/android"
+      text: Install on Android
+      icon: android
+    - type: divider
+    - type: reference
+      files:
+      - functions
+      - HttpsError
   - title: Cloud Messaging
     path: messaging
     links:

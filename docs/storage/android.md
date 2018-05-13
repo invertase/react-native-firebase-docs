@@ -2,7 +2,7 @@
 
 ## Add the dependency
 
-Add the Firebase Storage dependancy to `android/app/build.gradle`:
+Add the Firebase Storage dependency to `android/app/build.gradle`:
 
 ```groovy
 dependencies {
