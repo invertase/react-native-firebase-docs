@@ -9,6 +9,8 @@ This is the interface that defines the required continue/state URL with optional
 - `android`: Sets the Android package name. This will try to open the link in an android app if it is installed. If installApp is passed, it specifies whether to install the Android app if the device supports it and the app is not already installed. If this field is provided without a packageName, an error is thrown explaining that the packageName must be provided in conjunction with this field. If minimumVersion is specified, and an older version of the app is installed, the user is taken to the Play Store to upgrade the app.
 - `handleCodeInApp`: The default is false. When set to true, the action code link will be be sent as a Universal Link or Android App Link and will be opened by the app if installed. In the false case, the code will be sent to the web widget first and then on continue will redirect to the app if installed.
 
+?> `handleCodeInApp` must always be `true` when being used for [ref auth.auth#fetchSignInMethodsForEmail]
+
 ## Structure
 
 ```js

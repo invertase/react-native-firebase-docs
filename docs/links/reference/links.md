@@ -67,6 +67,8 @@ firebase.links()
 
 Returns the URL that the app has been launched from. If the app was not launched from a URL the return value will be null.
 
+> Use [ref auth.auth#isSignInWithEmailLink] to check if an inbound dynamic link is an email sign-in link.
+
 [collapse Example]
 ```javascript
 firebase.links()
@@ -89,6 +91,8 @@ Subscribe to URL open events while the app is still running.
 The listener is called from URL open events whilst the app is still running, use [getInitialLink](#getInitialLink) for URLs which cause the app to open from a previously closed / not running state.
 
 Returns an unsubscribe function, call the returned function to unsubscribe from all future events.
+
+> Use [ref auth.auth#isSignInWithEmailLink] to check if an inbound dynamic link is an email sign-in link.
 
 [collapse Example]
 ```javascript

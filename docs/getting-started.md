@@ -75,7 +75,6 @@ For feature requests please use our [Canny Board](http://invertase.link/requests
 
 Detailed changes for each release are documented in the [releases notes](https://github.com/invertase/react-native-firebase/releases).
 
-
 ## Contributing
 
 Please make sure to read the [Contributing Guide](https://github.com/invertase/react-native-firebase/blob/master/CONTRIBUTING.md) before making a pull request.

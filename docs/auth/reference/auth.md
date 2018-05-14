@@ -87,7 +87,7 @@ Signs out the current user.
 
 Asynchronously signs in as an anonymous user.
 
-This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#signInAnonymouslyAndRetrieveData].
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.auth#signInAnonymouslyAndRetrieveData].
 
 If there is already an anonymous user signed in, that user will be returned; otherwise, a new anonymous user identity will be created and returned.
 
@@ -144,7 +144,7 @@ Parameter |         |
 
 Creates a new user account associated with the specified email address and password.
 
-This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#createUserAndRetrieveDataWithEmailAndPassword].
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.auth#createUserAndRetrieveDataWithEmailAndPassword].
 
 On successful creation of the user account, this user will also be signed in to your application.
 
@@ -181,7 +181,7 @@ This method will be renamed to `signInWithCredential` replacing the existing met
 
 | Code | Message |
 | --------- | ------- |
-| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchProvidersForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchSignInMethodsForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
@@ -301,7 +301,7 @@ This method will be deprecated and will be updated to resolve with a `firebase.a
 
 | Code | Message |
 | --------- | ------- |
-| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchProvidersForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
+| auth/account-exists-with-different-credential  | Thrown if there already exists an account with the email address asserted by the credential. Resolve this by calling [ref auth#fetchSignInMethodsForEmail] and then asking the user to sign in using one of the returned providers. Once the user is signed in, the original credential can be linked to the user with [ref auth.User#linkWithCredential]. |
 | auth/invalid-credential  | Thrown if the credential is malformed or has expired. |
 | auth/operation-not-allowed  | Thrown if the type of account corresponding to the credential is not enabled. Enable the account type in the Firebase Console, under the Auth tab. |
 | auth/user-disabled  | Thrown if the user corresponding to the given credential has been disabled. |
@@ -418,14 +418,116 @@ Returns metadata about the code.
 | auth/user-disabled  | Thrown if the user corresponding to the given password reset code has been disabled. |
 | auth/user-not-found  | Thrown if there is no user corresponding to the password reset code. This may have happened if the user was deleted between when the code was issued and when this method was called. |
 
-### fetchProvidersForEmail
-[method]fetchProvidersForEmail(email) returns Promise containing Array of string;[/method]
+### fetchSignInMethodsForEmail
+[method]fetchSignInMethodsForEmail(email) returns Promise containing Array of string;[/method]
 
-Gets the list of provider IDs that can be used to sign in for the given email address. Useful for an "identifier-first" sign-in flow.
+Returns a list of authentication methods that can be used to sign in a given user (identified by its main email address).
+
+Useful for an "identifier-first" sign-in flow.
 
 | Parameter |         |
 | --------- | ------- |
 | email     | **string** |
+
+
+### sendSignInLinkToEmail
+[method]sendSignInLinkToEmail(email, actionCodeSettings) returns Promise containing void;[/method]
+
+Sends a sign-in email link to the user with the specified email.
+
+To complete sign in with the email link, call [ref auth.auth#signInWithEmailLink] with the email address and the email link supplied in the email sent to the user.
+
+| Parameter |         |
+| --------- | ------- |
+| email     | **string** |
+| actionCodeSettings | **[ref auth.ActionCodeSettings]**
+
+[collapse Example]
+```js
+const email = 'foo@example.com';
+const actionCodeSettings = {
+    url: 'http://example.com/something?foobar=1234',
+    handleCodeInApp: true, // must always be true for sendSignInLinkToEmail
+    iOS: {
+      bundleId: 'com.testing',
+    },
+    android: {
+      packageName: 'com.testing',
+      installApp: true,
+      minimumVersion: '12',
+    },
+};
+
+firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
+    // .then()
+    // .catch(error) -> error.code
+```
+[/collapse]
+
+#### Error Codes
+
+| Code | Message |
+| --------- | ------- |
+| auth/argument-error  | Thrown if handleCodeInApp is false. |
+| auth/invalid-email  | Thrown if the email address is not valid. |
+| auth/operation-not-allowed  | Thrown if 'Email/Password > Email link (passwordless sign-in)' authentication mode is not enabled on the Firebase console |
+| auth/missing-android-pkg-name  | An Android package name must be provided if the Android app is required to be installed. |
+| auth/missing-continue-uri | A continue URL must be provided in the request. |
+| auth/missing-ios-bundle-id | An iOS Bundle ID must be provided if an App Store ID is provided. |
+| auth/invalid-continue-uri | The continue URL provided in the request is invalid. |
+| auth/unauthorized-continue-uri | The domain of the continue URL is not whitelisted. Whitelist the domain in the Firebase console. |
+
+### signInWithEmailLink
+[method]signInWithEmailLink(email, emailLink) returns Promise containing [ref auth.UserCredential];[/method]
+
+Asynchronously signs in using an email and sign-in email link.
+
+Fails with an error if the email address is invalid or the email link has expired.
+
+> Use [ref auth.auth#isSignInWithEmailLink] to check if an inbound dynamic link is a sign-in link. None sign-in links will fail.
+
+| Parameter |         |
+| --------- | ------- |
+| email     | **string** |
+| emailLink | **string**
+
+[collapse Example]
+```js
+const email = 'foo@example.com';
+
+// link from firebase.links().getInitialLink() or it's link listener
+const link = '';
+
+firebase.auth().signInWithEmailLink(email, link);
+    // .then()
+    // .catch(error) -> error.code
+```
+[/collapse]
+
+### isSignInWithEmailLink
+[method]isSignInWithEmailLink(emailLink) returns boolean;[/method]
+
+Checks if an incoming link is a sign-in with email link. Use on incoming links via [ref links.links#getInitialLink] or [ref links.links#onLink]
+
+| Parameter |         |
+| --------- | ------- |
+| emailLink | **string**
+
+[collapse Example]
+```js
+firebase.links()
+    .getInitialLink()
+    .then((url) => {
+        if (firebase.auth().isSignInWithEmailLink(url)) {
+            // call signInWithEmailLink or make a credential from the url using
+            // firebase.auth.EmailAuthProvider.credentialWithLink(email, url)
+            // and use any of the credential based auth flows with it, e.g. linkWithCredential
+        } else {
+           // not a sign-in link - must be some other type of link
+        }
+    });
+```
+[/collapse]
 
 ### verifyPasswordResetCode
 

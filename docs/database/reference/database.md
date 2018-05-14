@@ -17,7 +17,7 @@ The client automatically maintains a persistent connection to the Database serve
 
 While offline, the client will no longer receive data updates from the Database. However, all Database operations performed locally will continue to immediately fire events, allowing your application to continue behaving normally. Additionally, each operation performed locally will automatically be queued and retried upon reconnection to the Database server.
 
-To reconnect to the Database and begin receiving remote events, see [ref database.Database#goOnline].
+To reconnect to the Database and begin receiving remote events, see [ref database.database#goOnline].
 
 [collapse Example]
 ```js
