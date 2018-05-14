@@ -2,8 +2,6 @@
 
 **React Native Firebase** makes using [Firebase](http://firebase.com) with React Native simple. It provides a _light-weight_ layer on-top of the native Firebase SDKs (iOS & Android) whilst mirroring the Firebase Web SDKs API as closely as possible.
 
----
-
 ## Why 
 
 Although some features from the [Firebase Web SDK](https://www.npmjs.com/package/firebase) will generally work with React Native, it is mainly built for the web and as such has a limited compatible feature set.
@@ -11,8 +9,6 @@ Although some features from the [Firebase Web SDK](https://www.npmjs.com/package
 In contrast we use the Firebase Native SDKs - this allows us to provide APIs to a vast majority of Firebase products and services.
 
 See the [Supported Firebase Features](#Supported-Firebase-Features) table below to compare our supported features.
-
----
 
 ## Getting Started
 
@@ -25,7 +21,6 @@ We provide several options for you to get started with React Native Firebase, se
 |  | Recommended for **experienced** React Native **developers** and **existing** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. | Recommended for **beginners** and **new** React Native **projects**. |
 |  | [![continue][btn-guide]](version /installation/initial-setup) | [![btn-kit][btn-kit]](version /installation/basic-kit) | [![btn-kits][btn-kits]](/kits) |
 
----
 
 ## Supported Firebase Features
 > The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native. A '**?**' indicates partial support.
@@ -52,7 +47,6 @@ We provide several options for you to get started with React Native Firebase, se
 | **Remote Config**          |   ✅   |   ✅   |   ✅   |   ❌   |
 | **Storage**                |   ✅   |   ✅   |   ✅   | **?**  |
 
----
 
 ### Supported versions - React Native / Firebase
 
@@ -64,7 +58,6 @@ We provide several options for you to get started with React Native Firebase, se
 | Firebase Android SDK   | 11.0.0 + | 11.8.0 + | 12.0.0 + |
 | Firebase iOS SDK       | 4.0.0 +  | 4.7.0 +  | 4.11.0 + |
 
----
 
 ## Questions
 
@@ -81,8 +74,6 @@ For feature requests please use our [Canny Board](http://invertase.link/requests
 ## Changelog
 
 Detailed changes for each release are documented in the [releases notes](https://github.com/invertase/react-native-firebase/releases).
-
----
 
 ## Contributing
 
