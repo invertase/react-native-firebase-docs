@@ -87,7 +87,7 @@ Signs out the current user.
 
 Asynchronously signs in as an anonymous user.
 
-This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#signInAnonymouslyAndRetrieveData].
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.auth#signInAnonymouslyAndRetrieveData].
 
 If there is already an anonymous user signed in, that user will be returned; otherwise, a new anonymous user identity will be created and returned.
 
@@ -144,7 +144,7 @@ Parameter |         |
 
 Creates a new user account associated with the specified email address and password.
 
-This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.Auth#createUserAndRetrieveDataWithEmailAndPassword].
+This method will be deprecated and will be updated to resolve with a `firebase.auth.UserCredential` as is returned in [ref auth.auth#createUserAndRetrieveDataWithEmailAndPassword].
 
 On successful creation of the user account, this user will also be signed in to your application.
 
