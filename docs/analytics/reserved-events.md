@@ -4,7 +4,6 @@ A number of methods are provided to help tailor analytics specifically for your 
 
 !> Attempting to use one of these events will throw an exception.
  
- 
 ```javascript
 const reserved = [
   'app_clear_data',
