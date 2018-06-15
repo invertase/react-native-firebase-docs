@@ -106,7 +106,7 @@ Run `pod install`.
 
 #### Option 2: Manual frameworks (Not Recommended)
 
-If for some reason you are unable to use Cocoapods, then you need to manually add the Firebase frameworks to an `ios/Firebase` folder for them to be picked up by React Native Firebase.
+If for some reason you are unable to use Cocoapods, then you need to manually unzip the Firebase SDK to the `ios/Firebase` folder, and then drag all desired frameworks and Firebase.h to the project (as documented in the README), in order to be picked up by React Native Firebase.
 
 ## 2. React Native Firebase Installation Recommended installation
 
