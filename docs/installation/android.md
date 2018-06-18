@@ -99,6 +99,14 @@ allprojects {
 }
 ```
 
+### Using with Proguard enabled
+
+When using react-native-firebase with Proguard enabled (`minifyEnabled true in android/app/build.gradle`) you need to update your proguard-rules.pro file (`android/app/proguard-rules.pro`) to include the following lines:
+```
+-keep class io.invertase.firebase.** { *; }
+-dontwarn io.invertase.firebase.**
+```
+
 ## 4. Install modules
 
 The `RNFirebasePackage` only provides your application with access to [Core](version /core/reference/core) features. Check out the installation guides on the other modules for how to use other Firebase features.
