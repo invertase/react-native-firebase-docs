@@ -2,6 +2,8 @@
 
 First ensure you have followed the [initial setup guide](version /installation/initial-setup) and the [dynamic links setup guide](version /links/android).
 
+Secondly ensure you have SHA fingerprint added in your Firebase console, under the 'General settings' tab. Otherwise you will a 'Message failed to send' error.
+
 ## Install the RNFirebase Invites package
 
 Add the `RNFirebaseInvitesPackage` to your `android/app/src/main/java/com/[app name]/MainApplication.java`:
