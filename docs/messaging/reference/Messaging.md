@@ -13,9 +13,7 @@ The following methods are accessed via the Cloud Messaging instance `firebase.me
 ### getToken
 [method]getToken() returns Promise containing String;[/method]
 
-After calling requestPermission() you can call this method to get an FCM registration token that can be used to send push messages to this user.
-
-The generated registration token is used to identify the web app instance and periodically sends data to the Firebase backend. To stop this, call firebase.messaging.Messaging#deleteToken.
+This generated registration token is used to identify the app instance and periodically sends data to the Firebase backend. To stop this, call firebase.messaging.Messaging#deleteToken.
 
 Returns the FCM token;
 
