@@ -25,7 +25,7 @@ We provide several options for you to get started with React Native Firebase, se
 ## Supported Firebase Features
 > The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native. A '**?**' indicates partial support.
 
-| Firebase Features          | v2.2.x | v3.3.x | v4.1.x | Web SDK |
+| Firebase Features          | v2.2.x | v3.3.x | v4.3.x | Web SDK |
 | -------------------------- | :----: | :----: | :----: | :-----: |
 | **AdMob**                  |   ✅   |   ✅   |   ✅   |   ❌   |
 | **Analytics**              |   ✅   |   ✅   |   ✅   |   ❌   |
@@ -41,7 +41,7 @@ We provide several options for you to get started with React Native Firebase, se
 | **Dynamic Links**          |   ❌   |   ✅   |   ✅   |   ❌   |
 | **[Functions Callable](https://firebase.googleblog.com/2018/04/launching-cloud-functions-for-firebase-1-0.html?m=1)**              |   ❌   |   ❌   |   ✅   |   ✅   |
 | **Invites**                |   ❌   |   ❌   |   ✅   |   ❌   |
-| **Instance ID**            |   ❌   |   ❌   | **?**  |   ❌   |
+| **Instance ID**            |   ❌   |   ❌   |   ✅  |   ❌   |
 | **Performance Monitoring** |   ✅   |   ✅   |   ✅   |   ❌   |
 | **Realtime Database**      |   ✅   |   ✅   |   ✅   |   ✅   |
 | _-- Offline Persistence_   |   ✅   |   ✅   |   ✅   | **?**  |
@@ -53,11 +53,11 @@ We provide several options for you to get started with React Native Firebase, se
 
 > The table below shows the supported versions of React Native and the Firebase SDKs for different versions of `react-native-firebase`
 
-|                        | 2.2.x    | 3.3.x    |  4.0.x   |  **4.1.x**  |   4.2.x  |
-|------------------------|----------|----------|----------|----------|----------|
-| React Native           | 0.47 +   | 0.50 +   | 0.52 +   | 0.52 +   |  0.52 +  |
-| Firebase Android SDK   | 11.0.0 + | 11.8.0 + | 12.0.0 + | 15.0.0 + | 15.0.0 + |
-| Firebase iOS SDK       | 4.0.0 +  | 4.7.0 +  | 4.11.0 + | 4.11.0 + |  5.0.0 + |
+|                        | 2.2.x    | 3.3.x    |  4.0.x   |   4.1.x  |   4.2.x  |   4.3.x  |
+|------------------------|----------|----------|----------|----------|----------|----------|
+| React Native           | 0.47 +   | 0.50 +   | 0.52 +   | 0.52 +   | 0.52-55  | 0.52-55  |
+| Firebase Android SDK   | 11.0.0 + | 11.8.0 + | 12.0.0 + | 15.0.0 + | 15.0.0 + | 15.0.0 + |
+| Firebase iOS SDK       | 4.0.0 +  | 4.7.0 +  | 4.11.0 + | 4.11.0 + |  5.0.0 + |  5.3.0   |
 
 
 ## Questions
