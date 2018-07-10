@@ -97,7 +97,7 @@ Simply add the following to your `Podfile` either at the top level, or within th
 
 ```ruby
 # Required by RNFirebase
-pod 'Firebase/Core'
+pod 'Firebase/Core', '~> {{ ios.firebase.core }}'
 ```
 
 Run `pod install`.
