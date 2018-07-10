@@ -7,7 +7,7 @@ First ensure you have followed the [initial setup guide](version /installation/i
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'Firebase/Crash'
+pod 'Firebase/Crash', '~> {{ ios.firebase.crash }}'
 ```
 
 Run `pod update`.

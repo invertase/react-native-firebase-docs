@@ -39,6 +39,7 @@ ios:
     firestore: 5.3.0
     functions: 5.3.0
     invites: 5.3.0
+    links: 5.3.0
     messaging: 5.3.0
     perf: 5.3.0
     storage: 5.3.0
