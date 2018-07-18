@@ -28,8 +28,22 @@ Returns a new instance of Trace. The id is the unique name of something you'd li
 | --------- | ------- |
 | id   | **string** <br /> The unique name of the trace to monitor |
 
+### newHttpMetric
+[method]newHttpMetric(url, method) returns [ref perf-mon.HttpMetric];[/method]
+
+Returns a new instance of HttpMetric.
+
+| Parameter |         |
+| --------- | ------- |
+| url   | **string** <br /> The full URL of the new request |
+| method   | **string** <br /> The HTTP method of the request. One of: GET, PUT, POST, DELETE, HEAD, PATCH, OPTIONS, TRACE, CONNECT |
+
 ## Classes
 
 ### Trace
 
 [ref perf-mon.Trace]
+
+### HttpMetric
+
+[ref perf-mon.HttpMetric]

@@ -403,6 +403,8 @@
     - to: "/android"
       text: Install on Android
       icon: android
+    - to: "/example"
+      text: Example
     - type: divider
     - type: reference
       files:
