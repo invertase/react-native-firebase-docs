@@ -45,6 +45,10 @@ const facebookLogin = async () => {
 }
 ```
 
+### Caveat: profile picture expiration
+
+The Facebook profile picture URL provided by `firebase.auth().currentUser.photoUrl` has an expiration date: after a few days you will get an `URL signature expired` error. A workaround is either to store the image in your database or to use `firebase.auth().currentUser.providerData[0].photoURL + '?height=' + myCustomHeight`.
+
 ## Google
 
 We recommend using [react-native-google-signin](https://github.com/devfd/react-native-google-signin) for Google authentication.  This module handles the flow of logging in a user and obtaining their `accessToken` and `idToken` by wrapping around the offical Google login library. This means you get a much smoother experience than using a standard OAuth library, particularly on Android.
