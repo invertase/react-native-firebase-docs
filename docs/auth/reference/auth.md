@@ -134,10 +134,10 @@ Parameter |         |
 
 | Code | Message |
 | --------- | ------- |
+| auth/email-already-in-use  | Thrown if there already exists an account with the given email address. |
 | auth/invalid-email  | Thrown if the email address is not valid. |
-| auth/user-disabled  | Thrown if the user corresponding to the given email has been disabled. |
-| auth/user-not-found | Thrown if there is no user corresponding to the given email. |
-| auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
+| auth/operation-not-allowed | Thrown if email/password accounts are not enabled. Enable email/password accounts in the Firebase Console, under the Auth tab. |
+| auth/weak-password | Thrown if the password is not strong enough. |
 
 ### createUserWithEmailAndPassword
 [method]createUserWithEmailAndPassword(email, password) returns Promise containing [ref auth.User];[/method]
@@ -161,10 +161,10 @@ Note: The email address acts as a unique identifier for the user and enables an 
 
 | Code | Message |
 | --------- | ------- |
+| auth/email-already-in-use  | Thrown if there already exists an account with the given email address. |
 | auth/invalid-email  | Thrown if the email address is not valid. |
-| auth/user-disabled  | Thrown if the user corresponding to the given email has been disabled. |
-| auth/user-not-found | Thrown if there is no user corresponding to the given email. |
-| auth/wrong-password | Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set. |
+| auth/operation-not-allowed | Thrown if email/password accounts are not enabled. Enable email/password accounts in the Firebase Console, under the Auth tab. |
+| auth/weak-password | Thrown if the password is not strong enough. |
 
 ### signInAndRetrieveDataWithCredential
 [method]signInAndRetrieveDataWithCredential(credential) returns Promise containing [ref auth.UserCredential];[/method]
