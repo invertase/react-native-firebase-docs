@@ -70,7 +70,7 @@ Please make sure to complete the issue template before opening an issue. Issues 
 
 ## Feature Requests
 
-For feature requests please use our [Canny Board](http://invertase.link/requests).
+For feature requests please visit our [Feature Request Board](https://boards.invertase.io/react-native-firebase).
 
 ## Changelog
 
