@@ -53,6 +53,7 @@ The `react-native-google-signin` library allows us to login (using `GoogleSignin
 
 ```js
 import { GoogleSignin } from 'react-native-google-signin';
+import firebase from 'react-native-firebase'
 
 // Calling this function will open Google for login.
 export const googleLogin = async () => {
