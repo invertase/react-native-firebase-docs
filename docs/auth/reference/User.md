@@ -257,6 +257,8 @@ The phone number normalized based on the E.164 standard (e.g. +16505550101) for 
 
 The URL of the user's profile picture (if available).
 
+Caveat: The Facebook profile picture URL provided by `firebase.auth().currentUser.photoUrl` has an expiration date: after a few days you will get an `URL signature expired` error. A workaround is either to store the image in your database or to use `firebase.auth().currentUser.providerData[0].photoURL + '?height=' + myCustomHeight`.
+
 ### providerData
 [method]providerData returns Array of [ref auth.UserInfo];[/method]
 
