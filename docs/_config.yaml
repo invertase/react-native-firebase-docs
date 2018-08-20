@@ -15,7 +15,7 @@ android:
     crashlytics: 2.9.4
     database: 16.0.1
     firestore: 17.0.2
-    functions: 16.0.1
+    functions: 16.1.0
     invites: 16.0.1
     messaging: 17.1.0
     perf: 16.0.0
