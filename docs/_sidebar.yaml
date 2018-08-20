@@ -226,22 +226,7 @@
     - type: divider  
     - type: reference
       files:
-      - crashlytics 
-  - title: Crash Reporting
-    path: crash
-    links:
-    - to: "/ios"
-      text: Install on iOS
-      icon: apple
-    - to: "/android"
-      text: Install on Android
-      icon: android
-    - to: "/manual-reporting"
-      text: Manual Reporting
-    - type: divider  
-    - type: reference
-      files:
-      - crash 
+      - crashlytics
   - title: Database
     path: database
     links:
