@@ -232,7 +232,7 @@ The user's display name (if available).
 
 The user's email address (if available).
 
-### emailVerified
+### emailVerified
 [method]emailVerified returns boolean;[/method]
 
 Returns `true` if the user's email address has been verified.
@@ -292,7 +292,7 @@ The following methods are not supported in RNFirebase as they cannot work in the
 
 ### updatePhoneNumber
 
-## Unsupported properties
+## Unsupported properties
 
 The following properties are not supported in RNFirebase as they cannot work in the React Native environment or have a different implementation.
 
