@@ -20,6 +20,8 @@ You can still however easily enable this natively for the default app instance:
 
 ### Android
 
+Add `implementation "com.google.firebase:firebase-database:16.0.1"` line in `dependencies` of you `android/app/build.gradle`.
+
 Add `FirebaseDatabase.getInstance().setPersistenceEnabled(true);` inside your `MainApplication.java` files `onCreate()` method.
 
 You also need to explicitly add the `FirebaseDatabase` import with the rest of the imports near the top of your `MainApplication.java` file:
@@ -29,5 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 ```
 
 ### iOS
+
+Add `pod 'Firebase/Database', '~> 5.3.0'` in your `Podfile`.
 
 Add `[FIRDatabase database].persistenceEnabled = YES;` after the `[FIRApp configure];` line inside your `AppDelegate.m` files `didFinishLaunchingWithOptions` method.
