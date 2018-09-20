@@ -75,3 +75,14 @@ Sets a key/value pair of data on the current user.
 | --------- | ------- |
 | name   | **string**  |
 | value   | **string**  |
+
+### setUserProperties
+[method]setUserProperties(fieldMapping) returns void;[/method]
+
+Sets mutiple key/value pair of data on the current user.
+Param object's keys are property value and values are values.
+
+
+| Parameter |         |
+| --------- | ------- |
+| fieldMapping   | **object**  |
