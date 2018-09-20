@@ -98,7 +98,7 @@ If there is already an anonymous user signed in, that user will be returned; oth
 | auth/operation-not-allowed   | Thrown if anonymous accounts are not enabled. Enable anonymous accounts in the Firebase Console, under the Auth tab.  |
 
 ### signInAnonymouslyAndRetrieveData
-[method]signInAnonymously() returns Promise containing [ref auth.UserCredential];[/method]
+[method]signInAnonymouslyAndRetrieveData() returns Promise containing [ref auth.UserCredential];[/method]
 
 Signs in a user anonymously and returns any additional user info data or credentials.
 
