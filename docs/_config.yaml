@@ -12,7 +12,7 @@ android:
     config: 16.0.0
     core: 16.0.1
     crash: 16.0.1
-    crashlytics: 2.9.4
+    crashlytics: 2.9.5
     database: 16.0.2
     firestore: 17.1.0
     functions: 16.1.0
@@ -27,7 +27,7 @@ android:
 ios:
   fabric:
     tools: 1.7.11
-    version: 3.10.4
+    version: 3.10.7
   firebase:
     ads: 5.8.1
     auth: 5.8.1

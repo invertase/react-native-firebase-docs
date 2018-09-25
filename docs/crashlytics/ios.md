@@ -40,7 +40,15 @@ Run `pod update`.
 2. Open the **Build Phases** tab.
 3. Click **+ Add a new build phase**, and select **New Run Script Phase**.
 4. Add the following line to the **Type a script..** text box (Assuming the Fabric library is in `${SRCROOT}/Firebase/Fabric`):
+    ```groovy
+    "${SRCROOT}/Firebase/Fabric/Fabric.framework/run"
+    ```
+5. **Xcode 10 only:** Add your app's built Info.plist location to the Build Phase's Input Files field:
+    ```groovy
+    $(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)
+    ```
 
-```groovy
-"${SRCROOT}/Firebase/Fabric/Fabric.framework/run" <FABRIC API KEY> <FABRIC BUILD SECRECT>
-```
+
+----
+
+**Source:** [Firebase Crashlytics - Getting Started - iOS](https://firebase.google.com/docs/crashlytics/get-started#ios)
