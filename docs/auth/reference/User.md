@@ -28,6 +28,20 @@ Returns the current token if it has not expired, otherwise this will refresh the
 | --------- | ------- |
 | forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
 
+### getIdTokenResult
+[method]getIdTokenResult(forceRefresh) returns Promise containing [ref auth.IdTokenResult];[/method]
+
+Returns a [ref auth.IdTokenResult] object which contains the ID token JWT string and other properties for getting
+data associated with the token and all the decoded payload claims.                        
+
+?> While client side parsing of ID tokens is convenient for UI changes depending on payload content, it is not sufficient or secure. Server side ID token verification is always required when enforcing access to restricted resources.
+
+Returns the current [ref auth.IdTokenResult] object if it has not expired, otherwise this will refresh the token and return a new one.
+
+| Parameter |         |
+| --------- | ------- |
+| forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
+
 ### linkAndRetrieveDataWithCredential
 [method]linkAndRetrieveDataWithCredential(credential) returns Promise containing [ref auth.UserCredential];[/method]
 
