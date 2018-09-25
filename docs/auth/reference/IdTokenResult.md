@@ -12,7 +12,7 @@ associated with the token as well as all the decoded payload claims.
 ### authTime
 [method]authTime returns string;[/method]
 
-The authentication time as a UTC string. This is the time the user authenticated (signed in) and not the time the token was refreshed.
+The authentication time as a ISO 8601 UTC Date string. This is the time the user authenticated (signed in) and not the time the token was refreshed.
 
 ### claims
 [method]claims returns non-null Object;[/method]
@@ -22,12 +22,12 @@ The entire payload claims of the token including reserved claims and custom clai
 ### expirationTime
 [method]expirationTime returns string;[/method]
 
-The token expiration time formatted as a UTC string.
+The token expiration time formatted as a ISO 8601 UTC Date string.
 
 ### issuedAtTime
 [method]issuedAtTime returns string;[/method]
 
-The token issued at time formatted as a UTC string.
+The token issued at time formatted as a ISO 8601 UTC Date string.
 
 ### signInProvider
 [method]signInProvider returns nullable string;[/method]
