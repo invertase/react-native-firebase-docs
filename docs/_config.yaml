@@ -17,7 +17,7 @@ android:
     firestore: 17.1.0
     functions: 16.1.0
     invites: 16.0.3
-    messaging: 17.3.3
+    messaging: 17.3.2
     perf: 16.1.0
     storage: 16.0.2
     plugins: 1.1.1
