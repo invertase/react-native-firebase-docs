@@ -31,7 +31,7 @@ We provide several options for you to get started with React Native Firebase, se
 | **Analytics**              |   ✅   |   ❌   |
 | **App Indexing**           |   ❌   |   ❌   |
 | **Authentication**         |   ✅   |   ✅   |
-| _-- Phone Auth_            |   ✅   |   ❌   |
+| _-- Phone Auth_            |   ✅   |   ✅   |
 | **Core**                   |   ✅   |   ✅   |
 |  _-- Multiple Apps_        |   ✅   |   ✅   |
 | **Cloud Firestore**        |   ✅   |   ✅   |
