@@ -178,6 +178,7 @@ firebase.invites()
        - [ref perf-mon.Trace#putAttribute]
        - [ref perf-mon.Trace#removeAttribute]
  - Add support for [ref perf-mon.HttpMetric]'s
+ - **BREAKING**: `Trace#incrementCounter` has been removed. See [ref perf-mon.Trace#incrementMetric] for a replacement.
 
 ----
 
@@ -270,7 +271,7 @@ Crashlytics is the replacement service for crash reporting; see the following li
  - Remove all usages of `firebase.auth().currentUser.getToken()` - use [ref auth.User#getIdToken] instead
  - Remove  `"AndRetrieveData"` from all auth methods used in `auth()` and `auth().currentUser` methods;
    - e.g. `signInAndRetrieveDataWithEmailAndPassword` becomes `signInWithEmailAndPassword` but still returns a [ref auth.UserCredential] instance as a result
-
+ - Replace all Performance Monitoring `Trace#incrementCounter` calls with [ref perf-mon.Trace#incrementMetric] 
 ----
 
 ## Feedback
