@@ -37,6 +37,7 @@ firebase.auth()
     - Guide: [Firebase - Control Access with Custom Claims and Security Rules](https://firebase.google.com/docs/auth/admin/custom-claims)
     - YouTube - Firecasts: [Controlling Data Access Using Firebase Auth Custom Claims](https://youtu.be/3hj_r_N0qMs)
  - Add support for [ref auth.User#updatePhoneNumber]
+ - Remove formerly deprecated method `getToken` - use [ref auth.User#getIdToken] or [ref auth.User#getIdTokenResult] instead
  - Deprecated all `*AndRetrieveData*` `auth()` and `auth().currentUser` methods;
     - e.g. `signInAndRetrieveDataWithEmailAndPassword` is now deprecated and `signInWithEmailAndPassword` undeprecated with the output of `signInWithEmailAndPassword` becoming that of `signInAndRetrieveDataWithEmailAndPassword`. The same applies to all the other AndRetrieveData methods.
  - [ref auth.ActionCodeInfo#operation] now correctly returned - native code was incorrectly returning a key named `actionType`
@@ -58,6 +59,8 @@ firebase.firestore()
  - Add support for `NaN` and `Infinity` values in documents - [#1357](https://github.com/invertase/react-native-firebase/issues/1357)
  - Document & Query snapshot listeners now correctly returns an Error class instance on error, formerly returned a plain object
    - Instance of [ref firestore.SnapshotError]
+ - Collection / Document listeners now internally handle errors even if no error observer provided
+   -  Additionally now self-unsubscribes listeners on JS and Native if an error occurs, not leaving them in limbo
 
 #### Android
 
@@ -76,6 +79,7 @@ firebase.functions()
  - Add support for multiple Firebase app instances, e.g. `firebase.app('someOtherApp`).functions()`
  - Add support for [ref functions.Functions#useFunctionsEmulator], e.g. run a Cloud Functions emulator locally and point your app to it
    - Guide: [Functions - Local Emulator](https://firebase.google.com/docs/functions/local-emulator)
+ - [ref functions.HttpError] now correctly extends `Error` - was a Babel issue formerly blocking this
    
 ```js
 // default app and region
@@ -95,11 +99,29 @@ await functions.useFunctionsEmulator(origin);
 
 ----
 
+### Crashlytics
+
+```js
+firebase.crashytics()
+```
+
+### iOS
+
+ - Fix for `module not initialized` errors when using Crashlytics via manual linking
+   - Commit: [e20652](https://github.com/invertase/react-native-firebase/commit/e20652d67d36e5045fe6ca6c6a6f5567ac40f5a7)
+
+----
+
 ### Database
 
 ```js
 firebase.database()
 ```
+
+#### Android
+
+ - [internal] Transactions now correctly reset signalled state on every transaction attempt
+   - To address "already signalled" exceptions
 
 ----
 
