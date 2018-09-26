@@ -393,6 +393,7 @@
       files:
       - perf-mon
       - Trace
+      - HttpMetric
 - title: "Explore"
   categories:
   - title: Library
