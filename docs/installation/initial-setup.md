@@ -72,17 +72,21 @@ React Native Firebase supports multiple app instances. For more information see 
 
 We've curated some articles we love below to help you get started.
 
-| Invertase |
+### By Invertase
+
+| Links |
 |:---------:|
 |[Getting started with Cloud Firestore on React Native](https://blog.invertase.io/getting-started-with-cloud-firestore-on-react-native-b338fb6525b9)|
 
 > Found an article you like that's not listed below? Submit a PR to add it here and we'll review it (hint: click on the ✏️ edit button at the top of this page to edit this file on GitHub).
 
-| Community |
-|:---------:|
+
+### By the community
 
 These guides are written by the community and may or may not be up to date.
 
+| Links |
+|:---------:|
 |[Building a Google Analytics Funnel from Firebase in React-Native](https://blog.theodo.fr/2018/01/building-google-analytics-funnel-firebase-react-native/)|
 |[Getting started with Firebase Authentication on React Native](https://blog.invertase.io/getting-started-with-firebase-authentication-on-react-native-a1ed3d2d6d91)|
 |[React Native Push Notifications with Firebase Cloud Functions](https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386)|
