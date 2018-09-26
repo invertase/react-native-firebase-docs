@@ -112,7 +112,16 @@ firebase.database()
 
 ### Notifications 
 
+
+
 ----
+
+### Remote Config 
+
+ - Allow handling Remote config throttled exceptions, e.g. rejects with code `"config/throttled"` - [#1295](https://github.com/invertase/react-native-firebase/pull/1295)
+
+----
+
 
 ### Utils
 
