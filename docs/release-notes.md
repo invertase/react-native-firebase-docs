@@ -80,7 +80,9 @@ firebase.functions()
  - Add support for [ref functions.Functions#useFunctionsEmulator], e.g. run a Cloud Functions emulator locally and point your app to it
    - Guide: [Functions - Local Emulator](https://firebase.google.com/docs/functions/local-emulator)
  - [ref functions.HttpError] now correctly extends `Error` - was a Babel issue formerly blocking this
-   
+
+**Examples:**
+
 ```js
 // default app and region
 const functions = firebase.functions();
