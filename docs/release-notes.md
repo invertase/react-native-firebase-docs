@@ -21,7 +21,8 @@ npm install --save react-native-firebase@latest
  - Add support for import destructuring e.g. `import { database } from 'react-native-firebase'`
  - Remove internal clone of React Natives JS event emitter - now points to exposed version from React Native directly - [dbe2673](https://github.com/invertase/react-native-firebase/commit/dbe2673bc637b921ad334c900da88ca1a90d3709)
  - [android][internals] `Utils.isAppInForeground` not correctly accounting for RN LifecycleState;
-    - this utility in some rare cases would return true that Activity was in the foreground, however, React Native was still in the process of resuming, this, for example, led to crashes in HeadlessJS Notification tasks: `"Tried to start task RNFirebaseBackgroundMessage while in foreground, but this is not allowed."`
+   - this utility in some rare cases would return true that Activity was in the foreground, however, React Native was still in the process of resuming, this, for example, led to crashes in HeadlessJS Notification tasks: `"Tried to start task RNFirebaseBackgroundMessage while in foreground, but this is not allowed."`
+
 ----
 
 ### Authentication
