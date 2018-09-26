@@ -59,6 +59,8 @@ firebase.firestore()
    - Guide: [Better Arrays in Cloud Firestore!](https://firebase.googleblog.com/2018/08/better-arrays-in-cloud-firestore.html)
      - `arrayUnion` & `arrayRemove` support coming soon
  - Add support for `NaN` and `Infinity` values in documents - [#1357](https://github.com/invertase/react-native-firebase/issues/1357)
+ - Document & Query snapshot listeners now correctly returns an Error class instance on error
+   - Instance of [ref firestore.SnapshotError]
 
 #### Android
 
