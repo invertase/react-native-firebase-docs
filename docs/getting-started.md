@@ -54,9 +54,9 @@ We provide several options for you to get started with React Native Firebase, se
 
 |                           |  3.3.x   |  4.3.x  |     5.0.x     |
 | ------------------------- | :------: | :-----: | :-----------: |
-| React Native              | 0.50-52  | 0.52-55 |     0.57      |
-| Play Services Android SDK | 11.8.0 + | 15.0.1  |    15.0.1+    |
-| Firebase iOS SDK          | 4.7.0 +  |  5.3.0  | 5.8.1 - 5.9.0 |
+| React Native              | 0.50-52  | 0.52-55 |     ^0.56 - ^0.57      |
+| Play Services Android SDK | 11.8.0 + | 15.0.1  |    ^15.0.1    |
+| Firebase iOS SDK          | 4.7.0 +  |  5.3.0  | ^5.8.0 - ^5.9.0 |
 
 ## Questions
 
