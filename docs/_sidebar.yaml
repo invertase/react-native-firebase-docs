@@ -104,6 +104,7 @@
       - ActionCodeSettings
       - AdditionalUserInfo
       - AuthCredential
+      - AuthSettings
       - ConfirmationResult
       - EmailAuthProvider
       - Error
