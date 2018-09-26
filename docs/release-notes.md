@@ -2,10 +2,6 @@
 
 ## 5.0.0
 
-----
-
-### Quick Start
-
 Install using:
  
 ```bash
@@ -17,33 +13,68 @@ npm install --save react-native-firebase@latest
  - Remove `fbjs` peer dependency
  - Update Flow version: `^0.78.0`
  - Update TypeScript version: `^0.78.0`
- - [color #ff3232]Remove formerly deprecated Crash Reporting (`firebase.crash()`)[/color]
  - Support React Native versions `^0.56.0` to `^0.57.0`
  - Remove bloated `opencollective` install only dependency
+ - Remove formerly deprecated Crash Reporting (`firebase.crash()`)
  - Update build script to Babel 7 & [`@invertase/babel-preset-react-native-syntax`](https://github.com/invertase/babel-preset-react-native-syntax)
- - Remove internal clone of React Natives JS event emitter - now points to exposed version from React Native directly - [dbe2673](https://github.com/invertase/react-native-firebase/commit/dbe2673bc637b921ad334c900da88ca1a90d3709)
  - Add support for import destructuring e.g. `import { database } from 'react-native-firebase'`
+ - Remove internal clone of React Natives JS event emitter - now points to exposed version from React Native directly - [dbe2673](https://github.com/invertase/react-native-firebase/commit/dbe2673bc637b921ad334c900da88ca1a90d3709)
  
 ----
 
 ### Authentication
 
+```js
+firebase.auth()
+```
+
+----
+
 ### Crashlytics
+
+----
 
 ### Cloud Firestore
 
+```js
+firebase.firestore()
+```
+
 #### Android
 
- -` AsyncThread` serialize Document/Query snapshots to reduce UI/FPS lag
+ - `AsyncTask` serialize Document/Query snapshots to reduce UI/FPS lag - [#1223](https://github.com/invertase/react-native-firebase/issues/1223)
+  - [Before & After video comparison](https://drive.google.com/file/d/121Ouk57Ai29atadSdt_klILtDy1iTEhO/view)
+
+----
 
 ### Database
+
+```js
+firebase.database()
+```
+
+----
 
 ### Messaging 
 
  - Add [ref messaging#deleteToken] support - requires `[ref iid]()`
 
+----
+
 ### Notifications 
 
+----
+
+### Utils
+
+```js
+firebase.utils()
+```
+
+#### Android
+
+ - Add `firebase.utils().getPlayServicesStatus(): Promise<GoogleApiAvailabilityType | null>`
+  - This is the same as the static `firebase.utils.playServicesAvailability` - but allows forcing an update/refresh of the status
 
 ----
 
