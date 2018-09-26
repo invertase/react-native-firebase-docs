@@ -42,6 +42,12 @@ Returns the current [ref auth.IdTokenResult] object if it has not expired, other
 | --------- | ------- |
 | forceRefresh   | **boolean** (optional) <br /> Force refresh regardless of token expiration. |
 
+#### Guides
+
+ - [Firebase - Control Access with Custom Claims and Security Rules](https://firebase.google.com/docs/auth/admin/custom-claims)
+ - [YouTube - Firecasts - Controlling Data Access Using Firebase Auth Custom Claims](https://youtu.be/3hj_r_N0qMs)
+
+
 ### linkAndRetrieveDataWithCredential
 [method]linkAndRetrieveDataWithCredential(credential) returns Promise containing [ref auth.UserCredential];[/method]
 
@@ -201,12 +207,26 @@ Important: this is a security sensitive operation that requires the user to have
 | auth/weak-password  | Thrown if the password is not strong enough. |
 | auth/requires-recent-login  | Thrown if the user's last sign-in time does not meet the security threshold. Use [ref auth.User#reauthenticateWithCredential] to resolve. This does not apply if the user is anonymous. |
 
+
+### updatePhoneNumber
+[method]updatePhoneNumber(credential: [ref auth.AuthCredential]) returns Promise containing void;[/method]
+
+Update the current user's phone number with a phone AuthCredential - call [ref auth.Auth#verifyPhoneNumber] with the new phone number and pass the outputted credential to this method.
+
+Important: this is a security sensitive operation that requires the user to have recently signed in. If this requirement isn't met, ask the user to authenticate again and then call [ref auth.User#reauthenticateWithCredential].
+
+| Parameter |         |
+| --------- | ------- |
+| credential   | **[ref auth.AuthCredential]** |
+
 #### Error Codes
 
 | Code | Message |
 | --------- | ------- |
+| auth/requires-recent-login  | Thrown if the user's last sign-in time does not meet the security threshold. Use [ref auth.User#reauthenticateWithCredential] to resolve. This does not apply if the user is anonymous. |
 | auth/invalid-verification-code  | Thrown if the verification code of the credential is not valid. |
 | auth/invalid-verification-id  | Thrown if the verification ID of the credential is not valid. |
+
 
 ### updateProfile
 [method]updateProfile(profile) returns Promise containing void;[/method]
@@ -286,8 +306,6 @@ The following methods are not supported in RNFirebase as they cannot work in the
 ### reauthenticateWithPopup
 
 ### reauthenticateWithRedirect
-
-### updatePhoneNumber
 
 ## Unsupported properties
 

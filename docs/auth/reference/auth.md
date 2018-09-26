@@ -795,6 +795,11 @@ console.log(firebase.auth().languageCode); // 'fr'
 ```
 [/collapse]
 
+### settings
+[method]settings returns [ref auth.AuthSettings];[/method]
+
+The current Auth instance's settings. This is used to edit/read configuration related options like app verification mode for phone authentication.
+
 ## Unsupported Methods
 
 The following methods are not supported in RNFirebase as they cannot work in the React Native environment or have a different implementation.
