@@ -49,11 +49,15 @@ firebase.auth().settings.appVerificationDisabledForTesting = false;
 Once this has been called, every call to [ref auth.Auth#verifyPhoneNumber] or [ref auth.Auth#signInWithPhoneNumber] with the
 same phone number as the one that is configured here will automatically trigger verification (auto verify) without manual input of the code being required.
 
+
 The phone number and SMS code here must have been configured in the Firebase Console (Authentication > Sign In Method > Phone).
+
 
 Calling this method a second time will overwrite the previously passed parameters. Only one number can be configured at a given time.
 
+
 Calling this method with either parameter set to null removes this functionality until valid parameters are passed.
+
 
 Verifying a phone number other than the one configured here will trigger normal behaviour. If the phone number is configured as a test phone number in the console, the regular testing flow occurs. Otherwise, normal phone number verification will take place.
 

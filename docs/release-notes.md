@@ -8,6 +8,7 @@ Install using:
 npm install --save react-native-firebase@latest
 ```
 
+
 ### General
 
  - Remove `fbjs` peer dependency
@@ -28,10 +29,15 @@ npm install --save react-native-firebase@latest
 firebase.auth()
 ```
 
+
  - Add support for [ref auth.AuthSettings] - allows for automated testing phone authentication flows in your test suites/CI.
- - Add support for [ref auth.Auth#getIdTokenResult]
+    - Guide: [Test with whitelisted phone numbers](https://firebase.google.com/docs/auth/web/phone-auth#test-with-whitelisted-phone-numbers)
+ - Add support for [ref auth.User#getIdTokenResult];
     - Guide: [Firebase - Control Access with Custom Claims and Security Rules](https://firebase.google.com/docs/auth/admin/custom-claims)
     - YouTube - Firecasts: [Controlling Data Access Using Firebase Auth Custom Claims](https://youtu.be/3hj_r_N0qMs)
+ - Deprecated all `*AndRetrieveData*` `auth()` and `auth().currentUser` methods;
+    - e.g. `signInAndRetrieveDataWithEmailAndPassword` gets deprecated and the former undeprecated with the output of `signInWithEmailAndPassword` becoming that of `signInAndRetrieveDataWithEmailAndPassword`. The same applies to all the other AndRetrieveData methods.
+ 
 
 ----
 
