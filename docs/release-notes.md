@@ -105,7 +105,7 @@ await functions.useFunctionsEmulator(origin);
 firebase.crashytics()
 ```
 
-### iOS
+#### iOS
 
  - Fix for `module not initialized` errors when using Crashlytics via manual linking
    - Commit: [e20652](https://github.com/invertase/react-native-firebase/commit/e20652d67d36e5045fe6ca6c6a6f5567ac40f5a7)
