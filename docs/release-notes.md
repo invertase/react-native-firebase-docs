@@ -31,7 +31,6 @@ npm install --save react-native-firebase@latest
 firebase.auth()
 ```
 
-
  - Add support for [ref auth.AuthSettings] - allows for automated testing phone authentication flows in your test suites/CI.
     - Guide: [Test with whitelisted phone numbers](https://firebase.google.com/docs/auth/web/phone-auth#test-with-whitelisted-phone-numbers)
  - Add support for [ref auth.User#getIdTokenResult];
@@ -39,7 +38,7 @@ firebase.auth()
     - YouTube - Firecasts: [Controlling Data Access Using Firebase Auth Custom Claims](https://youtu.be/3hj_r_N0qMs)
  - Add support for [ref auth.User#updatePhoneNumber]
  - Deprecated all `*AndRetrieveData*` `auth()` and `auth().currentUser` methods;
-    - e.g. `signInAndRetrieveDataWithEmailAndPassword` gets deprecated and the former undeprecated with the output of `signInWithEmailAndPassword` becoming that of `signInAndRetrieveDataWithEmailAndPassword`. The same applies to all the other AndRetrieveData methods.
+    - e.g. `signInAndRetrieveDataWithEmailAndPassword` is now deprecated and `signInWithEmailAndPassword` undeprecated with the output of `signInWithEmailAndPassword` becoming that of `signInAndRetrieveDataWithEmailAndPassword`. The same applies to all the other AndRetrieveData methods.
  
 
 ----
@@ -58,12 +57,13 @@ firebase.firestore()
 
  - Add support for `'array-contains'` querying
    - Guide: [Better Arrays in Cloud Firestore!](https://firebase.googleblog.com/2018/08/better-arrays-in-cloud-firestore.html)
-     - `arrayUnion` & `arrayRemove` support coming soon.
+     - `arrayUnion` & `arrayRemove` support coming soon
+ - Add support for `NaN` and `Infinity` values in documents - [#1357](https://github.com/invertase/react-native-firebase/issues/1357)
 
 #### Android
 
  - `AsyncTask` serialize Document/Query snapshots to reduce UI/FPS lag - [#1223](https://github.com/invertase/react-native-firebase/issues/1223)
-  - [Before & After video comparison](https://drive.google.com/file/d/121Ouk57Ai29atadSdt_klILtDy1iTEhO/view)
+  - [Before & After change UI lag comparison video](https://drive.google.com/file/d/121Ouk57Ai29atadSdt_klILtDy1iTEhO/view)
 
 ----
 
@@ -93,7 +93,7 @@ firebase.utils()
 
 #### Android
 
- - Add `firebase.utils().getPlayServicesStatus(): Promise<GoogleApiAvailabilityType | null>`
+ - Add `firebase.utils().getPlayServicesStatus(): Promise<GoogleApiAvailabilityType | null>` - [#1257](https://github.com/invertase/react-native-firebase/issues/1257)
   - This is the same as the static `firebase.utils.playServicesAvailability` - but allows forcing an update/refresh of the status
 
 ----
