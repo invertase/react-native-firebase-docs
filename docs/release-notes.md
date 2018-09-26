@@ -113,6 +113,18 @@ firebase.database()
 ### Notifications 
 
 
+----
+
+### Performance Monitoring 
+
+ - Add support for custom [ref perf-mon.Trace] attributes
+   - Guide: [Monitor Custom Attributes](https://firebase.google.com/docs/perf-mon/custom-attributes)
+   - **Methods**:
+       - [ref perf-mon.Trace#getAttribute]
+       - [ref perf-mon.Trace#getAttributes]
+       - [ref perf-mon.Trace#putAttribute]
+       - [ref perf-mon.Trace#removeAttribute]
+ - Add support for [ref perf-mon.HttpMetric]'s
 
 ----
 
