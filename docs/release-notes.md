@@ -1,10 +1,12 @@
-# v5.0.0 Changelog
+# Release Notes
+
+## v5.0.0
 
 TODO / WIP
 
 ----
 
-## Quick Start
+### Quick Start
 
 Install using:
  
@@ -12,43 +14,45 @@ Install using:
 npm install --save react-native-firebase@latest
 ```
 
-----
-
-## Messaging 
+### General
 
 ----
 
-## Firebase Invites
+### Messaging 
 
 ----
 
-## Dynamic Links
-
+### Firebase Invites
 
 ----
 
-## Cloud Firestore
+### Dynamic Links
 
 
 ----
 
-## Authentication
+### Cloud Firestore
 
 
 ----
 
-## Database
+### Authentication
 
 
 ----
 
-## Crashlytics
+### Database
+
+
+----
+
+### Crashlytics
 
 
 
 ----
 
-## Upgrade instructions
+### Upgrade instructions
 
 ```
 npm install --save react-native-firebase@latest
@@ -56,11 +60,11 @@ npm install --save react-native-firebase@latest
 
 > For a reference app to look through versions see our [/tests](https://github.com/invertase/react-native-firebase/tree/master/tests) app.
 
-### React Native
+#### React Native
 
 React Native version `0.56` is now the minimum supported version, it's recommended to upgrade to `0.57.x` if possible.
 
-### Android - Firebase SDK Versions
+#### Android - Firebase SDK Versions
 
 1) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
 
@@ -78,7 +82,7 @@ React Native version `0.56` is now the minimum supported version, it's recommend
 - **com.google.firebase:firebase-storage**: {{ android.firebase.storage }}
 - **com.crashlytics.sdk.android:crashlytics**:  {{ android.firebase.crashlytics }}
 
-### iOS - Firebase SDK Versions
+#### iOS - Firebase SDK Versions
 
 v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to update to v5.9.0:
 
@@ -101,7 +105,7 @@ v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to upda
   pod 'Crashlytics', '~> 3.10.7'
 ```
 
-### Crash Reporting
+#### Crash Reporting
 
 - Crash reporting is now removed from the library due to the previous deprecation - if you haven't already; you'll need to remove all usages of it.
 
@@ -112,3 +116,7 @@ v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to upda
 We want your feedback!
 
 If you have any comments and suggestions or want to report an issue, come find us on [Discord](https://discord.gg/C9aK28N)
+
+
+## Contributing
+
