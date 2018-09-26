@@ -1,19 +1,6 @@
-# v4.0.0 Changelog
+# v5.0.0 Changelog
 
-TL;DR: The one everybody has been waiting for: our overhaul of messaging and notification functionality to make it more reliable, better documented and easier to use.
-
-Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dynamic Links and some other minor fixes.
-
-**Notification highlights:**
-- Better separation of concerns: `messaging`, `notifications` and `instanceid`
-- Fully documented API
-- Builder classes provide a type safe way to construct [messages](https://rnfirebase.io/docs/v4.0.x/messaging/reference/RemoteMessage) and [notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notification)
-- Clearer distinction between Android and IOS specific functionality
-- Support for Android Notification Channels, Android Actions and Remote Input
-- Support for BigTextStyle and BigPictureStyle Android notifications
-
-**Outstanding functionality (to be added in a later release):**
-- Support for iOS notification categories
+TODO / WIP
 
 ----
 
@@ -22,109 +9,42 @@ Plus, we've got Firebase Invites, Multi-Database url support, an overhaul of Dyn
 Install using:
  
 ```
-npm install --save react-native-firebase
+npm install --save react-native-firebase@latest
 ```
 
 ----
 
 ## Messaging 
 
-### Messaging vs Notifications
-
-We have made the conscious decision to separate this functionality into two distinct areas:
-
-- Messaging
-  - handles remote FCM data-only messages
-  - follows the official Firebase JS web SDK's messaging API where possible 
-
-- Notifications
-  - handles remote FCM notification and notification + data messages, 
-  - handles the display and receipt of locally displayed notifications
-
-You can read some more here: https://rnfirebase.io/docs/v4.0.x/messaging/introduction#Message-types
-
-### Receiving messages and notifications
-
-With our previous implementation, we had a single `onMessage` listener which was triggered for all messaging and notification actions, whether that was a notification in the foreground, background or even when the notification was pressed.  This meant you'd have to implement some logic to check the state of the notification to try and identify what had actually happened.
-
-To simplify things, we've broken out a number of different listeners to provide greater control and customisation:
-
-- Messaging
-  - `onMessage`: Triggered when a data-only message is received remotely from FCM
-
-Read more here: https://rnfirebase.io/docs/v4.0.x/messaging/receiving-messages
-
-- Notifications
-  - `onNotification`: Triggered when a remote of local notification is received
-    - This will typically be triggered when your app is in the foreground
-    - The notification will not have been displayed automatically to the end user by the OS, and it is up to you as the developer to display it if you wish to using `firebase.notifications().displayNotification()`: https://rnfirebase.io/docs/v4.0.x/notifications/displaying-notifications
-  - `onNotificationDisplayed`: Triggered when a remote or local notification is displayed by the OS
-    - This will typically be triggered when your app is in the background, or in the foreground if you have called `firebase.notifications().displayNotification()` directly.
-    - The notification will have been displayed automatically to the end user by the OS
-  - `onNotificationOpened`: Triggered when a remote or local notification is tapped / pressed / opened by the user
-    - This will be triggered if your app is in the background or foreground
-    - The event contains information about the notification and the action that the user took: https://rnfirebase.io/docs/v4.0.x/notifications/receiving-notifications#4)-Listen-for-a-Notification-being-opened
-    - If your app is closed, then `firebase.notifications().getInitialNotification()` will be populated with this information when the app is started by a notification being opened.
-
-Read more here: https://rnfirebase.io/docs/v4.0.x/notifications/receiving-notifications and https://rnfirebase.io/docs/v4.0.x/notifications/introduction
-
-### Foreground vs Background
-
-With our previous implementation, we relied on the `show_in_foreground` flag existing within the notification content to force the library to automatically show the notification if the app was running in the foreground.  Whilst this (kind of) worked, it meant it was down to the notification sender to control the display of the notification, not the app itself.
-
-The `show_in_foreground` flag no longer exists and instead you can use the listeners described above to give better control, e.g.
-
-```js
-firebase.notifications().onNotification((notification: Notification) => {
-  // You've received a notification that hasn't been displayed by the OS
-  // To display it whilst the app is in the foreground, simply call the following
-  firebase.notifications().displayNotification(notification);
-});
-```
-
-When the app is in the background, the OS will automatically handle the notification display when a remote or local notification is received.  If you wish to display a heads up notification on Android, we recommend you look at sending data only messages to your app.  These can be handled when your app is in the background or closed by following the instructions here: https://rnfirebase.io/docs/v4.0.x/messaging/receiving-messages#4)-(Optional)(Android-only)-Listen-for-FCM-messages-in-the-background
-
 ----
 
 ## Firebase Invites
-
-We've added full support for Firebase Invites: [iOS](https://rnfirebase.io/docs/v4.0.x/invites/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/invites/android)
 
 ----
 
 ## Dynamic Links
 
-We've rolled out the `Builder` approach to Dynamic Links.  Check out the [createDynamicLink](https://rnfirebase.io/docs/v4.0.x/links/reference/links#createDynamicLink) docs and [Dynamic Link](https://rnfirebase.io/docs/v4.0.x/links/reference/DynamicLink) reference docs
-
-!> This is a breaking change.
 
 ----
 
 ## Cloud Firestore
 
-- Added support for `disableNetwork` and `enableNetwork`
-- Added typescript definitions for Transactions
 
 ----
 
 ## Authentication
 
-- Fixed issue with null photo URL when updating a user profile #911
 
 ----
 
 ## Database
 
-- Fixed issue with server time offset #910
-- Database now supports using multiple database instances via database urls e.g.:
-```js
-const dbShard = firebase.database('https://rnfirebase-3.firebaseio.com/');
-```
-> Big shout out to @akshetpandey and @Chenjh1992 for their help getting this pushed through on #881 
+
+----
 
 ## Crashlytics
 
-- Crashlytics now lives at the top level under `firebase.crashlytics()`
+
 
 ----
 
@@ -134,46 +54,23 @@ const dbShard = firebase.database('https://rnfirebase-3.firebaseio.com/');
 npm install --save react-native-firebase@latest
 ```
 
-### Gradle
+> For a reference app to look through versions see our [/tests](https://github.com/invertase/react-native-firebase/tree/master/tests) app.
 
-Due to some breaking changes in v12 of the Android libs, you'll need to upgrade your Gradle version to at least v4.4 and make a few other tweaks as follows:
+### React Native
 
-1) In `android/gradle/wrapper/gradle-wrapper.properties`, update the gradle URL to `gradle-4.4-all.zip`
-2) In `android/build.gradle` check that you have `google()` specified in the buildScript repositories section:
+React Native version `0.56` is now the minimum supported version, it's recommended to upgrade to `0.57.x` if possible.
 
-```groovy
-buildscript {
-    repositories {
-        jcenter()
-        google()  // <-- Check this line exists
-        ...
-    }
-```
+### Android - Firebase SDK Versions
 
-3) In `android/build.gradle` update Android build tools to version `{{ android.build.tools }}` and google services to version `{{ android.gms.google-services }}`:
-
-```groovy
-classpath 'com.android.tools.build:gradle:{{ android.build.tools }}'
-classpath 'com.google.gms:google-services:{{ android.gms.google-services }}'
-```
-
-4) In `android/app/build.gradle` update all your `compile` statements to be `implementation`, e.g.
-
-```groovy
-implementation(project(':react-native-firebase')) {
-    transitive = false
-}
-```
-
-5) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
+1) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
 
 - **com.google.android.gms:play-services-base**: {{ android.gms.play-services-base }}
 - **com.google.firebase:firebase-core**: {{ android.firebase.core }}
 - **com.google.firebase:firebase-ads**: {{ android.firebase.ads }}
 - **com.google.firebase:firebase-auth**: {{ android.firebase.auth }}
 - **com.google.firebase:firebase-config**: {{ android.firebase.config }}
-- **com.google.firebase:firebase-crash**: {{ android.firebase.crash }}
 - **com.google.firebase:firebase-database**: {{ android.firebase.database }}
+- **com.google.firebase:firebase-functions**: {{ android.firebase.functions }}
 - **com.google.firebase:firebase-invites**: {{ android.firebase.invites }}
 - **com.google.firebase:firebase-firestore**: {{ android.firebase.firestore }}
 - **com.google.firebase:firebase-messaging**: {{ android.firebase.messaging }}
@@ -181,56 +78,37 @@ implementation(project(':react-native-firebase')) {
 - **com.google.firebase:firebase-storage**: {{ android.firebase.storage }}
 - **com.crashlytics.sdk.android:crashlytics**:  {{ android.firebase.crashlytics }}
 
-6) When running your app from within Android Studio, you may encounter `Missing Byte Code` errors.  This is due to a known issue with version 3.1.x of the android tools plugin: https://issuetracker.google.com/issues/72811718.  You'll need to disable Instant Run to get past this error.
+### iOS - Firebase SDK Versions
 
-### Messaging / Notifications
+v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to update to v5.9.0:
 
-As you can imagine, for Messaging and Notifications this is a completely breaking change, so you'll want to follow the installation instructions available here:
-
-- Messaging: [iOS](https://rnfirebase.io/docs/v4.0.x/messaging/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/messaging/android)
-- Notifications: [iOS](https://rnfirebase.io/docs/v4.0.x/notifications/ios) | [Android](https://rnfirebase.io/docs/v4.0.x/notifications/android)
-
-There are a number of guides available: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/introduction) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/introduction)
-
-Reference can be found here: [Messaging](https://rnfirebase.io/docs/v4.0.x/messaging/reference/Messaging) | [Notifications](https://rnfirebase.io/docs/v4.0.x/notifications/reference/Notifications)
-
-Some key things to note:
-
-- The iOS `AppDelegate.m` will need to be completely updated
-- All packages in `AndroidManifest.xml` will need to be updated
-- `firebase.messaging().requestPermissions()` is now `firebase.messaging().requestPermission()`
-- `firebase.messaging().setBadgeNumber()` and `firebase.messaging().getBadgeNumber()` are now `firebase.notifications().setBadge()` and `firebase.notifications().getBadge()`
-
-### Dynamic Links
-
-- For dynamic links on iOS, you need to make a subtle change to your `AppDelegate.m`:
-
-```objectivec
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-            options:(NSDictionary<NSString *, id> *)options {
-    return [[RNFirebaseLinks instance] application:application openURL:url options:options];
-}
-
-- (BOOL)application:(UIApplication *)application
-continueUserActivity:(NSUserActivity *)userActivity
- restorationHandler:(void (^)(NSArray *))restorationHandler {
-     return [[RNFirebaseLinks instance] application:application continueUserActivity:userActivity restorationHandler:restorationHandler];
-}
+```ruby
+  pod 'Firebase/AdMob', '~> 5.9.0'
+  pod 'Firebase/Auth', '~> 5.9.0'
+  pod 'Firebase/Core', '~> 5.9.0'
+  pod 'Firebase/Database', '~> 5.9.0'
+  pod 'Firebase/Functions', '~> 5.9.0'
+  pod 'Firebase/DynamicLinks', '~> 5.9.0'
+  pod 'Firebase/Firestore', '~> 5.9.0'
+  pod 'Firebase/Invites', '~> 5.9.0'
+  pod 'Firebase/Messaging', '~> 5.9.0'
+  pod 'Firebase/RemoteConfig', '~> 5.9.0'
+  pod 'Firebase/Storage', '~> 5.9.0'
+  pod 'Firebase/Performance', '~> 5.9.0'
+  
+  # Crashlytics
+  pod 'Fabric', '~> 1.7.11'
+  pod 'Crashlytics', '~> 3.10.7'
 ```
-
-### Crashlytics
-
-- All Crashlytics methods have been moved from `firebase.fabric.crashlytics()` to `firebase.crashlytics()`
 
 ### Crash Reporting
 
-- Crash reporting is now flagged as deprecated.  We recommend you upgrade to Crashlytics which is now Firebase's recommended crash tool.
+- Crash reporting is now removed from the library due to the previous deprecation - if you haven't already; you'll need to remove all usages of it.
 
 ----
 
 ## Feedback
 
-We want your feedback!!
+We want your feedback!
 
 If you have any comments and suggestions or want to report an issue, come find us on [Discord](https://discord.gg/C9aK28N)
