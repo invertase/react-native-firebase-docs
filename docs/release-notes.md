@@ -133,6 +133,13 @@ firebase.database()
 
 ### Notifications 
 
+#### Android
+
+ - Fix `Null Pointer Exception` crash caused by calling `deleteChannelGroup` on a `channelId` that does not exist
+ - Fix `createChannelGroups` issue - native method incorrectly named
+ - Fix crash that occurred when using `vibrationPattern` - native array not initialized with the correct size
+ - Fix issue with alert once notification behavior - native was incorrectly calling `setOngoing` instead of `setOnlyAlertOnce`
+ - Notifications now uses localized title and body from remote messages (e.g. `title_loc_key`) if `title` or `body` are not specified
 
 ----
 
