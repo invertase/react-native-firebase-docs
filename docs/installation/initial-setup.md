@@ -52,7 +52,7 @@ Once you've completed setting up React Native Firebase you can now use the libra
 import firebase from 'react-native-firebase';
 
 firebase.auth()
-  .signInAnonymouslyAndRetrieveData()
+  .signInAnonymously()
   .then(credential => {
     if (credential) {
       console.log('default app user ->', credential.user.toJSON());
