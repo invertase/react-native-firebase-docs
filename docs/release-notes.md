@@ -39,11 +39,8 @@ firebase.auth()
  - Add support for [ref auth.User#updatePhoneNumber]
  - Deprecated all `*AndRetrieveData*` `auth()` and `auth().currentUser` methods;
     - e.g. `signInAndRetrieveDataWithEmailAndPassword` is now deprecated and `signInWithEmailAndPassword` undeprecated with the output of `signInWithEmailAndPassword` becoming that of `signInAndRetrieveDataWithEmailAndPassword`. The same applies to all the other AndRetrieveData methods.
- 
-
-----
-
-### Crashlytics
+ - [ref auth.ActionCodeInfo#operation] now correctly returned - native code was incorrectly returning a key named `actionType`
+   - Additionally added the `EMAIL_SIGNIN` type
 
 ----
 
@@ -59,7 +56,7 @@ firebase.firestore()
    - Guide: [Better Arrays in Cloud Firestore!](https://firebase.googleblog.com/2018/08/better-arrays-in-cloud-firestore.html)
      - `arrayUnion` & `arrayRemove` support coming soon
  - Add support for `NaN` and `Infinity` values in documents - [#1357](https://github.com/invertase/react-native-firebase/issues/1357)
- - Document & Query snapshot listeners now correctly returns an Error class instance on error
+ - Document & Query snapshot listeners now correctly returns an Error class instance on error, formerly returned a plain object
    - Instance of [ref firestore.SnapshotError]
 
 #### Android
