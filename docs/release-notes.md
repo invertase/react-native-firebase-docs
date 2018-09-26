@@ -35,6 +35,7 @@ firebase.auth()
  - Add support for [ref auth.User#getIdTokenResult];
     - Guide: [Firebase - Control Access with Custom Claims and Security Rules](https://firebase.google.com/docs/auth/admin/custom-claims)
     - YouTube - Firecasts: [Controlling Data Access Using Firebase Auth Custom Claims](https://youtu.be/3hj_r_N0qMs)
+ - Add support for [ref auth.User#updatePhoneNumber]
  - Deprecated all `*AndRetrieveData*` `auth()` and `auth().currentUser` methods;
     - e.g. `signInAndRetrieveDataWithEmailAndPassword` gets deprecated and the former undeprecated with the output of `signInWithEmailAndPassword` becoming that of `signInAndRetrieveDataWithEmailAndPassword`. The same applies to all the other AndRetrieveData methods.
  
