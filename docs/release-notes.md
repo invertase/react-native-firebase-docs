@@ -67,6 +67,35 @@ firebase.firestore()
 
 ----
 
+### Cloud Functions
+
+```js
+firebase.functions()
+```
+
+ - Add support for specifying a custom function region, e.g. `us-central1`
+ - Add support for multiple Firebase app instances, e.g. `firebase.app('someOtherApp`).functions()`
+ - Add support for [ref functions.Functions#useFunctionsEmulator], e.g. run a Cloud Functions emulator locally and point your app to it
+   - Guide: [Functions - Local Emulator](https://firebase.google.com/docs/functions/local-emulator)
+   
+```js
+// default app and region
+const functions = firebase.functions();
+// custom FirebaseApp
+const functions = firebase.functions(app);
+// custom region
+const functions = firebase.functions('us-central1');
+// custom FirebaseApp and region
+const functions = firebase.functions(app, 'us-central1');
+
+// cloud functions local emulator support
+// see https://firebase.google.com/docs/functions/local-emulator
+const origin = 'http://localhost:3000';
+await functions.useFunctionsEmulator(origin);
+```
+
+----
+
 ### Database
 
 ```js
