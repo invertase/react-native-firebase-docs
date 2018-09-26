@@ -233,7 +233,7 @@ React Native version `0.56` is now the minimum supported version, it's recommend
 
 #### iOS - Update Firebase SDKs
 
-v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to update to v5.9.0:
+v5.0.0 supports iOS SDK versions `5.8.0`, `5.8.1` & `5.9.0` - it's recommended to update to v5.9.0 and set the versions specifically in your `Podfile`:
 
 ```ruby
   pod 'Firebase/AdMob', '~> 5.9.0'
@@ -256,8 +256,14 @@ v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to upda
 
 #### Crash Reporting
 
-- Crash reporting is now removed from the library due to the previous deprecation - if you haven't already; you'll need to remove all usages of it.
-
+ - Crash reporting has now removed from the library due to the previous deprecation - if you haven't already; you'll need to remove all usages of it.
+ 
+Crashlytics is the replacement service for crash reporting; see the following links for more information:
+ 
+ - [Firebase - Crashlytics Overview](https://firebase.google.com/docs/crashlytics/)
+ - [Crashlytics - React Native - iOS Install Guide](https://rnfirebase.io/docs/v5.x.x/crashlytics/ios)
+ - [Crashlytics - React Native - Android Install Guide](https://rnfirebase.io/docs/v5.x.x/crashlytics/android)
+ - [Crashlytics - React Native - Reference Docs](https://rnfirebase.io/docs/v5.x.x/crashlytics/reference/crashlytics)
 
 #### Other
 
@@ -271,8 +277,10 @@ v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to upda
 
 We want your feedback!
 
-If you have any comments and suggestions or want to report an issue, come find us on [Discord](https://discord.gg/C9aK28N)
-
+If you have any comments and suggestions or want to report an issue, come find us on [Discord](https://discord.gg/C9aK28N), [Twitter](https://twitter.com/rnfirebase) or [GitHub](https://github.com/invertase/react-native-firebase).
 
 ## Contributing
 
+Thank to [all the contributors](https://github.com/invertase/react-native-firebase/graphs/contributors?from=2018-06-28&to=2018-09-26&type=c) that made this release happen 💛. 
+
+If you'd like to contribute please check out our new [testing](https://rnfirebase.io/docs/v5.x.x/testing) and [contributing](https://rnfirebase.io/docs/v5.x.x/contributing) guides.
