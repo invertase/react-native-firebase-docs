@@ -1,8 +1,6 @@
 # Release Notes
 
-## v5.0.0
-
-TODO / WIP
+## 5.0.0
 
 ----
 
@@ -10,44 +8,41 @@ TODO / WIP
 
 Install using:
  
-```
+```bash
 npm install --save react-native-firebase@latest
 ```
 
 ### General
 
-----
-
-### Messaging 
-
-----
-
-### Firebase Invites
-
-----
-
-### Dynamic Links
-
-
-----
-
-### Cloud Firestore
-
-
+ - Remove `fbjs` peer dependency
+ - Update Flow version: `^0.78.0`
+ - Update TypeScript version: `^0.78.0`
+ - [color #ff3232]Remove formerly deprecated Crash Reporting (`firebase.crash()`)[/color]
+ - Support React Native versions `^0.56.0` to `^0.57.0`
+ - Remove bloated `opencollective` install only dependency
+ - Update build script to Babel 7 & [`@invertase/babel-preset-react-native-syntax`](https://github.com/invertase/babel-preset-react-native-syntax)
+ - Remove internal clone of React Natives JS event emitter - now points to exposed version from React Native directly - [dbe2673](https://github.com/invertase/react-native-firebase/commit/dbe2673bc637b921ad334c900da88ca1a90d3709)
+ - Add support for import destructuring e.g. `import { database } from 'react-native-firebase'`
+ 
 ----
 
 ### Authentication
 
+### Crashlytics
 
-----
+### Cloud Firestore
+
+#### Android
+
+ -` AsyncThread` serialize Document/Query snapshots to reduce UI/FPS lag
 
 ### Database
 
+### Messaging 
 
-----
+ - Add [ref messaging#deleteToken] support - requires `[ref iid]()`
 
-### Crashlytics
-
+### Notifications 
 
 
 ----
