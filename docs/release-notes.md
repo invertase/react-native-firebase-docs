@@ -107,7 +107,7 @@ firebase.crashytics()
 
 #### iOS
 
- - Fix for `module not initialized` errors when using Crashlytics via manual linking
+ - Fix for `module not initialized` errors when using Crashlytics via manual linking (without Pods)
    - Commit: [e20652](https://github.com/invertase/react-native-firebase/commit/e20652d67d36e5045fe6ca6c6a6f5567ac40f5a7)
 
 ----
@@ -125,9 +125,30 @@ firebase.database()
 
 ----
 
+### Dynamic Invites
+
+```js
+firebase.invites()
+```
+
+#### Android
+
+ - Fix Invites module error `"requestCode must be in 16 bits"`
+
+----
+
+
 ### Messaging 
 
+#### All Platforms
+
  - Add [ref messaging#deleteToken] support - requires [ref iid]()
+ 
+#### iOS
+
+ - Add support for Background notification completion handlers - [#1393](https://github.com/invertase/react-native-firebase/pull/1393)
+ - Fix for [ref messaging.Messaging#getToken] resolving null if called early on in app initialization
+    - Commit: [66aa5cc](https://github.com/invertase/react-native-firebase/commit/66aa5ccb67356bc22ef27507c93be737d1871b4b#diff-06c99e7e87036c83640e069ed3ddea7e)
 
 ----
 
@@ -137,9 +158,13 @@ firebase.database()
 
  - Fix `Null Pointer Exception` crash caused by calling `deleteChannelGroup` on a `channelId` that does not exist
  - Fix `createChannelGroups` issue - native method incorrectly named
- - Fix crash that occurred when using `vibrationPattern` - native array not initialized with the correct size
+ - Fix a crash that occurred when using `vibrationPattern` - native array not initialized with the correct size
  - Fix issue with alert once notification behavior - native was incorrectly calling `setOngoing` instead of `setOnlyAlertOnce`
  - Notifications now uses localized title and body from remote messages (e.g. `title_loc_key`) if `title` or `body` are not specified
+
+#### iOS
+
+ - Add support for Background notification completion handlers - [#1393](https://github.com/invertase/react-native-firebase/pull/1393)
 
 ----
 
@@ -186,9 +211,9 @@ npm install --save react-native-firebase@latest
 
 #### React Native
 
-React Native version `0.56` is now the minimum supported version, it's recommended to upgrade to `0.57.x` if possible.
+React Native version `0.56` is now the minimum supported version, it's recommended to upgrade to `0.57.x` if possible, otherwise `0.56` is also acceptable.
 
-#### Android - Firebase SDK Versions
+#### Android - Update Firebase SDKs
 
 1) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
 
@@ -206,7 +231,7 @@ React Native version `0.56` is now the minimum supported version, it's recommend
 - **com.google.firebase:firebase-storage**: {{ android.firebase.storage }}
 - **com.crashlytics.sdk.android:crashlytics**:  {{ android.firebase.crashlytics }}
 
-#### iOS - Firebase SDK Versions
+#### iOS - Update Firebase SDKs
 
 v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to update to v5.9.0:
 
@@ -232,6 +257,13 @@ v5.0.0 supports iOS SDK versions 5.8.0, 5.8.1 & 5.9.0 - it's recommended to upda
 #### Crash Reporting
 
 - Crash reporting is now removed from the library due to the previous deprecation - if you haven't already; you'll need to remove all usages of it.
+
+
+#### Other
+
+ - Remove all usages of `firebase.auth().currentUser.getToken()` - use [ref auth.User#getIdToken] instead
+ - Remove  `"AndRetrieveData"` from all auth methods used in `auth()` and `auth().currentUser` methods;
+   - e.g. `signInAndRetrieveDataWithEmailAndPassword` becomes `signInWithEmailAndPassword` but still returns a [ref auth.UserCredential] instance as a result
 
 ----
 
