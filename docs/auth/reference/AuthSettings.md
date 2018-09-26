@@ -8,7 +8,7 @@ Interface representing an Auth instance's settings, currently used for enabling/
 
 In order to use this feature, you will need to [whitelist your phone number](https://firebase.google.com/docs/auth/web/phone-auth#test-with-whitelisted-phone-numbers) via the Firebase Console.
 
-!> These are for testing purposes, ensure you're not using them in the public release version of your app.
+?> These are for testing purposes, ensure you're not using them in the public release version of your app.
 
 An example use in e2e testing can be seen in our tests suite [here](https://github.com/invertase/react-native-firebase/blob/master/tests/e2e/auth/phone.e2e.js).
 
@@ -50,16 +50,13 @@ Once this has been called, every call to [ref auth.Auth#verifyPhoneNumber] or [r
 same phone number as the one that is configured here will automatically trigger verification (auto verify) without manual input of the code being required.
 
 
-The phone number and SMS code here must have been configured in the Firebase Console (Authentication > Sign In Method > Phone).
+> The phone number and SMS code here must have been configured in the Firebase Console (Authentication > Sign In Method > Phone).
 
 
 Calling this method a second time will overwrite the previously passed parameters. Only one number can be configured at a given time.
 
 
-Calling this method with either parameter set to null removes this functionality until valid parameters are passed.
-
-
-Verifying a phone number other than the one configured here will trigger normal behaviour. If the phone number is configured as a test phone number in the console, the regular testing flow occurs. Otherwise, normal phone number verification will take place.
+Calling this method with either parameter set to null removes this functionality until valid parameters are passed. Verifying a phone number other than the one configured here will trigger normal behaviour. If the phone number is configured as a test phone number in the console, the regular testing flow occurs. Otherwise, normal phone number verification will take place.
 
 ```js
 // example
