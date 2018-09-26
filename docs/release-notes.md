@@ -42,7 +42,7 @@ firebase.firestore()
 
 #### Android
 
- - `AsyncTask` serialize Document/Query snapshots to reduce UI/FPS lag - [#1223](https://github.com/invertase/react-native-firebase/issues/1223)
+ - `AsyncTask` serialize Document/Query snapshots to reduce UI/FPS lag - [1223](https://github.com/invertase/react-native-firebase/issues/1223)
   - [Before & After video comparison](https://drive.google.com/file/d/121Ouk57Ai29atadSdt_klILtDy1iTEhO/view)
 
 ----
