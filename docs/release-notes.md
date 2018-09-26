@@ -274,6 +274,7 @@ Crashlytics is the replacement service for crash reporting; see the following li
  - Remove  `"AndRetrieveData"` from all auth methods used in `auth()` and `auth().currentUser` methods;
    - e.g. `signInAndRetrieveDataWithEmailAndPassword` becomes `signInWithEmailAndPassword` but still returns a [ref auth.UserCredential] instance as a result
  - Replace all Performance Monitoring `Trace#incrementCounter` calls with [ref perf-mon.Trace#incrementMetric] 
+ 
 ----
 
 ## Feedback
