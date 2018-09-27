@@ -5,12 +5,12 @@ android:
     tools: 1.25.4
     version: 2.9.4
   firebase:
-    version: 16.0.1
+    version: 16.0.3
     ads: 15.0.1
-    analytics: 16.0.1 # part of core ??
+    analytics: 16.0.3 # part of core ??
     auth: 16.0.3
     config: 16.0.0
-    core: 16.0.1
+    core: 16.0.3
     crash: 16.0.1
     crashlytics: 2.9.5
     database: 16.0.2
