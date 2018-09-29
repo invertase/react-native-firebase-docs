@@ -220,19 +220,19 @@ React Native version `0.56` is now the minimum supported version, it's recommend
 
 1) In `android/app/build.gradle`, update all the firebase and gms dependencies to the following versions:
 
-- **com.google.android.gms:play-services-base**: {{ android.gms.play-services-base }}
-- **com.google.firebase:firebase-core**: {{ android.firebase.core }}
-- **com.google.firebase:firebase-ads**: {{ android.firebase.ads }}
-- **com.google.firebase:firebase-auth**: {{ android.firebase.auth }}
-- **com.google.firebase:firebase-config**: {{ android.firebase.config }}
-- **com.google.firebase:firebase-database**: {{ android.firebase.database }}
-- **com.google.firebase:firebase-functions**: {{ android.firebase.functions }}
-- **com.google.firebase:firebase-invites**: {{ android.firebase.invites }}
-- **com.google.firebase:firebase-firestore**: {{ android.firebase.firestore }}
-- **com.google.firebase:firebase-messaging**: {{ android.firebase.messaging }}
-- **com.google.firebase:firebase-perf**: {{ android.firebase.perf }}
-- **com.google.firebase:firebase-storage**: {{ android.firebase.storage }}
-- **com.crashlytics.sdk.android:crashlytics**:  {{ android.firebase.crashlytics }}
+- **com.google.android.gms:play-services-base**:{{ android.gms.play-services-base }}
+- **com.google.firebase:firebase-core**:{{ android.firebase.core }}
+- **com.google.firebase:firebase-ads**:{{ android.firebase.ads }}
+- **com.google.firebase:firebase-auth**:{{ android.firebase.auth }}
+- **com.google.firebase:firebase-config**:{{ android.firebase.config }}
+- **com.google.firebase:firebase-database**:{{ android.firebase.database }}
+- **com.google.firebase:firebase-functions**:{{ android.firebase.functions }}
+- **com.google.firebase:firebase-invites**:{{ android.firebase.invites }}
+- **com.google.firebase:firebase-firestore**:{{ android.firebase.firestore }}
+- **com.google.firebase:firebase-messaging**:{{ android.firebase.messaging }}
+- **com.google.firebase:firebase-perf**:{{ android.firebase.perf }}
+- **com.google.firebase:firebase-storage**:{{ android.firebase.storage }}
+- **com.crashlytics.sdk.android:crashlytics**:{{ android.firebase.crashlytics }}
 
 #### iOS - Update Firebase SDKs
 
