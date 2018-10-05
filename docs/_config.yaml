@@ -12,12 +12,12 @@ android:
     config: 16.0.0
     core: 16.0.1
     crash: 16.0.1
-    crashlytics: 2.9.4
+    crashlytics: 2.9.5
     database: 16.0.2
     firestore: 17.1.0
     functions: 16.1.0
     invites: 16.0.3
-    messaging: 17.3.3
+    messaging: 17.3.2
     perf: 16.1.0
     storage: 16.0.2
     plugins: 1.1.1
@@ -27,19 +27,19 @@ android:
 ios:
   fabric:
     tools: 1.7.11
-    version: 3.10.4
+    version: 3.10.7
   firebase:
-    ads: 5.8.1
-    auth: 5.8.1
-    config: 5.8.1
-    core: 5.8.1
-    crash: 5.8.1
+    ads: 5.9.0
+    auth: 5.9.0
+    config: 5.9.0
+    core: 5.9.0
+    crash: 5.9.0
     crashlytics: 3.10.7
-    database: 5.8.1
-    firestore: 5.8.1
-    functions: 5.8.1
-    invites: 5.8.1
-    links: 5.8.1
-    messaging: 5.8.1
-    perf: 5.8.1
-    storage: 5.8.1
+    database: 5.9.0
+    firestore: 5.9.0
+    functions: 5.9.0
+    invites: 5.9.0
+    links: 5.9.0
+    messaging: 5.9.0
+    perf: 5.9.0
+    storage: 5.9.0
