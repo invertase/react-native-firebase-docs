@@ -90,7 +90,7 @@ Returns an unsubscribe function.
 ### orderBy
 [method]orderBy(fieldPath, directionStr) returns [ref firestore.Query];[/method]
 
-Creates a new query where the results are sorted by the specified field, in descendin or ascending order.
+Creates a new query where the results are sorted by the specified field, in descending or ascending order.
 
 | Parameter |         |
 | --------- | ------- |

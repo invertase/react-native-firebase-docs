@@ -2,12 +2,13 @@
 
 ## Add the dependency
 
-Add the Firebase Cloud Messaging dependancy to `android/app/build.gradle`:
+Add the Firebase Cloud Messaging dependency and optional ShortcutBadger dependency to `android/app/build.gradle`:
 
 ```groovy
 dependencies {
   // ...
   compile "com.google.firebase:firebase-messaging:{{ android.firebase.version }}"
+  compile 'me.leolin:ShortcutBadger:1.1.21@aar' // <-- Add this line if you wish to use badge on Android
 }
 ```
 

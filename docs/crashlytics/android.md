@@ -18,10 +18,13 @@ dependencies {
 Crashlytics also requires the Fabric Gradle dependency. In your projects `android/build.gradle` file, add the plugin to your dependencies and also check that you have version {{ android.google.services }} of the google-services plugin:
 
 ```groovy
-dependencies {
+buildscript {
   // ...
-  classpath 'com.google.gms:google-services:{{ android.google.services }}'
-  classpath 'io.fabric.tools:gradle:{{ android.fabric.gradle }}'
+  dependencies {
+    // ...
+    classpath 'com.google.gms:google-services:{{ android.google.services }}'
+    classpath 'io.fabric.tools:gradle:{{ android.fabric.gradle }}'
+  }
 }
 ```
 

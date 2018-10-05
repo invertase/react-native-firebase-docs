@@ -10,7 +10,7 @@ A QuerySnapshot contains zero or more DocumentSnapshot objects representing the 
 An array of the documents that changed since the last snapshot. If this is the first snapshot, all documents will be in the list as added changes.
 
 ### docs
-[method]docs returns Array of [ref firestore.DocumentChange];[/method]
+[method]docs returns Array of [ref firestore.DocumentSnapshot];[/method]
 
 An array of all the documents in the QuerySnapshot.
 
