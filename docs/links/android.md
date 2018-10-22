@@ -41,7 +41,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 1. In your [Firebase console](https://console.firebase.google.com/), open the Dynamic Links section.
     1. Accept the terms of service if you are prompted to do so.
-    2. Take note of your project's Dynamic Links domain, which is displayed at the top of the Dynamic Links page. You need your project's Dynamic Links domain to programmatically create Dynamic Links. A Dynamic Links domain looks like app_code.app.goo.gl.
+    2. Take note of your project's Dynamic Links domain, which is displayed at the top of the Dynamic Links page. You need your project's Dynamic Links domain to programmatically create Dynamic Links. A Dynamic Links domain looks like app_code.page.link.
 
         ![console](https://firebase.google.com/docs/dynamic-links/images/dynamic-links-domain.png)
 

@@ -65,7 +65,7 @@ Returns a promise that resolves with the created invitation IDs if the invitatio
 ```javascript
 // create invitation
 const invitation = new firebase.invites.Invitation('Title', 'Message');
-invitation.setDeepLink('https://je786.app.goo.gl/testing');
+invitation.setDeepLink('https://je786.page.link/testing');
 // send the invitation
 const invitationIds = await firebase.invites().sendInvitation(invitation);
 // use the invitationIds as you see fit
