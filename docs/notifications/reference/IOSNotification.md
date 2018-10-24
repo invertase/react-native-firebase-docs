@@ -21,7 +21,7 @@ Gets the attachments for the notification.
 > iOS 10+.
 
 ### badge
-[method]badge returns nullable string;[/method]
+[method]badge returns nullable number;[/method]
 
 Gets the optional badge for the notification.
 
