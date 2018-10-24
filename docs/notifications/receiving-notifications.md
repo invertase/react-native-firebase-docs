@@ -111,7 +111,7 @@ componentWillUnmount() {
 }
 ```
 
-### App Closed
+### App Closed
 
 If your app is closed, you can check if it was opened by a notification being clicked / tapped / opened as follows:
 
