@@ -6,7 +6,7 @@ This release is mainly focused on bug fixes and QoL changes with only some minor
 
 Thanks to all our [contributors](https://github.com/invertase/react-native-firebase/compare/v5.0.0...v5.1.0-rc3). 💛
 
-#### Upgrading from v5.0.0
+### Upgrade from v5.0.0
 
 Install the latest version:
  
@@ -15,6 +15,8 @@ npm install --save react-native-firebase@5.1.0
 ```
 
 ----
+
+Update native dependencies:
 
 ?> Please ensure you change your versions to match the ones below (where possible).
 
@@ -119,7 +121,7 @@ task wrapper(type: Wrapper) {
  
 ----
 
-### Misc
+### General
 
  - [JS] [INTERNAL] [BUGFIX] [./utils/native.js] - `nativeWithArgs` wrapper incorrectly wrapping `NativeModule` constants - should only wrap functions.
  - [ANDROID] [BUILD] force Java 8 target compatibility for JDK 10 - #1070
