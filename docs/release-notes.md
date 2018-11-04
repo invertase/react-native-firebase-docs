@@ -92,7 +92,7 @@ implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
 
 ----
 
- - [android] Update build dependencies;
+ - [ANDROID] Update build dependencies;
    - see [/tests/android/build.gradle](https://github.com/invertase/react-native-firebase/blob/master/tests/android/build.gradle) for a reference project build gradle file
 
 ```groovy
