@@ -2,15 +2,21 @@
 
 ## 5.1.0
 
-Install using:
+This release is mainly focused on bug fixes and QoL changes with only some minor enhancements added such as Firestore `arrayRemove`/`arrayUnion` support.
+
+Thanks to all our [contributors](https://github.com/invertase/react-native-firebase/compare/v5.0.0...v5.1.0-rc3). 💛
+
+#### Upgrading from v5.0.0
+
+Install the latest version:
  
 ```bash
 npm install --save react-native-firebase@5.1.0
 ```
 
-#### Native SDK Version Upgrades
+----
 
-> Please ensure you change your versions to match the following changes where possible.
+?> Please ensure you change your versions to match the ones below (where possible).
 
  - [IOS] Updated Firebase SDKs (Pods) to `v5.11.0` - `v5.10.0` is also supported
  - [ANDROID] Updated gradle build tools to `3.2.0`
@@ -21,93 +27,110 @@ npm install --save react-native-firebase@5.1.0
    - see [/tests/android/app/build.gradle](https://github.com/invertase/react-native-firebase/blob/master/tests/android/app/build.gradle) for a reference app build gradle file
 
 
- ```groovy
-  implementation "com.google.firebase:firebase-core:16.0.4"
-  implementation "com.google.android.gms:play-services-base:16.0.1"
+```groovy
+implementation "com.google.firebase:firebase-core:16.0.4"
+implementation "com.google.android.gms:play-services-base:16.0.1"
 
-  /* -------------------------
-   *   OPTIONAL FIREBASE SDKS
-   * ------------------------- */
+/* -------------------------
+*   OPTIONAL FIREBASE SDKS
+* ------------------------- */
 
-  implementation('com.google.firebase:firebase-ads:15.0.1') {
+implementation('com.google.firebase:firebase-ads:15.0.1') {
     // exclude `customtabs` as the support lib version is out of date
     // we manually add it as a dependency below with a custom version
     exclude group: 'com.android.support', module: 'customtabs'
-  }
+}
 
-  // Authentication
-  implementation "com.google.firebase:firebase-auth:16.0.5"
-  // Analytics
-  implementation "com.google.firebase:firebase-analytics:16.0.4"
-  // Performance Monitoring
-  implementation "com.google.firebase:firebase-perf:16.2.0"
-  // Remote Config
-  implementation "com.google.firebase:firebase-config:16.1.0"
-  // Cloud Storage
-  implementation "com.google.firebase:firebase-storage:16.0.4"
-  // Invites
-  implementation "com.google.firebase:firebase-invites:16.0.4"
-  // Dynamic Links
-  implementation "com.google.firebase:firebase-dynamic-links:16.1.2"
-  // Real-time Database
-  implementation "com.google.firebase:firebase-database:16.0.4"
-  // Cloud Functions
-  implementation "com.google.firebase:firebase-functions:16.1.2"
-  // Cloud Firestore
-  implementation "com.google.firebase:firebase-firestore:17.1.2"
-  // Cloud Messaging / FCM
-  implementation "com.google.firebase:firebase-messaging:17.3.4"
-  // Crashlytics
-  implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+// Authentication
+implementation "com.google.firebase:firebase-auth:16.0.5"
+
+// Analytics
+implementation "com.google.firebase:firebase-analytics:16.0.4"
+
+// Performance Monitoring
+implementation "com.google.firebase:firebase-perf:16.2.0"
+
+// Remote Config
+implementation "com.google.firebase:firebase-config:16.1.0"
+
+// Cloud Storage
+implementation "com.google.firebase:firebase-storage:16.0.4"
+
+// Invites
+implementation "com.google.firebase:firebase-invites:16.0.4"
+
+// Dynamic Links
+implementation "com.google.firebase:firebase-dynamic-links:16.1.2"
+
+// Real-time Database
+implementation "com.google.firebase:firebase-database:16.0.4"
+
+// Cloud Functions
+implementation "com.google.firebase:firebase-functions:16.1.2"
+
+// Cloud Firestore
+implementation "com.google.firebase:firebase-firestore:17.1.2"
+
+// Cloud Messaging / FCM
+implementation "com.google.firebase:firebase-messaging:17.3.4"
+
+// Crashlytics
+implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
     transitive = true
-  }
+}
 
-  /* --------------------------------
-   *  OPTIONAL SUPPORT LIBS
-   * -------------------------------- */
+/* --------------------------------
+*  OPTIONAL SUPPORT LIBS
+* -------------------------------- */
 
-  // For Firebase Ads
-  implementation "com.android.support:customtabs:27.1.1"
+// For Firebase Ads
+implementation "com.android.support:customtabs:27.1.1"
 
-  // For React Native Firebase Notifications
-  implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
- ```
+// For React Native Firebase Notifications
+implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
+```
 
- - [android] updated build dependencies;
+----
+
+ - [android] Update build dependencies;
    - see [/tests/android/build.gradle](https://github.com/invertase/react-native-firebase/blob/master/tests/android/build.gradle) for a reference project build gradle file
 
- ```groovy
-    classpath 'com.android.tools.build:gradle:3.2.0'
-    classpath 'com.google.gms:google-services:4.0.1'
-    classpath 'com.google.firebase:firebase-plugins:1.1.5'
-    classpath 'io.fabric.tools:gradle:1.25.4'
- ```
+```groovy
+classpath 'com.android.tools.build:gradle:3.2.0'
+classpath 'com.google.gms:google-services:4.0.1'
+classpath 'com.google.firebase:firebase-plugins:1.1.5'
+classpath 'io.fabric.tools:gradle:1.25.4'
+```
+
+----
 
  - [ANDROID] Updated to gradle 4.6
 
  You can update your gradle version if required by adding the following at the bottom of your `/android/build.gradle`
 
- ```groovy
- task wrapper(type: Wrapper) {
-   gradleVersion = '4.6'
-   distributionUrl = distributionUrl.replace("bin", "all")
- }
- ```
+```groovy
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+```
 
  Or by modifying the `distributionUrl` in `/android/gradle/wrapper/gradle-wrapper.properties`
  
 ----
 
-### General
+### Misc
 
  - [JS] [INTERNAL] [BUGFIX] [./utils/native.js] - `nativeWithArgs` wrapper incorrectly wrapping `NativeModule` constants - should only wrap functions.
  - [ANDROID] [BUILD] force Java 8 target compatibility for JDK 10 - #1070
+ - [ANDROID] [BUILD] add support for reading React Native sources from inside a mono-repo
  - [ANDROID] [BUILD] remove fabric build tools from lib - only needed in users build.gradle
  - [ANDROID] replace `android.support`.`NonNull` & `Nullable` annotation instances with java annotations
     - removes dependency on android support v4 annotations
  - [LINKS] [TS] fix types for `createShortDynamicLink` - #1580
  - [FUNCTIONS] [TS] add export of `functions` type #1533
  - [METRO] [JS] add workaround for `module-resolver` bug - #1560
+ 
 ----
 
 ### Authentication
