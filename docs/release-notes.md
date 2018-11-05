@@ -129,6 +129,7 @@ task wrapper(type: Wrapper) {
  - [ANDROID] [BUILD] remove fabric build tools from lib - only needed in users build.gradle
  - [ANDROID] replace `android.support`.`NonNull` & `Nullable` annotation instances with java annotations
     - removes dependency on android support v4 annotations
+ - [ANDROID] [IOS] [CORE] added `firebase.app().delete()` support (was pending Android SDK support which has now been added)
  - [LINKS] [TS] fix types for `createShortDynamicLink` - #1580
  - [FUNCTIONS] [TS] add export of `functions` type #1533
  - [METRO] [JS] add workaround for `module-resolver` bug - #1560
