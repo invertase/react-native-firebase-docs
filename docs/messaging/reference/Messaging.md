@@ -21,7 +21,7 @@ The following methods are accessed via the Cloud Messaging instance `firebase.me
 ### getToken
 [method]getToken() returns Promise containing String;[/method]
 
-This generated registration token is used to identify the app instance and periodically sends data to the Firebase backend. To reset this; call [ref firebase.messaging.Messaging#deleteToken].
+This generated registration token is used to identify the app instance and periodically sends data to the Firebase backend. To reset this; call [ref Messaging#deleteToken].
 
 Returns the current FCM token.
 
