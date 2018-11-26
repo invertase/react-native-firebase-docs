@@ -1,5 +1,49 @@
 # Release Notes
 
+## 5.1.1
+
+This patch release is mainly to fix several minor typings issues (TS & Flow). 
+
+Thanks to all our [contributors](https://github.com/invertase/react-native-firebase/compare/v5.1.0...v5.1.1). 💛
+
+You can compare all changes between v5.1.0 and v5.1.1 [here](https://github.com/invertase/react-native-firebase/compare/v5.1.0...v5.1.1).
+
+### Upgrade from v5.1.0
+
+No native code or dependency version changes required. Install the latest version via NPM:
+ 
+```bash
+npm install --save react-native-firebase@5.1.1
+```
+
+----
+
+### General
+
+- [TYPESCRIPT] [ENHANCEMENT] [ANALYTICS] Add `setUserProperties` type definition
+- [TYPESCRIPT] [ENHANCEMENT] [AUTHENTICATION] Improve TS types for auth listeners
+- [TYPESCRIPT] [ENHANCEMENT] [STORAGE] Export storage statics (`.Native`, `.TaskState` and `.TaskEvent`) - fixes #1706
+- [TYPESCRIPT] [ENHANCEMENT] [FIRESTORE] Improve `onSnapshot` error type definitions - fixes #1708
+- [FLOW] [BUGFIX] [LINKS] Change return type to `string` literal instead of incorrect usage of `String`
+- [TESTS] [ENHANCEMENT] [DATABASE] Improve query test coverage 
+ 
+----
+
+### Android
+
+- [ANDROID] [BUGFIX] [NOTIFICATIONS] Added missing input text result field to `notificationOpen` object
+- [ANDROID] [ENHANCEMENT] [BUILD] Update build script to also read Android sources from `react-native` root directory - fixes #1697 
+
+----
+
+### iOS
+
+- [IOS] [BUGFIX] [AUTHENTICATION] `authStateChanged` listeners now correctly torn down between RN reloads - fixes #1677
+
+----
+
+----
+
 ## 5.1.0
 
 This release is mainly focused on bug fixes and QoL changes with only some minor enhancements added such as Firestore `arrayRemove`/`arrayUnion` support.
