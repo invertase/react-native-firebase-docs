@@ -6,6 +6,8 @@
       text: Getting Started
     - to: "/release-notes"
       text: Release Notes
+    - to: "/about"
+      text: About
   - title: Installation
     links:
     - to: "/installation/initial-setup"
