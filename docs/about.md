@@ -8,8 +8,7 @@ In mid-2017, we were approached by Google, who offered to help ensure the projec
 
 In the 2018 Firebase Summit in Prague during the opening keynote, Google openly announced their working relationship with Invertase - check it out below:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thanks for the shout-out ☺️👌<a href="https://twitter.com/hashtag/FirebaseSummit?src=hash&amp;ref_src=twsrc%5Etfw">#FirebaseSummit</a> <a href="https://t.co/hktZVRxFw8">pic.twitter.com/hktZVRxFw8</a></p>&mdash; React Native Firebase (@rnfirebase) <a href="https://twitter.com/rnfirebase/status/1056839638961348608?ref_src=twsrc%5Etfw">October 29, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> https://twitter.com/rnfirebase/status/1056839638961348608/video/1
 
 ## Future of React Native Firebase
 
