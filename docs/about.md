@@ -1,17 +1,26 @@
-## About
+# About React Native Firebase
 
-TODO
+The React Native Firebase project started life in late 2016 as a personal project [Mike Diarmid](https://twitter.com/mikediarmid) and [Elliot Hesp](https://twitter.com/elliothesp) were working on. The project gained instant popularity, allowing React Native developers to hook into the native services Firebase provides.
 
-### Roadmap
+During the first few months of its development, the repository was moved into the organisation of Invertase on Github. The organisation was a collection of the personal and combined Open Source efforts Mike and Elliot had been working over the past number of years. With a constant flow of feature requests, issues and contributions, the library rapidly grew in popularity, achieving over 100k NPM downloads in its first 12 months of development. 
 
-TODO
+In mid-2017, we were approached by Google, who offered to help ensure the projects continued support by providing direct contact with the Firebase team and by providing funding to ensure the project had dedicated time assigned to its upkeep.
 
-----
+In the 2018 Firebase Summit in Prague during the opening keynote, Google openly announced their working relationship with Invertase - check it out below:
 
-### History
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thanks for the shout-out ☺️👌<a href="https://twitter.com/hashtag/FirebaseSummit?src=hash&amp;ref_src=twsrc%5Etfw">#FirebaseSummit</a> <a href="https://t.co/hktZVRxFw8">pic.twitter.com/hktZVRxFw8</a></p>&mdash; React Native Firebase (@rnfirebase) <a href="https://twitter.com/rnfirebase/status/1056839638961348608?ref_src=twsrc%5Etfw">October 29, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-TODO
+## Future of React Native Firebase
 
-----
+The React Native Firebase library has been a huge driving force for our knowledge and experience.  Even with years of experience in Open Source, JavaScript, Android and iOS, we're constantly learning and improving the library - whilst focusing on the needs of the community and many users of the library.  Maintaining a popular Open Source library is hard, yet rewarding work.
 
-> Special thanks to [Chris Bianca](http://invertase.link/cb-twitter) at [CS Frequency](http://invertase.link/csf-website) for [his work](http://invertase.link/cb-commits) in helping us get this project off the ground.
+With the support from the community and Google, we're pleased to announce that starting in 2019, our very own Mike Diarmid will be working full time on the library. With the lessons we've learnt, we'll be focusing on taking the library to a new level. 
+
+> Keep an eye out for our upcoming blog on version 6!
+
+The success and upkeep of the library wouldn't be possible without the support and contributions from the community.  To date, we've had contributions from 114 members of the Open Source community on the repository to who we're very grateful to, the project wouldn't be where it is without you. Special thanks to Chris Bianca at [CS Frequency Limited](https://csfrequency.com) for their work in helping to get this project off the ground.
+
+We'd also like to extend our thanks to our backers on [Open Collective](https://opencollective.com/react-native-firebase), whose contributions have made it possible to sustain the vast amount of time required in the upkeep of such a project.
+
+The future of Invertase and React Native Firebase is exciting. We're excited to see worldwide apps using our library, and with Expo now [integrating our library](https://blog.expo.io/using-firebase-in-expo-e13844061832) into their core service, 2019 is full of possibilities.
