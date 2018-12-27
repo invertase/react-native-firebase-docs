@@ -18,7 +18,7 @@ With the support from the community and Google, we're pleased to announce that s
 
 > Keep an eye out for our upcoming blog on version 6!
 
-The success and upkeep of the library wouldn't be possible without the support and contributions from the community.  To date, we've had contributions from 114 members of the Open Source community on the repository to who we're very grateful to, the project wouldn't be where it is without you. Special thanks to Chris Bianca at [CS Frequency Limited](https://csfrequency.com) for their work in helping to get this project off the ground.
+The success and upkeep of the library wouldn't be possible without the support and contributions from the community.  To date, we've had contributions from 114 members of the Open Source community on the repository to who we're very grateful to, the project wouldn't be where it is without you. Special thanks to Chris Bianca at [CS Frequency Limited](http://invertase.link/csf-website) for their work in helping to get this project off the ground.
 
 We'd also like to extend our thanks to our backers on [Open Collective](https://opencollective.com/react-native-firebase), whose contributions have made it possible to sustain the vast amount of time required in the upkeep of such a project.
 
