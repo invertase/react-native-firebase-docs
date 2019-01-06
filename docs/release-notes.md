@@ -4,7 +4,7 @@
 
 The latest version is `v5.2.0`; 
 
-[> View the Release Notes](version /releases/v5.2.0)
+[View the Release Notes](version /releases/v5.2.0)
 
 ## Other Versions 
 
