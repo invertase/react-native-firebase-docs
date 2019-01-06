@@ -1,5 +1,3 @@
-# Release Notes
-
 ## Latest Version
 
 The latest version is `v5.2.0`; 
