@@ -95,7 +95,7 @@ If your app is in the foreground, or background, you can listen for when a notif
 
 ```js
 // Optional: Flow type
-import type { Notification, NotificationOpen } from 'react-native-firebase';
+import type, { Notification, NotificationOpen } from 'react-native-firebase';
 
 componentDidMount() {
     this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen: NotificationOpen) => {
