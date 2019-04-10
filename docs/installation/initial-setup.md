@@ -84,6 +84,3 @@ We've curated some articles we love below to help you get started.
 |[React Native Push Notifications with Firebase Cloud Functions](https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386)|
 |[Firebase Environments with React Native (Dev/Staging/Prod)](https://medium.com/@egunsoma/firebase-environments-with-react-native-dev-staging-prod-3832d7d22a80)|
 
----
-
-Help us [keep React Native Firebase awesome](https://blog.invertase.io/keeping-react-native-firebase-awesome-8723470d2d26). ❤️
