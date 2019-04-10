@@ -88,7 +88,7 @@ These guides are written by the community and may or may not be up to date.
 | Links |
 |:---------:|
 |[Building a Google Analytics Funnel from Firebase in React-Native](https://blog.theodo.fr/2018/01/building-google-analytics-funnel-firebase-react-native/)|
-|[Getting started with Firebase Authentication on React Native](https://blog.invertase.io/getting-started-with-firebase-authentication-on-react-native-a1ed3d2d6d91)|
+|[Getting started with Firebase Firestore on React Native](https://invertase.io/blog/getting-started-with-cloud-firestore-on-react-native)|
 |[React Native Push Notifications with Firebase Cloud Functions](https://medium.com/the-modern-development-stack/react-native-push-notifications-with-firebase-cloud-functions-74b832d45386)|
 |[Firebase Environments with React Native (Dev/Staging/Prod)](https://medium.com/@egunsoma/firebase-environments-with-react-native-dev-staging-prod-3832d7d22a80)|
 |[Adding Firebase Analytics to your React Native app](https://www.measurelab.co.uk/blog/adding-firebase-analytics-react-native-app/)|
