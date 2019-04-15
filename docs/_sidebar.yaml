@@ -157,6 +157,7 @@
       - SetOptions
       - Settings
       - SnapshotMetadata
+      - Timestamp
       - Transaction
       - WriteBatch
   - title: Cloud Functions
