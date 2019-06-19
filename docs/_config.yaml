@@ -1,6 +1,6 @@
 android:
   build:
-    tools: 3.3.2
+    tools: 3.4.1
   fabric:
     tools: 1.28.1
   firebase:
@@ -14,9 +14,10 @@ android:
     database: 17.0.0
     firestore: 19.0.0
     functions: 17.0.0
+    links: 17.0.0
     invites: 17.0.0
     messaging: 18.0.0
-    perf: 16.2.5
+    perf: 17.0.2
     storage: 17.0.0
     plugins: 1.2.1
   gms:
@@ -26,17 +27,17 @@ ios:
   fabric:
     tools: 1.10.1
   firebase:
-    ads: 5.20.2
-    auth: 5.20.2
-    config: 5.20.2
-    core: 5.20.2
-    crash: 5.20.2
+    ads: 6.2.0
+    auth: 6.2.0
+    config: 6.2.0
+    core: 6.2.0
+    crash: 6.2.0
     crashlytics: 3.13.1
-    database: 5.20.2
-    firestore: 5.20.2
-    functions: 5.20.2
-    invites: 5.20.2
-    links: 5.20.2
-    messaging: 5.20.2
-    perf: 5.20.2
-    storage: 5.20.2
+    database: 6.2.0
+    firestore: 6.2.0
+    functions: 6.2.0
+    invites: 6.2.0
+    links: 6.2.0
+    messaging: 6.2.0
+    perf: 6.2.0
+    storage: 6.2.0

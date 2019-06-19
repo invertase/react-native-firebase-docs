@@ -1,5 +1,7 @@
 # Dynamic Links
 
+!> Invites has been removed from the Firebase SDKs, and removed here as of v5.5.0. This documentation is only here for users of older versions of the library. Use Dynamic Links instead.
+
 [Firebase Invites](https://firebase.google.com/docs/invites/) are an out-of-the-box solution for app referrals and sharing via email or SMS.
 
 ## Methods
