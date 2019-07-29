@@ -1,6 +1,6 @@
 # Latest Version
 
-The latest version is `v5.5.0`;  [➡️ View the Release Notes](/docs/v5.x.x/releases/v5.5.x)
+The latest version is `v5.5.6`;  [➡️ View the Release Notes](/docs/v5.x.x/releases/v5.5.x)
 
 ## Older Versions
 
