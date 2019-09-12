@@ -65,3 +65,5 @@ Within the application component, add your AdMob ID (from the AdMob UI):
 ```
 
 > Important: This AdmOb ID is required as of Google Mobile Ads SDK version 17.0.0. Failure to add this `<meta-data>` tag results in a crash with the message: "The Google Mobile Ads SDK was initialized incorrectly."
+
+> Important: Do not forget to update your "Contains ads" settings in PlayStore -> Pricing & distribution tab. 
